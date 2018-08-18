@@ -1,0 +1,16 @@
+.top{
+  margin-top: -300px;
+}
+
+.bibliografia{
+	line-height: 32px;
+}
+
+#justisiaciega{ 
+    display: flex;
+    flex-flow: row nowrap;    
+}
+
+#lista1{ 
+    align-self: center;   
+}

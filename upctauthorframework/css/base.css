@@ -1,0 +1,625 @@
+/* ==========================================================================
+
+   General styles
+
+   ========================================================================== */
+
+html,
+body {
+  height: 100%;
+}
+
+
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: #484f59;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+  text-align: justify;
+}
+
+hr {
+  display: block;
+  position: relative;
+  height: 1px;
+  border: 0;
+}
+
+hr:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 25%;
+  width: 50%;
+  height: 2px;
+  background: #697079;
+}
+
+b{
+  color: #0F4E95;
+}
+
+
+/* Section Dividers */
+.section-divider {
+  z-index: 999;
+  width: 100%;
+  display: table;
+  max-height: 450px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: 30px;
+  padding-bottom: 70px;
+  margin-top: -1px;
+  background-position: center center;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: relative;
+  text-align: center;
+  height: 320px;
+}
+.textdivider h1 {
+  padding-top: 70px;
+  color: #697079;
+  font-size: 40px;
+  /*filter: progid:DXImageTransform.Microsoft.DropShadow(color='#666666', Direction=135, Strength=4);*/
+}
+
+.textdividersub h1 {
+  padding-top: 70px;
+  color: #ffffff;
+  font-size: 40px;
+  text-shadow: 2px 2px 2px #000;
+  /*filter: progid:DXImageTransform.Microsoft.DropShadow(color='#666666', Direction=135, Strength=4);*/
+}
+.textdividersub hr:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 25%;
+  width: 50%;
+  height: 2px;
+  text-shadow: 2px 2px 2px #000;
+  /* background: #ffffff; */
+  background: #ccc;
+}
+.textdivider p {
+  color: white;
+  font-size: 25px;
+  text-shadow: 2px 2px 2px #000;
+  /*filter: progid:DXImageTransform.Microsoft.Shadow(color='#666666', Direction=135, Strength=4);*/
+}
+
+/* Cuadros Importantes */
+.conborde{
+	border:3px solid #0089bd;
+  border-radius: 10px;
+	background: rgba(0,137,189, 0.3);
+}
+
+.conborde>h4{
+	padding: 5px;
+	font-weight: 700;
+}
+
+.conborde>p{
+	padding: 15px;
+	margin: 0px;
+}
+
+/*Indice de paginas*/
+
+.contenedorplantilla8{
+	margin-top: 30px;
+	margin-bottom: 40px;
+}
+
+.tabpanel{
+	margin-top: -75px !important;
+	padding-bottom: 30px !important;
+	position: relative!important;
+	padding-left: 45% !important;
+}
+
+.nav-tabs > li > a {
+  margin-right: 2px;
+  line-height: 1.42857143;
+  border: 1px solid transparent;
+  border-radius: 0;
+  color: #00933f;
+  font-weight: 500;
+}
+
+.nav-tabs > li > a:hover {
+  border-color: #eee #eee #ddd;
+  /* color: #8a929c; */
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  color: #484f59;
+  cursor: default;
+  border: 1px solid #ddd;
+  border-bottom-color: transparent;
+  font-weight: 700;
+}
+
+.tabpanel ul .active a{
+	color: #8a929c!important;
+	background-color: #fff!important;
+}
+
+/* Flotantes */
+.flotarr{
+  float: right;
+}
+
+.flotarl{
+  float: left;
+}
+
+/* Titles */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Arial;
+  /*  font-weight: 300;*/
+  color: #333;
+}
+
+
+/* Paragraph & Typographic */
+
+p {
+  line-height: 28px;
+  margin-bottom: 25px;
+}
+
+.centered {
+  text-align: center;
+}
+
+.righted {
+  text-align: right;
+}
+
+.lefted {
+  text-align: left;
+}
+
+.justified {
+  text-align: justify;
+}
+
+strong {
+  font-weight: 700;
+}
+
+em {
+  font-weight: 300;
+}
+
+pre {
+  background: #ebebeb;
+  border: none;
+  font-size: 16px;
+  color: #666;
+  padding: 20px;
+  line-height: 28px;
+}
+
+small {
+  font-size: 12px;
+}
+
+blockquote,
+blockquote p {
+  line-height: 28px;
+  color: #999;
+  font-weight: 300;
+  font-style: italic;
+}
+
+blockquote {
+  position: relative;
+  margin: 0 0 40px -30px;
+  padding-left: 30px;
+  border-left: 5px solid #0089bd;
+}
+
+blockquote.pull-right{
+	position: relative;
+	margin: 0 0 40px -30px;
+	padding-right: 30px;
+	border-right: 5px solid #0089bd;
+}
+
+blockquote cite {
+  position: absolute;
+  bottom: -25px;
+  right: 0;
+  font-size: 12px;
+  font-style: italic;
+  color: #333;
+  font-weight: 300;
+}
+
+blockquote cite:before {
+  content: "-- "
+}
+
+/* Modales */
+.modal {
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+}
+.modal-header {
+  background: #0089bd;
+}
+
+.modal-dialog_quiz {
+	width: 400px;
+}
+
+.modal-header_correcto {
+	background: #00933f;	
+}
+
+.modal-header_incorrecto {
+	background: #d20824;
+}
+.modal-header h4 {
+  color: white;
+}
+.modal-footer {
+  background: #2b2b2b;
+}
+
+/* Texto Sinister */
+.textw{
+  color: #ffffff!important;
+  /* font-size: 14px!important; */
+  font-size: 15px!important;
+  font-family: Arial,Helvetica,sans-serif!important;
+  overflow-y:auto;
+}
+
+/* Links */
+
+a {
+  color: #00b0ca;
+  word-wrap: break-word;
+  -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+  transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+a:hover,
+a:focus {
+  color: #B8B9BB;
+  text-decoration: none;
+  outline: 0;
+}
+
+a:before,
+a:after {
+  -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+  transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+
+/* Colores */
+
+.azul {
+  color: #0089bd;
+}
+
+.amarillo {
+  color: #fcc200;
+}
+
+.verde {
+  color: #00933f;
+}
+
+.naranja {
+  color: #d68200;
+}
+
+.rojo {
+  color: #d20824;
+}
+
+.gris {
+  color: #484f59;
+}
+
+.blanco {
+  color: #ffffff;
+}
+
+.negro {
+  color: #000000;
+}
+
+
+/* Estrellas */
+
+.interview .icon5 {
+  cursor: default;
+  float: right;
+  font-size: 30px;
+  left: 47%;
+  position: absolute;
+  text-shadow: 2px 2px 2px #000;
+  top: 0;
+  z-index: 1;
+}
+
+.interview .icon3 {
+  cursor: default;
+  float: right;
+  font-size: 30px;
+  left: 50%;
+  position: absolute;
+  text-shadow: 2px 2px 2px #000;
+  top: 0;
+}
+
+.interview .icon4 {
+  cursor: default;
+  float: right;
+  font-size: 30px;
+  left: 50%;
+  position: absolute;
+  text-shadow: 2px 2px 2px #000;
+  top: 10;
+}
+
+.interview>h4{
+  margin: 0;
+  color: #00933f;
+}
+
+
+/*regla exclusiva IE*/
+
+@media screen and (min-width: 0\0) {
+  .span6 {
+    width: 85%;
+    /*margin:0 0 0 -80px*/
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .centered {
+    display: block;
+    /*margin-left: auto;
+
+		margin-right: auto;*/
+  }
+  .icon-star {
+    color: #ccc;
+  }
+  .interview .icon {
+    margin: -30px 0 0 60px
+  }
+}
+
+.visto {
+  color: #fcc200;
+}
+
+#footerwrap {
+  background: #2b2b2b;
+  margin-top: 0px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+#footerwrap p {
+  color: white;
+}
+
+.img-responsive {
+  display: inline-block;
+}
+
+.greywrapcab {
+  padding-top: 0px;
+  background: #f5f5f5;
+  margin-top: 0px;
+  border-bottom: 1px solid #ddd;
+}
+
+.greywrapcab2 {
+  padding-top: 20px;
+  background: #f5f5f5;
+  margin-top: 0px;
+  border-bottom: 1px solid #ddd;
+}
+
+.bgwhitecab {
+  padding-top: 0px;
+}
+
+.bgwhitecab2 {
+  padding-top: 20px;
+}
+
+
+/* Hands */
+
+.manocaja {
+  position: absolute;
+  bottom: 3px;
+  right: 3px;
+}
+
+.mano {
+  cursor: pointer;
+}
+
+.no-pointer {
+  cursor: default;
+}
+
+.btn-success{
+	background-color: #00933f!important;
+}
+
+
+/* ==========================================================================
+
+   MEDIA QUERIES
+
+   ========================================================================== */
+
+@media screen and (max-width: 1050px),
+screen and (max-device-width: 1050px) {
+  body .header {
+    background-attachment: scroll;
+  }
+}
+
+@media screen and (max-width: 1199px),
+screen and (max-device-width: 1199px) {
+  .a-posicion {
+    left: 55%;
+  }
+}
+
+@media screen and (max-width: 991px),
+screen and (max-device-width: 991px) {
+  .a-posicion {
+    left: 56%;
+  }
+}
+
+
+/*ipad portrait*/
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .header {
+    background-attachment: scroll;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  #headerwrap h1 {
+    font-size: 80px;
+  }
+  #headerwrap p {
+    font-size: 30px;
+    line-height: 38px;
+  }
+}
+
+
+/*********** BACKGROUND BIBLIOGRAFIA*******/
+ 
+ .book{
+	background: url('../img/notebook5.png') no-repeat center;
+	height: 973px;
+	
+ 
+ }
+ .bibliografia {
+	 /* left: 0px; margin-left: 309px; margin-top: 192px; */
+	 line-height: 31px;
+ }
+ .bibliografia ul li {
+	 
+	 margin-bottom: 3px;
+ }
+ 
+  /*******************MENU SUPERIOR******************/
+ 
+
+.navbar-default {
+
+border-color: transparent;
+
+background-color: #dadada;
+
+}
+
+.navbar-toggle {
+
+border-color: transparent;
+
+border: 0px solid transparent;
+
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+
+.navbar-default .navbar-nav > li > a:focus {
+
+	background-color: #16a085;
+
+	color: white;
+
+}
+
+.navbar-fixed-top {
+
+    border-width: 0px 0px 1px;
+
+    top: -50px;
+
+	-webkit-transition: all 0.3s ease-out;
+
+       -moz-transition: all 0.3s ease-out;
+
+        -ms-transition: all 0.3s ease-out;
+
+         -o-transition: all 0.3s ease-out;
+
+            transition: all 0.3s ease-out;
+
+}
+
+.navbar-fixed-scroll{
+
+	    top: 0px;
+
+		-webkit-transition: all 0.3s ease-out;
+
+       -moz-transition: all 0.3s ease-out;
+
+        -ms-transition: all 0.3s ease-out;
+
+         -o-transition: all 0.3s ease-out;
+
+            transition: all 0.3s ease-out;
+
+}
+
+.navbar-nav {
+    font-family: arial;
+    font-weight: 700;
+    text-transform: uppercase;
+}

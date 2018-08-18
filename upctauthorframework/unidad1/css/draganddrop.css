@@ -1,0 +1,29 @@
+.smar1 {
+  border: 1px solid;
+  border-radius: 12px;
+}
+
+.drops {
+  max-width: 220px;
+  height: 70px;
+  margin: 15px auto;
+}
+
+.textdrag {
+  margin: 5px auto;
+}
+
+.resultado h4 {
+  color: #3BB4C1;
+  font-weight: 600;
+}
+
+.btn-success {
+  background-color: #3BB4C1!important;
+  border-color: #3BB4C1!important;
+}
+
+.btn-success:hover {
+  background-color: #048998!important;
+  border-color: #048998!important;
+}

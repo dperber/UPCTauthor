@@ -1,0 +1,248 @@
+{
+"numeroPreguntasEvaluacion": "10",
+"aleatoriedad": "true",
+"notaBaremo": "50",
+"preguntas": [
+
+	{
+		"numeroPregunta": "1",
+		
+		"enunciado": "An enterprise is:",
+
+		"respuestas": [	
+				
+			"An economic unit of production.",
+
+				
+			"A department of a company.",
+
+				
+			"A stakeholder.",
+
+				
+			"The external functions develop by a company."
+
+		],
+		"respuestaCorrecta": "1",
+		"feedbackCorrecto": "Correct",
+		"feedbackIncorrecto": "Incorrect"
+	},
+
+	{
+		"numeroPregunta": "2",
+		
+		"enunciado": "Enterprises:",
+
+		"respuestas": [	
+				
+			"Are outside the economy.",
+
+				
+			"Reduce the generation of wealth in an area.",
+
+				
+			"Improve job creation.",
+
+				
+			"Decrease the economic development."
+
+		],
+		"respuestaCorrecta": "3",
+		"feedbackCorrecto": "Correct",
+		"feedbackIncorrecto": "Incorrect"
+	},
+
+	{
+		"numeroPregunta": "3",
+		
+		"enunciado": "Enterprises:",
+
+		"respuestas": [	
+				
+			"Are outside the economy.",
+
+				
+			"Increase the generation of wealth in an area.",
+
+				
+			"Decrease job creation.",
+
+				
+			"Reduce the economic development."
+
+		],
+		"respuestaCorrecta": "3",
+		"feedbackCorrecto": "Correct",
+		"feedbackIncorrecto": "Incorrect"
+	},
+
+	{
+		"numeroPregunta": "4",
+		
+		"enunciado": "A company is an open system because:",
+
+		"respuestas": [	
+				
+			"It receives outputs from the environment which transform into inputs.",
+
+				
+			"It has internal interrelated subsystems.",
+
+				
+			"It receives inputs from the environment which transform into outputs.",
+
+				
+			"It is an independent agent of the economy."
+
+		],
+		"respuestaCorrecta": "3",
+		"feedbackCorrecto": "Correct",
+		"feedbackIncorrecto": "Incorrect"
+	},
+
+	{
+		"numeroPregunta": "5",
+		
+		"enunciado": "A management subsystem includes the functions of:",
+
+		"respuestas": [	
+				
+			"Planning, organizing, leading and controlling.",
+
+				
+			"Planning, commanding, investing and controlling.",
+
+				
+			"Planning, organizing, marketing and controlling.",
+
+				
+			"Planning, commanding, staff, and guiding."
+
+		],
+		"respuestaCorrecta": "1",
+		"feedbackCorrecto": "Correct",
+		"feedbackIncorrecto": "Incorrect"
+	},
+
+	{
+		"numeroPregunta": "6",
+		
+		"enunciado": "The attempt to provide and allocate resources wisely to achieve the desired goals and assess the management environment to set future objectives, mapping out the necessary activities to accomplish those objectives, is the management function of:",
+
+		"respuestas": [	
+				
+			"Planning.",
+
+				
+			"Organizing.",
+
+				
+			"Leading.",
+
+				
+			"Controlling."
+
+		],
+		"respuestaCorrecta": "1",
+		"feedbackCorrecto": "Correct",
+		"feedbackIncorrecto": "Incorrect"
+	},
+
+	{
+		"numeroPregunta": "7",
+		
+		"enunciado": "The management function that manages material resources, coordinates human groups and establishes a network of relationships to achieve the desired goals is:",
+
+		"respuestas": [	
+				
+			"Planning.",
+
+				
+			"Organizing.",
+
+				
+			"Leading.",
+
+				
+			"Controlling."
+
+		],
+		"respuestaCorrecta": "2",
+		"feedbackCorrecto": "Correct",
+		"feedbackIncorrecto": "Incorrect"
+	},
+
+	{
+		"numeroPregunta": "8",
+		
+		"enunciado": "The process of influencing and energizing people to make them give their best in the performance of their tasks, both individually and in cooperation with other people, is the management function of:",
+
+		"respuestas": [	
+				
+			"Planning.",
+
+				
+			"Organizing.",
+
+				
+			"Leading.",
+
+				
+			"Controlling."
+
+		],
+		"respuestaCorrecta": "3",
+		"feedbackCorrecto": "Correct",
+		"feedbackIncorrecto": "Incorrect"
+	},
+
+	{
+		"numeroPregunta": "9",
+		
+		"enunciado": "The management function that measures performance, compares it to objectives, implements necessary changes and monitors progress to ensure that the results are within the pre-set limits is:",
+
+		"respuestas": [	
+				
+			"Planning.",
+
+				
+			"Organizing.",
+
+				
+			"Leading.",
+
+				
+			"Controlling."
+
+		],
+		"respuestaCorrecta": "4",
+		"feedbackCorrecto": "Correct",
+		"feedbackIncorrecto": "Incorrect"
+	},
+
+	{
+		"numeroPregunta": "10",
+		
+		"enunciado": "The management function of planning establishes:",
+
+		"respuestas": [	
+				
+			"Goals, objectives, means, period of time and standards.",
+
+				
+			"Goals, objectives, meanings, period of time and leading.",
+
+				
+			"Goals, results, means and standards.",
+
+				
+			"Grants, objectives, meaning, time and monitoring."
+
+		],
+		"respuestaCorrecta": "1",
+		"feedbackCorrecto": "Correct",
+		"feedbackIncorrecto": "Incorrect"
+	}
+
+]	
+}

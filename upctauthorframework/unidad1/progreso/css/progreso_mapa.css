@@ -1,0 +1,183 @@
+﻿/* ITINERARIO PORCENTAJES */
+#progreso_mp {
+	background:url('../img/RRHH-TEMA1-Gestion-de-recursos-humanos.png') no-repeat;
+	width: 100%;
+	height: 400px;
+	text-align: center;
+}
+
+.mapaWrapper {
+	margin:-10px auto;
+	max-width:800px;
+	width:calc(100%;);
+	padding:0px;
+	position: relative;
+	display:block;
+}
+
+	#progreso_contenedor {
+		width: 750px;
+		height: 300px;
+		position: relative;
+		top: 30px;
+		display: inline-block;
+	}
+	#progreso_abajo {
+		width: 750px;
+		height: 300px;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		display: inline-block;
+	}
+	#progreso_arriba {
+		width: 750px;
+		height: 300px;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		display: inline-block;
+	}
+	#progreso_svg{
+		width: 750px;
+		height: 300px;
+		top: 0px;
+		left: 0px;
+	}
+	.progreso_linea {
+		stroke:rgb(255,255,255);
+		stroke-width:10;
+		position: absolute;
+	}
+	.circulo_fondo_porcentaje {
+		fill: #fff;
+		position: absolute;
+	}
+	.circulo_fondo {
+		/* fill: #eee; */ /* no utilizo fill en la clase porque luego no me deja superponer otro color */
+		position: absolute;
+		cursor: pointer;
+	}
+	.texto_porcentaje {
+		/*color: #000;
+		text-align: center;
+		position: absolute;
+		font-family: Arial;
+		cursor: pointer;*/
+	}
+	.texto_porcentaje_over{
+		color: #fff;
+		/*text-align: center;
+		position: absolute;
+		font-family: Arial;
+		cursor: pointer;*/
+	}
+	.caja_texto_titulo {
+		position: absolute;
+	}
+	.texto_titulo {
+		margin: 0px;
+		text-align: center;
+		position: relative;
+		margin-top: 58px;
+		font-family: Arial;
+		text-transform: uppercase;
+		font-weight: 700;
+		text-shadow: 2px 2px 2px #000;
+		color: #fff;
+		cursor: default;
+		font-size: 25px;
+		line-height: 1.1;
+		width: 380px!important;
+	}
+
+	.boton_prueba {
+		/* Botones de prueba para realizar las validaciones. En la versi�n final estar�n ocultos */
+		/* display: none; */
+		border-style: solid; border-width: 1px; border-color: grey;
+		width: 150px;
+		background-color: #FCC;
+		cursor: pointer;
+		margin: 10px auto 0 auto;
+		text-align: center;
+	}
+
+	/* bordes de l�nea para construir el mapa de progreso (despu�s de dejan comentados) */
+	/*
+	#progreso_contenedor {
+		border-style: solid; border-width: 1px; border-color: grey;
+	}
+	#progreso_abajo {
+		border-style: solid; border-width: 1px; border-color: red;
+	}
+	#progreso_arriba {
+		border-style: solid; border-width: 1px; border-color: yellow;
+	}
+	.caja_texto_titulo {
+		border-style: solid; border-width: 1px; border-color: grey;
+	}
+	.texto_titulo {
+		border-style: solid; border-width: 1px; border-color: yellow;
+	}
+	*/
+
+.progress-bar {
+  position: relative;
+  height: 150px;
+  width: 150px;
+      background-color: transparent!important;
+	  color: #000!important;
+	      height: auto!important;
+}
+
+
+
+.progress-bar div {
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+.progress-bar div span {
+  position: absolute;
+  font-family: Arial;
+  font-size: 37px;
+  line-height: 130px ;
+  height: 130px ;
+  width: 130px  ;
+  left: 10.5px;
+  top: 10.5px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.progress-bar .background { background-color: #b3cef6; }
+
+.progress-bar .rotate {
+  clip: rect(0 75px 150px 0);
+  background-color: #4b86db;
+}
+
+.progress-bar .left {
+  clip: rect(0 75px 150px 0);
+  opacity: 1;
+  background-color: #b3cef6;
+}
+
+.progress-bar .right {
+  clip: rect(0 100px 200px 0);
+  transform: rotate(180deg);
+  opacity: 0;
+  background-color: #4b86db;
+}
+
+@keyframes 
+toggle {  0% {
+ opacity: 0;
+}
+ 100% {
+ opacity: 1;
+}
+}

@@ -1,0 +1,72 @@
+/* Contenedores */
+.contenedor {
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+.contenedor1 {
+  margin-top: 60px;
+}
+
+.contenedor2 {
+  margin-top: 70px;
+  margin-bottom: 40px;
+}
+
+.contenedor3 {
+  margin-top: 70px;
+}
+
+.contenedor4 {
+  margin-top: 40px;
+}
+
+/* Margenes */
+.m25{
+  margin-bottom: 25px;
+}
+
+
+#div1_1,
+#div2_1,
+#div3_1,
+#div4_1,
+#div5_1,
+#div6_1,
+#div11_1,
+#div13_1,
+#div14_1,
+#div15_1,
+#div16_1,
+#div12_1{
+  width: 220px;
+  height: 70px;
+  border: 1px solid #aaaaaa;
+  border-radius: 5px;
+  margin: 15px auto;
+}
+.textdrag{
+  margin: 5px auto;
+}
+
+.smar1{
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+
+.fondogris1{
+	background-color: #f5f5f5;
+}
+
+.fondoblanco1{
+	background-color: #ffffff;
+}
+
+.padtf{
+	padding-bottom:5px;
+	padding-top:5px;
+}
+.marzero{
+	margin-bottom:0px
+}

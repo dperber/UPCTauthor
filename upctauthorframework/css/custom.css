@@ -1,0 +1,41 @@
+.top{
+  margin-top: -300px;
+}
+
+.navbar {
+  height: 80px!important;
+}
+
+.centered {
+  text-align: center;
+}
+
+.visto {
+  color: #3BB4C1;
+}
+
+footer {
+  background-color: #222;
+  border-color: #080808;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* MODALES */
+.modal-header {
+  background-color: #3BB4C1;
+  color: #fff;
+}
+
+.modal-header .close {
+  margin-top: -25px!important;
+}
+
+.close {
+  font-size: 30px!important;
+}
+
+.modal-footer {
+  background-color: #f5f5f5;
+}

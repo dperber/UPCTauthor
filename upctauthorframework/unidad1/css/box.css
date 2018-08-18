@@ -1,0 +1,152 @@
+/* ####################################################################### 
+						AMARILLO
+############################################################################ */
+
+.camarillo {
+  border: solid 3px #fcc200!important;
+}
+
+.camarillor {
+  border: solid 3px #fcc200!important;
+  background-color: #fdf0c5!important;
+  border-radius: 10px;
+  margin-bottom: 3px;
+}
+
+/* ####################################################################### 
+						NARANJA
+############################################################################ */
+
+
+.cnaranja {
+  border: solid 3px #d68200!important;
+  border-radius: 10px;
+  margin-bottom: 3px;
+}
+
+.cnaranjar {
+  border: solid 3px #d68200!important;
+  background-color: solid 3px #fbe4c1;
+  border-radius: 10px;
+  margin-bottom: 3px;
+}
+
+/* ####################################################################### 
+						VERDE
+############################################################################ */
+
+.cverde {
+  border: solid 3px #00933f!important;
+  border-radius: 10px;
+  margin-bottom: 3px;
+}
+
+.cverder {
+  border: solid 3px #00933f!important;
+  background-color: #d1f7e1!important;
+  border-radius: 10px;
+  margin-bottom: 3px;
+}
+
+/* ####################################################################### 
+						ROJO
+############################################################################ */
+
+.crojo {
+  border: solid 3px #d20824!important;
+  border-radius: 10px;
+  margin-bottom: 3px;
+}
+
+.crojor {
+  border: solid 3px #d20824!important;
+  background-color: #ffcccc!important;
+  border-radius: 10px;
+  margin-bottom: 3px;
+}
+
+/* ####################################################################### 
+						AZUL
+############################################################################ */
+
+.cazul {
+  border: solid 3px #0089bd!important;
+  border-radius: 10px;
+  margin-bottom: 3px;
+}
+
+.cazulr {
+  border: solid 3px #0089bd!important;
+  background-color: #ceeffc!important;
+  border-radius: 10px;
+  margin-bottom: 3px;
+}
+
+/* ####################################################################### 
+						GRIS
+############################################################################ */
+
+.cgris {
+  border: solid 3px #484F59!important;
+  border-radius: 10px;
+  margin-bottom: 3px;
+}
+
+.cgrisr {
+  border: solid 3px #484F59!important;
+  background-color: #e5e6e8!important;
+  border-radius: 10!important;
+  margin-bottom: 3px;
+}
+
+/* ####################################################################### 
+						LILA
+############################################################################ */
+
+.clila {
+  border: solid 3px #975a7b!important;
+  border-radius: 10px;
+  margin-bottom: 3px;
+}
+
+.clilar {
+  border: solid 3px #975a7b!important;
+  background-color: #eed3e2!important;
+  border-radius: 10!important;
+  margin-bottom: 3px;
+}
+
+/* ####################################################################### 
+						NEGRO
+############################################################################ */
+
+.cnegro {
+  border: solid 3px #2b232e!important;
+  border-radius: 10px;
+  margin-bottom: 3px;
+}
+
+.cnegror {
+  border: solid 3px #2b232e !important;
+  background-color: #878787 !important;
+  border-radius: 10!important;
+  margin-bottom: 3px;
+}
+
+/* ####################################################################### 
+						MARINO
+############################################################################ */
+
+.cmarino {
+  border: solid 3px #0f4e95!important;
+  border-radius: 10px;
+  margin-bottom: 3px;
+}
+
+.cmarinor {
+  border: solid 3px #0f4e95!important;
+  background-color: #99c8fd!important;
+  border-radius: 10!important;
+  margin-bottom: 3px;
+}
+
