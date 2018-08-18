@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;templateupctforma.aird, templateupctforma.ecore, templateupctforma.genmodel&apos; to &apos;model&apos;" description="Move 3 resources to &apos;model&apos;" destination="model" element1="/templateupctf/model/templateupctforma.aird" element2="/templateupctf/model/templateupctforma.ecore" element3="/templateupctf/model/templateupctforma.genmodel" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="3" stamp="1496082915081" updateReferences="true"/>
+</session>

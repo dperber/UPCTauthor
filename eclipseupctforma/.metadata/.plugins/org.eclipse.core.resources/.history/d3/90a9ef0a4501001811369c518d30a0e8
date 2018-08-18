@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="upctforma" nsURI="http://cpcd.upct.es/upctforma" nsPrefix="upctforma">
+  <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+    <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="Column" eSuperTypes="#//Composite">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="checkNoParameterVariable"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="checkNoParameterVariable" value="self.elements->forAll( e | e.oclIsKindOf(Variable)=false)"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
+        eType="#//ContentElement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TemplateDef" eSuperTypes="#//NameElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rows" upperBound="-1" eType="#//Row"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Image" eSuperTypes="#//Simple">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NameElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Widget" eSuperTypes="#//ContentElement #//Argument #//NameElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="typewidget" lowerBound="1"
+        eType="#//WidgetDef"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="widgetarguments" upperBound="-1"
+        eType="#//Argument" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Text" eSuperTypes="#//Simple">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="paragraphs" lowerBound="1"
+        upperBound="-1" eType="#//Paragraph" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Composite" eSuperTypes="#//ContentElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Video" eSuperTypes="#//Simple">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ContentDefinition" eSuperTypes="#//NameElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="templates" upperBound="-1"
+        eType="#//TemplateDef" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="widgets" upperBound="-1"
+        eType="#//WidgetDef" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="imports" upperBound="-1"
+        eType="#//Import" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="unit" eType="#//Unit" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="types" upperBound="-1"
+        eType="#//Type" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ContentElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Simple" eSuperTypes="#//ContentElement #//Argument"/>
+  <eClassifiers xsi:type="ecore:EClass" name="WidgetDef" eSuperTypes="#//NameElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
+        eType="#//Parameter" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Parameter" eSuperTypes="#//ContentElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//Type"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Row" eSuperTypes="#//Composite">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="checkNumberArgumentParameter checkRowManualNoUseTemplate"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="checkNumberArgumentParameter" value="if ((self.oclContainer().oclIsTypeOf(Section)) and (self.usetemplate.typetemplate.oclIsUndefined() = false)) then self.getParameters(self) = self.getArguments(self) else true endif"/>
+      <details key="checkRowManualNoUseTemplate" value=" if self.oclContainer().oclIsTypeOf(Section) then if (self.columns->size() > 0) then self.usetemplate->size() = 0 else self.usetemplate->size() > 0 endif else true endif"/>
+    </eAnnotations>
+    <eOperations name="getArgumentType" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+        <details key="body" value="&#xA;&#x9;&#x9;&#x9;&#x9;(if elem.oclIsTypeOf(Text) then&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;'Text'&#xA;&#x9;&#x9;&#x9;&#x9;else &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;if elem.oclIsTypeOf(Image) then&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;'Image'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;'Video'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;endif&#xA;&#x9;&#x9;&#x9;&#x9;endif)"/>
+      </eAnnotations>
+      <eParameters name="elem" lowerBound="1" eType="#//Simple"/>
+    </eOperations>
+    <eOperations name="getArguments" unique="false" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+        <details key="body" value="object.usetemplate.arguments->iterate(elem : Argument; ctype:Sequence(String) =Sequence{} |&#xA;&#x9;&#x9;&#x9;&#x9;if elem.oclIsKindOf(Simple) then&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;ctype->including(getArgumentType(elem.oclAsType(Simple)))&#xA;&#x9;&#x9;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;elem.oclAsType(Widget).widgetarguments->iterate(e : Argument; ctype:Sequence(String) = ctype |&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;if e.oclIsKindOf(Simple) then&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;ctype->including(getArgumentType(e.oclAsType(Simple)))&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;ctype->including('Variable')&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;endif&#x9;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;)&#xA;&#x9;&#x9;&#x9;&#x9;endif&#xA;&#x9;&#x9;&#x9;)"/>
+      </eAnnotations>
+      <eParameters name="object" lowerBound="1" eType="#//Row"/>
+    </eOperations>
+    <eOperations name="getParameterType" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+        <details key="body" value="&#xA;&#x9;&#x9;&#x9;&#x9;(if e =TypeSimpleElement::Text then&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;'Text'&#xA;&#x9;&#x9;&#x9;&#x9;else &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;if e =TypeSimpleElement::Image then&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;'Image'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;'Video'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;endif&#xA;&#x9;&#x9;&#x9;&#x9;endif)"/>
+      </eAnnotations>
+      <eParameters name="e" lowerBound="1" eType="#//TypeSimpleElement"/>
+    </eOperations>
+    <eOperations name="getParameters" unique="false" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+        <details key="body" value="object.usetemplate.typetemplate.rows.columns.elements->iterate (elem: ColumnElement; ctype:Sequence(String) =Sequence{} |&#xA;&#x9;&#x9;&#x9;&#x9;if (elem.oclIsTypeOf(Fixed)) then&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;ctype->including(getParameterType(elem.oclAsType(Fixed).type))&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;&#x9;else if (elem.oclIsTypeOf(WidgetType)) then&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;elem.oclAsType(WidgetType).widgettype.parameters->iterate(e : Parameter; ctype:Sequence(String) = ctype |&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;if (e.oclIsTypeOf(Fixed)) then&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;ctype->including(getParameterType(e.oclAsType(Fixed).type))&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;ctype->including('Variable')&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;endif&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;ctype&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;endif&#xA;&#x9;&#x9;&#x9;&#x9;endif&#x9;&#xA;&#x9;&#x9;&#x9;)"/>
+      </eAnnotations>
+      <eParameters name="object" lowerBound="1" eType="#//Row"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="columns" upperBound="-1"
+        eType="#//Column" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="usetemplate" eType="#//UseTemplate"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Unit" eSuperTypes="#//NameElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sections" lowerBound="1"
+        upperBound="-1" eType="#//Section" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="author" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Section" eSuperTypes="#//NameElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rows" upperBound="-1" eType="#//Row"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="image" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Import">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="importedNamespace" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Paragraph">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TypeSimpleElement">
+    <eLiterals name="Text" value="1"/>
+    <eLiterals name="Image" value="2"/>
+    <eLiterals name="Video" value="3"/>
+    <eLiterals name="Undefined" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Argument"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Tab" eSuperTypes="#//CompositeArgument"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Animation" eSuperTypes="#//CompositeArgument">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="checkTypeImage"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="checkTypeImage" value="self.arguments->forAll( e | e.oclIsKindOf(Image)=true)"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="image" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DragAndDrop" eSuperTypes="#//CompositeArgument">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="checkTypeImage"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="checkTypeImage" value="self.arguments->forAll( e | e.oclIsKindOf(Image)=true)"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UseTemplate">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="typetemplate" eType="#//TemplateDef"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="arguments" upperBound="-1"
+        eType="#//Argument" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Type" eSuperTypes="#//NameElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SimpleType" eSuperTypes="#//Type">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//TypeSimpleElement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AggregatedType" eSuperTypes="#//Type">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" upperBound="-1" eType="#//SimpleType"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CompositeArgument" eSuperTypes="#//Argument">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="arguments" upperBound="-1"
+        eType="#//Simple" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Fixed" eSuperTypes="#//Parameter"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Variable" eSuperTypes="#//Parameter"/>
+  <eClassifiers xsi:type="ecore:EClass" name="WidgetType" eSuperTypes="#//Type">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="widgettype" eType="#//WidgetDef"/>
+  </eClassifiers>
+</ecore:EPackage>

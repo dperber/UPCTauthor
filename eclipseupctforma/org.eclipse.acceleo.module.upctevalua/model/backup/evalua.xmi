@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ASCII"?>
+<upctformaevalua:Evaluation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:upctformaevalua="http://cpcd.upct.es/upctformaevalua" name="Evalua1">
+  <units xsi:type="upctformaevalua:Final" name="FinalUnit1" numberquestions="10">
+    <questions xsi:type="upctformaevalua:UniqueAnswer" correctfeedback="Correct" incorrectfeedback="Incorrect" correctanswer="1">
+      <statements text="An enterprise is:"/>
+      <answers text="An economic unit of production."/>
+      <answers text="A department of a company."/>
+      <answers text="A stakeholder."/>
+      <answers text="The external functions develop by a company."/>
+    </questions>
+    <questions xsi:type="upctformaevalua:UniqueAnswer" correctfeedback="Correct" incorrectfeedback="Incorrect" correctanswer="3">
+      <statements text="Enterprises:"/>
+      <answers text="Are outside the economy."/>
+      <answers text="Reduce the generation of wealth in an area."/>
+      <answers text="Improve job creation."/>
+      <answers text="Decrease the economic development."/>
+    </questions>
+    <questions xsi:type="upctformaevalua:UniqueAnswer" correctfeedback="Correct" incorrectfeedback="Incorrect" correctanswer="3">
+      <statements text="Enterprises:"/>
+      <answers text="Are outside the economy."/>
+      <answers text="Increase the generation of wealth in an area."/>
+      <answers text="Decrease job creation."/>
+      <answers text="Reduce the economic development."/>
+    </questions>
+    <questions xsi:type="upctformaevalua:UniqueAnswer" correctfeedback="Correct" incorrectfeedback="Incorrect" correctanswer="3">
+      <statements text="A company is an open system because:"/>
+      <answers text="It receives outputs from the environment which transform into inputs."/>
+      <answers text="It has internal interrelated subsystems."/>
+      <answers text="It receives inputs from the environment which transform into outputs."/>
+      <answers text="It is an independent agent of the economy."/>
+    </questions>
+    <questions xsi:type="upctformaevalua:UniqueAnswer" correctfeedback="Correct" incorrectfeedback="Incorrect" correctanswer="1">
+      <statements text="A management subsystem includes the functions of:"/>
+      <answers text="Planning, organizing, leading and controlling."/>
+      <answers text="Planning, commanding, investing and controlling."/>
+      <answers text="Planning, organizing, marketing and controlling."/>
+      <answers text="Planning, commanding, staff, and guiding."/>
+    </questions>
+    <questions xsi:type="upctformaevalua:UniqueAnswer" correctfeedback="Correct" incorrectfeedback="Incorrect" correctanswer="1">
+      <statements text="The attempt to provide and allocate resources wisely to achieve the desired goals and assess the management environment to set future objectives, mapping out the necessary activities to accomplish those objectives, is the management function of:"/>
+      <answers text="Planning."/>
+      <answers text="Organizing."/>
+      <answers text="Leading."/>
+      <answers text="Controlling."/>
+    </questions>
+    <questions xsi:type="upctformaevalua:UniqueAnswer" correctfeedback="Correct" incorrectfeedback="Incorrect" correctanswer="2">
+      <statements text="The management function that manages material resources, coordinates human groups and establishes a network of relationships to achieve the desired goals is:"/>
+      <answers text="Planning."/>
+      <answers text="Organizing."/>
+      <answers text="Leading."/>
+      <answers text="Controlling."/>
+    </questions>
+    <questions xsi:type="upctformaevalua:UniqueAnswer" correctfeedback="Correct" incorrectfeedback="Incorrect" correctanswer="3">
+      <statements text="The process of influencing and energizing people to make them give their best in the performance of their tasks, both individually and in cooperation with other people, is the management function of:"/>
+      <answers text="Planning."/>
+      <answers text="Organizing."/>
+      <answers text="Leading."/>
+      <answers text="Controlling."/>
+    </questions>
+    <questions xsi:type="upctformaevalua:UniqueAnswer" correctfeedback="Correct" incorrectfeedback="Incorrect" correctanswer="4">
+      <statements text="The management function that measures performance, compares it to objectives, implements necessary changes and monitors progress to ensure that the results are within the pre-set limits is:"/>
+      <answers text="Planning."/>
+      <answers text="Organizing."/>
+      <answers text="Leading."/>
+      <answers text="Controlling."/>
+    </questions>
+    <questions xsi:type="upctformaevalua:UniqueAnswer" correctfeedback="Correct" incorrectfeedback="Incorrect" correctanswer="1">
+      <statements text="The management function of planning establishes:"/>
+      <answers text="Goals, objectives, means, period of time and standards."/>
+      <answers text="Goals, objectives, meanings, period of time and leading."/>
+      <answers text="Goals, results, means and standards."/>
+      <answers text="Grants, objectives, meaning, time and monitoring."/>
+    </questions>
+  </units>
+</upctformaevalua:Evaluation>

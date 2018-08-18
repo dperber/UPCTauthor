@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
+  <mtl:Module name="video" nsURI="org::eclipse::acceleo::module::upctforma::common::video" startHeaderPosition="29" endHeaderPosition="361">
+    <input>
+      <takesTypesFrom href="http://cpcd.upct.es/upctforma#/"/>
+    </input>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateVideo" visibility="Public">
+      <body xsi:type="mtl:FileBlock">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&#x9;&lt;div class=&quot;row&quot;>&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;div class=&quot;col-md-12&quot;>&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;i id=&quot;objetivo"/>
+        <body xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="idgen" eType="/3/Sequence(String)" referredVariable="/0/generateVideo/idgen"/>
+            <argument xsi:type="ocl.ecore:IntegerLiteralExp" integerSymbol="1">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)_Class/at"/>
+          </source>
+          <argument xsi:type="ocl.ecore:TypeExp" eType="/9/String">
+            <referredType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </argument>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/oclAsType"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot; class=&quot;fa fa-check-square-o fa-2x&quot; aria-hidden=&quot;true&quot;>&lt;/i>&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/div>&#xA;&#x9;&#x9;&#x9;&#x9;&lt;/div>&#xA;&#x9;&#x9;&#x9;&#x9;"/>
+        <body xsi:type="mtl:TemplateInvocation" definition="/0/nombreObjetivos">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <argument xsi:type="ocl.ecore:VariableExp" name="anElement" referredVariable="/0/generateVideo/anElement">
+            <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+          </argument>
+          <argument xsi:type="ocl.ecore:VariableExp" name="idgen" eType="/3/Sequence(String)" referredVariable="/0/generateVideo/idgen"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#x9;&#x9;&#x9;&#x9;&lt;div>&#xA;&#x9;&#x9;          &lt;?php &#x9;require_once('./php/funcionesgenerales.php'); echo getVideo(&quot;"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Video"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="anElement" referredVariable="/0/generateVideo/anElement">
+              <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+            </source>
+            <argument xsi:type="ocl.ecore:TypeExp" eType="/9/Video">
+              <referredType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Video"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclAsType"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://cpcd.upct.es/upctforma#//Video/url"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;, &quot;"/>
+        <body xsi:type="ocl.ecore:VariableExp" name="idgen" eType="/3/Sequence(String)" referredVariable="/0/generateVideo/idgen"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;); ?>&#xA;&#x9;&#x9;        &lt;/div>&#xA;&#xA;"/>
+        <fileUrl xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="index.php">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </fileUrl>
+        <charset xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="UTF-8">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </charset>
+      </body>
+      <parameter name="anElement">
+        <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+      </parameter>
+      <parameter name="carg" eType="/3/Sequence(Argument)"/>
+      <parameter name="cparam" eType="/3/Sequence(ContentElement)"/>
+      <parameter name="idgen" eType="/3/Sequence(String)"/>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="nombreObjetivos" visibility="Public">
+      <body xsi:type="mtl:FileBlock">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;,&quot;objetivo"/>
+        <body xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="idgen" eType="/3/Sequence(String)" referredVariable="/0/nombreObjetivos/idgen"/>
+            <argument xsi:type="ocl.ecore:IntegerLiteralExp" integerSymbol="1">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)_Class/at"/>
+          </source>
+          <argument xsi:type="ocl.ecore:TypeExp" eType="/9/String">
+            <referredType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </argument>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/oclAsType"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;&#xA;&#xA;"/>
+        <fileUrl xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="progreso_obj.js">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </fileUrl>
+        <charset xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="UTF-8">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </charset>
+      </body>
+      <parameter name="anElement">
+        <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+      </parameter>
+      <parameter name="idgen" eType="/3/Sequence(String)"/>
+    </ownedModuleElement>
+  </mtl:Module>
+  <ecore:EPackage name="additions">
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_String_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Integer_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Real_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ecore_EObject_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eAnnotations>
+      <eOperations name="generateVideo">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generateVideo"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="anElement">
+          <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+        </eParameters>
+        <eParameters name="carg" eType="/3/Sequence(Argument)"/>
+        <eParameters name="cparam" eType="/3/Sequence(ContentElement)"/>
+        <eParameters name="idgen" eType="/3/Sequence(String)"/>
+      </eOperations>
+      <eOperations name="nombreObjetivos">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/nombreObjetivos"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="anElement">
+          <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+        </eParameters>
+        <eParameters name="idgen" eType="/3/Sequence(String)"/>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OclAny_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Collection(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Sequence(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OrderedSet(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="upctforma_ContentElement_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+      </eAnnotations>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="collections">
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(Argument)" instanceClassName="java.util.List">
+      <elementType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Argument"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(ContentElement)" instanceClassName="java.util.List">
+      <elementType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(String)" instanceClassName="java.util.List">
+      <elementType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="types">
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="String">
+      <referredType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="Video">
+      <referredType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Video"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EAnnotation source="positions">
+    <eAnnotations source="positions.0" references="/0/generateVideo">
+      <details key="start" value="78"/>
+      <details key="end" value="669"/>
+      <details key="line" value="4"/>
+    </eAnnotations>
+    <eAnnotations source="positions.1" references="/0/generateVideo/%">
+      <details key="start" value="223"/>
+      <details key="end" value="657"/>
+      <details key="line" value="5"/>
+    </eAnnotations>
+    <eAnnotations source="positions.2" references="/0/generateVideo/%/%">
+      <details key="start" value="258"/>
+      <details key="end" value="330"/>
+      <details key="line" value="6"/>
+    </eAnnotations>
+    <eAnnotations source="positions.3" references="/0/generateVideo/%/%.1">
+      <details key="start" value="331"/>
+      <details key="end" value="361"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.4" references="/0/generateVideo/%/%.1/%">
+      <details key="start" value="331"/>
+      <details key="end" value="343"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.5" references="/0/generateVideo/%/%.1/%/idgen">
+      <details key="start" value="331"/>
+      <details key="end" value="336"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.6" references="/0/generateVideo/%/%.1/%/%">
+      <details key="start" value="341"/>
+      <details key="end" value="342"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.7" references="/0/generateVideo/%/%.1/%.1">
+      <details key="start" value="354"/>
+      <details key="end" value="360"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.8" references="/0/generateVideo/%/%.2">
+      <details key="start" value="363"/>
+      <details key="end" value="451"/>
+      <details key="line" value="8"/>
+    </eAnnotations>
+    <eAnnotations source="positions.9" references="/0/generateVideo/%/%.3">
+      <details key="start" value="452"/>
+      <details key="end" value="484"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.10" references="/0/generateVideo/%/%.3/anElement">
+      <details key="start" value="452"/>
+      <details key="end" value="461"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.11" references="/0/generateVideo/%/%.3/idgen">
+      <details key="start" value="478"/>
+      <details key="end" value="483"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.12" references="/0/generateVideo/%/%.4">
+      <details key="start" value="486"/>
+      <details key="end" value="577"/>
+      <details key="line" value="12"/>
+    </eAnnotations>
+    <eAnnotations source="positions.13" references="/0/generateVideo/%/%.5">
+      <details key="start" value="578"/>
+      <details key="end" value="610"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.14" references="/0/generateVideo/%/%.5/%">
+      <details key="start" value="578"/>
+      <details key="end" value="606"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/generateVideo/%/%.5/%/anElement">
+      <details key="start" value="579"/>
+      <details key="end" value="588"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.16" references="/0/generateVideo/%/%.5/%/%">
+      <details key="start" value="599"/>
+      <details key="end" value="604"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.17" references="/0/generateVideo/%/%.6">
+      <details key="start" value="613"/>
+      <details key="end" value="617"/>
+      <details key="line" value="13"/>
+    </eAnnotations>
+    <eAnnotations source="positions.18" references="/0/generateVideo/%/idgen">
+      <details key="start" value="618"/>
+      <details key="end" value="623"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.19" references="/0/generateVideo/%/%.7">
+      <details key="start" value="625"/>
+      <details key="end" value="650"/>
+      <details key="line" value="13"/>
+    </eAnnotations>
+    <eAnnotations source="positions.20" references="/0/generateVideo/%/%.8">
+      <details key="start" value="229"/>
+      <details key="end" value="240"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.21" references="/0/generateVideo/%/%.9">
+      <details key="start" value="248"/>
+      <details key="end" value="255"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.22" references="/0/generateVideo/anElement">
+      <details key="start" value="109"/>
+      <details key="end" value="135"/>
+      <details key="line" value="4"/>
+    </eAnnotations>
+    <eAnnotations source="positions.23" references="/0/generateVideo/carg">
+      <details key="start" value="137"/>
+      <details key="end" value="161"/>
+      <details key="line" value="4"/>
+    </eAnnotations>
+    <eAnnotations source="positions.24" references="/0/generateVideo/cparam">
+      <details key="start" value="163"/>
+      <details key="end" value="195"/>
+      <details key="line" value="4"/>
+    </eAnnotations>
+    <eAnnotations source="positions.25" references="/0/generateVideo/idgen">
+      <details key="start" value="197"/>
+      <details key="end" value="220"/>
+      <details key="line" value="4"/>
+    </eAnnotations>
+    <eAnnotations source="positions.26" references="/0/nombreObjetivos">
+      <details key="start" value="671"/>
+      <details key="end" value="865"/>
+      <details key="line" value="19"/>
+    </eAnnotations>
+    <eAnnotations source="positions.27" references="/0/nombreObjetivos/%">
+      <details key="start" value="758"/>
+      <details key="end" value="853"/>
+      <details key="line" value="20"/>
+    </eAnnotations>
+    <eAnnotations source="positions.28" references="/0/nombreObjetivos/%/%">
+      <details key="start" value="799"/>
+      <details key="end" value="810"/>
+      <details key="line" value="21"/>
+    </eAnnotations>
+    <eAnnotations source="positions.29" references="/0/nombreObjetivos/%/%.1">
+      <details key="start" value="811"/>
+      <details key="end" value="841"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.30" references="/0/nombreObjetivos/%/%.1/%">
+      <details key="start" value="811"/>
+      <details key="end" value="823"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.31" references="/0/nombreObjetivos/%/%.1/%/idgen">
+      <details key="start" value="811"/>
+      <details key="end" value="816"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.32" references="/0/nombreObjetivos/%/%.1/%/%">
+      <details key="start" value="821"/>
+      <details key="end" value="822"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.33" references="/0/nombreObjetivos/%/%.1/%.1">
+      <details key="start" value="834"/>
+      <details key="end" value="840"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.34" references="/0/nombreObjetivos/%/%.2">
+      <details key="start" value="843"/>
+      <details key="end" value="846"/>
+      <details key="line" value="21"/>
+    </eAnnotations>
+    <eAnnotations source="positions.35" references="/0/nombreObjetivos/%/%.3">
+      <details key="start" value="764"/>
+      <details key="end" value="781"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.36" references="/0/nombreObjetivos/%/%.4">
+      <details key="start" value="789"/>
+      <details key="end" value="796"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.37" references="/0/nombreObjetivos/anElement">
+      <details key="start" value="704"/>
+      <details key="end" value="730"/>
+      <details key="line" value="19"/>
+    </eAnnotations>
+    <eAnnotations source="positions.38" references="/0/nombreObjetivos/idgen">
+      <details key="start" value="732"/>
+      <details key="end" value="755"/>
+      <details key="line" value="19"/>
+    </eAnnotations>
+  </ecore:EAnnotation>
+</xmi:XMI>

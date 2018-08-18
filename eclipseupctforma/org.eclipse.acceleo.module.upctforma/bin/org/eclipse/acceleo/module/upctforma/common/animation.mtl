@@ -1,0 +1,354 @@
+[comment encoding = UTF-8 /]
+[module animation('http://cpcd.upct.es/upctforma')]
+
+[template public generateAnimation(anElement : ContentElement, carg: Sequence(Argument), cparam: Sequence(ContentElement), idgen: Sequence(String))]
+	[file('index.php', true, 'UTF-8')]
+		<div class="row">
+			<div class="col-md-12">
+				<i id="objetivo[idgen->at(1).oclAsType(String)/]" class="fa fa-check-square-o fa-2x" aria-hidden="true"></i>
+			</div>
+		</div>
+		[anElement.nombreObjetivos(idgen)/]
+		<div class="col-md-12" id="[idgen->at(1).oclAsType(String)/]"></div>
+		[anElement.generateAnimation0(carg, cparam,idgen)/]
+		[anElement.generateAnimation1(carg, cparam,idgen)/]
+		[anElement.generateAnimation2(carg, cparam,idgen)/]
+		[anElement.generateAnimation3(carg, cparam,idgen)/]
+		[anElement.generateAnimation4(carg, cparam,idgen)/]
+		[anElement.generateAnimation5(carg, cparam, idgen)/]
+		[anElement.animationLatexFile(anElement,carg, cparam)/]
+	[/file]
+[/template]
+
+[template public nombreObjetivos(anElement : ContentElement, idgen: Sequence(String))]
+[file('progreso_obj.js', true, 'UTF-8')]
+	,"objetivo[idgen->at(1).oclAsType(String)/]"
+
+[/file]
+[/template]
+
+[template public generateAnimation1(anElement : ContentElement, carg: Sequence(Argument), cparam: Sequence(ContentElement), idgen: Sequence(String))]
+[file('animation.js', true, 'UTF-8')]
+var canvasapp[idgen->at(1).oclAsType(String)/];
+var stageapp[idgen->at(1).oclAsType(String)/];
+var cargadorapp[idgen->at(1).oclAsType(String)/];
+var contenedorImagenesapp[idgen->at(1).oclAsType(String)/];
+var fondoapp[idgen->at(1).oclAsType(String)/];
+var imagenrcapp[idgen->at(1).oclAsType(String)/];
+var imagenrcgapp[idgen->at(1).oclAsType(String)/];
+var rutaPieza[idgen->at(1).oclAsType(String)/];
+var textoPiezasapp[idgen->at(1).oclAsType(String)/];
+var enablePiezasapp[idgen->at(1).oclAsType(String)/];
+var cambiadoapp[idgen->at(1).oclAsType(String)/];
+var moverPiezasapp[idgen->at(1).oclAsType(String)/];
+var piezasapp[idgen->at(1).oclAsType(String)/];
+
+function initializeapp[idgen->at(1).oclAsType(String)/]() {
+	this.rutaPieza[idgen->at(1).oclAsType(String)/] =  ['['/] 
+		[for (aSimple : SimpleElement | carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(1).oclAsType(Animation).arguments)]
+			"img/[(aSimple.oclAsType(Image)).url /]"
+			[if (i <> carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(1).oclAsType(Animation).arguments->size())],
+			[else] [']'/];
+			[/if]					
+		[/for]
+
+
+	this.enablePiezasapp[idgen->at(1).oclAsType(String)/] = ['['/]
+	[for (aSimple : SimpleElement | carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(1).oclAsType(Animation).arguments)]
+			[if (i < ((carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(1).oclAsType(Animation).arguments->size()-1)/2))]
+				0,
+			[else]
+				[if (i = ((carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(1).oclAsType(Animation).arguments->size()-1)/2))]
+					0
+				[/if]
+			[/if]					
+	[/for]
+	[']'/];
+	
+	this.moverPiezasapp[idgen->at(1).oclAsType(String)/] = ['['/]1, 0, 0, 0, 0[']'/];
+	this.piezasapp[idgen->at(1).oclAsType(String)/] = ['['/]null, null, null, null, null[']'/];
+	var self = this;
+	this.canvasapp[idgen->at(1).oclAsType(String)/] = document.createElement("canvas");
+	this.canvasapp[idgen->at(1).oclAsType(String)/].width = 800;
+	this.canvasapp[idgen->at(1).oclAsType(String)/].height = 533;
+	var contenedorapp[idgen->at(1).oclAsType(String)/] = document.getElementById("[idgen->at(1).oclAsType(String)/]");
+	contenedorapp[idgen->at(1).oclAsType(String)/].appendChild(this.canvasapp[idgen->at(1).oclAsType(String)/]);
+
+	this.stageapp[idgen->at(1).oclAsType(String)/] = new createjs.Stage(this.canvasapp[idgen->at(1).oclAsType(String)/]); //Base de Aplicación
+	this.stageapp[idgen->at(1).oclAsType(String)/].enableMouseOver(20);
+	this.cargadorapp[idgen->at(1).oclAsType(String)/] = new Cargador[idgen->at(1).oclAsType(String)/]();
+
+	this.cargadorapp[idgen->at(1).oclAsType(String)/].onComplete = function() {
+
+		self.assetsCargadosapp[idgen->at(1).oclAsType(String)/]();
+	}
+	this.cargadorapp[idgen->at(1).oclAsType(String)/].loadImagenes(['['/]
+	[for (aSimple : SimpleElement | carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(1).oclAsType(Animation).arguments)]
+		this.rutaPieza[idgen->at(1).oclAsType(String)/]['['/][i-1/][']'/]
+		[if i <> carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(1).oclAsType(Animation).arguments->size()],[else][']'/]);[/if]
+	[/for]
+
+};
+
+function assetsCargadosapp[idgen->at(1).oclAsType(String)/]() {
+	this.ejecutaAppapp[idgen->at(1).oclAsType(String)/]();
+}
+
+function ejecutaAppapp[idgen->at(1).oclAsType(String)/]() {
+
+	var contenedorapp[idgen->at(1).oclAsType(String)/] = new ContenedorImagenes[idgen->at(1).oclAsType(String)/]();
+	this.stageapp[idgen->at(1).oclAsType(String)/].addChild(contenedorapp[idgen->at(1).oclAsType(String)/]);
+	contenedorImagenesapp[idgen->at(1).oclAsType(String)/] = contenedorapp[idgen->at(1).oclAsType(String)/];
+	contenedorImagenesapp[idgen->at(1).oclAsType(String)/].x = 0;
+	contenedorImagenesapp[idgen->at(1).oclAsType(String)/].y = 0;
+
+	var self = this;
+	this.tickapp[idgen->at(1).oclAsType(String)/]();
+};
+
+function tickapp[idgen->at(1).oclAsType(String)/](e) {
+	this.stageapp[idgen->at(1).oclAsType(String)/].update();
+};
+
+var completo = ['['/][']'/];
+function Recargarapp[idgen->at(1).oclAsType(String)/](vid) {	
+	this.enablePiezasapp[idgen->at(1).oclAsType(String)/]['['/]0[']'/] = vid + 1;
+	if (vid == [((carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(1).oclAsType(Animation).arguments->size()-1)/2)/]){
+		setObjetivoCompleto("objetivo[idgen->at(1).oclAsType(String)/]","[carg->at(cparam->indexOf(anElement)).oclAsType(Widget).name/]", "AnimationInOut");
+	}
+	this.rutaPieza[idgen->at(1).oclAsType(String)/]['['/]vid[']'/] = this.rutaPieza[idgen->at(1).oclAsType(String)/]['['/]vid+[(((carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(1).oclAsType(Animation).arguments->size()-1)/2).round())/][']'/];
+	
+	contenedorImagenesapp[idgen->at(1).oclAsType(String)/].deleteImagenCargar();
+};
+[/file]
+[/template]
+
+[template public generateAnimation2(anElement : ContentElement, carg: Sequence(Argument), cparam: Sequence(ContentElement), idgen: Sequence(String))]
+[file('animation.js', true, 'UTF-8')]
+
+(function(scope){
+	function Cargador[idgen->at(1).oclAsType(String)/](){
+		this.initialize();
+	}
+	
+	//var variable = Cargador[idgen->at(1).oclAsType(String)/].prototype;
+	var cargadas  = Cargador[idgen->at(1).oclAsType(String)/].prototype;
+	var totales = Cargador[idgen->at(1).oclAsType(String)/].prototype;
+	var onComplete  = Cargador[idgen->at(1).oclAsType(String)/].prototype;
+
+	Cargador[idgen->at(1).oclAsType(String)/].prototype.initialize = function(){
+		//console.log("cargador generado");	
+	};
+
+	Cargador[idgen->at(1).oclAsType(String)/].prototype.loadImagenes = function(lista){
+		
+		this.cargadas = 0;
+		this.totales = lista.length;
+		for (i=0;i<this.totales;i++){
+			this.cargaImagen(lista['['/]i[']'/]);
+		}
+	}
+
+	Cargador[idgen->at(1).oclAsType(String)/].prototype.cargaImagen = function(ruta){
+		var self = this;
+		var image = new Image();
+		this['['/]ruta[']'/] = image;
+		
+		image.onload = function(e){
+			self.imagenCargada();
+		}
+		image.src = image.url = ruta;
+
+	}
+
+	Cargador[idgen->at(1).oclAsType(String)/].prototype.imagenCargada = function(){
+		this.cargadas ++;
+		if (this.cargadas == this.totales){
+			if (this.onComplete){
+				this.onComplete();
+			}else{
+				//console.log("onComplete no definida");
+			}
+
+		}
+
+	}
+	scope.Cargador[idgen->at(1).oclAsType(String)/] = Cargador[idgen->at(1).oclAsType(String)/];
+}(window));
+
+[/file]
+[/template]
+
+[template public generateAnimation3(anElement : ContentElement, carg: Sequence(Argument), cparam: Sequence(ContentElement), idgen: Sequence(String))]
+[file('animation.js', true, 'UTF-8')]
+(function(scope) {
+	//constructor de la clase
+	function ContenedorImagenes[idgen->at(1).oclAsType(String)/]() {
+		this.initialize();
+	}
+
+	//si no se pone prototype en los métodos, se convierten en estáticos
+	ContenedorImagenes[idgen->at(1).oclAsType(String)/].prototype = new createjs.Container()
+	ContenedorImagenes[idgen->at(1).oclAsType(String)/].prototype.Container_init = ContenedorImagenes[idgen->at(1).oclAsType(String)/].prototype.initialize;
+
+	var filas = ContenedorImagenes[idgen->at(1).oclAsType(String)/].prototype;
+	var pasos = ContenedorImagenes[idgen->at(1).oclAsType(String)/].prototype;
+	var initY = ContenedorImagenes[idgen->at(1).oclAsType(String)/].prototype;
+	var cargado = ContenedorImagenes[idgen->at(1).oclAsType(String)/].prototype;
+
+	var vX = ContenedorImagenes[idgen->at(1).oclAsType(String)/].prototype;
+	var vY = ContenedorImagenes[idgen->at(1).oclAsType(String)/].prototype;
+
+	//implemento la nueva inicialización del objeto
+	ContenedorImagenes[idgen->at(1).oclAsType(String)/].prototype.initialize = function() {
+		this.Container_init();
+
+		this.vX = 6;
+		this.vY = 70;
+		this.velocity = {
+			x: 0,
+			y: 0
+		};
+		this.init();
+	}
+
+	ContenedorImagenes[idgen->at(1).oclAsType(String)/].prototype.init = function() {
+		var self = this;
+		this.cargado = false;
+
+		//console.log("Inicializando Contenedor Imagenes");
+
+		this.x = 0;
+		this.y = 0;
+		this.initY = 60;
+
+		this.snapToPixel = true;
+
+		this.cargarPiezas();
+	}
+
+	ContenedorImagenes[idgen->at(1).oclAsType(String)/].prototype.cargarPiezas = function(e) {		
+		[for (aSimple : SimpleElement | carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(1).oclAsType(Animation).arguments)]
+			[if (i <= (((carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(1).oclAsType(Animation).arguments->size()-1)/2)+1))]	
+				var bmp[i/] = new MostrarImagen[idgen->at(1).oclAsType(String)/]([i-1/], cargadorapp[idgen->at(1).oclAsType(String)/]['['/]rutaPieza[idgen->at(1).oclAsType(String)/]['['/][i-1/][']'/][']'/], 0, 0);
+				this.addChild(bmp[i/]);
+			[/if]
+		[/for]
+	};
+
+	//este onTick lo llevan se llama para todos los objetos añadidos al stage
+	ContenedorImagenes[idgen->at(1).oclAsType(String)/].prototype.onTick = function() {}
+
+	ContenedorImagenes[idgen->at(1).oclAsType(String)/].prototype.deleteImagenCargar = function() {
+		this.removeAllChildren();
+		this.cargarPiezas();
+	}
+
+	//esto para poder acceder desde fuera del namespace
+	scope.ContenedorImagenes[idgen->at(1).oclAsType(String)/] = ContenedorImagenes[idgen->at(1).oclAsType(String)/];
+
+	//se asocia al namespace window que es tanto como usar _global
+}(window));
+[/file]
+[/template]
+
+[template public generateAnimation4(anElement : ContentElement, carg: Sequence(Argument), cparam: Sequence(ContentElement), idgen: Sequence(String))]
+[file('animation.js', true, 'UTF-8')]
+(function(scope){
+	//constructor de la clase
+	function MostrarImagen[idgen->at(1).oclAsType(String)/](id,image, posX, posY){
+		this.initialize(id,image, posX, posY);
+	}
+
+	MostrarImagen[idgen->at(1).oclAsType(String)/].prototype = new createjs.Bitmap()
+	MostrarImagen[idgen->at(1).oclAsType(String)/].prototype.Bitmap_init = MostrarImagen[idgen->at(1).oclAsType(String)/].prototype.initialize;
+
+	var ancho = MostrarImagen[idgen->at(1).oclAsType(String)/].prototype;
+	var id = MostrarImagen[idgen->at(1).oclAsType(String)/].prototype;
+	var _evento = MostrarImagen[idgen->at(1).oclAsType(String)/].prototype;
+
+	MostrarImagen[idgen->at(1).oclAsType(String)/].prototype.initialize = function (id,image, posX, posY){
+		this.ancho = 6;
+		var self = this;
+		this.Bitmap_init(image);
+		this.x = posX;
+		this.y = posY;
+		this.id = id;
+		stageapp[idgen->at(1).oclAsType(String)/].addChild(this);
+
+		//ejecuto el resto de valores
+		this.snapToPixel = true;
+		this.velocity = {x:0,y:-15};
+		this.addEventListener("mousedown", function(e){self.handleMouseDown(e);});
+
+		this.addEventListener("mouseover", function(e){self.handleMouseOver(e);});
+		this.addEventListener("mouseout", function(e){self.handleMouseOut(e);});
+
+		tickapp[idgen->at(1).oclAsType(String)/]();
+	}
+
+	MostrarImagen[idgen->at(1).oclAsType(String)/].prototype.handleMouseDown = function (e){
+		if (
+		[for (aSimple : SimpleElement | carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(1).oclAsType(Animation).arguments)]
+			[if (i <= ((carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(1).oclAsType(Animation).arguments->size()-1)/2))]
+				(this.id == [i/])[if (i < ((carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(1).oclAsType(Animation).arguments->size()-1)/2))]||[/if]
+			[else]
+				[if i = carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(1).oclAsType(Animation).arguments->size()]
+					){
+				[/if]
+			[/if]
+		[/for]
+			Recargarapp[idgen->at(1).oclAsType(String)/](this.id);
+		}
+	}
+
+	MostrarImagen[idgen->at(1).oclAsType(String)/].prototype.handleMouseOver = function (e){
+		if (
+		[for (aSimple : SimpleElement | carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(1).oclAsType(Animation).arguments)]
+			[if (i <= ((carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(1).oclAsType(Animation).arguments->size()-1)/2))]
+				(this.id == [i/])[if (i < ((carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(1).oclAsType(Animation).arguments->size()-1)/2))]||[/if]
+			[else]
+				[if i = carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(1).oclAsType(Animation).arguments->size()]
+					){
+				[/if]
+			[/if]
+		[/for]
+			$("#[idgen->at(1).oclAsType(String)/]").addClass('mano');
+		}
+	}
+	MostrarImagen[idgen->at(1).oclAsType(String)/].prototype.handleMouseOut = function (e){
+		$("#[idgen->at(1).oclAsType(String)/]").removeClass('mano');
+	}
+
+	//esto para poder acceder desde fuera del namespace
+	scope.MostrarImagen[idgen->at(1).oclAsType(String)/] = MostrarImagen[idgen->at(1).oclAsType(String)/];
+
+	//se asocia al namespace window que es tanto como usar _global
+
+}(window));
+[/file]
+[/template]
+
+
+[template public generateAnimation0(anElement : ContentElement, carg: Sequence(Argument), cparam: Sequence(ContentElement), idgen: Sequence(String))]
+[file('animation.js', false, 'UTF-8')]
+	$(document).ready(function() {
+			initializeapp[idgen->at(1).oclAsType(String)/]();	
+	});
+[/file]
+[/template]
+
+[template public generateAnimation5(anElement : ContentElement, carg: Sequence(Argument), cparam: Sequence(ContentElement), idgen: Sequence(String))]
+[file('animation.css', true, 'UTF-8')]
+#[idgen->at(1).oclAsType(String)/] canvas{
+	max-width: [carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(1).oclAsType(Animation).width/]
+}
+[/file]
+[/template]
+
+[template public animationLatexFile(anElement : ContentElement, carg: Sequence(Argument), cparam: Sequence(ContentElement))]
+[file('contentpdf.tex', true, 'UTF-8')]
+\includegraphics['['/]width=0.9\columnwidth[']'/]{[carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(1).oclAsType(Animation).image/]}
+[/file]
+[/template]
+

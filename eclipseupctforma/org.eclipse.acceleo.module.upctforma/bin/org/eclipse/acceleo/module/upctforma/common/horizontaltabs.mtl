@@ -1,0 +1,98 @@
+[comment encoding = UTF-8 /]
+[module horizontaltabs('http://cpcd.upct.es/upctforma')]
+
+
+[template public generateHorizontalTabs(anElement : ContentElement, carg: Sequence(Argument), cparam: Sequence(ContentElement), idgen: Sequence(String), nameSection: String)]
+[file('index.php', true, 'UTF-8')]
+<div class="row">
+	<div class="col-md-12">
+[for (aSimple : SimpleElement | carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(1).oclAsType(Tab).arguments)]
+	[if i.mod(2) <> 0 and i <> 1]
+		<i id="objetivo[idgen->at(1).oclAsType(String)/][i/]" class="fa fa-check-square-o fa-2x" aria-hidden="true"></i>
+		[anElement.nombreObjetivos(idgen,i)/]
+	[/if]
+[/for]
+	</div>
+</div>
+
+ <div role="tabpanel"> 
+	            <ul class="nav nav-tabs" role="tablist">
+					[for (aSimple : SimpleElement | carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(1).oclAsType(Tab).arguments)]
+						[if i.mod(2) <> 0]
+	                		<li role="presentation" id="[idgen->at(1).oclAsType(String)/][i/]" data-type="HorizontalTabs" data-desc="[carg->at(cparam->indexOf(anElement)).oclAsType(Widget).name/]" class="[if i=1]active[else]control_objetivo_unico_click[/if]"><a class="events" href="#pes[idgen->at(1).oclAsType(String)/][i/]" aria-controls="pes[idgen->at(1).oclAsType(String)/][i/]" role="tab" data-toggle="tab">
+									[for (anParagraph : Paragraph | aSimple.oclAsType(Text).paragraphs)]
+										[anParagraph.text /]
+									[/for]
+							</a></li> 
+						[/if]
+					[/for]
+	            </ul>
+	            <div class="tab-content">
+						[for (aSimple : SimpleElement | carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(1).oclAsType(Tab).arguments)]
+							[if i.mod(2) <> 0]
+								[for (anParagraph : Paragraph | aSimple.oclAsType(Text).paragraphs)]
+										[anElement.horizontalLatexFile(anElement, anParagraph.text)/]
+								[/for]
+				                <div role="tabpanel" class="col-md-12 tab-pane [if i=1]active[/if]" id="pes[idgen->at(1).oclAsType(String)/][i/]">
+				                    [let aSimple2 : SimpleElement = carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(1).oclAsType(Tab).arguments->at(i+1)]
+										[if (aSimple2.oclIsTypeOf(Text))]
+											[for (anParagraph : Paragraph | aSimple2.oclAsType(Text).paragraphs)]
+												[anElement.horizontalTextLatexFile(anElement, anParagraph.text, aSimple2.oclAsType(Text).paragraphs->size(), i, nameSection)/]
+												<p>[anParagraph.text /]</p>
+											[/for]
+										[/if]
+										[if (aSimple2.oclIsTypeOf(Image))]
+											[anElement.horizontalImageLatexFile(anElement, aSimple2.oclAsType(Image).url, nameSection)/]			
+											<img src="img/[(aSimple2.oclAsType(Image)).url /]" alt="Imagen" title="Imagen" class="img-responsive mano btnmostrar" >
+										[/if]
+									[/let]
+				                </div>
+	               			[/if]
+						[/for]
+	            </div>
+	        </div>
+[/file]
+[/template]
+
+[template public nombreObjetivos(anElement : ContentElement, idgen: Sequence(String), idnum: Integer)]
+[file('progreso_obj.js', true, 'UTF-8')]
+	,"objetivo[idgen->at(1).oclAsType(String).concat(idnum.toString())/]"
+
+[/file]
+[/template]
+
+
+[template public horizontalLatexFile(anElement : ContentElement, texto: String)]
+[file('contentpdf.tex', true, 'UTF-8')]
+\begin{block}{[texto/]}
+[/file]
+[/template]
+
+[template public horizontalTextLatexFile(anElement : ContentElement, texto: String, tsize: Integer, position: Integer, nameSection: String)]
+[file('contentpdf.tex', true, 'UTF-8')]
+
+[texto.replaceAll('<blockquote>', '\\\\begin{quote}').replaceAll('</blockquote>','\\\\end{quote}').replaceAll('<strong>','\\\\textbf{').replaceAll('</strong>','}').replaceAll('<h2>','\\\\textbf{').replaceAll('</h2>','}') /]
+[if tsize <> 1 and position <> tsize]
+\pause
+[/if]
+\end{block}
+\end{frame}
+\begin{frame}
+\frametitle{[nameSection/]}
+
+[/file]
+[/template]
+
+[template public horizontalImageLatexFile(anElement : ContentElement, texto: String, nameSection: String)]
+[file('contentpdf.tex', true, 'UTF-8')]
+
+\includegraphics['['/]width=0.5\columnwidth[']'/]{[texto/]}
+
+\end{block}
+\end{frame}
+\begin{frame}
+\frametitle{[nameSection/]}
+
+[/file]
+[/template]
+

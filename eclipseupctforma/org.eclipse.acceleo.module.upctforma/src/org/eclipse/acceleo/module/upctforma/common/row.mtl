@@ -1,0 +1,29 @@
+[comment encoding = UTF-8 /]
+[module row('http://cpcd.upct.es/upctforma')]
+
+[import org::eclipse::acceleo::module::upctforma::common::column /]
+
+[template public generateRow(aRow : Row, carg: Sequence(Argument), idgen: Sequence(String), nameSection: String)]
+[file('index.php', true, 'UTF-8')]
+
+	<section class="bgwhitecab2">
+      <div class="container">
+		<br>
+        <div class="row">
+			[comment let aParameter : Sequence(Element) = aRow.columns.elements->collect(x | if (x.oclIsTypeOf(Fixed)) then x else if (x.oclIsTypeOf(Widget)) then x.oclAsType(Widget).typewidget.parameters->collect(y | x) else x endif endif)/]
+
+			[let aParameter : Sequence(ContentElement) = aRow.columns.elements->collect(x | if (x.oclIsTypeOf(Fixed)) then if (x.oclAsType(Fixed).type.oclIsTypeOf(WidgetType)) then x.oclAsType(Fixed).type.oclAsType(WidgetType).parameters->collect(y | x) else x endif else x endif)]
+				[for (aColumn : Column | aRow.columns)]
+					[let idgenp : Sequence(String) = Sequence{idgen->at(1).oclAsType(String).concat('c').concat(i.toString())} ]
+			        	  [aColumn.generateColumn(carg, aParameter, idgenp, nameSection)/]
+					[/let]
+		    	[/for]
+			[/let]
+        </div>
+      </div>
+    </section>
+	
+[/file]
+[/template]
+
+

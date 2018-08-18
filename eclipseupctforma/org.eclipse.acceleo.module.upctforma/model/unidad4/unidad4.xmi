@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:upctforma="http://cpcd.upct.es/upctforma">
+  <upctforma:ContentDefinition name="upctforma.unit2">
+    <imports importedNamespace="upctforma.template1.*"/>
+    <unit name="Demo Unit 4" author="Daniel P&#xe9;rez Berenguer">
+      <sections name="Section1" image="cabecera.jpg" title="CONTROLLING">
+        <rows>
+          <columns width="12">
+            <elements xsi:type="upctforma:Text">
+              <paragraphs text="The task of controlling represents the final point of the company&#x2019;s management system but is closely related to the task of planning. Based on the objectives established at the planning stage, controlling ensures that everything is done according to the plan adopted, the orders provided and the accepted principles. It thus aims to point out the faults and errors so that the company can remedy the situation and prevent these from happening again."/>
+            </elements>
+          </columns>
+        </rows>
+        <rows>
+          <columns width="6">
+            <elements xsi:type="upctforma:Text">
+              <paragraphs text="Controlling can be applied to everything (things, people and events) through controls and its final result (information) can have several recipients, in an attempt to:"/>
+              <paragraphs text="&lt;ul>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;li>Standardize what is considered acceptable performance, through rules, regulations, inspections, written procedures or production schedules.&lt;/li>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;li>Protect the organization&#x2019;s assets (materials, tools, machinery, etc.) from theft, waste or misuse.&lt;/li>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;li>Maintain the quality of products and services that are sold to customers through training, inspections, statistical quality control or incentive systems, among others.&lt;/li>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;li>Measure and drive individual and departmental actions through performance evaluations, direct supervision and reports on the quantity and quality of results.&lt;/li>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/ul>"/>
+            </elements>
+          </columns>
+          <columns width="6">
+            <elements xsi:type="upctforma:Text">
+              <paragraphs text="However, controls also have some drawbacks, such as:"/>
+              <paragraphs text="&lt;ul>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;li>&lt;em>Monitoring has a cost&lt;/em> which includes not only sums attributable to the departments that perform this activity but also the value of the many hours that managers spend on this task.&lt;/li>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;li>&lt;em>The danger that it becomes repressive&lt;/em> because some managers put too much pressure on employees when they monitor their behaviour.&lt;/li>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;li>&lt;em>Sometimes the information can be distorted.&lt;/em> Data could be manipulated by employees and provide false reports and unreliable information.&lt;/li>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/ul>"/>
+            </elements>
+          </columns>
+        </rows>
+        <rows>
+          <columns width="12">
+            <elements xsi:type="upctforma:Text">
+              <paragraphs text="Within the process of creating the Organizational Structure, several phases can be distinguished:"/>
+            </elements>
+          </columns>
+        </rows>
+        <rows>
+          <usetemplate typetemplate="/1/@templates.3">
+            <arguments xsi:type="upctforma:Widget" name="section1textright" widgettype="/1/@types.4">
+              <widgetarguments xsi:type="upctforma:Image" url="s437023_1920.jpg"/>
+              <widgetarguments xsi:type="upctforma:Text">
+                <paragraphs text="The result of this process is the organizational structure. It is about establishing the &#x201c;framework&#x201d; of the organization."/>
+                <paragraphs text="The organizational design concerns the generation and change in the structure of an organization, so that it is able to provide support for the implementation of the chosen strategy and achieve the goals set for the whole organization."/>
+                <paragraphs text="Thus, the organizational structure may have wide variations between organizations depending on many different factors such as the size of the organization, the objectives, etc."/>
+              </widgetarguments>
+            </arguments>
+          </usetemplate>
+        </rows>
+      </sections>
+    </unit>
+  </upctforma:ContentDefinition>
+  <upctforma:ContentDefinition name="upctforma.template1">
+    <templates name="TwoColumnsText">
+      <rows>
+        <columns width="6">
+          <elements xsi:type="upctforma:Fixed" type="/1/@types.2"/>
+        </columns>
+        <columns width="6">
+          <elements xsi:type="upctforma:Fixed" type="/1/@types.2"/>
+        </columns>
+      </rows>
+    </templates>
+    <templates name="OneColumnText">
+      <rows>
+        <columns width="12">
+          <elements xsi:type="upctforma:Fixed" type="/1/@types.2"/>
+        </columns>
+      </rows>
+    </templates>
+    <templates name="TwoColumnsImageTextOver">
+      <rows>
+        <columns width="6">
+          <elements xsi:type="upctforma:Fixed" type="/1/@types.3"/>
+        </columns>
+        <columns width="6">
+          <elements xsi:type="upctforma:Fixed" type="/1/@types.3"/>
+        </columns>
+      </rows>
+    </templates>
+    <templates name="OneColumnImageTextRight">
+      <rows>
+        <columns width="12">
+          <elements xsi:type="upctforma:Fixed" type="/1/@types.4"/>
+        </columns>
+      </rows>
+    </templates>
+    <templates name="OneColumnVerticalAccordion">
+      <rows>
+        <columns width="12">
+          <elements xsi:type="upctforma:Fixed" type="/1/@types.5"/>
+        </columns>
+      </rows>
+    </templates>
+    <templates name="OneColumnHorizontalTab">
+      <rows>
+        <columns width="12">
+          <elements xsi:type="upctforma:Fixed" type="/1/@types.6"/>
+        </columns>
+      </rows>
+    </templates>
+    <templates name="OneColumnAnimationInOut">
+      <rows>
+        <columns width="12">
+          <elements xsi:type="upctforma:Fixed" type="/1/@types.7"/>
+        </columns>
+      </rows>
+    </templates>
+    <templates name="OneColumnRectangleDragAndDrop">
+      <rows>
+        <columns width="12">
+          <elements xsi:type="upctforma:Fixed" type="/1/@types.8"/>
+        </columns>
+      </rows>
+    </templates>
+    <types xsi:type="upctforma:AggregatedType" name="Tabs">
+      <type name="name"/>
+      <type name="content" type="Undefined"/>
+    </types>
+    <types xsi:type="upctforma:SimpleType" name="TypeImage" type="Image"/>
+    <types xsi:type="upctforma:SimpleType" name="TypeText"/>
+    <types xsi:type="upctforma:WidgetType" name="ImageTextOver">
+      <parameters xsi:type="upctforma:Fixed" type="/1/@types.1"/>
+      <parameters xsi:type="upctforma:Fixed" type="/1/@types.2"/>
+    </types>
+    <types xsi:type="upctforma:WidgetType" name="ImageTextRight">
+      <parameters xsi:type="upctforma:Fixed" type="/1/@types.1"/>
+      <parameters xsi:type="upctforma:Fixed" type="/1/@types.2"/>
+    </types>
+    <types xsi:type="upctforma:WidgetType" name="VerticalAccordion">
+      <parameters xsi:type="upctforma:Variable" type="/1/@types.0"/>
+    </types>
+    <types xsi:type="upctforma:WidgetType" name="HorizontalTabs">
+      <parameters xsi:type="upctforma:Variable" type="/1/@types.0"/>
+    </types>
+    <types xsi:type="upctforma:WidgetType" name="AnimationInOut">
+      <parameters xsi:type="upctforma:Variable" type="/1/@types.1"/>
+    </types>
+    <types xsi:type="upctforma:WidgetType" name="RectangleDragAndDrop">
+      <parameters xsi:type="upctforma:Variable" type="/1/@types.1"/>
+    </types>
+  </upctforma:ContentDefinition>
+</xmi:XMI>

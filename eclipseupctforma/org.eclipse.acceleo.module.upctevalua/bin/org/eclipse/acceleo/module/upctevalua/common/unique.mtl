@@ -1,0 +1,9 @@
+[comment encoding = UTF-8 /]
+[module unique('http://cpcd.upct.es/upctformaevalua')]
+
+
+[template public generateAnswer(anUnique : Unique, tipo : Integer)]
+	[file('datos.json', true, 'UTF-8')]
+			"[anUnique.text /]"[if tipo = 2],[/if]
+	[/file]
+[/template]

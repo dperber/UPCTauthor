@@ -1,0 +1,82 @@
+[comment encoding = UTF-8 /]
+[module verticalaccordion('http://cpcd.upct.es/upctforma')]
+
+
+[template public generateVerticalAccordion(anElement : ContentElement, carg: Sequence(Argument), cparam: Sequence(ContentElement), idgen: Sequence(String), nameSection: String)]
+[file('index.php', true, 'UTF-8')]
+<div class="row">
+	<div class="col-md-12">
+[for (aSimple : SimpleElement | carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(1).oclAsType(Tab).arguments)]
+	[if i.mod(2) <> 0 and i <> 1]
+		<i id="objetivo[idgen->at(1).oclAsType(String)/][i/]" class="fa fa-check-square-o fa-2x" aria-hidden="true"></i>
+[anElement.nombreObjetivos(idgen,i)/]
+	[/if]
+[/for]
+	</div>
+</div>
+
+<div class="panel-group" id="[idgen->at(1).oclAsType(String)/]" role="tablist" aria-multiselectable="true">
+		 		[for (aSimple : SimpleElement | carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(1).oclAsType(Tab).arguments)]
+					[if i.mod(2) <> 0]
+					<div class="panel panel-default">
+		                <div class="panel-heading" role="tab" id="heading[idgen->at(1).oclAsType(String)/][i/]">
+		                    <h4 class="panel-title [if i <> 1]control_objetivo_unico_click" id="[idgen->at(1).oclAsType(String)/][i/]" data-type="VerticalAccordion" data-desc="[carg->at(cparam->indexOf(anElement)).oclAsType(Widget).name/]"[else]"[/if]>
+		                        <!-- Título de la Pestaña -->
+		                        <a class="events" data-toggle="collapse" data-parent="[idgen->at(1).oclAsType(String)/]" href="#collapse[idgen->at(1).oclAsType(String)/][i/]" aria-expanded="true" aria-controls="collapse1">
+									[for (anParagraph : Paragraph | aSimple.oclAsType(Text).paragraphs)]
+										[anElement.verticalLatexFile(anElement, anParagraph.text)/]
+										[anParagraph.text /]
+									[/for]
+								</a>
+		                    </h4>
+		                </div>        
+		                <div id="collapse[idgen->at(1).oclAsType(String)/][i/]" class="panel-collapse collapse [if i=1]in[/if]" role="tabpanel" aria-labelledby="heading[idgen->at(1).oclAsType(String)/][i/]"> <!-- la primera pestaña lleva la clase 'in', el resto no -->
+		                    <div class="panel-body">	 
+		                        <!-- Cuerpo de la Pestaña -->
+								[let aSimple2 : SimpleElement = carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(1).oclAsType(Tab).arguments->at(i+1)]
+									[if (aSimple2.oclIsTypeOf(Text))]
+										[for (anParagraph : Paragraph | aSimple2.oclAsType(Text).paragraphs)]
+											[anElement.verticalTextLatexFile(anElement, anParagraph.text, aSimple2.oclAsType(Text).paragraphs->size(), i, nameSection)/]
+											<p>[anParagraph.text /]</p>
+										[/for]
+									[/if]
+									[if (aSimple2.oclIsTypeOf(Image))]
+										<img src="img/[(aSimple2.oclAsType(Image)).url /]" alt="Imagen" title="Imagen" class="img-responsive mano btnmostrar" >
+									[/if]
+								[/let]
+		                    </div>
+		                </div>
+	            	</div>
+					[/if]
+				[/for]
+	        </div>
+[/file]
+[/template]
+
+[template public nombreObjetivos(anElement : ContentElement, idgen: Sequence(String), idnum: Integer)]
+[file('progreso_obj.js', true, 'UTF-8')]
+	,"objetivo[idgen->at(1).oclAsType(String).concat(idnum.toString())/]"
+
+[/file]
+[/template]
+
+[template public verticalLatexFile(anElement : ContentElement, texto: String)]
+[file('contentpdf.tex', true, 'UTF-8')]
+\begin{block}{[texto/]}
+[/file]
+[/template]
+
+[template public verticalTextLatexFile(anElement : ContentElement, texto: String, tsize: Integer, position: Integer, nameSection: String)]
+[file('contentpdf.tex', true, 'UTF-8')]
+
+[texto.replaceAll('<blockquote>', '\\\\begin{quote}').replaceAll('</blockquote>','\\\\end{quote}').replaceAll('<strong>','\\\\textbf{').replaceAll('</strong>','}').replaceAll('<h2>','\\\\textbf{').replaceAll('</h2>','}') /]
+[if tsize <> 1 and position <> tsize]
+\pause
+[/if]
+\end{block}
+\end{frame}
+\begin{frame}
+\frametitle{[nameSection/]}
+
+[/file]
+[/template]

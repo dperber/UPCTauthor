@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:upctforma="http://cpcd.upct.es/upctforma">
+  <upctforma:ContentDefinition name="upctforma.unit1">
+    <imports importedNamespace="upctforma.template1.*"/>
+    <unit name="Demo Unit 1" author="Daniel P&#xe9;rez Berenguer">
+      <sections name="Section1" image="cabecera.jpg" title="ENTREPRENEURSHIP AND ENTREPRENEURS">
+        <rows>
+          <columns width="12">
+            <elements xsi:type="upctforma:Text">
+              <paragraphs text="&lt;blockquote> &lt;strong>Entrepreneurship&lt;/strong> is the process of creating a business enterprise capable of entering new or established markets.&lt;/blockquote>"/>
+            </elements>
+            <elements xsi:type="upctforma:Video" url="Nzk="/>
+          </columns>
+        </rows>
+        <rows>
+          <usetemplate typetemplate="/1/@templates.0">
+            <arguments xsi:type="upctforma:Text">
+              <paragraphs text="This can be one of the most exciting management challenges because successful entrepreneurship requires deploying resources and people in unique ways to develop a new organization."/>
+              <paragraphs text="An entrepreneur is an individual who creates an enterprise that becomes a new entry in the market. Broadly stated, an entrepreneur is anyone who recognizes an opportunity (by changing, revolutionizing, transforming or introducing new products or services), undertakes some innovative projects and bears some risk."/>
+            </arguments>
+            <arguments xsi:type="upctforma:Text">
+              <paragraphs text="There are some myths about entrepreneurs. One common belief is that entrepreneurs possess certain innate traits that make them different from regular people, but many types of people with different personality characteristics have become successful entrepreneurs. In fact, many of them studied entrepreneurship as a discipline before launching a business because useful skills for entrepreneurs can be learned and practiced."/>
+              <paragraphs text="Another myth is to consider that only wealthy people can start a business. Many companies have been started by people with few resources and accumulated capital by putting in long hours without pay and reinvesting their profits in the business."/>
+            </arguments>
+          </usetemplate>
+        </rows>
+        <rows>
+          <usetemplate typetemplate="/1/@templates.1">
+            <arguments xsi:type="upctforma:Text">
+              <paragraphs text="Although some of the most celebrated entrepreneurs were young when they started their business (Bill Gates - Microsoft, Steve Jobs - Apple, Mark Zuckerberg - Facebook), not all successful entrepreneurs were young when they got started. For instance, Harland Sanders was 65 when he started his Kentucky Fried Chicken franchise, and Herb Kelleher was 40 when he founded Southwest Airlines."/>
+            </arguments>
+          </usetemplate>
+        </rows>
+        <rows>
+          <usetemplate typetemplate="/1/@templates.2">
+            <arguments xsi:type="upctforma:Widget" name="Section1left" widgettype="/1/@types.3">
+              <widgetarguments xsi:type="upctforma:Image" url="oldtimer-1198776_1920.jpg"/>
+              <widgetarguments xsi:type="upctforma:Text">
+                <paragraphs text="Finally, people tend to remember entrepreneurial success, but very often failure is a key part of the learning process. Entrepreneurs learn lessons that eventually lead to the creation of a successful company. For example Henry Ford founded two automotive companies that failed before he was able to gain success with the Ford Motor Company. At the time of his death, Ford&#x2019;s estimated net worth was 188 billion dollars."/>
+              </widgetarguments>
+            </arguments>
+            <arguments xsi:type="upctforma:Widget" name="section1right" widgettype="/1/@types.3">
+              <widgetarguments xsi:type="upctforma:Image" url="apple-758333_1920.jpg"/>
+              <widgetarguments xsi:type="upctforma:Text">
+                <paragraphs text="Steve Jobs was actually fired from Apple Computers, the company that he was responsible for making it the success it is today. When Jobs was fired from Apple, he was quoted as stating &#x201c;I didn&#x2019;t see it then, but it turned out that getting fired from Apple was the best thing that could have ever happened to me. The heaviness of being successful was replaced by the lightness of being a beginner again, less sure about everything. It freed me to enter one of the most creative periods of my life&#x201d;."/>
+              </widgetarguments>
+            </arguments>
+          </usetemplate>
+        </rows>
+        <rows>
+          <columns width="12">
+            <elements xsi:type="upctforma:Text">
+              <paragraphs text="&lt;h2> The importance of entrepreneurship&lt;/h2>"/>
+            </elements>
+          </columns>
+        </rows>
+        <rows>
+          <usetemplate typetemplate="/1/@templates.1">
+            <arguments xsi:type="upctforma:Text">
+              <paragraphs text="When entrepreneurs create a company, they are starting a basic unit of production that has a reflection on the economies of their countries, creating jobs, stimulating innovation and providing opportunities for diverse people in society."/>
+              <paragraphs text="Entrepreneurship creates jobs because the person who started the company creates his/her own job and, as the company grows, it will need more employees who receive salaries in return for their work. The individual income earned by these workers gives them the ability to satisfy their needs (paying for the products and services that they want) and governments can also improve their income by taxing the companies and workers in order to improve public services. Therefore, entrepreneurship impacts on the overall long-term economic health of communities, regions and nations, improving the whole of society&#x2019;s quality of life."/>
+            </arguments>
+          </usetemplate>
+        </rows>
+        <rows>
+          <usetemplate typetemplate="/1/@templates.3">
+            <arguments xsi:type="upctforma:Widget" name="section1textright" widgettype="/1/@types.4">
+              <widgetarguments xsi:type="upctforma:Image" url="shutterstock_198994412.jpg"/>
+              <widgetarguments xsi:type="upctforma:Text">
+                <paragraphs text="Entrepreneurship is also responsible for introducing a major proportion of new and innovative products and services into the market. These enterprises are often started by visionary people who develop an innovative way of doing something faster, better, cheaper or with improved features, pioneering the design of new technologies that make older ones obsolete. The &#x201c;creative destruction&#x201d; process that characterizes innovation leads to technological changes and employment growth. Entrepreneurial companies act as &#x201c;agents of change&#x201d; by providing an essential source of new and unique ideas that may otherwise go untapped."/>
+                <paragraphs text="Consequently, entrepreneurship is not limited to starting a company. Entrepreneurship and entrepreneurial innovation can occur in a variety of organizations. Entrepreneurship emerges under widely diverse circumstances, typically in response to new conditions and in pursuit of newly perceived opportunities, delivering traditional products or services or creating new combinations that result in novel technologies, products, services and operating practices&#x2014;that is, substantial innovation."/>
+              </widgetarguments>
+            </arguments>
+          </usetemplate>
+        </rows>
+        <rows>
+          <usetemplate typetemplate="/1/@templates.1">
+            <arguments xsi:type="upctforma:Text">
+              <paragraphs text="Finally, people from diverse backgrounds who have experienced frustration and blocked career paths in large corporations can improve their economic status and pursue interesting careers by becoming entrepreneurs. Entrepreneurship provides an attractive alternative for avoiding the unpleasant politics of organizations, gaining more challenges and autonomy or balancing work and family responsibilities, among other benefits."/>
+            </arguments>
+          </usetemplate>
+        </rows>
+        <rows>
+          <usetemplate typetemplate="/1/@templates.1">
+            <arguments xsi:type="upctforma:Text">
+              <paragraphs text="&lt;blockquote>Entrepreneurial characteristics and skills&lt;/blockquote>"/>
+            </arguments>
+          </usetemplate>
+        </rows>
+        <rows>
+          <usetemplate typetemplate="/1/@templates.1">
+            <arguments xsi:type="upctforma:Text">
+              <paragraphs text="In general, entrepreneurs have some key characteristics that can be acquired in various ways, such as: a) learning from family role models; b) exposure to school, work or social activities, or c) by imitating others who have them. &lt;strong>Some of the characteristics that are associated with entrepreneurship are:&lt;/strong>"/>
+            </arguments>
+          </usetemplate>
+        </rows>
+        <rows>
+          <usetemplate typetemplate="/1/@templates.4">
+            <arguments xsi:type="upctforma:Widget" name="section1verticalaccordion" widgettype="/1/@types.5">
+              <widgetarguments xsi:type="upctforma:Tab">
+                <arguments xsi:type="upctforma:Text">
+                  <paragraphs text="NEED FOR ACHIEVEMENT"/>
+                </arguments>
+                <arguments xsi:type="upctforma:Text">
+                  <paragraphs text="This refers to a strong desire to solve problems on your own. These types of people enjoy setting goals and accomplishing them through their own efforts and like receiving feedback on how they are doing. These characteristics help entrepreneurs to be more proactive and anticipate future problems, needs or changes."/>
+                </arguments>
+                <arguments xsi:type="upctforma:Text">
+                  <paragraphs text="AN INTERNAL LOCUS OF CONTROL"/>
+                </arguments>
+                <arguments xsi:type="upctforma:Text">
+                  <paragraphs text="This is related to a strong belief in one&#x2019;s own ability to succeed, so that if one fails or makes a mistake, the individual is likely to accept responsibility for the outcome and try harder rather than search for external reasons to explain the failure (luck, fate, etc.). These help entrepreneurs to be persistent and motivated to overcome barriers that would deter others."/>
+                </arguments>
+                <arguments xsi:type="upctforma:Text">
+                  <paragraphs text="WILLINGNESS TO TAKE RISK"/>
+                </arguments>
+                <arguments xsi:type="upctforma:Text">
+                  <paragraphs text="Sometimes entrepreneurs may risk a substantial portion of their own capital as well as funds contributed by family, friends and other investors. Therefore, entrepreneurs should be capable of dealing with a certain level of uncertainty."/>
+                </arguments>
+                <arguments xsi:type="upctforma:Text">
+                  <paragraphs text="SELF-CONFIDENCE"/>
+                </arguments>
+                <arguments xsi:type="upctforma:Text">
+                  <paragraphs text="This is related to the perception that the person can master the skills needed to run a business and that he/she can overcome unforeseen obstacles. This can be used by entrepreneurs to energize and motivate employees. It also helps them to improvise and to find novel solutions to business problems that may discourage people who are more self-critical."/>
+                </arguments>
+              </widgetarguments>
+            </arguments>
+          </usetemplate>
+        </rows>
+        <rows>
+          <usetemplate typetemplate="/1/@templates.1">
+            <arguments xsi:type="upctforma:Text">
+              <paragraphs text="As well as an entrepreneur&#x2019;s personal characteristics, there are also &lt;strong>skills&lt;/strong> which are related to success. Although an entrepreneur uses a variety of business skills to create and operate an enterprise, some of the most important ones are:"/>
+            </arguments>
+          </usetemplate>
+        </rows>
+        <rows>
+          <usetemplate typetemplate="/1/@templates.5">
+            <arguments xsi:type="upctforma:Widget" name="section1horiztonaltab" widgettype="/1/@types.6">
+              <widgetarguments xsi:type="upctforma:Tab">
+                <arguments xsi:type="upctforma:Text">
+                  <paragraphs text="NEGOTIATION SKILLS"/>
+                </arguments>
+                <arguments xsi:type="upctforma:Text">
+                  <paragraphs text="Entrepreneurs use these skills to obtain the resources needed to launch and maintain a company, such as borrowing money from a bank at good rates, obtaining a low price for raw materials from a supplier, discussing employment contracts, etc."/>
+                </arguments>
+                <arguments xsi:type="upctforma:Text">
+                  <paragraphs text="NETWORKING SKILLS"/>
+                </arguments>
+                <arguments xsi:type="upctforma:Text">
+                  <paragraphs text="This refers to the relationships between the entrepreneur and other parties, including other entrepreneurs, suppliers, creditors, investors, friends, former colleagues and other people. These personal contacts can help an entrepreneur make effective decisions by gathering information that reduces uncertainty for the business. Networks can be formed through participation in professional societies, business clubs, charitable organizations, trade fairs and networks of entrepreneurs. Business networks can also help build alliances formed with other businesses to achieve mutually beneficial goals."/>
+                </arguments>
+                <arguments xsi:type="upctforma:Text">
+                  <paragraphs text="LEADERSHIP SKILLS"/>
+                </arguments>
+                <arguments xsi:type="upctforma:Image" url="shutterstock_198994412.jpg"/>
+              </widgetarguments>
+            </arguments>
+          </usetemplate>
+        </rows>
+      </sections>
+      <sections name="Section2" image="cabecera1.jpg" title="INTEGRATED WATER RESOURCE MANAGEMENT">
+        <rows>
+          <usetemplate typetemplate="/1/@templates.6">
+            <arguments xsi:type="upctforma:Widget" name="section2animation" widgettype="/1/@types.7">
+              <widgetarguments xsi:type="upctforma:Animation" width="800px" image="completa.jpg">
+                <arguments xsi:type="upctforma:Image" url="fondo.png"/>
+                <arguments xsi:type="upctforma:Image" url="p1.png"/>
+                <arguments xsi:type="upctforma:Image" url="p2.png"/>
+                <arguments xsi:type="upctforma:Image" url="p11.png"/>
+                <arguments xsi:type="upctforma:Image" url="p21.png"/>
+              </widgetarguments>
+            </arguments>
+          </usetemplate>
+        </rows>
+      </sections>
+      <sections name="Section3" image="color-767166_1920.png" title="Activities Human Resource Recruitment">
+        <rows>
+          <usetemplate typetemplate="/1/@templates.7">
+            <arguments xsi:type="upctforma:Widget" name="section3draganddrop" widgettype="/1/@types.8">
+              <widgetarguments xsi:type="upctforma:DragAndDrop">
+                <arguments xsi:type="upctforma:Image" url="drag1.png"/>
+                <arguments xsi:type="upctforma:Image" url="text2.png"/>
+                <arguments xsi:type="upctforma:Image" url="drag2.png"/>
+                <arguments xsi:type="upctforma:Image" url="drag2.png"/>
+                <arguments xsi:type="upctforma:Image" url="text1.png"/>
+                <arguments xsi:type="upctforma:Image" url="drag1.png"/>
+                <arguments xsi:type="upctforma:Image" url="drag3.png"/>
+                <arguments xsi:type="upctforma:Image" url="text4.png"/>
+                <arguments xsi:type="upctforma:Image" url="drag4.png"/>
+                <arguments xsi:type="upctforma:Image" url="drag4.png"/>
+                <arguments xsi:type="upctforma:Image" url="text3.png"/>
+                <arguments xsi:type="upctforma:Image" url="drag3.png"/>
+              </widgetarguments>
+            </arguments>
+          </usetemplate>
+        </rows>
+        <rows>
+          <columns width="12">
+            <elements xsi:type="upctforma:Text">
+              <paragraphs text=""/>
+            </elements>
+          </columns>
+        </rows>
+      </sections>
+      <sections name="Section4" image="cabeceramath.jpg" title="LaTex - Mathematical expressions">
+        <rows>
+          <columns width="12">
+            <elements xsi:type="upctforma:Text">
+              <paragraphs text="Example 1: $$\begin{bmatrix}{a}&amp;{b}\\{a}&amp;{b}\end{bmatrix}$$"/>
+              <paragraphs text="Example 2:  $$f(n) = \left \{ \begin{matrix} n/2 &amp; \mbox{si }n\mbox{ es par} \\ 3n+1 &amp; \mbox{si }n\mbox{ es impar}\end{matrix}\right.$$ "/>
+              <paragraphs text="Example 3: $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$"/>
+            </elements>
+          </columns>
+        </rows>
+        <rows>
+          <usetemplate typetemplate="/1/@templates.4">
+            <arguments xsi:type="upctforma:Widget" name="section3verticalaccordion" widgettype="/1/@types.5">
+              <widgetarguments xsi:type="upctforma:Tab">
+                <arguments xsi:type="upctforma:Text">
+                  <paragraphs text="ECONOMIC AND SOCIAL COHESION"/>
+                </arguments>
+                <arguments xsi:type="upctforma:Text">
+                  <paragraphs text="Promote competitiveness, ecological economic growth in the regions, and provide better services, more job opportunities and a better quality of life for the population."/>
+                </arguments>
+                <arguments xsi:type="upctforma:Text">
+                  <paragraphs text="TERRITORIAL COHESION"/>
+                </arguments>
+                <arguments xsi:type="upctforma:Text">
+                  <paragraphs text="Link up the regions to allow them to benefit from their respective strengths and work together on new and innovative configurations to address common challenges (such as climate change), thereby benefiting the EU and strengthening the Union as a whole."/>
+                </arguments>
+              </widgetarguments>
+            </arguments>
+          </usetemplate>
+        </rows>
+      </sections>
+    </unit>
+  </upctforma:ContentDefinition>
+  <upctforma:ContentDefinition name="upctforma.template1">
+    <templates name="TwoColumnsText">
+      <rows>
+        <columns width="6">
+          <elements xsi:type="upctforma:Fixed" type="/1/@types.2"/>
+        </columns>
+        <columns width="6">
+          <elements xsi:type="upctforma:Fixed" type="/1/@types.2"/>
+        </columns>
+      </rows>
+    </templates>
+    <templates name="OneColumnText">
+      <rows>
+        <columns width="12">
+          <elements xsi:type="upctforma:Fixed" type="/1/@types.2"/>
+        </columns>
+      </rows>
+    </templates>
+    <templates name="TwoColumnsImageTextOver">
+      <rows>
+        <columns width="6">
+          <elements xsi:type="upctforma:Fixed" type="/1/@types.3"/>
+        </columns>
+        <columns width="6">
+          <elements xsi:type="upctforma:Fixed" type="/1/@types.3"/>
+        </columns>
+      </rows>
+    </templates>
+    <templates name="OneColumnImageTextRight">
+      <rows>
+        <columns width="12">
+          <elements xsi:type="upctforma:Fixed" type="/1/@types.4"/>
+        </columns>
+      </rows>
+    </templates>
+    <templates name="OneColumnVerticalAccordion">
+      <rows>
+        <columns width="12">
+          <elements xsi:type="upctforma:Fixed" type="/1/@types.5"/>
+        </columns>
+      </rows>
+    </templates>
+    <templates name="OneColumnHorizontalTab">
+      <rows>
+        <columns width="12">
+          <elements xsi:type="upctforma:Fixed" type="/1/@types.6"/>
+        </columns>
+      </rows>
+    </templates>
+    <templates name="OneColumnAnimationInOut">
+      <rows>
+        <columns width="12">
+          <elements xsi:type="upctforma:Fixed" type="/1/@types.7"/>
+        </columns>
+      </rows>
+    </templates>
+    <templates name="OneColumnRectangleDragAndDrop">
+      <rows>
+        <columns width="12">
+          <elements xsi:type="upctforma:Fixed" type="/1/@types.8"/>
+        </columns>
+      </rows>
+    </templates>
+    <types xsi:type="upctforma:AggregatedType" name="Tabs">
+      <type name="name"/>
+      <type name="content" type="Undefined"/>
+    </types>
+    <types xsi:type="upctforma:SimpleType" name="TypeImage" type="Image"/>
+    <types xsi:type="upctforma:SimpleType" name="TypeText"/>
+    <types xsi:type="upctforma:WidgetType" name="ImageTextOver">
+      <parameters xsi:type="upctforma:Fixed" type="/1/@types.1"/>
+      <parameters xsi:type="upctforma:Fixed" type="/1/@types.2"/>
+    </types>
+    <types xsi:type="upctforma:WidgetType" name="ImageTextRight">
+      <parameters xsi:type="upctforma:Fixed" type="/1/@types.1"/>
+      <parameters xsi:type="upctforma:Fixed" type="/1/@types.2"/>
+    </types>
+    <types xsi:type="upctforma:WidgetType" name="VerticalAccordion">
+      <parameters xsi:type="upctforma:Variable" type="/1/@types.0"/>
+    </types>
+    <types xsi:type="upctforma:WidgetType" name="HorizontalTabs">
+      <parameters xsi:type="upctforma:Variable" type="/1/@types.0"/>
+    </types>
+    <types xsi:type="upctforma:WidgetType" name="AnimationInOut">
+      <parameters xsi:type="upctforma:Variable" type="/1/@types.1"/>
+    </types>
+    <types xsi:type="upctforma:WidgetType" name="RectangleDragAndDrop">
+      <parameters xsi:type="upctforma:Variable" type="/1/@types.1"/>
+    </types>
+  </upctforma:ContentDefinition>
+</xmi:XMI>

@@ -1,0 +1,698 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
+  <mtl:Module name="column" nsURI="org::eclipse::acceleo::module::upctforma::common::column" startHeaderPosition="29" endHeaderPosition="145">
+    <input>
+      <takesTypesFrom href="http://cpcd.upct.es/upctforma#/"/>
+    </input>
+    <imports href="element.emtl#/0"/>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateColumn" visibility="Public">
+      <body xsi:type="mtl:FileBlock">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9; &lt;div class=&quot;col-md-"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aColumn" referredVariable="/0/generateColumn/aColumn">
+            <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Column"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://cpcd.upct.es/upctforma#//Column/width"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;>&#xA;"/>
+        <body xsi:type="mtl:ForBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&#x9;&#x9;"/>
+          <body xsi:type="mtl:TemplateInvocation" definition="/0/rowLatexFile">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <argument xsi:type="ocl.ecore:VariableExp" name="aColumn" referredVariable="/0/generateColumn/aColumn">
+              <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Column"/>
+            </argument>
+            <argument xsi:type="ocl.ecore:VariableExp" name="nameSection" referredVariable="/0/generateColumn/nameSection">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </argument>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+          <body xsi:type="mtl:LetBlock">
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;"/>
+            <body xsi:type="mtl:TemplateInvocation">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <definition href="element.emtl#/0/generateElement"/>
+              <argument xsi:type="ocl.ecore:VariableExp" name="anElement" referredVariable="/0/generateColumn/%/%.3/anElement">
+                <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+              </argument>
+              <argument xsi:type="ocl.ecore:VariableExp" name="carg" eType="/3/Sequence(Argument)" referredVariable="/0/generateColumn/carg"/>
+              <argument xsi:type="ocl.ecore:VariableExp" name="cparam" eType="/3/Sequence(ContentElement)" referredVariable="/0/generateColumn/cparam"/>
+              <argument xsi:type="ocl.ecore:VariableExp" name="idgenp" eType="/3/Sequence(String)" referredVariable="/0/generateColumn/%/%.3/%.3/idgenp"/>
+              <argument xsi:type="ocl.ecore:VariableExp" name="nameSection" referredVariable="/0/generateColumn/nameSection">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              </argument>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+            <letVariable name="idgenp" eType="/3/Sequence(String)">
+              <initExpression xsi:type="ocl.ecore:CollectionLiteralExp" eType="/3/Sequence(String)" kind="Sequence">
+                <part xsi:type="ocl.ecore:CollectionItem">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  <item xsi:type="ocl.ecore:OperationCallExp">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                    <source xsi:type="ocl.ecore:OperationCallExp">
+                      <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                      <source xsi:type="ocl.ecore:OperationCallExp">
+                        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                        <source xsi:type="ocl.ecore:OperationCallExp">
+                          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                          <source xsi:type="ocl.ecore:VariableExp" name="idgen" eType="/3/Sequence(String)" referredVariable="/0/generateColumn/idgen"/>
+                          <argument xsi:type="ocl.ecore:IntegerLiteralExp" integerSymbol="1">
+                            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                          </argument>
+                          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)_Class/at"/>
+                        </source>
+                        <argument xsi:type="ocl.ecore:TypeExp" eType="/13/String">
+                          <referredType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                        </argument>
+                        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/oclAsType"/>
+                      </source>
+                      <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="e">
+                        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                      </argument>
+                      <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/concat"/>
+                    </source>
+                    <argument xsi:type="ocl.ecore:OperationCallExp">
+                      <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                      <source xsi:type="ocl.ecore:VariableExp" name="i" referredVariable="/18">
+                        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                      </source>
+                      <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/toString"/>
+                    </argument>
+                    <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/concat"/>
+                  </item>
+                </part>
+              </initExpression>
+            </letVariable>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&#x9;&#x9;"/>
+          <body xsi:type="mtl:TemplateInvocation" definition="/0/finrowLatexFile">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <argument xsi:type="ocl.ecore:VariableExp" name="aColumn" referredVariable="/0/generateColumn/aColumn">
+              <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Column"/>
+            </argument>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+          <loopVariable name="anElement">
+            <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+          </loopVariable>
+          <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/3/OrderedSet(ContentElement)">
+            <source xsi:type="ocl.ecore:VariableExp" name="aColumn" referredVariable="/0/generateColumn/aColumn">
+              <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Column"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://cpcd.upct.es/upctforma#//Column/elements"/>
+          </iterSet>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;          &lt;/div>&#xA;"/>
+        <fileUrl xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="index.php">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </fileUrl>
+        <charset xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="UTF-8">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </charset>
+      </body>
+      <parameter name="aColumn">
+        <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Column"/>
+      </parameter>
+      <parameter name="carg" eType="/3/Sequence(Argument)"/>
+      <parameter name="cparam" eType="/3/Sequence(ContentElement)"/>
+      <parameter name="idgen" eType="/3/Sequence(String)"/>
+      <parameter name="nameSection">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="rowLatexFile" visibility="Public">
+      <body xsi:type="mtl:FileBlock">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="\begin{frame}&#xA;\frametitle{"/>
+        <body xsi:type="ocl.ecore:VariableExp" name="nameSection" referredVariable="/0/rowLatexFile/nameSection">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="}&#xA;&#xA;&#xA;"/>
+        <fileUrl xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="contentpdf.tex">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </fileUrl>
+        <charset xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="UTF-8">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </charset>
+      </body>
+      <parameter name="aColumn">
+        <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Column"/>
+      </parameter>
+      <parameter name="nameSection">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="finrowLatexFile" visibility="Public">
+      <body xsi:type="mtl:FileBlock">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;\end{frame}&#xA;"/>
+        <fileUrl xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="contentpdf.tex">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </fileUrl>
+        <charset xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="UTF-8">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </charset>
+      </body>
+      <parameter name="aColumn">
+        <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Column"/>
+      </parameter>
+    </ownedModuleElement>
+  </mtl:Module>
+  <ecore:EPackage name="additions">
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_String_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Integer_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Real_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ecore_EObject_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eAnnotations>
+      <eOperations name="generateColumn">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generateColumn"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aColumn">
+          <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Column"/>
+        </eParameters>
+        <eParameters name="carg" eType="/3/Sequence(Argument)"/>
+        <eParameters name="cparam" eType="/3/Sequence(ContentElement)"/>
+        <eParameters name="idgen" eType="/3/Sequence(String)"/>
+        <eParameters name="nameSection">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="rowLatexFile">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/rowLatexFile"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aColumn">
+          <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Column"/>
+        </eParameters>
+        <eParameters name="nameSection">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="finrowLatexFile">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/finrowLatexFile"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aColumn">
+          <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Column"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateElement">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="element.emtl#/0/generateElement"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="anElement">
+          <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+        </eParameters>
+        <eParameters name="carg">
+          <eType xsi:type="ocl.ecore:SequenceType" href="element.emtl#/3/Sequence(Argument)"/>
+        </eParameters>
+        <eParameters name="cparam">
+          <eType xsi:type="ocl.ecore:SequenceType" href="element.emtl#/3/Sequence(ContentElement)"/>
+        </eParameters>
+        <eParameters name="idgen">
+          <eType xsi:type="ocl.ecore:SequenceType" href="element.emtl#/3/Sequence(String)"/>
+        </eParameters>
+        <eParameters name="nameSection">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OclAny_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Collection(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Sequence(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OrderedSet(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="upctforma_Column_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://cpcd.upct.es/upctforma#//Column"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="upctforma_ContentElement_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+      </eAnnotations>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="collections">
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(Argument)" instanceClassName="java.util.List">
+      <elementType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Argument"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(ContentElement)" instanceClassName="java.util.List">
+      <elementType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(String)" instanceClassName="java.util.List">
+      <elementType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(ContentElement)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Column"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Column"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Column"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Column"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Column"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Column"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="types">
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="String">
+      <referredType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Column"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Column"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Column"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Column"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Column"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Column"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Column"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Column"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Column"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Column"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EAnnotation source="positions">
+    <eAnnotations source="positions.0" references="/0/generateColumn">
+      <details key="start" value="149"/>
+      <details key="end" value="778"/>
+      <details key="line" value="6"/>
+    </eAnnotations>
+    <eAnnotations source="positions.1" references="/0/generateColumn/%">
+      <details key="start" value="306"/>
+      <details key="end" value="766"/>
+      <details key="line" value="7"/>
+    </eAnnotations>
+    <eAnnotations source="positions.2" references="/0/generateColumn/%/%">
+      <details key="start" value="341"/>
+      <details key="end" value="364"/>
+      <details key="line" value="8"/>
+    </eAnnotations>
+    <eAnnotations source="positions.3" references="/0/generateColumn/%/%.1">
+      <details key="start" value="365"/>
+      <details key="end" value="378"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.4" references="/0/generateColumn/%/%.1/aColumn">
+      <details key="start" value="365"/>
+      <details key="end" value="372"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.5" references="/0/generateColumn/%/%.2">
+      <details key="start" value="381"/>
+      <details key="end" value="384"/>
+      <details key="line" value="8"/>
+    </eAnnotations>
+    <eAnnotations source="positions.6" references="/0/generateColumn/%/%.3">
+      <details key="start" value="388"/>
+      <details key="end" value="740"/>
+      <details key="line" value="9"/>
+    </eAnnotations>
+    <eAnnotations source="positions.7" references="/0/generateColumn/%/%.3/%">
+      <details key="start" value="442"/>
+      <details key="end" value="447"/>
+      <details key="line" value="10"/>
+    </eAnnotations>
+    <eAnnotations source="positions.8" references="/0/generateColumn/%/%.3/%.1">
+      <details key="start" value="448"/>
+      <details key="end" value="490"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.9" references="/0/generateColumn/%/%.3/%.1/aColumn">
+      <details key="start" value="469"/>
+      <details key="end" value="476"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.10" references="/0/generateColumn/%/%.3/%.1/nameSection">
+      <details key="start" value="478"/>
+      <details key="end" value="489"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.11" references="/0/generateColumn/%/%.3/%.2">
+      <details key="start" value="492"/>
+      <details key="end" value="493"/>
+      <details key="line" value="11"/>
+    </eAnnotations>
+    <eAnnotations source="positions.12" references="/0/generateColumn/%/%.3/%.3">
+      <details key="start" value="498"/>
+      <details key="end" value="688"/>
+      <details key="line" value="11"/>
+    </eAnnotations>
+    <eAnnotations source="positions.13" references="/0/generateColumn/%/%.3/%.3/%">
+      <details key="start" value="607"/>
+      <details key="end" value="613"/>
+      <details key="line" value="12"/>
+    </eAnnotations>
+    <eAnnotations source="positions.14" references="/0/generateColumn/%/%.3/%.3/%.1">
+      <details key="start" value="614"/>
+      <details key="end" value="674"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/generateColumn/%/%.3/%.3/%.1/anElement">
+      <details key="start" value="614"/>
+      <details key="end" value="623"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.16" references="/0/generateColumn/%/%.3/%.3/%.1/carg">
+      <details key="start" value="640"/>
+      <details key="end" value="644"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.17" references="/0/generateColumn/%/%.3/%.3/%.1/cparam">
+      <details key="start" value="646"/>
+      <details key="end" value="652"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.18" references="/0/generateColumn/%/%.3/%.3/%.1/idgenp">
+      <details key="start" value="654"/>
+      <details key="end" value="660"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.19" references="/0/generateColumn/%/%.3/%.3/%.1/nameSection">
+      <details key="start" value="662"/>
+      <details key="end" value="673"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.20" references="/0/generateColumn/%/%.3/%.3/%.2">
+      <details key="start" value="676"/>
+      <details key="end" value="677"/>
+      <details key="line" value="13"/>
+    </eAnnotations>
+    <eAnnotations source="positions.21" references="/0/generateColumn/%/%.3/%.3/idgenp">
+      <details key="start" value="503"/>
+      <details key="end" value="604"/>
+      <details key="line" value="11"/>
+    </eAnnotations>
+    <eAnnotations source="positions.22" references="/0/generateColumn/%/%.3/%.3/idgenp/%">
+      <details key="start" value="532"/>
+      <details key="end" value="605"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.23" references="/0/generateColumn/%/%.3/%.3/idgenp/%/%/%">
+      <details key="start" value="541"/>
+      <details key="end" value="604"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.24" references="/0/generateColumn/%/%.3/%.3/idgenp/%/%/%/%">
+      <details key="start" value="541"/>
+      <details key="end" value="583"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.25" references="/0/generateColumn/%/%.3/%.3/idgenp/%/%/%/%/%">
+      <details key="start" value="541"/>
+      <details key="end" value="571"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.26" references="/0/generateColumn/%/%.3/%.3/idgenp/%/%/%/%/%/%">
+      <details key="start" value="541"/>
+      <details key="end" value="553"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.27" references="/0/generateColumn/%/%.3/%.3/idgenp/%/%/%/%/%/%/idgen">
+      <details key="start" value="541"/>
+      <details key="end" value="546"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.28" references="/0/generateColumn/%/%.3/%.3/idgenp/%/%/%/%/%/%/%">
+      <details key="start" value="551"/>
+      <details key="end" value="552"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.29" references="/0/generateColumn/%/%.3/%.3/idgenp/%/%/%/%/%/%.1">
+      <details key="start" value="564"/>
+      <details key="end" value="570"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.30" references="/0/generateColumn/%/%.3/%.3/idgenp/%/%/%/%/%.1">
+      <details key="start" value="579"/>
+      <details key="end" value="582"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.31" references="/0/generateColumn/%/%.3/%.3/idgenp/%/%/%/%.1">
+      <details key="start" value="591"/>
+      <details key="end" value="603"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.32" references="/0/generateColumn/%/%.3/%.3/idgenp/%/%/%/%.1/i">
+      <details key="start" value="591"/>
+      <details key="end" value="592"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.33" references="/0/generateColumn/%/%.3/%.4">
+      <details key="start" value="689"/>
+      <details key="end" value="694"/>
+      <details key="line" value="14"/>
+    </eAnnotations>
+    <eAnnotations source="positions.34" references="/0/generateColumn/%/%.3/%.5">
+      <details key="start" value="695"/>
+      <details key="end" value="727"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.35" references="/0/generateColumn/%/%.3/%.5/aColumn">
+      <details key="start" value="719"/>
+      <details key="end" value="726"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.36" references="/0/generateColumn/%/%.3/%.6">
+      <details key="start" value="729"/>
+      <details key="end" value="730"/>
+      <details key="line" value="15"/>
+    </eAnnotations>
+    <eAnnotations source="positions.37" references="/0/generateColumn/%/%.3/anElement">
+      <details key="start" value="394"/>
+      <details key="end" value="420"/>
+      <details key="line" value="9"/>
+    </eAnnotations>
+    <eAnnotations source="positions.38" references="/0/generateColumn/%/%.3/%.7">
+      <details key="start" value="423"/>
+      <details key="end" value="439"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.39" references="/0/generateColumn/%/%.3/%.7/aColumn">
+      <details key="start" value="423"/>
+      <details key="end" value="430"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.40" references="/0/generateColumn/%/%.4">
+      <details key="start" value="741"/>
+      <details key="end" value="759"/>
+      <details key="line" value="16"/>
+    </eAnnotations>
+    <eAnnotations source="positions.41" references="/0/generateColumn/%/%.5">
+      <details key="start" value="312"/>
+      <details key="end" value="323"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.42" references="/0/generateColumn/%/%.6">
+      <details key="start" value="331"/>
+      <details key="end" value="338"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.43" references="/0/generateColumn/aColumn">
+      <details key="start" value="181"/>
+      <details key="end" value="197"/>
+      <details key="line" value="6"/>
+    </eAnnotations>
+    <eAnnotations source="positions.44" references="/0/generateColumn/carg">
+      <details key="start" value="199"/>
+      <details key="end" value="223"/>
+      <details key="line" value="6"/>
+    </eAnnotations>
+    <eAnnotations source="positions.45" references="/0/generateColumn/cparam">
+      <details key="start" value="225"/>
+      <details key="end" value="257"/>
+      <details key="line" value="6"/>
+    </eAnnotations>
+    <eAnnotations source="positions.46" references="/0/generateColumn/idgen">
+      <details key="start" value="259"/>
+      <details key="end" value="282"/>
+      <details key="line" value="6"/>
+    </eAnnotations>
+    <eAnnotations source="positions.47" references="/0/generateColumn/nameSection">
+      <details key="start" value="284"/>
+      <details key="end" value="303"/>
+      <details key="line" value="6"/>
+    </eAnnotations>
+    <eAnnotations source="positions.48" references="/0/rowLatexFile">
+      <details key="start" value="781"/>
+      <details key="end" value="955"/>
+      <details key="line" value="21"/>
+    </eAnnotations>
+    <eAnnotations source="positions.49" references="/0/rowLatexFile/%">
+      <details key="start" value="851"/>
+      <details key="end" value="943"/>
+      <details key="line" value="22"/>
+    </eAnnotations>
+    <eAnnotations source="positions.50" references="/0/rowLatexFile/%/%">
+      <details key="start" value="891"/>
+      <details key="end" value="917"/>
+      <details key="line" value="23"/>
+    </eAnnotations>
+    <eAnnotations source="positions.51" references="/0/rowLatexFile/%/nameSection">
+      <details key="start" value="918"/>
+      <details key="end" value="929"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.52" references="/0/rowLatexFile/%/%.1">
+      <details key="start" value="932"/>
+      <details key="end" value="936"/>
+      <details key="line" value="24"/>
+    </eAnnotations>
+    <eAnnotations source="positions.53" references="/0/rowLatexFile/%/%.2">
+      <details key="start" value="857"/>
+      <details key="end" value="873"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.54" references="/0/rowLatexFile/%/%.3">
+      <details key="start" value="881"/>
+      <details key="end" value="888"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.55" references="/0/rowLatexFile/aColumn">
+      <details key="start" value="811"/>
+      <details key="end" value="827"/>
+      <details key="line" value="21"/>
+    </eAnnotations>
+    <eAnnotations source="positions.56" references="/0/rowLatexFile/nameSection">
+      <details key="start" value="829"/>
+      <details key="end" value="848"/>
+      <details key="line" value="21"/>
+    </eAnnotations>
+    <eAnnotations source="positions.57" references="/0/finrowLatexFile">
+      <details key="start" value="957"/>
+      <details key="end" value="1081"/>
+      <details key="line" value="30"/>
+    </eAnnotations>
+    <eAnnotations source="positions.58" references="/0/finrowLatexFile/%">
+      <details key="start" value="1009"/>
+      <details key="end" value="1069"/>
+      <details key="line" value="31"/>
+    </eAnnotations>
+    <eAnnotations source="positions.59" references="/0/finrowLatexFile/%/%">
+      <details key="start" value="1049"/>
+      <details key="end" value="1062"/>
+      <details key="line" value="32"/>
+    </eAnnotations>
+    <eAnnotations source="positions.60" references="/0/finrowLatexFile/%/%.1">
+      <details key="start" value="1015"/>
+      <details key="end" value="1031"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.61" references="/0/finrowLatexFile/%/%.2">
+      <details key="start" value="1039"/>
+      <details key="end" value="1046"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.62" references="/0/finrowLatexFile/aColumn">
+      <details key="start" value="990"/>
+      <details key="end" value="1006"/>
+      <details key="line" value="30"/>
+    </eAnnotations>
+  </ecore:EAnnotation>
+</xmi:XMI>

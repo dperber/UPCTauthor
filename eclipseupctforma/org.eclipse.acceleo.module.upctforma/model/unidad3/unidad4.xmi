@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:upctforma="http://cpcd.upct.es/upctforma">
+  <upctforma:ContentDefinition name="upctforma.unit3">
+    <imports importedNamespace="upctforma.template1.*"/>
+    <unit name="Demo Unit 3" author="Daniel P&#xe9;rez Berenguer">
+      <sections name="Section1" image="cabecera.jpg" title="PLANNING">
+        <rows>
+          <columns width="12">
+            <elements xsi:type="upctforma:Text">
+              <paragraphs text="Planning is the first managerial function in the company because it provides a basis for the other functions. This activity determines in advance which objectives the company wants to accomplish in the future and what the enterprise should do to achieve them. Thus, planning can be understood as a link between the current situation and the desired future situation of the company. Planning asks the following questions:"/>
+            </elements>
+          </columns>
+        </rows>
+        <rows>
+          <usetemplate typetemplate="/1/@templates.5">
+            <arguments xsi:type="upctforma:Widget" name="section1horiztonaltab" widgettype="/1/@types.6">
+              <widgetarguments xsi:type="upctforma:Tab">
+                <arguments xsi:type="upctforma:Text">
+                  <paragraphs text="Measurable"/>
+                </arguments>
+                <arguments xsi:type="upctforma:Text">
+                  <paragraphs text="The objective should contemplate, as precisely as possible, what the company wants to achieve and when. Quantification facilitates the task of achieving the objectives and monitoring the actions taken."/>
+                </arguments>
+                <arguments xsi:type="upctforma:Text">
+                  <paragraphs text="Focused on resulta"/>
+                </arguments>
+                <arguments xsi:type="upctforma:Text">
+                  <paragraphs text="Outputs are the fields in which to establish the measures, rather than in the activities needed to achieve them."/>
+                </arguments>
+                <arguments xsi:type="upctforma:Text">
+                  <paragraphs text="Feasible"/>
+                </arguments>
+                <arguments xsi:type="upctforma:Text">
+                  <paragraphs text="People involved in achieving the objectives must perceive them as possible."/>
+                </arguments>
+                <arguments xsi:type="upctforma:Text">
+                  <paragraphs text="Flexible"/>
+                </arguments>
+                <arguments xsi:type="upctforma:Text">
+                  <paragraphs text="It means that if unforeseen issues arise, the objective may be modified."/>
+                </arguments>
+                <arguments xsi:type="upctforma:Text">
+                  <paragraphs text="Comprehensible"/>
+                </arguments>
+                <arguments xsi:type="upctforma:Text">
+                  <paragraphs text="Objectives have to be performed, evaluated and controlled by different people, so they must be easy to understand."/>
+                </arguments>
+              </widgetarguments>
+            </arguments>
+          </usetemplate>
+        </rows>
+      </sections>
+    </unit>
+  </upctforma:ContentDefinition>
+  <upctforma:ContentDefinition name="upctforma.template1">
+    <templates name="TwoColumnsText">
+      <rows>
+        <columns width="6">
+          <elements xsi:type="upctforma:Fixed" type="/1/@types.2"/>
+        </columns>
+        <columns width="6">
+          <elements xsi:type="upctforma:Fixed" type="/1/@types.2"/>
+        </columns>
+      </rows>
+    </templates>
+    <templates name="OneColumnText">
+      <rows>
+        <columns width="12">
+          <elements xsi:type="upctforma:Fixed" type="/1/@types.2"/>
+        </columns>
+      </rows>
+    </templates>
+    <templates name="TwoColumnsImageTextOver">
+      <rows>
+        <columns width="6">
+          <elements xsi:type="upctforma:Fixed" type="/1/@types.3"/>
+        </columns>
+        <columns width="6">
+          <elements xsi:type="upctforma:Fixed" type="/1/@types.3"/>
+        </columns>
+      </rows>
+    </templates>
+    <templates name="OneColumnImageTextRight">
+      <rows>
+        <columns width="12">
+          <elements xsi:type="upctforma:Fixed" type="/1/@types.4"/>
+        </columns>
+      </rows>
+    </templates>
+    <templates name="OneColumnVerticalAccordion">
+      <rows>
+        <columns width="12">
+          <elements xsi:type="upctforma:Fixed" type="/1/@types.5"/>
+        </columns>
+      </rows>
+    </templates>
+    <templates name="OneColumnHorizontalTab">
+      <rows>
+        <columns width="12">
+          <elements xsi:type="upctforma:Fixed" type="/1/@types.6"/>
+        </columns>
+      </rows>
+    </templates>
+    <templates name="OneColumnAnimationInOut">
+      <rows>
+        <columns width="12">
+          <elements xsi:type="upctforma:Fixed" type="/1/@types.7"/>
+        </columns>
+      </rows>
+    </templates>
+    <templates name="OneColumnRectangleDragAndDrop">
+      <rows>
+        <columns width="12">
+          <elements xsi:type="upctforma:Fixed" type="/1/@types.8"/>
+        </columns>
+      </rows>
+    </templates>
+    <types xsi:type="upctforma:AggregatedType" name="Tabs">
+      <type name="name"/>
+      <type name="content" type="Undefined"/>
+    </types>
+    <types xsi:type="upctforma:SimpleType" name="TypeImage" type="Image"/>
+    <types xsi:type="upctforma:SimpleType" name="TypeText"/>
+    <types xsi:type="upctforma:WidgetType" name="ImageTextOver">
+      <parameters xsi:type="upctforma:Fixed" type="/1/@types.1"/>
+      <parameters xsi:type="upctforma:Fixed" type="/1/@types.2"/>
+    </types>
+    <types xsi:type="upctforma:WidgetType" name="ImageTextRight">
+      <parameters xsi:type="upctforma:Fixed" type="/1/@types.1"/>
+      <parameters xsi:type="upctforma:Fixed" type="/1/@types.2"/>
+    </types>
+    <types xsi:type="upctforma:WidgetType" name="VerticalAccordion">
+      <parameters xsi:type="upctforma:Variable" type="/1/@types.0"/>
+    </types>
+    <types xsi:type="upctforma:WidgetType" name="HorizontalTabs">
+      <parameters xsi:type="upctforma:Variable" type="/1/@types.0"/>
+    </types>
+    <types xsi:type="upctforma:WidgetType" name="AnimationInOut">
+      <parameters xsi:type="upctforma:Variable" type="/1/@types.1"/>
+    </types>
+    <types xsi:type="upctforma:WidgetType" name="RectangleDragAndDrop">
+      <parameters xsi:type="upctforma:Variable" type="/1/@types.1"/>
+    </types>
+  </upctforma:ContentDefinition>
+</xmi:XMI>

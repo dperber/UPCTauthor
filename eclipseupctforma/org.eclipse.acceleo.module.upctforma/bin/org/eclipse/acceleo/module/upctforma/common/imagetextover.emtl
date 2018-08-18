@@ -1,0 +1,1690 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
+  <mtl:Module name="imagetextover" nsURI="org::eclipse::acceleo::module::upctforma::common::imagetextover" startHeaderPosition="29" endHeaderPosition="329">
+    <input>
+      <takesTypesFrom href="http://cpcd.upct.es/upctforma#/"/>
+    </input>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateImageTextOver" visibility="Public">
+      <body xsi:type="mtl:FileBlock">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&#x9;"/>
+        <body xsi:type="mtl:TemplateInvocation" definition="/0/imtoverLatexFile">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <argument xsi:type="ocl.ecore:VariableExp" name="anElement" referredVariable="/0/generateImageTextOver/anElement">
+            <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+          </argument>
+          <argument xsi:type="ocl.ecore:VariableExp" name="carg" eType="/3/Sequence(Argument)" referredVariable="/0/generateImageTextOver/carg"/>
+          <argument xsi:type="ocl.ecore:VariableExp" name="cparam" eType="/3/Sequence(ContentElement)" referredVariable="/0/generateImageTextOver/cparam"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#x9;&#x9;&#x9;&#x9;&lt;div class=&quot;row&quot;>&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;div class=&quot;col-md-12&quot;>&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;i id=&quot;objetivo"/>
+        <body xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="idgen" eType="/3/Sequence(String)" referredVariable="/0/generateImageTextOver/idgen"/>
+            <argument xsi:type="ocl.ecore:IntegerLiteralExp" integerSymbol="1">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)_Class/at"/>
+          </source>
+          <argument xsi:type="ocl.ecore:TypeExp" eType="/10/String">
+            <referredType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </argument>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/oclAsType"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot; class=&quot;fa fa-check-square-o fa-2x&quot; aria-hidden=&quot;true&quot;>&lt;/i>&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/div>&#xA;&#x9;&#x9;&#x9;&#x9;&lt;/div>&#xA;&#x9;&#x9;&#x9;&#x9;"/>
+        <body xsi:type="mtl:TemplateInvocation" definition="/0/nombreObjetivos">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <argument xsi:type="ocl.ecore:VariableExp" name="anElement" referredVariable="/0/generateImageTextOver/anElement">
+            <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+          </argument>
+          <argument xsi:type="ocl.ecore:VariableExp" name="idgen" eType="/3/Sequence(String)" referredVariable="/0/generateImageTextOver/idgen"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#x9;&#x9;&#x9;&#x9;&lt;div class=&quot;grid mask&quot;>&#xA;&#x9;&#x9;            &lt;figure class=&quot;text&quot;>&#xA;&#x9;&#x9;                &lt;img id=&quot;"/>
+        <body xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="idgen" eType="/3/Sequence(String)" referredVariable="/0/generateImageTextOver/idgen"/>
+            <argument xsi:type="ocl.ecore:IntegerLiteralExp" integerSymbol="1">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)_Class/at"/>
+          </source>
+          <argument xsi:type="ocl.ecore:TypeExp" eType="/10/String">
+            <referredType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </argument>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/oclAsType"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot; data-type=&quot;ImageTextOver&quot; data-desc=&quot;"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Widget"/>
+            <source xsi:type="ocl.ecore:OperationCallExp">
+              <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Argument"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="carg" eType="/3/Sequence(Argument)" referredVariable="/0/generateImageTextOver/carg"/>
+              <argument xsi:type="ocl.ecore:OperationCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="cparam" eType="/3/Sequence(ContentElement)" referredVariable="/0/generateImageTextOver/cparam"/>
+                <argument xsi:type="ocl.ecore:VariableExp" name="anElement" referredVariable="/0/generateImageTextOver/anElement">
+                  <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+                </argument>
+                <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)_Class/indexOf"/>
+              </argument>
+              <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)_Class/at"/>
+            </source>
+            <argument xsi:type="ocl.ecore:TypeExp" eType="/10/Widget">
+              <referredType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Widget"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclAsType"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://cpcd.upct.es/upctforma#//NameElement/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot; class=&quot;img-responsive mano btnmostrar control_objetivo_unico_click&quot; title=&quot;Imagen&quot; alt=&quot;figcaption&quot; src=&quot;img/"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Image"/>
+            <source xsi:type="ocl.ecore:OperationCallExp">
+              <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Argument"/>
+              <source xsi:type="ocl.ecore:PropertyCallExp" eType="/3/OrderedSet(Argument)">
+                <source xsi:type="ocl.ecore:OperationCallExp">
+                  <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Widget"/>
+                  <source xsi:type="ocl.ecore:OperationCallExp">
+                    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Argument"/>
+                    <source xsi:type="ocl.ecore:VariableExp" name="carg" eType="/3/Sequence(Argument)" referredVariable="/0/generateImageTextOver/carg"/>
+                    <argument xsi:type="ocl.ecore:OperationCallExp">
+                      <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                      <source xsi:type="ocl.ecore:VariableExp" name="cparam" eType="/3/Sequence(ContentElement)" referredVariable="/0/generateImageTextOver/cparam"/>
+                      <argument xsi:type="ocl.ecore:VariableExp" name="anElement" referredVariable="/0/generateImageTextOver/anElement">
+                        <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+                      </argument>
+                      <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)_Class/indexOf"/>
+                    </argument>
+                    <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)_Class/at"/>
+                  </source>
+                  <argument xsi:type="ocl.ecore:TypeExp" eType="/10/Widget">
+                    <referredType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Widget"/>
+                  </argument>
+                  <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclAsType"/>
+                </source>
+                <referredProperty xsi:type="ecore:EReference" href="http://cpcd.upct.es/upctforma#//Widget/widgetarguments"/>
+              </source>
+              <argument xsi:type="ocl.ecore:IntegerLiteralExp" integerSymbol="1">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+              </argument>
+              <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)_Class/at"/>
+            </source>
+            <argument xsi:type="ocl.ecore:TypeExp" eType="/10/Image">
+              <referredType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Image"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclAsType"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://cpcd.upct.es/upctforma#//Image/url"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;>&#xA;&#x9;&#x9;                &lt;figcaption>&#xA;"/>
+        <body xsi:type="mtl:IfBlock">
+          <body xsi:type="mtl:ForBlock">
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;"/>
+            <body xsi:type="mtl:TemplateInvocation" definition="/0/imtoverTextLatexFile">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <argument xsi:type="ocl.ecore:VariableExp" name="anElement" referredVariable="/0/generateImageTextOver/anElement">
+                <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+              </argument>
+              <argument xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="anParagraph" referredVariable="/0/generateImageTextOver/%/%.13/%/anParagraph">
+                  <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Paragraph"/>
+                </source>
+                <referredProperty xsi:type="ecore:EAttribute" href="http://cpcd.upct.es/upctforma#//Paragraph/text"/>
+              </argument>
+              <argument xsi:type="ocl.ecore:OperationCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                <source xsi:type="ocl.ecore:PropertyCallExp" eType="/3/OrderedSet(Paragraph)">
+                  <source xsi:type="ocl.ecore:OperationCallExp">
+                    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Text"/>
+                    <source xsi:type="ocl.ecore:OperationCallExp">
+                      <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Argument"/>
+                      <source xsi:type="ocl.ecore:PropertyCallExp" eType="/3/OrderedSet(Argument)">
+                        <source xsi:type="ocl.ecore:OperationCallExp">
+                          <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Widget"/>
+                          <source xsi:type="ocl.ecore:OperationCallExp">
+                            <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Argument"/>
+                            <source xsi:type="ocl.ecore:VariableExp" name="carg" eType="/3/Sequence(Argument)" referredVariable="/0/generateImageTextOver/carg"/>
+                            <argument xsi:type="ocl.ecore:OperationCallExp">
+                              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                              <source xsi:type="ocl.ecore:VariableExp" name="cparam" eType="/3/Sequence(ContentElement)" referredVariable="/0/generateImageTextOver/cparam"/>
+                              <argument xsi:type="ocl.ecore:VariableExp" name="anElement" referredVariable="/0/generateImageTextOver/anElement">
+                                <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+                              </argument>
+                              <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)_Class/indexOf"/>
+                            </argument>
+                            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)_Class/at"/>
+                          </source>
+                          <argument xsi:type="ocl.ecore:TypeExp" eType="/10/Widget">
+                            <referredType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Widget"/>
+                          </argument>
+                          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclAsType"/>
+                        </source>
+                        <referredProperty xsi:type="ecore:EReference" href="http://cpcd.upct.es/upctforma#//Widget/widgetarguments"/>
+                      </source>
+                      <argument xsi:type="ocl.ecore:IntegerLiteralExp" integerSymbol="2">
+                        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                      </argument>
+                      <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)_Class/at"/>
+                    </source>
+                    <argument xsi:type="ocl.ecore:TypeExp" eType="/10/Text">
+                      <referredType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Text"/>
+                    </argument>
+                    <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclAsType"/>
+                  </source>
+                  <referredProperty xsi:type="ecore:EReference" href="http://cpcd.upct.es/upctforma#//Text/paragraphs"/>
+                </source>
+                <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)_Class/size"/>
+              </argument>
+              <argument xsi:type="ocl.ecore:VariableExp" name="i" referredVariable="/22">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+              </argument>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;p>"/>
+            <body xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="anParagraph" referredVariable="/0/generateImageTextOver/%/%.13/%/anParagraph">
+                <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Paragraph"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://cpcd.upct.es/upctforma#//Paragraph/text"/>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;/p>&#xA;"/>
+            <loopVariable name="anParagraph">
+              <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Paragraph"/>
+            </loopVariable>
+            <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/3/OrderedSet(Paragraph)">
+              <source xsi:type="ocl.ecore:OperationCallExp">
+                <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Text"/>
+                <source xsi:type="ocl.ecore:OperationCallExp">
+                  <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Argument"/>
+                  <source xsi:type="ocl.ecore:PropertyCallExp" eType="/3/OrderedSet(Argument)">
+                    <source xsi:type="ocl.ecore:OperationCallExp">
+                      <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Widget"/>
+                      <source xsi:type="ocl.ecore:OperationCallExp">
+                        <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Argument"/>
+                        <source xsi:type="ocl.ecore:VariableExp" name="carg" eType="/3/Sequence(Argument)" referredVariable="/0/generateImageTextOver/carg"/>
+                        <argument xsi:type="ocl.ecore:OperationCallExp">
+                          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                          <source xsi:type="ocl.ecore:VariableExp" name="cparam" eType="/3/Sequence(ContentElement)" referredVariable="/0/generateImageTextOver/cparam"/>
+                          <argument xsi:type="ocl.ecore:VariableExp" name="anElement" referredVariable="/0/generateImageTextOver/anElement">
+                            <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+                          </argument>
+                          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)_Class/indexOf"/>
+                        </argument>
+                        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)_Class/at"/>
+                      </source>
+                      <argument xsi:type="ocl.ecore:TypeExp" eType="/10/Widget">
+                        <referredType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Widget"/>
+                      </argument>
+                      <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclAsType"/>
+                    </source>
+                    <referredProperty xsi:type="ecore:EReference" href="http://cpcd.upct.es/upctforma#//Widget/widgetarguments"/>
+                  </source>
+                  <argument xsi:type="ocl.ecore:IntegerLiteralExp" integerSymbol="2">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                  </argument>
+                  <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)_Class/at"/>
+                </source>
+                <argument xsi:type="ocl.ecore:TypeExp" eType="/10/Text">
+                  <referredType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Text"/>
+                </argument>
+                <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclAsType"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://cpcd.upct.es/upctforma#//Text/paragraphs"/>
+            </iterSet>
+          </body>
+          <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:OperationCallExp">
+              <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Argument"/>
+              <source xsi:type="ocl.ecore:PropertyCallExp" eType="/3/OrderedSet(Argument)">
+                <source xsi:type="ocl.ecore:OperationCallExp">
+                  <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Widget"/>
+                  <source xsi:type="ocl.ecore:OperationCallExp">
+                    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Argument"/>
+                    <source xsi:type="ocl.ecore:VariableExp" name="carg" eType="/3/Sequence(Argument)" referredVariable="/0/generateImageTextOver/carg"/>
+                    <argument xsi:type="ocl.ecore:OperationCallExp">
+                      <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                      <source xsi:type="ocl.ecore:VariableExp" name="cparam" eType="/3/Sequence(ContentElement)" referredVariable="/0/generateImageTextOver/cparam"/>
+                      <argument xsi:type="ocl.ecore:VariableExp" name="anElement" referredVariable="/0/generateImageTextOver/anElement">
+                        <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+                      </argument>
+                      <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)_Class/indexOf"/>
+                    </argument>
+                    <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)_Class/at"/>
+                  </source>
+                  <argument xsi:type="ocl.ecore:TypeExp" eType="/10/Widget">
+                    <referredType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Widget"/>
+                  </argument>
+                  <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclAsType"/>
+                </source>
+                <referredProperty xsi:type="ecore:EReference" href="http://cpcd.upct.es/upctforma#//Widget/widgetarguments"/>
+              </source>
+              <argument xsi:type="ocl.ecore:IntegerLiteralExp" integerSymbol="2">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+              </argument>
+              <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)_Class/at"/>
+            </source>
+            <argument xsi:type="ocl.ecore:TypeExp" eType="/10/Text">
+              <referredType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Text"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsTypeOf"/>
+          </ifExpr>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;                &lt;/figcaption>&#xA;&#x9;&#x9;            &lt;/figure>&#xA;&#x9;&#x9;        &lt;/div>&#xA;&#xA;"/>
+        <fileUrl xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="index.php">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </fileUrl>
+        <charset xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="UTF-8">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </charset>
+      </body>
+      <parameter name="anElement">
+        <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+      </parameter>
+      <parameter name="carg" eType="/3/Sequence(Argument)"/>
+      <parameter name="cparam" eType="/3/Sequence(ContentElement)"/>
+      <parameter name="idgen" eType="/3/Sequence(String)"/>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="nombreObjetivos" visibility="Public">
+      <body xsi:type="mtl:FileBlock">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;,&quot;objetivo"/>
+        <body xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="idgen" eType="/3/Sequence(String)" referredVariable="/0/nombreObjetivos/idgen"/>
+            <argument xsi:type="ocl.ecore:IntegerLiteralExp" integerSymbol="1">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)_Class/at"/>
+          </source>
+          <argument xsi:type="ocl.ecore:TypeExp" eType="/10/String">
+            <referredType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </argument>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/oclAsType"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;&#xA;&#xA;"/>
+        <fileUrl xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="progreso_obj.js">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </fileUrl>
+        <charset xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="UTF-8">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </charset>
+      </body>
+      <parameter name="anElement">
+        <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+      </parameter>
+      <parameter name="idgen" eType="/3/Sequence(String)"/>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="imtoverLatexFile" visibility="Public">
+      <body xsi:type="mtl:FileBlock">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="\includegraphics"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="[">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="width=0.4\columnwidth"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="]">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="{"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Image"/>
+            <source xsi:type="ocl.ecore:OperationCallExp">
+              <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Argument"/>
+              <source xsi:type="ocl.ecore:PropertyCallExp" eType="/3/OrderedSet(Argument)">
+                <source xsi:type="ocl.ecore:OperationCallExp">
+                  <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Widget"/>
+                  <source xsi:type="ocl.ecore:OperationCallExp">
+                    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Argument"/>
+                    <source xsi:type="ocl.ecore:VariableExp" name="carg" eType="/3/Sequence(Argument)" referredVariable="/0/imtoverLatexFile/carg"/>
+                    <argument xsi:type="ocl.ecore:OperationCallExp">
+                      <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                      <source xsi:type="ocl.ecore:VariableExp" name="cparam" eType="/3/Sequence(ContentElement)" referredVariable="/0/imtoverLatexFile/cparam"/>
+                      <argument xsi:type="ocl.ecore:VariableExp" name="anElement" referredVariable="/0/imtoverLatexFile/anElement">
+                        <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+                      </argument>
+                      <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)_Class/indexOf"/>
+                    </argument>
+                    <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)_Class/at"/>
+                  </source>
+                  <argument xsi:type="ocl.ecore:TypeExp" eType="/10/Widget">
+                    <referredType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Widget"/>
+                  </argument>
+                  <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclAsType"/>
+                </source>
+                <referredProperty xsi:type="ecore:EReference" href="http://cpcd.upct.es/upctforma#//Widget/widgetarguments"/>
+              </source>
+              <argument xsi:type="ocl.ecore:IntegerLiteralExp" integerSymbol="1">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+              </argument>
+              <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)_Class/at"/>
+            </source>
+            <argument xsi:type="ocl.ecore:TypeExp" eType="/10/Image">
+              <referredType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Image"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclAsType"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://cpcd.upct.es/upctforma#//Image/url"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="}\pause&#xA;"/>
+        <fileUrl xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="contentpdf.tex">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </fileUrl>
+        <charset xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="UTF-8">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </charset>
+      </body>
+      <parameter name="anElement">
+        <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+      </parameter>
+      <parameter name="carg" eType="/3/Sequence(Argument)"/>
+      <parameter name="cparam" eType="/3/Sequence(ContentElement)"/>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="imtoverTextLatexFile" visibility="Public">
+      <body xsi:type="mtl:FileBlock">
+        <body xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/oclstdlib_String_Class/replaceAll">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/oclstdlib_String_Class/replaceAll">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/oclstdlib_String_Class/replaceAll">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/oclstdlib_String_Class/replaceAll">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                <source xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/oclstdlib_String_Class/replaceAll">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  <source xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/oclstdlib_String_Class/replaceAll">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                    <source xsi:type="ocl.ecore:VariableExp" name="texto" referredVariable="/0/imtoverTextLatexFile/texto">
+                      <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                    </source>
+                    <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;blockquote>">
+                      <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                    </argument>
+                    <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="\\begin{quote}">
+                      <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                    </argument>
+                  </source>
+                  <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;/blockquote>">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  </argument>
+                  <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="\\end{quote}">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  </argument>
+                </source>
+                <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;strong>">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                </argument>
+                <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="\\textbf{">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                </argument>
+              </source>
+              <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;/strong>">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              </argument>
+              <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="}">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              </argument>
+            </source>
+            <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;h2>">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </argument>
+            <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="\\textbf{">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </argument>
+          </source>
+          <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;/h2>">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </argument>
+          <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="}">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </argument>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+        <body xsi:type="mtl:IfBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="\pause&#xA;"/>
+          <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:OperationCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="tsize" referredVariable="/0/imtoverTextLatexFile/tsize">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+              </source>
+              <argument xsi:type="ocl.ecore:IntegerLiteralExp" integerSymbol="1">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+              </argument>
+              <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/%3C%3E"/>
+            </source>
+            <argument xsi:type="ocl.ecore:OperationCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="position" referredVariable="/0/imtoverTextLatexFile/position">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+              </source>
+              <argument xsi:type="ocl.ecore:VariableExp" name="tsize" referredVariable="/0/imtoverTextLatexFile/tsize">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+              </argument>
+              <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/%3C%3E"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean_Class/and"/>
+          </ifExpr>
+        </body>
+        <fileUrl xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="contentpdf.tex">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </fileUrl>
+        <charset xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="UTF-8">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </charset>
+      </body>
+      <parameter name="anElement">
+        <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+      </parameter>
+      <parameter name="texto">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </parameter>
+      <parameter name="tsize">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+      </parameter>
+      <parameter name="position">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+      </parameter>
+    </ownedModuleElement>
+  </mtl:Module>
+  <ecore:EPackage name="additions">
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_String_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eAnnotations>
+      <eOperations name="replaceAll">
+        <eAnnotations source="MTL non-standard"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="substring">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </eParameters>
+        <eParameters name="replacement">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Integer_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Real_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ecore_EObject_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eAnnotations>
+      <eOperations name="generateImageTextOver">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generateImageTextOver"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="anElement">
+          <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+        </eParameters>
+        <eParameters name="carg" eType="/3/Sequence(Argument)"/>
+        <eParameters name="cparam" eType="/3/Sequence(ContentElement)"/>
+        <eParameters name="idgen" eType="/3/Sequence(String)"/>
+      </eOperations>
+      <eOperations name="nombreObjetivos">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/nombreObjetivos"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="anElement">
+          <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+        </eParameters>
+        <eParameters name="idgen" eType="/3/Sequence(String)"/>
+      </eOperations>
+      <eOperations name="imtoverLatexFile">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/imtoverLatexFile"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="anElement">
+          <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+        </eParameters>
+        <eParameters name="carg" eType="/3/Sequence(Argument)"/>
+        <eParameters name="cparam" eType="/3/Sequence(ContentElement)"/>
+      </eOperations>
+      <eOperations name="imtoverTextLatexFile">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/imtoverTextLatexFile"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="anElement">
+          <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+        </eParameters>
+        <eParameters name="texto">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </eParameters>
+        <eParameters name="tsize">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        </eParameters>
+        <eParameters name="position">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OclAny_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Collection(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Sequence(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OrderedSet(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="upctforma_ContentElement_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+      </eAnnotations>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="collections">
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(Argument)" instanceClassName="java.util.List">
+      <elementType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Argument"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(ContentElement)" instanceClassName="java.util.List">
+      <elementType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(String)" instanceClassName="java.util.List">
+      <elementType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Argument)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Argument"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Paragraph)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Paragraph"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SetType" instanceClassName="java.util.Set">
+      <elementType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Paragraph"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="types">
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="String">
+      <referredType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="Widget">
+      <referredType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Widget"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="Image">
+      <referredType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Image"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="Text">
+      <referredType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Text"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Paragraph"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Paragraph"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Paragraph"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//ContentElement"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EAnnotation source="positions">
+    <eAnnotations source="positions.0" references="/0/generateImageTextOver">
+      <details key="start" value="87"/>
+      <details key="end" value="1637"/>
+      <details key="line" value="5"/>
+    </eAnnotations>
+    <eAnnotations source="positions.1" references="/0/generateImageTextOver/%">
+      <details key="start" value="240"/>
+      <details key="end" value="1625"/>
+      <details key="line" value="6"/>
+    </eAnnotations>
+    <eAnnotations source="positions.2" references="/0/generateImageTextOver/%/%">
+      <details key="start" value="275"/>
+      <details key="end" value="279"/>
+      <details key="line" value="7"/>
+    </eAnnotations>
+    <eAnnotations source="positions.3" references="/0/generateImageTextOver/%/%.1">
+      <details key="start" value="280"/>
+      <details key="end" value="329"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.4" references="/0/generateImageTextOver/%/%.1/anElement">
+      <details key="start" value="307"/>
+      <details key="end" value="316"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.5" references="/0/generateImageTextOver/%/%.1/carg">
+      <details key="start" value="317"/>
+      <details key="end" value="321"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.6" references="/0/generateImageTextOver/%/%.1/cparam">
+      <details key="start" value="322"/>
+      <details key="end" value="328"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.7" references="/0/generateImageTextOver/%/%.2">
+      <details key="start" value="331"/>
+      <details key="end" value="404"/>
+      <details key="line" value="8"/>
+    </eAnnotations>
+    <eAnnotations source="positions.8" references="/0/generateImageTextOver/%/%.3">
+      <details key="start" value="405"/>
+      <details key="end" value="435"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.9" references="/0/generateImageTextOver/%/%.3/%">
+      <details key="start" value="405"/>
+      <details key="end" value="417"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.10" references="/0/generateImageTextOver/%/%.3/%/idgen">
+      <details key="start" value="405"/>
+      <details key="end" value="410"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.11" references="/0/generateImageTextOver/%/%.3/%/%">
+      <details key="start" value="415"/>
+      <details key="end" value="416"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.12" references="/0/generateImageTextOver/%/%.3/%.1">
+      <details key="start" value="428"/>
+      <details key="end" value="434"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.13" references="/0/generateImageTextOver/%/%.4">
+      <details key="start" value="437"/>
+      <details key="end" value="525"/>
+      <details key="line" value="10"/>
+    </eAnnotations>
+    <eAnnotations source="positions.14" references="/0/generateImageTextOver/%/%.5">
+      <details key="start" value="526"/>
+      <details key="end" value="558"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/generateImageTextOver/%/%.5/anElement">
+      <details key="start" value="526"/>
+      <details key="end" value="535"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.16" references="/0/generateImageTextOver/%/%.5/idgen">
+      <details key="start" value="552"/>
+      <details key="end" value="557"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.17" references="/0/generateImageTextOver/%/%.6">
+      <details key="start" value="560"/>
+      <details key="end" value="652"/>
+      <details key="line" value="14"/>
+    </eAnnotations>
+    <eAnnotations source="positions.18" references="/0/generateImageTextOver/%/%.7">
+      <details key="start" value="653"/>
+      <details key="end" value="683"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.19" references="/0/generateImageTextOver/%/%.7/%">
+      <details key="start" value="653"/>
+      <details key="end" value="665"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.20" references="/0/generateImageTextOver/%/%.7/%/idgen">
+      <details key="start" value="653"/>
+      <details key="end" value="658"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.21" references="/0/generateImageTextOver/%/%.7/%/%">
+      <details key="start" value="663"/>
+      <details key="end" value="664"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.22" references="/0/generateImageTextOver/%/%.7/%.1">
+      <details key="start" value="676"/>
+      <details key="end" value="682"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.23" references="/0/generateImageTextOver/%/%.8">
+      <details key="start" value="685"/>
+      <details key="end" value="724"/>
+      <details key="line" value="16"/>
+    </eAnnotations>
+    <eAnnotations source="positions.24" references="/0/generateImageTextOver/%/%.9">
+      <details key="start" value="725"/>
+      <details key="end" value="784"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.25" references="/0/generateImageTextOver/%/%.9/%">
+      <details key="start" value="725"/>
+      <details key="end" value="779"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.26" references="/0/generateImageTextOver/%/%.9/%/%">
+      <details key="start" value="725"/>
+      <details key="end" value="761"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.27" references="/0/generateImageTextOver/%/%.9/%/%/carg">
+      <details key="start" value="725"/>
+      <details key="end" value="729"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.28" references="/0/generateImageTextOver/%/%.9/%/%/%">
+      <details key="start" value="734"/>
+      <details key="end" value="760"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.29" references="/0/generateImageTextOver/%/%.9/%/%/%/cparam">
+      <details key="start" value="734"/>
+      <details key="end" value="740"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.30" references="/0/generateImageTextOver/%/%.9/%/%/%/anElement">
+      <details key="start" value="750"/>
+      <details key="end" value="759"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.31" references="/0/generateImageTextOver/%/%.9/%/%.1">
+      <details key="start" value="772"/>
+      <details key="end" value="778"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.32" references="/0/generateImageTextOver/%/%.10">
+      <details key="start" value="786"/>
+      <details key="end" value="897"/>
+      <details key="line" value="16"/>
+    </eAnnotations>
+    <eAnnotations source="positions.33" references="/0/generateImageTextOver/%/%.11">
+      <details key="start" value="898"/>
+      <details key="end" value="996"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.34" references="/0/generateImageTextOver/%/%.11/%">
+      <details key="start" value="898"/>
+      <details key="end" value="992"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.35" references="/0/generateImageTextOver/%/%.11/%/%">
+      <details key="start" value="898"/>
+      <details key="end" value="975"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.36" references="/0/generateImageTextOver/%/%.11/%/%/%">
+      <details key="start" value="898"/>
+      <details key="end" value="968"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.37" references="/0/generateImageTextOver/%/%.11/%/%/%/%">
+      <details key="start" value="898"/>
+      <details key="end" value="952"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.38" references="/0/generateImageTextOver/%/%.11/%/%/%/%/%">
+      <details key="start" value="898"/>
+      <details key="end" value="934"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.39" references="/0/generateImageTextOver/%/%.11/%/%/%/%/%/carg">
+      <details key="start" value="898"/>
+      <details key="end" value="902"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.40" references="/0/generateImageTextOver/%/%.11/%/%/%/%/%/%">
+      <details key="start" value="907"/>
+      <details key="end" value="933"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.41" references="/0/generateImageTextOver/%/%.11/%/%/%/%/%/%/cparam">
+      <details key="start" value="907"/>
+      <details key="end" value="913"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.42" references="/0/generateImageTextOver/%/%.11/%/%/%/%/%/%/anElement">
+      <details key="start" value="923"/>
+      <details key="end" value="932"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.43" references="/0/generateImageTextOver/%/%.11/%/%/%/%/%.1">
+      <details key="start" value="945"/>
+      <details key="end" value="951"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.44" references="/0/generateImageTextOver/%/%.11/%/%/%.1">
+      <details key="start" value="973"/>
+      <details key="end" value="974"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.45" references="/0/generateImageTextOver/%/%.11/%/%.1">
+      <details key="start" value="986"/>
+      <details key="end" value="991"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.46" references="/0/generateImageTextOver/%/%.12">
+      <details key="start" value="998"/>
+      <details key="end" value="1032"/>
+      <details key="line" value="16"/>
+    </eAnnotations>
+    <eAnnotations source="positions.47" references="/0/generateImageTextOver/%/%.13">
+      <details key="start" value="1039"/>
+      <details key="end" value="1542"/>
+      <details key="line" value="18"/>
+    </eAnnotations>
+    <eAnnotations source="positions.48" references="/0/generateImageTextOver/%/%.13/%">
+      <details key="start" value="1152"/>
+      <details key="end" value="1529"/>
+      <details key="line" value="19"/>
+    </eAnnotations>
+    <eAnnotations source="positions.49" references="/0/generateImageTextOver/%/%.13/%/%">
+      <details key="start" value="1291"/>
+      <details key="end" value="1301"/>
+      <details key="line" value="20"/>
+    </eAnnotations>
+    <eAnnotations source="positions.50" references="/0/generateImageTextOver/%/%.13/%/%.1">
+      <details key="start" value="1302"/>
+      <details key="end" value="1478"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.51" references="/0/generateImageTextOver/%/%.13/%/%.1/anElement">
+      <details key="start" value="1333"/>
+      <details key="end" value="1342"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.52" references="/0/generateImageTextOver/%/%.13/%/%.1/%">
+      <details key="start" value="1344"/>
+      <details key="end" value="1360"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.53" references="/0/generateImageTextOver/%/%.13/%/%.1/%/anParagraph">
+      <details key="start" value="1344"/>
+      <details key="end" value="1355"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.54" references="/0/generateImageTextOver/%/%.13/%/%.1/%.1">
+      <details key="start" value="1362"/>
+      <details key="end" value="1474"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.55" references="/0/generateImageTextOver/%/%.13/%/%.1/%.1/%">
+      <details key="start" value="1362"/>
+      <details key="end" value="1466"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.56" references="/0/generateImageTextOver/%/%.13/%/%.1/%.1/%/%">
+      <details key="start" value="1362"/>
+      <details key="end" value="1455"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.57" references="/0/generateImageTextOver/%/%.13/%/%.1/%.1/%/%/%">
+      <details key="start" value="1362"/>
+      <details key="end" value="1439"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.58" references="/0/generateImageTextOver/%/%.13/%/%.1/%.1/%/%/%/%">
+      <details key="start" value="1362"/>
+      <details key="end" value="1432"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.59" references="/0/generateImageTextOver/%/%.13/%/%.1/%.1/%/%/%/%/%">
+      <details key="start" value="1362"/>
+      <details key="end" value="1416"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.60" references="/0/generateImageTextOver/%/%.13/%/%.1/%.1/%/%/%/%/%/%">
+      <details key="start" value="1362"/>
+      <details key="end" value="1398"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.61" references="/0/generateImageTextOver/%/%.13/%/%.1/%.1/%/%/%/%/%/%/carg">
+      <details key="start" value="1362"/>
+      <details key="end" value="1366"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.62" references="/0/generateImageTextOver/%/%.13/%/%.1/%.1/%/%/%/%/%/%/%">
+      <details key="start" value="1371"/>
+      <details key="end" value="1397"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.63" references="/0/generateImageTextOver/%/%.13/%/%.1/%.1/%/%/%/%/%/%/%/cparam">
+      <details key="start" value="1371"/>
+      <details key="end" value="1377"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.64" references="/0/generateImageTextOver/%/%.13/%/%.1/%.1/%/%/%/%/%/%/%/anElement">
+      <details key="start" value="1387"/>
+      <details key="end" value="1396"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.65" references="/0/generateImageTextOver/%/%.13/%/%.1/%.1/%/%/%/%/%/%.1">
+      <details key="start" value="1409"/>
+      <details key="end" value="1415"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.66" references="/0/generateImageTextOver/%/%.13/%/%.1/%.1/%/%/%/%.1">
+      <details key="start" value="1437"/>
+      <details key="end" value="1438"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.67" references="/0/generateImageTextOver/%/%.13/%/%.1/%.1/%/%/%.1">
+      <details key="start" value="1450"/>
+      <details key="end" value="1454"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.68" references="/0/generateImageTextOver/%/%.13/%/%.1/i">
+      <details key="start" value="1476"/>
+      <details key="end" value="1477"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.69" references="/0/generateImageTextOver/%/%.13/%/%.2">
+      <details key="start" value="1480"/>
+      <details key="end" value="1489"/>
+      <details key="line" value="21"/>
+    </eAnnotations>
+    <eAnnotations source="positions.70" references="/0/generateImageTextOver/%/%.13/%/%.3">
+      <details key="start" value="1490"/>
+      <details key="end" value="1506"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.71" references="/0/generateImageTextOver/%/%.13/%/%.3/anParagraph">
+      <details key="start" value="1490"/>
+      <details key="end" value="1501"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.72" references="/0/generateImageTextOver/%/%.13/%/%.4">
+      <details key="start" value="1509"/>
+      <details key="end" value="1514"/>
+      <details key="line" value="21"/>
+    </eAnnotations>
+    <eAnnotations source="positions.73" references="/0/generateImageTextOver/%/%.13/%/anParagraph">
+      <details key="start" value="1158"/>
+      <details key="end" value="1181"/>
+      <details key="line" value="19"/>
+    </eAnnotations>
+    <eAnnotations source="positions.74" references="/0/generateImageTextOver/%/%.13/%/%.5">
+      <details key="start" value="1184"/>
+      <details key="end" value="1288"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.75" references="/0/generateImageTextOver/%/%.13/%/%.5/%">
+      <details key="start" value="1184"/>
+      <details key="end" value="1277"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.76" references="/0/generateImageTextOver/%/%.13/%/%.5/%/%">
+      <details key="start" value="1184"/>
+      <details key="end" value="1261"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.77" references="/0/generateImageTextOver/%/%.13/%/%.5/%/%/%">
+      <details key="start" value="1184"/>
+      <details key="end" value="1254"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.78" references="/0/generateImageTextOver/%/%.13/%/%.5/%/%/%/%">
+      <details key="start" value="1184"/>
+      <details key="end" value="1238"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.79" references="/0/generateImageTextOver/%/%.13/%/%.5/%/%/%/%/%">
+      <details key="start" value="1184"/>
+      <details key="end" value="1220"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.80" references="/0/generateImageTextOver/%/%.13/%/%.5/%/%/%/%/%/carg">
+      <details key="start" value="1184"/>
+      <details key="end" value="1188"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.81" references="/0/generateImageTextOver/%/%.13/%/%.5/%/%/%/%/%/%">
+      <details key="start" value="1193"/>
+      <details key="end" value="1219"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.82" references="/0/generateImageTextOver/%/%.13/%/%.5/%/%/%/%/%/%/cparam">
+      <details key="start" value="1193"/>
+      <details key="end" value="1199"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.83" references="/0/generateImageTextOver/%/%.13/%/%.5/%/%/%/%/%/%/anElement">
+      <details key="start" value="1209"/>
+      <details key="end" value="1218"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.84" references="/0/generateImageTextOver/%/%.13/%/%.5/%/%/%/%/%.1">
+      <details key="start" value="1231"/>
+      <details key="end" value="1237"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.85" references="/0/generateImageTextOver/%/%.13/%/%.5/%/%/%.1">
+      <details key="start" value="1259"/>
+      <details key="end" value="1260"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.86" references="/0/generateImageTextOver/%/%.13/%/%.5/%/%.1">
+      <details key="start" value="1272"/>
+      <details key="end" value="1276"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.87" references="/0/generateImageTextOver/%/%.13/%.1">
+      <details key="start" value="1043"/>
+      <details key="end" value="1140"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.88" references="/0/generateImageTextOver/%/%.13/%.1/%">
+      <details key="start" value="1044"/>
+      <details key="end" value="1121"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.89" references="/0/generateImageTextOver/%/%.13/%.1/%/%">
+      <details key="start" value="1044"/>
+      <details key="end" value="1114"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.90" references="/0/generateImageTextOver/%/%.13/%.1/%/%/%">
+      <details key="start" value="1044"/>
+      <details key="end" value="1098"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.91" references="/0/generateImageTextOver/%/%.13/%.1/%/%/%/%">
+      <details key="start" value="1044"/>
+      <details key="end" value="1080"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.92" references="/0/generateImageTextOver/%/%.13/%.1/%/%/%/%/carg">
+      <details key="start" value="1044"/>
+      <details key="end" value="1048"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.93" references="/0/generateImageTextOver/%/%.13/%.1/%/%/%/%/%">
+      <details key="start" value="1053"/>
+      <details key="end" value="1079"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.94" references="/0/generateImageTextOver/%/%.13/%.1/%/%/%/%/%/cparam">
+      <details key="start" value="1053"/>
+      <details key="end" value="1059"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.95" references="/0/generateImageTextOver/%/%.13/%.1/%/%/%/%/%/anElement">
+      <details key="start" value="1069"/>
+      <details key="end" value="1078"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.96" references="/0/generateImageTextOver/%/%.13/%.1/%/%/%/%.1">
+      <details key="start" value="1091"/>
+      <details key="end" value="1097"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.97" references="/0/generateImageTextOver/%/%.13/%.1/%/%.1">
+      <details key="start" value="1119"/>
+      <details key="end" value="1120"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.98" references="/0/generateImageTextOver/%/%.13/%.1/%.1">
+      <details key="start" value="1134"/>
+      <details key="end" value="1138"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.99" references="/0/generateImageTextOver/%/%.14">
+      <details key="start" value="1544"/>
+      <details key="end" value="1618"/>
+      <details key="line" value="23"/>
+    </eAnnotations>
+    <eAnnotations source="positions.100" references="/0/generateImageTextOver/%/%.15">
+      <details key="start" value="246"/>
+      <details key="end" value="257"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.101" references="/0/generateImageTextOver/%/%.16">
+      <details key="start" value="265"/>
+      <details key="end" value="272"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.102" references="/0/generateImageTextOver/anElement">
+      <details key="start" value="126"/>
+      <details key="end" value="152"/>
+      <details key="line" value="5"/>
+    </eAnnotations>
+    <eAnnotations source="positions.103" references="/0/generateImageTextOver/carg">
+      <details key="start" value="154"/>
+      <details key="end" value="178"/>
+      <details key="line" value="5"/>
+    </eAnnotations>
+    <eAnnotations source="positions.104" references="/0/generateImageTextOver/cparam">
+      <details key="start" value="180"/>
+      <details key="end" value="212"/>
+      <details key="line" value="5"/>
+    </eAnnotations>
+    <eAnnotations source="positions.105" references="/0/generateImageTextOver/idgen">
+      <details key="start" value="214"/>
+      <details key="end" value="237"/>
+      <details key="line" value="5"/>
+    </eAnnotations>
+    <eAnnotations source="positions.106" references="/0/nombreObjetivos">
+      <details key="start" value="1639"/>
+      <details key="end" value="1833"/>
+      <details key="line" value="31"/>
+    </eAnnotations>
+    <eAnnotations source="positions.107" references="/0/nombreObjetivos/%">
+      <details key="start" value="1726"/>
+      <details key="end" value="1821"/>
+      <details key="line" value="32"/>
+    </eAnnotations>
+    <eAnnotations source="positions.108" references="/0/nombreObjetivos/%/%">
+      <details key="start" value="1767"/>
+      <details key="end" value="1778"/>
+      <details key="line" value="33"/>
+    </eAnnotations>
+    <eAnnotations source="positions.109" references="/0/nombreObjetivos/%/%.1">
+      <details key="start" value="1779"/>
+      <details key="end" value="1809"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.110" references="/0/nombreObjetivos/%/%.1/%">
+      <details key="start" value="1779"/>
+      <details key="end" value="1791"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.111" references="/0/nombreObjetivos/%/%.1/%/idgen">
+      <details key="start" value="1779"/>
+      <details key="end" value="1784"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.112" references="/0/nombreObjetivos/%/%.1/%/%">
+      <details key="start" value="1789"/>
+      <details key="end" value="1790"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.113" references="/0/nombreObjetivos/%/%.1/%.1">
+      <details key="start" value="1802"/>
+      <details key="end" value="1808"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.114" references="/0/nombreObjetivos/%/%.2">
+      <details key="start" value="1811"/>
+      <details key="end" value="1814"/>
+      <details key="line" value="33"/>
+    </eAnnotations>
+    <eAnnotations source="positions.115" references="/0/nombreObjetivos/%/%.3">
+      <details key="start" value="1732"/>
+      <details key="end" value="1749"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.116" references="/0/nombreObjetivos/%/%.4">
+      <details key="start" value="1757"/>
+      <details key="end" value="1764"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.117" references="/0/nombreObjetivos/anElement">
+      <details key="start" value="1672"/>
+      <details key="end" value="1698"/>
+      <details key="line" value="31"/>
+    </eAnnotations>
+    <eAnnotations source="positions.118" references="/0/nombreObjetivos/idgen">
+      <details key="start" value="1700"/>
+      <details key="end" value="1723"/>
+      <details key="line" value="31"/>
+    </eAnnotations>
+    <eAnnotations source="positions.119" references="/0/imtoverLatexFile">
+      <details key="start" value="1835"/>
+      <details key="end" value="2176"/>
+      <details key="line" value="38"/>
+    </eAnnotations>
+    <eAnnotations source="positions.120" references="/0/imtoverLatexFile/%">
+      <details key="start" value="1958"/>
+      <details key="end" value="2164"/>
+      <details key="line" value="39"/>
+    </eAnnotations>
+    <eAnnotations source="positions.121" references="/0/imtoverLatexFile/%/%">
+      <details key="start" value="1998"/>
+      <details key="end" value="2014"/>
+      <details key="line" value="40"/>
+    </eAnnotations>
+    <eAnnotations source="positions.122" references="/0/imtoverLatexFile/%/%.1">
+      <details key="start" value="2015"/>
+      <details key="end" value="2018"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.123" references="/0/imtoverLatexFile/%/%.2">
+      <details key="start" value="2020"/>
+      <details key="end" value="2041"/>
+      <details key="line" value="40"/>
+    </eAnnotations>
+    <eAnnotations source="positions.124" references="/0/imtoverLatexFile/%/%.3">
+      <details key="start" value="2042"/>
+      <details key="end" value="2045"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.125" references="/0/imtoverLatexFile/%/%.4">
+      <details key="start" value="2047"/>
+      <details key="end" value="2048"/>
+      <details key="line" value="40"/>
+    </eAnnotations>
+    <eAnnotations source="positions.126" references="/0/imtoverLatexFile/%/%.5">
+      <details key="start" value="2049"/>
+      <details key="end" value="2147"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.127" references="/0/imtoverLatexFile/%/%.5/%">
+      <details key="start" value="2049"/>
+      <details key="end" value="2143"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.128" references="/0/imtoverLatexFile/%/%.5/%/%">
+      <details key="start" value="2049"/>
+      <details key="end" value="2126"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.129" references="/0/imtoverLatexFile/%/%.5/%/%/%">
+      <details key="start" value="2049"/>
+      <details key="end" value="2119"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.130" references="/0/imtoverLatexFile/%/%.5/%/%/%/%">
+      <details key="start" value="2049"/>
+      <details key="end" value="2103"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.131" references="/0/imtoverLatexFile/%/%.5/%/%/%/%/%">
+      <details key="start" value="2049"/>
+      <details key="end" value="2085"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.132" references="/0/imtoverLatexFile/%/%.5/%/%/%/%/%/carg">
+      <details key="start" value="2049"/>
+      <details key="end" value="2053"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.133" references="/0/imtoverLatexFile/%/%.5/%/%/%/%/%/%">
+      <details key="start" value="2058"/>
+      <details key="end" value="2084"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.134" references="/0/imtoverLatexFile/%/%.5/%/%/%/%/%/%/cparam">
+      <details key="start" value="2058"/>
+      <details key="end" value="2064"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.135" references="/0/imtoverLatexFile/%/%.5/%/%/%/%/%/%/anElement">
+      <details key="start" value="2074"/>
+      <details key="end" value="2083"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.136" references="/0/imtoverLatexFile/%/%.5/%/%/%/%/%.1">
+      <details key="start" value="2096"/>
+      <details key="end" value="2102"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.137" references="/0/imtoverLatexFile/%/%.5/%/%/%.1">
+      <details key="start" value="2124"/>
+      <details key="end" value="2125"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.138" references="/0/imtoverLatexFile/%/%.5/%/%.1">
+      <details key="start" value="2137"/>
+      <details key="end" value="2142"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.139" references="/0/imtoverLatexFile/%/%.6">
+      <details key="start" value="2149"/>
+      <details key="end" value="2157"/>
+      <details key="line" value="40"/>
+    </eAnnotations>
+    <eAnnotations source="positions.140" references="/0/imtoverLatexFile/%/%.7">
+      <details key="start" value="1964"/>
+      <details key="end" value="1980"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.141" references="/0/imtoverLatexFile/%/%.8">
+      <details key="start" value="1988"/>
+      <details key="end" value="1995"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.142" references="/0/imtoverLatexFile/anElement">
+      <details key="start" value="1869"/>
+      <details key="end" value="1895"/>
+      <details key="line" value="38"/>
+    </eAnnotations>
+    <eAnnotations source="positions.143" references="/0/imtoverLatexFile/carg">
+      <details key="start" value="1897"/>
+      <details key="end" value="1921"/>
+      <details key="line" value="38"/>
+    </eAnnotations>
+    <eAnnotations source="positions.144" references="/0/imtoverLatexFile/cparam">
+      <details key="start" value="1923"/>
+      <details key="end" value="1955"/>
+      <details key="line" value="38"/>
+    </eAnnotations>
+    <eAnnotations source="positions.145" references="/0/imtoverTextLatexFile">
+      <details key="start" value="2178"/>
+      <details key="end" value="2629"/>
+      <details key="line" value="44"/>
+    </eAnnotations>
+    <eAnnotations source="positions.146" references="/0/imtoverTextLatexFile/%">
+      <details key="start" value="2295"/>
+      <details key="end" value="2617"/>
+      <details key="line" value="45"/>
+    </eAnnotations>
+    <eAnnotations source="positions.147" references="/0/imtoverTextLatexFile/%/%">
+      <details key="start" value="2336"/>
+      <details key="end" value="2555"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.148" references="/0/imtoverTextLatexFile/%/%/%">
+      <details key="start" value="2336"/>
+      <details key="end" value="2531"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.149" references="/0/imtoverTextLatexFile/%/%/%/%">
+      <details key="start" value="2336"/>
+      <details key="end" value="2498"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.150" references="/0/imtoverTextLatexFile/%/%/%/%/%">
+      <details key="start" value="2336"/>
+      <details key="end" value="2470"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.151" references="/0/imtoverTextLatexFile/%/%/%/%/%/%">
+      <details key="start" value="2336"/>
+      <details key="end" value="2433"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.152" references="/0/imtoverTextLatexFile/%/%/%/%/%/%/%">
+      <details key="start" value="2336"/>
+      <details key="end" value="2388"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.153" references="/0/imtoverTextLatexFile/%/%/%/%/%/%/%/texto">
+      <details key="start" value="2336"/>
+      <details key="end" value="2341"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.154" references="/0/imtoverTextLatexFile/%/%/%/%/%/%/%/%">
+      <details key="start" value="2353"/>
+      <details key="end" value="2367"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.155" references="/0/imtoverTextLatexFile/%/%/%/%/%/%/%/%.1">
+      <details key="start" value="2369"/>
+      <details key="end" value="2387"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.156" references="/0/imtoverTextLatexFile/%/%/%/%/%/%/%.1">
+      <details key="start" value="2400"/>
+      <details key="end" value="2415"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.157" references="/0/imtoverTextLatexFile/%/%/%/%/%/%/%.2">
+      <details key="start" value="2416"/>
+      <details key="end" value="2432"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.158" references="/0/imtoverTextLatexFile/%/%/%/%/%/%.1">
+      <details key="start" value="2445"/>
+      <details key="end" value="2455"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.159" references="/0/imtoverTextLatexFile/%/%/%/%/%/%.2">
+      <details key="start" value="2456"/>
+      <details key="end" value="2469"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.160" references="/0/imtoverTextLatexFile/%/%/%/%/%.1">
+      <details key="start" value="2482"/>
+      <details key="end" value="2493"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.161" references="/0/imtoverTextLatexFile/%/%/%/%/%.2">
+      <details key="start" value="2494"/>
+      <details key="end" value="2497"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.162" references="/0/imtoverTextLatexFile/%/%/%/%.1">
+      <details key="start" value="2510"/>
+      <details key="end" value="2516"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.163" references="/0/imtoverTextLatexFile/%/%/%/%.2">
+      <details key="start" value="2517"/>
+      <details key="end" value="2530"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.164" references="/0/imtoverTextLatexFile/%/%/%.1">
+      <details key="start" value="2543"/>
+      <details key="end" value="2550"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.165" references="/0/imtoverTextLatexFile/%/%/%.2">
+      <details key="start" value="2551"/>
+      <details key="end" value="2554"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.166" references="/0/imtoverTextLatexFile/%/%.1">
+      <details key="start" value="2558"/>
+      <details key="end" value="2559"/>
+      <details key="line" value="47"/>
+    </eAnnotations>
+    <eAnnotations source="positions.167" references="/0/imtoverTextLatexFile/%/%.2">
+      <details key="start" value="2559"/>
+      <details key="end" value="2609"/>
+      <details key="line" value="47"/>
+    </eAnnotations>
+    <eAnnotations source="positions.168" references="/0/imtoverTextLatexFile/%/%.2/%">
+      <details key="start" value="2597"/>
+      <details key="end" value="2604"/>
+      <details key="line" value="48"/>
+    </eAnnotations>
+    <eAnnotations source="positions.169" references="/0/imtoverTextLatexFile/%/%.2/%.1">
+      <details key="start" value="2563"/>
+      <details key="end" value="2595"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.170" references="/0/imtoverTextLatexFile/%/%.2/%.1/%">
+      <details key="start" value="2563"/>
+      <details key="end" value="2573"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.171" references="/0/imtoverTextLatexFile/%/%.2/%.1/%/tsize">
+      <details key="start" value="2563"/>
+      <details key="end" value="2568"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.172" references="/0/imtoverTextLatexFile/%/%.2/%.1/%/%">
+      <details key="start" value="2572"/>
+      <details key="end" value="2573"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.173" references="/0/imtoverTextLatexFile/%/%.2/%.1/%.1">
+      <details key="start" value="2578"/>
+      <details key="end" value="2595"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.174" references="/0/imtoverTextLatexFile/%/%.2/%.1/%.1/position">
+      <details key="start" value="2578"/>
+      <details key="end" value="2586"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.175" references="/0/imtoverTextLatexFile/%/%.2/%.1/%.1/tsize">
+      <details key="start" value="2590"/>
+      <details key="end" value="2595"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.176" references="/0/imtoverTextLatexFile/%/%.3">
+      <details key="start" value="2301"/>
+      <details key="end" value="2317"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.177" references="/0/imtoverTextLatexFile/%/%.4">
+      <details key="start" value="2325"/>
+      <details key="end" value="2332"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.178" references="/0/imtoverTextLatexFile/anElement">
+      <details key="start" value="2216"/>
+      <details key="end" value="2242"/>
+      <details key="line" value="44"/>
+    </eAnnotations>
+    <eAnnotations source="positions.179" references="/0/imtoverTextLatexFile/texto">
+      <details key="start" value="2244"/>
+      <details key="end" value="2257"/>
+      <details key="line" value="44"/>
+    </eAnnotations>
+    <eAnnotations source="positions.180" references="/0/imtoverTextLatexFile/tsize">
+      <details key="start" value="2259"/>
+      <details key="end" value="2273"/>
+      <details key="line" value="44"/>
+    </eAnnotations>
+    <eAnnotations source="positions.181" references="/0/imtoverTextLatexFile/position">
+      <details key="start" value="2275"/>
+      <details key="end" value="2292"/>
+      <details key="line" value="44"/>
+    </eAnnotations>
+  </ecore:EAnnotation>
+</xmi:XMI>

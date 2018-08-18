@@ -1,0 +1,48 @@
+[comment encoding = UTF-8 /]
+[module section('http://cpcd.upct.es/upctforma')]
+
+
+[import org::eclipse::acceleo::module::upctforma::common::row /]
+
+[template public generateSection(aSection : Section, secId: Integer)]
+[file('index.php', true, 'UTF-8')]
+	[aSection.sectionLatexFile(aSection)/]
+	<section id="apdo[secId/]" class="section-divider textdividersub divider1" style="background:url('img/cabeceras/[aSection.image /]');">
+      <div class="container">
+        <h1>[aSection.title /]</h1>
+        <hr>
+        <p></p>
+      </div>
+    </section>
+	[for (aRow : Row | aSection.rows)]
+		[let idgen : Sequence(String) = Sequence{'s'.concat(secId.toString()).concat('r').concat(i.toString())} ]
+
+			[if (not aRow.usetemplate.oclIsUndefined())]
+				[let carg : Sequence(Argument) = aRow.usetemplate.arguments->collect(x | if (x.oclIsKindOf(SimpleElement)) then x else if (x.oclIsTypeOf(Widget)) then x.oclAsType(Widget).widgetarguments->collect(y | x) else x endif endif)] 
+			    	[for (aRow : Row | aRow.usetemplate.typetemplate.rows)]
+						[let idgen2 : Sequence(String) = Sequence{idgen->at(1).oclAsType(String).concat('rt'.concat(i.toString()))} ]
+							[aRow.generateRow(carg, idgen2, aSection.title)/]
+						[/let]
+					[/for]
+				[/let]
+			[else]
+					[aRow.generateRow(Sequence{}, idgen, aSection.title)/]
+			[/if]
+		[/let]
+	[/for]
+	[aSection.nombreObjetivos()/]
+[/file]
+[/template]
+
+[template public nombreObjetivos(aSection : Section)]
+[file('progreso_obj.js', true, 'UTF-8')]
+	,"section"
+
+[/file]
+[/template]
+
+[template public sectionLatexFile(aSection : Section)]
+[file('contentpdf.tex', true, 'UTF-8')]
+\section{[aSection.title /]}
+[/file]
+[/template]

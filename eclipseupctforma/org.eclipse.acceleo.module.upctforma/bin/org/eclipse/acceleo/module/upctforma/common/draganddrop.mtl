@@ -1,0 +1,202 @@
+[comment encoding = UTF-8 /]
+[module draganddrop('http://cpcd.upct.es/upctforma')]
+
+[template public generateDragAndDrop(anElement : ContentElement, carg: Sequence(Argument), cparam: Sequence(ContentElement), idgen: Sequence(String))]
+	[anElement.generateDragAndDrop0(carg, cparam,idgen)/]
+	[anElement.generateDragAndDrop1(carg, cparam,idgen)/]
+	[anElement.draganddropLatexFile()/]
+[/template]
+
+[template public generateDragAndDrop0(anElement : ContentElement, carg: Sequence(Argument), cparam: Sequence(ContentElement), idgen: Sequence(String))]
+[file('index.php', true, 'UTF-8')]
+<div class="row">
+	<div class="col-md-12">
+		<i id="objetivo[idgen->at(1).oclAsType(String)/]" class="fa fa-check-square-o fa-2x" aria-hidden="true"></i>
+	</div>
+</div>
+[anElement.nombreObjetivos(idgen)/]
+[for (aSimple : SimpleElement | carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(1).oclAsType(DragAndDrop).arguments)]
+[if (i-1).mod(3) = 0]
+<div class="row">
+	<div class="col-md-3 col-sm-3 col-xs-3">
+    	<div id="drop[idgen->at(1).oclAsType(String)/][i/][i/]" class="ui-droppable drops drop[idgen->at(1).oclAsType(String)/][i/] smar1 ui-helper-reset">
+        	<img src="img/[(aSimple.oclAsType(Image)).url /]" id="[(aSimple.oclAsType(Image)).url.strtok('.', 0) /]" class="img img-responsive ui-widget-content ui-draggable">
+        </div>
+	</div>
+	<div class="col-md-3 col-sm-3 col-xs-3">
+		<div id="drop[idgen->at(1).oclAsType(String)/][i/]" class="smar1 ui-droppable ui-widget-content drops drop[idgen->at(1).oclAsType(String)/][i/]"></div>
+	</div>
+	<div class="col-md-6 col-sm-6 col-xs-6">
+		[let aSimple2 : SimpleElement = carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(1).oclAsType(DragAndDrop).arguments->at(i+1)]
+			<img src="img/[(aSimple2.oclAsType(Image)).url /]" class="img img-responsive textdrag">
+		[/let]
+	</div>
+</div>
+[/if]
+[/for]
+
+<div class="row">
+	<div class="col-md-3">
+		<a class="btn btn-lg btn-success boton_quiz[idgen->at(1).oclAsType(String)/]">Check your answers</a>
+	</div>
+	<div class="col-md-9 resultado"></div>
+</div>
+
+[/file]
+[/template]
+
+[template public nombreObjetivos(anElement : ContentElement, idgen: Sequence(String))]
+[file('progreso_obj.js', true, 'UTF-8')]
+	,"objetivo[idgen->at(1).oclAsType(String)/]"
+
+[/file]
+[/template]
+
+[template public generateDragAndDrop1(anElement : ContentElement, carg: Sequence(Argument), cparam: Sequence(ContentElement), idgen: Sequence(String))]
+[file('draganddrop.js', true, 'UTF-8')]
+
+var ident[idgen->at(1).oclAsType(String)/];
+var ident2[idgen->at(1).oclAsType(String)/];
+$(function() {    
+    $(".row").on("drag",function(e){
+        ident[idgen->at(1).oclAsType(String)/] =e.target.id;
+        ident2[idgen->at(1).oclAsType(String)/] =e.target.src;
+    });
+
+[for (aSimple : SimpleElement | carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(1).oclAsType(DragAndDrop).arguments)]
+[if (i-1).mod(3) = 0]
+[let aSimple2 : SimpleElement = carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(1).oclAsType(DragAndDrop).arguments->at(i)]
+    $( "#[(aSimple2.oclAsType(Image)).url.strtok('.', 0) /]" ).draggable(
+        {revert: "invalid"}
+    );
+    $( ".drop[idgen->at(1).oclAsType(String)/][i/]" ).droppable({
+        activeClass: "ui-state-hover",
+        hoverClass: "ui-state-active",
+        drop: function( event, ui ) {
+            accion(this,ident[idgen->at(1).oclAsType(String)/],ident2[idgen->at(1).oclAsType(String)/]);
+			[let aSimple3 : SimpleElement = carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(1).oclAsType(DragAndDrop).arguments->at(i+2)]
+				var cadevento = '{ "draganddrop" : ['['/]';
+				if (($("#drop[idgen->at(1).oclAsType(String)/][i/]").children().first()).attr("id") != "[(aSimple3.oclAsType(Image)).url.strtok('.', 0) /]") {
+					cadevento = cadevento + '{ "Question" : "[(aSimple3.oclAsType(Image)).url.strtok('.', 0) /]" , "Response" :"' + ($("#drop[idgen->at(1).oclAsType(String)/][i/]").children().first()).attr("id") + '", "Solution" : "Incorrect"}';	
+				}else{
+					cadevento = cadevento + '{ "Question" : "[(aSimple3.oclAsType(Image)).url.strtok('.', 0) /]" , "Response" :"' + ($("#drop[idgen->at(1).oclAsType(String)/][i/]").children().first()).attr("id") + '", "Solution" : "Correct"}';	
+				}
+				cadevento = cadevento + '[']'/]}';
+				setObjetivoInteraccionMovimiento("objetivo[idgen->at(1).oclAsType(String)/]","[carg->at(cparam->indexOf(anElement)).oclAsType(Widget).name/]",cadevento);
+			[/let]
+        }
+    });
+[/let]
+[/if]
+[/for]
+});
+
+$('.boton_quiz[idgen->at(1).oclAsType(String)/]').click(function(ev) {
+	ev.preventDefault();
+    var resultado[idgen->at(1).oclAsType(String)/] = 0;
+    
+    // Si están colocadas correctamente marco resultado2 = 1
+[for (aSimple : SimpleElement | carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(1).oclAsType(DragAndDrop).arguments)]
+[if (i-1).mod(3) = 0]
+	[let aSimple2 : SimpleElement = carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(1).oclAsType(DragAndDrop).arguments->at(i+2)]
+		if (($("#drop[idgen->at(1).oclAsType(String)/][i/]").children().first()).attr("id") == "[(aSimple2.oclAsType(Image)).url.strtok('.', 0) /]") {
+	[/let]
+[/if]
+[/for]
+resultado[idgen->at(1).oclAsType(String)/] = 1;
+[for (aSimple : SimpleElement | carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(1).oclAsType(DragAndDrop).arguments)]
+[if (i-1).mod(3) = 0]
+    }
+[/if]
+[/for]
+
+	if (resultado[idgen->at(1).oclAsType(String)/] == 1) {
+
+		setObjetivoCompleto("objetivo[idgen->at(1).oclAsType(String)/]","[carg->at(cparam->indexOf(anElement)).oclAsType(Widget).name/]","RectangleDragAndDrop");
+		$('.resultado').html('');
+        $('.resultado').append('<h4>Correct</h4>');
+
+[for (aSimple : SimpleElement | carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(1).oclAsType(DragAndDrop).arguments)]
+[if (i-1).mod(3) = 0]
+		$("#drop[idgen->at(1).oclAsType(String)/][i/]").empty();
+		[let aSimple2 : SimpleElement = carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(1).oclAsType(DragAndDrop).arguments->at(i+2)]
+			$("#drop[idgen->at(1).oclAsType(String)/][i/]").prepend('<img src="img/[(aSimple2.oclAsType(Image)).url /]" id="[(aSimple2.oclAsType(Image)).url.strtok('.', 0) /]" class="img img-responsive ui-widget-content" style="position: relative; margin-top: 0px;">');
+		[/let]
+[/if]
+[/for]
+
+    } 
+    else {
+var cadevento = '{ "draganddrop" : ['['/]';
+[for (aSimple : SimpleElement | carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(1).oclAsType(DragAndDrop).arguments)]
+[if (i-1).mod(3) = 0]
+		[let aSimple2 : SimpleElement = carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(1).oclAsType(DragAndDrop).arguments->at(i+2)]
+			[if i <> 1] cadevento = cadevento + "," [/if]
+			if (($("#drop[idgen->at(1).oclAsType(String)/][i/]").children().first()).attr("id") != "[(aSimple2.oclAsType(Image)).url.strtok('.', 0) /]") {
+				cadevento = cadevento + '{ "Question" : "[(aSimple2.oclAsType(Image)).url.strtok('.', 0) /]" , "Response" :"' + ($("#drop[idgen->at(1).oclAsType(String)/][i/]").children().first()).attr("id") + '", "Solution" : "Incorrect"}';
+
+				if (($("#drop[idgen->at(1).oclAsType(String)/][i/]").children().first()).attr("id") != undefined){
+					$(primeraLibre()).prepend('<img src="img/'+($("#drop[idgen->at(1).oclAsType(String)/][i/]").children().first()).attr("id")+'.png" id="'+($("#drop[idgen->at(1).oclAsType(String)/][i/]").children().first()).attr("id")+'" class="img img-responsive ui-widget-content ui-draggable" style="position: relative; margin-top: 0px;">');
+					$( "#"+($("#drop[idgen->at(1).oclAsType(String)/][i/]").children().first()).attr("id")+"" ).draggable({revert: "invalid"});
+				}
+				$("#drop[idgen->at(1).oclAsType(String)/][i/]").empty();
+			}else{
+				cadevento = cadevento + '{ "Question" : "[(aSimple2.oclAsType(Image)).url.strtok('.', 0) /]" , "Response" :"' + ($("#drop[idgen->at(1).oclAsType(String)/][i/]").children().first()).attr("id") + '", "Solution" : "Correct"}';
+
+				$("#drop[idgen->at(1).oclAsType(String)/][i/]").empty();
+				$("#drop[idgen->at(1).oclAsType(String)/][i/]").prepend('<img src="img/[(aSimple2.oclAsType(Image)).url /]" id="[(aSimple2.oclAsType(Image)).url.strtok('.', 0) /]" class="img img-responsive ui-widget-content" style="position: relative; margin-top: 0px;">');
+			}
+		[/let]
+[/if]
+[/for]
+cadevento = cadevento + '[']'/]}';
+
+
+		setObjetivoInteraccion("objetivo[idgen->at(1).oclAsType(String)/]","[carg->at(cparam->indexOf(anElement)).oclAsType(Widget).name/]",cadevento);
+
+		$('.resultado').html('');
+        $('.resultado').append('<h4>Incorrect</h4>');
+	}
+});
+
+function accion (dropp,identidad,identidad2){
+	if(($(dropp).children().first()).attr("id")== undefined){
+		$("#"+identidad+"").remove();
+		$( dropp ) .html( '<img src="'+identidad2+'" id="'+identidad+'" class="img img-responsive ui-widget-content ui-draggable" style="position: relative; margin-top: 0px;">' );
+		$("#"+identidad+"").draggable(
+			{revert: "invalid"}
+		);
+	}else{
+		$("#"+identidad+"").draggable(
+			{revert: "valid"}
+		);
+	}
+}
+
+function primeraLibre(cimg){
+[for (aSimple : SimpleElement | carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(1).oclAsType(DragAndDrop).arguments)]
+[if (i-1).mod(3) = 0]  
+	if (!$.trim($("#drop[idgen->at(1).oclAsType(String)/][i/][i/]").html()).length) {
+			return "#drop[idgen->at(1).oclAsType(String)/][i/][i/]";	
+	[if (i<>(carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(1).oclAsType(DragAndDrop).arguments->size()-2))]
+		}else{
+	[/if]
+[/if]
+
+[/for]
+[for (aSimple : SimpleElement | carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(1).oclAsType(DragAndDrop).arguments)]
+[if (i-1).mod(3) = 0] 
+}
+[/if]
+[/for]
+
+}
+[/file]
+[/template]
+
+[template public draganddropLatexFile(anElement : ContentElement)]
+[file('contentpdf.tex', true, 'UTF-8')]
+\begin{quote}Section exercise\end{quote}
+[/file]
+[/template]
+

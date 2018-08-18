@@ -1,0 +1,7 @@
+[comment encoding = UTF-8 /]
+[module latexFile('http://cpcd.upct.es/upctforma')]
+
+
+[template public generateLatexFile(aContentElement : ContentElement)]
+
+[/template]

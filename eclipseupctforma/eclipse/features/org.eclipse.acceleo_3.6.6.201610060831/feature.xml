@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2008, 2013 Obeo.
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License v1.0
+which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/epl-v10.html
+
+Contributors:
+    Obeo - initial API and implementation
+-->
+<feature
+      id="org.eclipse.acceleo"
+      label="%featureName"
+      version="3.6.6.201610060831"
+      provider-name="%providerName"
+      plugin="org.eclipse.acceleo.common">
+
+   <description>
+      %description
+   </description>
+
+   <copyright url="%copyrightURL">
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <plugin
+         id="org.eclipse.acceleo.engine"
+         download-size="203"
+         install-size="454"
+         version="3.6.6.201610060831"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.acceleo.ide.ui"
+         download-size="1352"
+         install-size="3244"
+         version="3.6.6.201610060831"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.acceleo.model"
+         download-size="160"
+         install-size="394"
+         version="3.6.6.201610060831"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.acceleo.parser"
+         download-size="363"
+         install-size="835"
+         version="3.6.6.201610060831"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.acceleo.common"
+         download-size="116"
+         install-size="232"
+         version="3.6.6.201610060831"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.acceleo.common.ide"
+         download-size="39"
+         install-size="78"
+         version="3.6.6.201610060831"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.acceleo.doc"
+         download-size="3010"
+         install-size="3766"
+         version="3.6.6.201610060831"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.acceleo.compatibility"
+         download-size="188"
+         install-size="437"
+         version="3.6.6.201610060831"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.acceleo.compatibility.ui"
+         download-size="132"
+         install-size="2242"
+         version="3.6.6.201610060831"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.acceleo.model.edit"
+         download-size="106"
+         install-size="227"
+         version="3.6.6.201610060831"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.acceleo.profiler"
+         download-size="37"
+         install-size="73"
+         version="3.6.6.201610060831"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.acceleo.profiler.edit"
+         download-size="26"
+         install-size="50"
+         version="3.6.6.201610060831"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.acceleo.profiler.editor"
+         download-size="33"
+         install-size="55"
+         version="3.6.6.201610060831"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.acceleo.traceability"
+         download-size="68"
+         install-size="157"
+         version="3.6.6.201610060831"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.acceleo.traceability.model"
+         download-size="93"
+         install-size="208"
+         version="3.6.6.201610060831"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.acceleo.common.ui"
+         download-size="55"
+         install-size="78"
+         version="3.6.6.201610060831"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.acceleo.ui.interpreter"
+         download-size="171"
+         install-size="337"
+         version="3.6.6.201610060831"
+         unpack="false"/>
+
+   <plugin
+         id="com.google.guava"
+         download-size="2210"
+         install-size="4995"
+         version="15.0.0.v201403281430"
+         unpack="false"/>
+
+</feature>

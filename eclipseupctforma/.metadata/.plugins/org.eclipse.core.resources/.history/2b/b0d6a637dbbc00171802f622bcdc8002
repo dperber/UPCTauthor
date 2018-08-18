@@ -1,0 +1,158 @@
+/**
+ */
+package upctformagamification.impl;
+
+import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import upctforma.Unit;
+
+import upctformagamification.UnitGamification;
+import upctformagamification.UpctformagamificationPackage;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Unit Gamification</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link upctformagamification.impl.UnitGamificationImpl#getUnit <em>Unit</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class UnitGamificationImpl extends MinimalEObjectImpl.Container implements UnitGamification {
+	/**
+	 * The cached value of the '{@link #getUnit() <em>Unit</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUnit()
+	 * @generated
+	 * @ordered
+	 */
+	protected Unit unit;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected UnitGamificationImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return UpctformagamificationPackage.Literals.UNIT_GAMIFICATION;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Unit getUnit() {
+		if (unit != null && unit.eIsProxy()) {
+			InternalEObject oldUnit = (InternalEObject)unit;
+			unit = (Unit)eResolveProxy(oldUnit);
+			if (unit != oldUnit) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UpctformagamificationPackage.UNIT_GAMIFICATION__UNIT, oldUnit, unit));
+			}
+		}
+		return unit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Unit basicGetUnit() {
+		return unit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUnit(Unit newUnit) {
+		Unit oldUnit = unit;
+		unit = newUnit;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UpctformagamificationPackage.UNIT_GAMIFICATION__UNIT, oldUnit, unit));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case UpctformagamificationPackage.UNIT_GAMIFICATION__UNIT:
+				if (resolve) return getUnit();
+				return basicGetUnit();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case UpctformagamificationPackage.UNIT_GAMIFICATION__UNIT:
+				setUnit((Unit)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case UpctformagamificationPackage.UNIT_GAMIFICATION__UNIT:
+				setUnit((Unit)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case UpctformagamificationPackage.UNIT_GAMIFICATION__UNIT:
+				return unit != null;
+		}
+		return super.eIsSet(featureID);
+	}
+
+} //UnitGamificationImpl

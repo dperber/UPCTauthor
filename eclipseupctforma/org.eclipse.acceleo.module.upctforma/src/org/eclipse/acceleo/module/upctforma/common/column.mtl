@@ -1,0 +1,35 @@
+[comment encoding = UTF-8 /]
+[module column('http://cpcd.upct.es/upctforma')]
+
+[import org::eclipse::acceleo::module::upctforma::common::element /]
+
+[template public generateColumn(aColumn : Column, carg: Sequence(Argument), cparam: Sequence(ContentElement), idgen: Sequence(String), nameSection: String)]
+[file('index.php', true, 'UTF-8')]
+			 <div class="col-md-[aColumn.width /]">
+				[for (anElement : ContentElement | aColumn.elements)]
+					[aColumn.rowLatexFile(aColumn, nameSection)/]
+					[let idgenp : Sequence(String) = Sequence{idgen->at(1).oclAsType(String).concat('e').concat(i.toString())} ]
+						[anElement.generateElement(carg, cparam, idgenp, nameSection)/]
+					[/let]
+					[aColumn.finrowLatexFile(aColumn)/]
+				[/for]
+	          </div>
+[/file]
+[/template]
+
+
+[template public rowLatexFile(aColumn : Column, nameSection: String)]
+[file('contentpdf.tex', true, 'UTF-8')]
+\begin{frame}
+\frametitle{[nameSection /]}
+
+
+[/file]
+[/template]
+
+[template public finrowLatexFile(aColumn : Column)]
+[file('contentpdf.tex', true, 'UTF-8')]
+
+\end{frame}
+[/file]
+[/template]

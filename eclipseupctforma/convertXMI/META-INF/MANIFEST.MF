@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: convertXMI
+Bundle-SymbolicName: convertXMI
+Bundle-Version: 1.0.0.qualifier
+Export-Package: upct.cpcd.convert.xmi
+Require-Bundle: org.eclipse.emf;bundle-version="2.6.0",
+ org.eclipse.xtext;bundle-version="2.12.0",
+ org.xtext.upctformaevalua;bundle-version="1.0.0",
+ upctformaevalua;bundle-version="0.1.0",
+ org.xtext.upctformagami;bundle-version="1.0.0",
+ upctformagami;bundle-version="0.1.0",
+ org.xtext.upctforma;bundle-version="1.0.0",
+ upctforma;bundle-version="0.1.0"

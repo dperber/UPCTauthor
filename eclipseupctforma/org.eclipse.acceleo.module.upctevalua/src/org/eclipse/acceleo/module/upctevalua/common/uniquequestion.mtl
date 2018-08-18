@@ -1,0 +1,28 @@
+[comment encoding = UTF-8 /]
+[module uniquequestion('http://cpcd.upct.es/upctformaevalua')]
+
+[import org::eclipse::acceleo::module::upctevalua::common::paragraph /]
+[import org::eclipse::acceleo::module::upctevalua::common::unique /]
+
+[template public generateUniqueAnswer(anUniqueAnswer : UniqueAnswer,position: Integer, pfinal: Integer)]
+[file('datos.json', true, 'UTF-8')]
+	{
+		"numeroPregunta": "[position/]",
+	[for (aParagraph : Paragraph | anUniqueAnswer.statements)]
+		[aParagraph.generateParagraph()/]
+	[/for]
+		"respuestas": ['['/]	
+		[for (anUnique : Unique | anUniqueAnswer.answers)]
+			[if i =  anUniqueAnswer.answers->size()]
+				[anUnique.generateAnswer(1)/]
+			[else]
+				[anUnique.generateAnswer(2)/]
+			[/if]
+		[/for]
+		[']'/],
+		"respuestaCorrecta": "[anUniqueAnswer.correctanswer/]",
+		"feedbackCorrecto": "[anUniqueAnswer.correctfeedback/]",
+		"feedbackIncorrecto": "[anUniqueAnswer.incorrectfeedback/]"
+	}[if pfinal<>position],[/if]
+[/file]
+[/template]

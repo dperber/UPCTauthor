@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="dont_ask_again_dialog">
+	</section>
+	<section name="XtextValidatorConfigurationBlock">
+		<item value="true" key="expanded1"/>
+		<item value="true" key="expanded0"/>
+	</section>
+</section>

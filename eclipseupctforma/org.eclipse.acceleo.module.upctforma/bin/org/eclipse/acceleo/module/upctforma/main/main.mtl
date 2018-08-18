@@ -1,0 +1,15 @@
+[comment encoding = UTF-8 /]
+[module main('http://cpcd.upct.es/upctforma')]
+
+[import org::eclipse::acceleo::module::upctforma::common::unit /]
+
+[template public mainDefinition(aDefinition : ContentDefinition)]
+[comment @main/]
+
+[if (aDefinition.name.startsWith('upctforma.template') <> true)]
+	[for (anUnit : Unit | aDefinition.unit)]
+	 	[anUnit.generateUnit()/]
+	[/for]
+[/if]
+
+[/template]

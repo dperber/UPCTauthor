@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
+  <mtl:Module name="uniquequestion" nsURI="org::eclipse::acceleo::module::upctevalua::common::uniquequestion" startHeaderPosition="29" endHeaderPosition="162">
+    <input>
+      <takesTypesFrom href="http://cpcd.upct.es/upctformaevalua#/"/>
+    </input>
+    <imports href="paragraph.emtl#/0"/>
+    <imports href="unique.emtl#/0"/>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateUniqueAnswer" visibility="Public">
+      <body xsi:type="mtl:FileBlock">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;{&#xA;&#x9;&#x9;&quot;numeroPregunta&quot;: &quot;"/>
+        <body xsi:type="ocl.ecore:VariableExp" name="position" referredVariable="/0/generateUniqueAnswer/position">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;,&#xA;"/>
+        <body xsi:type="mtl:ForBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;"/>
+          <body xsi:type="mtl:TemplateInvocation">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <definition href="paragraph.emtl#/0/generateParagraph"/>
+            <argument xsi:type="ocl.ecore:VariableExp" name="aParagraph" referredVariable="/0/generateUniqueAnswer/%/%.2/aParagraph">
+              <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformaevalua#//Paragraph"/>
+            </argument>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+          <loopVariable name="aParagraph">
+            <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformaevalua#//Paragraph"/>
+          </loopVariable>
+          <iterSet xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformaevalua#//Paragraph"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="anUniqueAnswer" referredVariable="/0/generateUniqueAnswer/anUniqueAnswer">
+              <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformaevalua#//UniqueAnswer"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://cpcd.upct.es/upctformaevalua#//UniqueAnswer/statements"/>
+          </iterSet>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&quot;respuestas&quot;: "/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="[">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#xA;"/>
+        <body xsi:type="mtl:ForBlock">
+          <body xsi:type="mtl:IfBlock">
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&#x9;"/>
+            <body xsi:type="mtl:TemplateInvocation">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <definition href="unique.emtl#/0/generateAnswer"/>
+              <argument xsi:type="ocl.ecore:VariableExp" name="anUnique" referredVariable="/0/generateUniqueAnswer/%/%.6/anUnique">
+                <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformaevalua#//Unique"/>
+              </argument>
+              <argument xsi:type="ocl.ecore:IntegerLiteralExp" integerSymbol="1">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+              </argument>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+            <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="i" referredVariable="/22">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+              </source>
+              <argument xsi:type="ocl.ecore:OperationCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                <source xsi:type="ocl.ecore:PropertyCallExp" eType="/15/OrderedSet(Unique)">
+                  <source xsi:type="ocl.ecore:VariableExp" name="anUniqueAnswer" referredVariable="/0/generateUniqueAnswer/anUniqueAnswer">
+                    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformaevalua#//UniqueAnswer"/>
+                  </source>
+                  <referredProperty xsi:type="ecore:EReference" href="http://cpcd.upct.es/upctformaevalua#//UniqueAnswer/answers"/>
+                </source>
+                <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)_Class/size"/>
+              </argument>
+              <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/="/>
+            </ifExpr>
+            <else>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&#x9;"/>
+              <body xsi:type="mtl:TemplateInvocation">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                <definition href="unique.emtl#/0/generateAnswer"/>
+                <argument xsi:type="ocl.ecore:VariableExp" name="anUnique" referredVariable="/0/generateUniqueAnswer/%/%.6/anUnique">
+                  <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformaevalua#//Unique"/>
+                </argument>
+                <argument xsi:type="ocl.ecore:IntegerLiteralExp" integerSymbol="2">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                </argument>
+              </body>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+            </else>
+          </body>
+          <loopVariable name="anUnique">
+            <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformaevalua#//Unique"/>
+          </loopVariable>
+          <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/15/OrderedSet(Unique)">
+            <source xsi:type="ocl.ecore:VariableExp" name="anUniqueAnswer" referredVariable="/0/generateUniqueAnswer/anUniqueAnswer">
+              <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformaevalua#//UniqueAnswer"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://cpcd.upct.es/upctformaevalua#//UniqueAnswer/answers"/>
+          </iterSet>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="]">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=",&#xA;&#x9;&#x9;&quot;respuestaCorrecta&quot;: &quot;"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="anUniqueAnswer" referredVariable="/0/generateUniqueAnswer/anUniqueAnswer">
+            <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformaevalua#//UniqueAnswer"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://cpcd.upct.es/upctformaevalua#//UniqueAnswer/correctanswer"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;,&#xA;&#x9;&#x9;&quot;feedbackCorrecto&quot;: &quot;"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="anUniqueAnswer" referredVariable="/0/generateUniqueAnswer/anUniqueAnswer">
+            <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformaevalua#//UniqueAnswer"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://cpcd.upct.es/upctformaevalua#//Question/correctfeedback"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;,&#xA;&#x9;&#x9;&quot;feedbackIncorrecto&quot;: &quot;"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="anUniqueAnswer" referredVariable="/0/generateUniqueAnswer/anUniqueAnswer">
+            <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformaevalua#//UniqueAnswer"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://cpcd.upct.es/upctformaevalua#//Question/incorrectfeedback"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;&#xA;&#x9;}"/>
+        <body xsi:type="mtl:IfBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=","/>
+          <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="pfinal" referredVariable="/0/generateUniqueAnswer/pfinal">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+            </source>
+            <argument xsi:type="ocl.ecore:VariableExp" name="position" referredVariable="/0/generateUniqueAnswer/position">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/%3C%3E"/>
+          </ifExpr>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+        <fileUrl xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="datos.json">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </fileUrl>
+        <charset xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="UTF-8">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </charset>
+      </body>
+      <parameter name="anUniqueAnswer">
+        <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformaevalua#//UniqueAnswer"/>
+      </parameter>
+      <parameter name="position">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+      </parameter>
+      <parameter name="pfinal">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+      </parameter>
+    </ownedModuleElement>
+  </mtl:Module>
+  <ecore:EPackage name="additions">
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_String_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Integer_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Real_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ecore_EObject_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eAnnotations>
+      <eOperations name="generateUniqueAnswer">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generateUniqueAnswer"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="anUniqueAnswer">
+          <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformaevalua#//UniqueAnswer"/>
+        </eParameters>
+        <eParameters name="position">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        </eParameters>
+        <eParameters name="pfinal">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateParagraph">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="paragraph.emtl#/0/generateParagraph"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aParagraph">
+          <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformaevalua#//Paragraph"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateAnswer">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="unique.emtl#/0/generateAnswer"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="anUnique">
+          <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformaevalua#//Unique"/>
+        </eParameters>
+        <eParameters name="tipo">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OclAny_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Collection(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Sequence(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OrderedSet(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="upctformaevalua_UniqueAnswer_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://cpcd.upct.es/upctformaevalua#//UniqueAnswer"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="upctformaevalua_Paragraph_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://cpcd.upct.es/upctformaevalua#//Paragraph"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="upctformaevalua_Unique_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://cpcd.upct.es/upctformaevalua#//Unique"/>
+      </eAnnotations>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformaevalua#//UniqueAnswer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformaevalua#//UniqueAnswer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformaevalua#//UniqueAnswer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformaevalua#//UniqueAnswer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformaevalua#//UniqueAnswer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformaevalua#//UniqueAnswer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformaevalua#//Paragraph"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformaevalua#//Paragraph"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformaevalua#//UniqueAnswer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformaevalua#//UniqueAnswer"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="collections">
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Unique)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformaevalua#//Unique"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SetType" instanceClassName="java.util.Set">
+      <elementType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformaevalua#//Unique"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformaevalua#//UniqueAnswer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformaevalua#//Unique"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformaevalua#//Unique"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformaevalua#//Unique"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformaevalua#//Unique"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformaevalua#//UniqueAnswer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformaevalua#//UniqueAnswer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformaevalua#//UniqueAnswer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformaevalua#//UniqueAnswer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformaevalua#//UniqueAnswer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformaevalua#//UniqueAnswer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EAnnotation source="positions">
+    <eAnnotations source="positions.0" references="/0/generateUniqueAnswer">
+      <details key="start" value="235"/>
+      <details key="end" value="973"/>
+      <details key="line" value="7"/>
+    </eAnnotations>
+    <eAnnotations source="positions.1" references="/0/generateUniqueAnswer/%">
+      <details key="start" value="340"/>
+      <details key="end" value="961"/>
+      <details key="line" value="8"/>
+    </eAnnotations>
+    <eAnnotations source="positions.2" references="/0/generateUniqueAnswer/%/%">
+      <details key="start" value="376"/>
+      <details key="end" value="400"/>
+      <details key="line" value="9"/>
+    </eAnnotations>
+    <eAnnotations source="positions.3" references="/0/generateUniqueAnswer/%/position">
+      <details key="start" value="401"/>
+      <details key="end" value="409"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.4" references="/0/generateUniqueAnswer/%/%.1">
+      <details key="start" value="411"/>
+      <details key="end" value="414"/>
+      <details key="line" value="10"/>
+    </eAnnotations>
+    <eAnnotations source="positions.5" references="/0/generateUniqueAnswer/%/%.2">
+      <details key="start" value="415"/>
+      <details key="end" value="517"/>
+      <details key="line" value="11"/>
+    </eAnnotations>
+    <eAnnotations source="positions.6" references="/0/generateUniqueAnswer/%/%.2/%">
+      <details key="start" value="474"/>
+      <details key="end" value="476"/>
+      <details key="line" value="12"/>
+    </eAnnotations>
+    <eAnnotations source="positions.7" references="/0/generateUniqueAnswer/%/%.2/%.1">
+      <details key="start" value="477"/>
+      <details key="end" value="507"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.8" references="/0/generateUniqueAnswer/%/%.2/%.1/aParagraph">
+      <details key="start" value="477"/>
+      <details key="end" value="487"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.9" references="/0/generateUniqueAnswer/%/%.2/%.2">
+      <details key="start" value="509"/>
+      <details key="end" value="510"/>
+      <details key="line" value="13"/>
+    </eAnnotations>
+    <eAnnotations source="positions.10" references="/0/generateUniqueAnswer/%/%.2/aParagraph">
+      <details key="start" value="421"/>
+      <details key="end" value="443"/>
+      <details key="line" value="11"/>
+    </eAnnotations>
+    <eAnnotations source="positions.11" references="/0/generateUniqueAnswer/%/%.2/%.3">
+      <details key="start" value="446"/>
+      <details key="end" value="471"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.12" references="/0/generateUniqueAnswer/%/%.2/%.3/anUniqueAnswer">
+      <details key="start" value="446"/>
+      <details key="end" value="460"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.13" references="/0/generateUniqueAnswer/%/%.3">
+      <details key="start" value="518"/>
+      <details key="end" value="534"/>
+      <details key="line" value="14"/>
+    </eAnnotations>
+    <eAnnotations source="positions.14" references="/0/generateUniqueAnswer/%/%.4">
+      <details key="start" value="535"/>
+      <details key="end" value="538"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/generateUniqueAnswer/%/%.5">
+      <details key="start" value="540"/>
+      <details key="end" value="542"/>
+      <details key="line" value="14"/>
+    </eAnnotations>
+    <eAnnotations source="positions.16" references="/0/generateUniqueAnswer/%/%.6">
+      <details key="start" value="544"/>
+      <details key="end" value="734"/>
+      <details key="line" value="15"/>
+    </eAnnotations>
+    <eAnnotations source="positions.17" references="/0/generateUniqueAnswer/%/%.6/%">
+      <details key="start" value="598"/>
+      <details key="end" value="725"/>
+      <details key="line" value="16"/>
+    </eAnnotations>
+    <eAnnotations source="positions.18" references="/0/generateUniqueAnswer/%/%.6/%/%">
+      <details key="start" value="639"/>
+      <details key="end" value="643"/>
+      <details key="line" value="17"/>
+    </eAnnotations>
+    <eAnnotations source="positions.19" references="/0/generateUniqueAnswer/%/%.6/%/%.1">
+      <details key="start" value="644"/>
+      <details key="end" value="670"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.20" references="/0/generateUniqueAnswer/%/%.6/%/%.1/anUnique">
+      <details key="start" value="644"/>
+      <details key="end" value="652"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.21" references="/0/generateUniqueAnswer/%/%.6/%/%.1/%">
+      <details key="start" value="668"/>
+      <details key="end" value="669"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.22" references="/0/generateUniqueAnswer/%/%.6/%/%.2">
+      <details key="start" value="672"/>
+      <details key="end" value="673"/>
+      <details key="line" value="18"/>
+    </eAnnotations>
+    <eAnnotations source="positions.23" references="/0/generateUniqueAnswer/%/%.6/%/%.3">
+      <details key="start" value="602"/>
+      <details key="end" value="637"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.24" references="/0/generateUniqueAnswer/%/%.6/%/%.3/i">
+      <details key="start" value="602"/>
+      <details key="end" value="603"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.25" references="/0/generateUniqueAnswer/%/%.6/%/%.3/%">
+      <details key="start" value="607"/>
+      <details key="end" value="637"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.26" references="/0/generateUniqueAnswer/%/%.6/%/%.3/%/%">
+      <details key="start" value="607"/>
+      <details key="end" value="629"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.27" references="/0/generateUniqueAnswer/%/%.6/%/%.3/%/%/anUniqueAnswer">
+      <details key="start" value="607"/>
+      <details key="end" value="621"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.28" references="/0/generateUniqueAnswer/%/%.6/%/%.4">
+      <details key="start" value="676"/>
+      <details key="end" value="720"/>
+      <details key="line" value="18"/>
+    </eAnnotations>
+    <eAnnotations source="positions.29" references="/0/generateUniqueAnswer/%/%.6/%/%.4/%">
+      <details key="start" value="683"/>
+      <details key="end" value="687"/>
+      <details key="line" value="19"/>
+    </eAnnotations>
+    <eAnnotations source="positions.30" references="/0/generateUniqueAnswer/%/%.6/%/%.4/%.1">
+      <details key="start" value="688"/>
+      <details key="end" value="714"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.31" references="/0/generateUniqueAnswer/%/%.6/%/%.4/%.1/anUnique">
+      <details key="start" value="688"/>
+      <details key="end" value="696"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.32" references="/0/generateUniqueAnswer/%/%.6/%/%.4/%.1/%">
+      <details key="start" value="712"/>
+      <details key="end" value="713"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.33" references="/0/generateUniqueAnswer/%/%.6/%/%.4/%.2">
+      <details key="start" value="716"/>
+      <details key="end" value="717"/>
+      <details key="line" value="20"/>
+    </eAnnotations>
+    <eAnnotations source="positions.34" references="/0/generateUniqueAnswer/%/%.6/anUnique">
+      <details key="start" value="550"/>
+      <details key="end" value="567"/>
+      <details key="line" value="15"/>
+    </eAnnotations>
+    <eAnnotations source="positions.35" references="/0/generateUniqueAnswer/%/%.6/%.1">
+      <details key="start" value="570"/>
+      <details key="end" value="592"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.36" references="/0/generateUniqueAnswer/%/%.6/%.1/anUniqueAnswer">
+      <details key="start" value="570"/>
+      <details key="end" value="584"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.37" references="/0/generateUniqueAnswer/%/%.7">
+      <details key="start" value="735"/>
+      <details key="end" value="737"/>
+      <details key="line" value="22"/>
+    </eAnnotations>
+    <eAnnotations source="positions.38" references="/0/generateUniqueAnswer/%/%.8">
+      <details key="start" value="738"/>
+      <details key="end" value="741"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.39" references="/0/generateUniqueAnswer/%/%.9">
+      <details key="start" value="743"/>
+      <details key="end" value="769"/>
+      <details key="line" value="22"/>
+    </eAnnotations>
+    <eAnnotations source="positions.40" references="/0/generateUniqueAnswer/%/%.10">
+      <details key="start" value="770"/>
+      <details key="end" value="798"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.41" references="/0/generateUniqueAnswer/%/%.10/anUniqueAnswer">
+      <details key="start" value="770"/>
+      <details key="end" value="784"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.42" references="/0/generateUniqueAnswer/%/%.11">
+      <details key="start" value="800"/>
+      <details key="end" value="826"/>
+      <details key="line" value="23"/>
+    </eAnnotations>
+    <eAnnotations source="positions.43" references="/0/generateUniqueAnswer/%/%.12">
+      <details key="start" value="827"/>
+      <details key="end" value="857"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.44" references="/0/generateUniqueAnswer/%/%.12/anUniqueAnswer">
+      <details key="start" value="827"/>
+      <details key="end" value="841"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.45" references="/0/generateUniqueAnswer/%/%.13">
+      <details key="start" value="859"/>
+      <details key="end" value="887"/>
+      <details key="line" value="24"/>
+    </eAnnotations>
+    <eAnnotations source="positions.46" references="/0/generateUniqueAnswer/%/%.14">
+      <details key="start" value="888"/>
+      <details key="end" value="920"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.47" references="/0/generateUniqueAnswer/%/%.14/anUniqueAnswer">
+      <details key="start" value="888"/>
+      <details key="end" value="902"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.48" references="/0/generateUniqueAnswer/%/%.15">
+      <details key="start" value="922"/>
+      <details key="end" value="926"/>
+      <details key="line" value="25"/>
+    </eAnnotations>
+    <eAnnotations source="positions.49" references="/0/generateUniqueAnswer/%/%.16">
+      <details key="start" value="926"/>
+      <details key="end" value="953"/>
+      <details key="line" value="26"/>
+    </eAnnotations>
+    <eAnnotations source="positions.50" references="/0/generateUniqueAnswer/%/%.16/%">
+      <details key="start" value="947"/>
+      <details key="end" value="948"/>
+      <details key="line" value="26"/>
+    </eAnnotations>
+    <eAnnotations source="positions.51" references="/0/generateUniqueAnswer/%/%.16/%.1">
+      <details key="start" value="930"/>
+      <details key="end" value="946"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.52" references="/0/generateUniqueAnswer/%/%.16/%.1/pfinal">
+      <details key="start" value="930"/>
+      <details key="end" value="936"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.53" references="/0/generateUniqueAnswer/%/%.16/%.1/position">
+      <details key="start" value="938"/>
+      <details key="end" value="946"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.54" references="/0/generateUniqueAnswer/%/%.17">
+      <details key="start" value="953"/>
+      <details key="end" value="954"/>
+      <details key="line" value="27"/>
+    </eAnnotations>
+    <eAnnotations source="positions.55" references="/0/generateUniqueAnswer/%/%.18">
+      <details key="start" value="346"/>
+      <details key="end" value="358"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.56" references="/0/generateUniqueAnswer/%/%.19">
+      <details key="start" value="366"/>
+      <details key="end" value="373"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.57" references="/0/generateUniqueAnswer/anUniqueAnswer">
+      <details key="start" value="273"/>
+      <details key="end" value="302"/>
+      <details key="line" value="7"/>
+    </eAnnotations>
+    <eAnnotations source="positions.58" references="/0/generateUniqueAnswer/position">
+      <details key="start" value="303"/>
+      <details key="end" value="320"/>
+      <details key="line" value="7"/>
+    </eAnnotations>
+    <eAnnotations source="positions.59" references="/0/generateUniqueAnswer/pfinal">
+      <details key="start" value="322"/>
+      <details key="end" value="337"/>
+      <details key="line" value="7"/>
+    </eAnnotations>
+  </ecore:EAnnotation>
+</xmi:XMI>

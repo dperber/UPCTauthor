@@ -1,0 +1,25 @@
+[comment encoding = UTF-8 /]
+[module evaluationunit('http://cpcd.upct.es/upctformaevalua')]
+
+[import org::eclipse::acceleo::module::upctevalua::common::uniquequestion /]
+
+
+
+[template public generateEvaluationUnit(anEvaluationUnit : EvaluationUnit)]
+[file('datos.json', false, 'UTF-8')]
+['{'/]
+"numeroPreguntasEvaluacion": "[anEvaluationUnit.numberquestions/]",
+"aleatoriedad": "true",
+"notaBaremo": "50",
+"preguntas": ['['/]
+[/file]
+		[for (aQuestion : Question | anEvaluationUnit.questions)]
+			[if (aQuestion.oclIsTypeOf(UniqueAnswer))]	
+				[aQuestion.oclAsType(UniqueAnswer).generateUniqueAnswer(i,anEvaluationUnit.questions->size())/]
+			[/if]
+		[/for]
+[file('datos.json', true, 'UTF-8')]
+[']'/]	
+['}'/]
+	[/file]
+[/template]

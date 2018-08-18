@@ -1,0 +1,221 @@
+/**
+ */
+package upctformagamification.impl;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+
+import org.eclipse.emf.ecore.impl.EPackageImpl;
+
+import upctforma.UpctformaPackage;
+
+import upctforma.impl.UpctformaPackageImpl;
+
+import upctformagamification.Gamification;
+import upctformagamification.UnitGamification;
+import upctformagamification.UpctformagamificationFactory;
+import upctformagamification.UpctformagamificationPackage;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model <b>Package</b>.
+ * <!-- end-user-doc -->
+ * @generated
+ */
+public class UpctformagamificationPackageImpl extends EPackageImpl implements UpctformagamificationPackage {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass gamificationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass unitGamificationEClass = null;
+
+	/**
+	 * Creates an instance of the model <b>Package</b>, registered with
+	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
+	 * package URI value.
+	 * <p>Note: the correct way to create the package is via the static
+	 * factory method {@link #init init()}, which also performs
+	 * initialization of the package, or returns the registered package,
+	 * if one already exists.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.ecore.EPackage.Registry
+	 * @see upctformagamification.UpctformagamificationPackage#eNS_URI
+	 * @see #init()
+	 * @generated
+	 */
+	private UpctformagamificationPackageImpl() {
+		super(eNS_URI, UpctformagamificationFactory.eINSTANCE);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private static boolean isInited = false;
+
+	/**
+	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
+	 * 
+	 * <p>This method is used to initialize {@link UpctformagamificationPackage#eINSTANCE} when that field is accessed.
+	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #eNS_URI
+	 * @see #createPackageContents()
+	 * @see #initializePackageContents()
+	 * @generated
+	 */
+	public static UpctformagamificationPackage init() {
+		if (isInited) return (UpctformagamificationPackage)EPackage.Registry.INSTANCE.getEPackage(UpctformagamificationPackage.eNS_URI);
+
+		// Obtain or create and register package
+		UpctformagamificationPackageImpl theUpctformagamificationPackage = (UpctformagamificationPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof UpctformagamificationPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new UpctformagamificationPackageImpl());
+
+		isInited = true;
+
+		// Obtain or create and register interdependencies
+		UpctformaPackageImpl theUpctformaPackage = (UpctformaPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(UpctformaPackage.eNS_URI) instanceof UpctformaPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(UpctformaPackage.eNS_URI) : UpctformaPackage.eINSTANCE);
+
+		// Create package meta-data objects
+		theUpctformagamificationPackage.createPackageContents();
+		theUpctformaPackage.createPackageContents();
+
+		// Initialize created meta-data
+		theUpctformagamificationPackage.initializePackageContents();
+		theUpctformaPackage.initializePackageContents();
+
+		// Mark meta-data to indicate it can't be changed
+		theUpctformagamificationPackage.freeze();
+
+  
+		// Update the registry and return the package
+		EPackage.Registry.INSTANCE.put(UpctformagamificationPackage.eNS_URI, theUpctformagamificationPackage);
+		return theUpctformagamificationPackage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getGamification() {
+		return gamificationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGamification_Units() {
+		return (EReference)gamificationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getUnitGamification() {
+		return unitGamificationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getUnitGamification_Unit() {
+		return (EReference)unitGamificationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public UpctformagamificationFactory getUpctformagamificationFactory() {
+		return (UpctformagamificationFactory)getEFactoryInstance();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private boolean isCreated = false;
+
+	/**
+	 * Creates the meta-model objects for the package.  This method is
+	 * guarded to have no affect on any invocation but its first.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void createPackageContents() {
+		if (isCreated) return;
+		isCreated = true;
+
+		// Create classes and their features
+		gamificationEClass = createEClass(GAMIFICATION);
+		createEReference(gamificationEClass, GAMIFICATION__UNITS);
+
+		unitGamificationEClass = createEClass(UNIT_GAMIFICATION);
+		createEReference(unitGamificationEClass, UNIT_GAMIFICATION__UNIT);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private boolean isInitialized = false;
+
+	/**
+	 * Complete the initialization of the package and its meta-model.  This
+	 * method is guarded to have no affect on any invocation but its first.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void initializePackageContents() {
+		if (isInitialized) return;
+		isInitialized = true;
+
+		// Initialize package
+		setName(eNAME);
+		setNsPrefix(eNS_PREFIX);
+		setNsURI(eNS_URI);
+
+		// Obtain other dependent packages
+		UpctformaPackage theUpctformaPackage = (UpctformaPackage)EPackage.Registry.INSTANCE.getEPackage(UpctformaPackage.eNS_URI);
+
+		// Create type parameters
+
+		// Set bounds for type parameters
+
+		// Add supertypes to classes
+
+		// Initialize classes, features, and operations; add parameters
+		initEClass(gamificationEClass, Gamification.class, "Gamification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getGamification_Units(), this.getUnitGamification(), null, "units", null, 0, -1, Gamification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(unitGamificationEClass, UnitGamification.class, "UnitGamification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getUnitGamification_Unit(), theUpctformaPackage.getUnit(), null, "unit", null, 0, 1, UnitGamification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		// Create resource
+		createResource(eNS_URI);
+	}
+
+} //UpctformagamificationPackageImpl

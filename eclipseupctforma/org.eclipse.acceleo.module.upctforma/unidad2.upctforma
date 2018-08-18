@@ -1,0 +1,22 @@
+Definition Unidad{
+	import upctforma.template1.*;
+	Unit Unidad1{	  
+		Section Section1{
+			image 'ima1.png'
+			row{ 
+				div{
+					class '6' 
+					Text{
+						p 'Esto es un ejemplo de texto'					
+					}	
+				},
+				div{
+					class '6'
+					Image{
+						url 'http://url_ejemplo'	
+					}
+				}
+			}
+		}
+	}		
+}	

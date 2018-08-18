@@ -1,0 +1,55 @@
+[comment encoding = UTF-8 /]
+[module imagetextright('http://cpcd.upct.es/upctforma')]
+
+
+[template public generateImageTextRight(anElement : ContentElement, carg: Sequence(Argument), cparam: Sequence(ContentElement), idgen: Sequence(String), nameSection: String)]
+[file('index.php', true, 'UTF-8')]
+<div class="row">
+	<div class="col-md-12">
+		<i id="objetivo[idgen->at(1).oclAsType(String)/]" class="fa fa-check-square-o fa-2x" aria-hidden="true"></i>
+	</div>
+</div>
+[anElement.nombreObjetivos(idgen)/]
+<div class="col-md-6">
+				[anElement.imtrghtLatexFile(anElement,carg,cparam, nameSection)/]
+	            <img id="[idgen->at(1).oclAsType(String)/]" class="img-responsive btnmostrar mano events control_objetivo_unico_click" data-type="ImageTextRight" data-desc="[carg->at(cparam->indexOf(anElement)).oclAsType(Widget).name/]" data-target="#imagen[idgen->at(1).oclAsType(String)/]" src="img/[carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(1).oclAsType(Image).url/]" alt="">
+	        </div>
+	        <div id="imagen[idgen->at(1).oclAsType(String)/]" class="col-md-6 hidden">   
+				[if (carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(2).oclIsTypeOf(Text))]
+		 			[for (anParagraph : Paragraph | carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(2).oclAsType(Text).paragraphs)]
+						[anElement.imtrghtTextLatexFile(anElement, anParagraph.text, carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(2).oclAsType(Text).paragraphs->size(), i)/]
+					<p>[anParagraph.text /]</p>
+					[/for]
+				[/if]
+	        </div>
+				
+[/file]
+[/template]
+
+[template public nombreObjetivos(anElement : ContentElement, idgen: Sequence(String))]
+[file('progreso_obj.js', true, 'UTF-8')]
+	,"objetivo[idgen->at(1).oclAsType(String)/]"
+
+[/file]
+[/template]
+
+[template public imtrghtLatexFile(anElement : ContentElement, carg: Sequence(Argument), cparam: Sequence(ContentElement), nameSection: String)]
+[file('contentpdf.tex', true, 'UTF-8')]
+
+\includegraphics['['/]width=0.5\columnwidth[']'/]{[carg->at(cparam->indexOf(anElement)).oclAsType(Widget).widgetarguments->at(1).oclAsType(Image).url/]}
+\end{frame}
+\begin{frame}
+\frametitle{[nameSection/]}
+[/file]
+[/template]
+
+[template public imtrghtTextLatexFile(anElement : ContentElement, texto: String, tsize: Integer, position: Integer)]
+[file('contentpdf.tex', true, 'UTF-8')]
+
+[texto.replaceAll('<blockquote>', '\\\\begin{quote}').replaceAll('</blockquote>','\\\\end{quote}').replaceAll('<strong>','\\\\textbf{').replaceAll('</strong>','}').replaceAll('<h2>','\\\\textbf{').replaceAll('</h2>','}') /]
+[if tsize <> 1 and position <> tsize]
+\pause
+[/if]
+[/file]
+[/template]
+

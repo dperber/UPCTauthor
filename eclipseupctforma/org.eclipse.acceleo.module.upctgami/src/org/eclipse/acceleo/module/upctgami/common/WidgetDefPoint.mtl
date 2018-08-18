@@ -1,0 +1,10 @@
+[comment encoding = UTF-8 /]
+[module WidgetDefPoint('http://cpcd.upct.es/upctformagami')]
+
+
+[template public generateWidgetDefPoint(aWidgetDefPoint : WidgetDefPoint)]
+[file('index.php', true, 'UTF-8')]
+
+
+[/file]
+[/template]

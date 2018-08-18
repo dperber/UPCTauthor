@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/templateupctforma/src" modelPluginID="templateupctforma"
+    modelName="Templateupctforma" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>templateupctforma.ecore</foreignModel>
+  <genPackages prefix="Templateupctforma" disposableProviderFactory="true" ecorePackage="templateupctforma.ecore#/">
+    <genClasses ecoreClass="templateupctforma.ecore#//TemplateDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference templateupctforma.ecore#//TemplateDefinition/templates"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference templateupctforma.ecore#//TemplateDefinition/widgets"/>
+    </genClasses>
+    <genClasses ecoreClass="templateupctforma.ecore#//Template">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference templateupctforma.ecore#//Template/blocks"/>
+    </genClasses>
+    <genClasses ecoreClass="templateupctforma.ecore#//Block">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference templateupctforma.ecore#//Block/columns"/>
+    </genClasses>
+    <genClasses ecoreClass="templateupctforma.ecore#//Column">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference templateupctforma.ecore#//Column/elements"/>
+    </genClasses>
+    <genClasses ecoreClass="templateupctforma.ecore#//TemplateElement"/>
+    <genClasses ecoreClass="templateupctforma.ecore#//Text"/>
+    <genClasses ecoreClass="templateupctforma.ecore#//Image"/>
+    <genClasses ecoreClass="templateupctforma.ecore#//Video"/>
+    <genClasses ecoreClass="templateupctforma.ecore#//ElementSimple">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference templateupctforma.ecore#//ElementSimple/elementssimple"/>
+    </genClasses>
+    <genClasses ecoreClass="templateupctforma.ecore#//ElementComposite">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference templateupctforma.ecore#//ElementComposite/elementcomposite"/>
+    </genClasses>
+    <genClasses ecoreClass="templateupctforma.ecore#//Widget">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference templateupctforma.ecore#//Widget/typewidget"/>
+    </genClasses>
+    <genClasses ecoreClass="templateupctforma.ecore#//WidgetDef">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference templateupctforma.ecore#//WidgetDef/parameters"/>
+    </genClasses>
+    <genClasses ecoreClass="templateupctforma.ecore#//Parameter"/>
+    <genClasses ecoreClass="templateupctforma.ecore#//ParameterSimple">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference templateupctforma.ecore#//ParameterSimple/typeparametersimple"/>
+    </genClasses>
+    <genClasses ecoreClass="templateupctforma.ecore#//ParameterComposite">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference templateupctforma.ecore#//ParameterComposite/typeparametercomposite"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:upctforma="http://cpcd.upct.es/upctforma">
+  <upctforma:ContentDefinition name="upctforma.unit2">
+    <imports importedNamespace="upctforma.template1.*"/>
+    <unit name="Demo Unit 2" author="Daniel P&#xe9;rez Berenguer">
+      <sections name="Section1" image="cabecera.jpg" title="WHAT IS A COMPANY?">
+        <rows>
+          <columns width="12">
+            <elements xsi:type="upctforma:Text">
+              <paragraphs text="Business, company, firm, enterprise and organization are words used as synonyms to refer to the same reality: a group regulated by a set of rules, which has formed to produce goods and services that are exchanged for one another or for money."/>
+              <paragraphs text="&lt;blockquote> An enterprise is an economic unit of production because it develops a productive activity so as to create or enhance the utility of the goods to satisfy human needs.&lt;/blockquote>"/>
+              <paragraphs text="This requires the use of a number of elements (inputs), such as raw materials, installations, equipment, warehouses... as well as technical, human and financial resources, in a coordinated manner. Therefore, a transformation process is necessary in order to obtain goods and services (outputs) that serve to satisfy people&#x2019;s needs and to achieve an economic objective (profit)."/>
+            </elements>
+          </columns>
+        </rows>
+        <rows>
+          <usetemplate typetemplate="/1/@templates.3">
+            <arguments xsi:type="upctforma:Widget" name="section1textright" widgettype="/1/@types.4">
+              <widgetarguments xsi:type="upctforma:Image" url="s130264070.jpg"/>
+              <widgetarguments xsi:type="upctforma:Text">
+                <paragraphs text="When a company implements its activity, it also develops external and internal functions. On the one hand, the enterprise develops an external function because its performance is carried out inside the market economic system, generating a value creation process. This is not only a focus on the increase of the usefulness of certain goods but also, due to job creation, on the generation of wealth in the area and on being a main driving force of the economy. On the other hand, internal functions are developed because of the need to combine and sort the production factors. In order to plan, organize, lead and control the process, some activities are necessary, such as: supply of materials or purchasing, marketing, human resources management, research and development, etc. In any case, these functions are part of a company&#x2019;s different general subsystems that are analyzed below."/>
+              </widgetarguments>
+            </arguments>
+          </usetemplate>
+        </rows>
+      </sections>
+    </unit>
+  </upctforma:ContentDefinition>
+  <upctforma:ContentDefinition name="upctforma.template1">
+    <templates name="TwoColumnsText">
+      <rows>
+        <columns width="6">
+          <elements xsi:type="upctforma:Fixed" type="/1/@types.2"/>
+        </columns>
+        <columns width="6">
+          <elements xsi:type="upctforma:Fixed" type="/1/@types.2"/>
+        </columns>
+      </rows>
+    </templates>
+    <templates name="OneColumnText">
+      <rows>
+        <columns width="12">
+          <elements xsi:type="upctforma:Fixed" type="/1/@types.2"/>
+        </columns>
+      </rows>
+    </templates>
+    <templates name="TwoColumnsImageTextOver">
+      <rows>
+        <columns width="6">
+          <elements xsi:type="upctforma:Fixed" type="/1/@types.3"/>
+        </columns>
+        <columns width="6">
+          <elements xsi:type="upctforma:Fixed" type="/1/@types.3"/>
+        </columns>
+      </rows>
+    </templates>
+    <templates name="OneColumnImageTextRight">
+      <rows>
+        <columns width="12">
+          <elements xsi:type="upctforma:Fixed" type="/1/@types.4"/>
+        </columns>
+      </rows>
+    </templates>
+    <templates name="OneColumnVerticalAccordion">
+      <rows>
+        <columns width="12">
+          <elements xsi:type="upctforma:Fixed" type="/1/@types.5"/>
+        </columns>
+      </rows>
+    </templates>
+    <templates name="OneColumnHorizontalTab">
+      <rows>
+        <columns width="12">
+          <elements xsi:type="upctforma:Fixed" type="/1/@types.6"/>
+        </columns>
+      </rows>
+    </templates>
+    <templates name="OneColumnAnimationInOut">
+      <rows>
+        <columns width="12">
+          <elements xsi:type="upctforma:Fixed" type="/1/@types.7"/>
+        </columns>
+      </rows>
+    </templates>
+    <templates name="OneColumnRectangleDragAndDrop">
+      <rows>
+        <columns width="12">
+          <elements xsi:type="upctforma:Fixed" type="/1/@types.8"/>
+        </columns>
+      </rows>
+    </templates>
+    <types xsi:type="upctforma:AggregatedType" name="Tabs">
+      <type name="name"/>
+      <type name="content" type="Undefined"/>
+    </types>
+    <types xsi:type="upctforma:SimpleType" name="TypeImage" type="Image"/>
+    <types xsi:type="upctforma:SimpleType" name="TypeText"/>
+    <types xsi:type="upctforma:WidgetType" name="ImageTextOver">
+      <parameters xsi:type="upctforma:Fixed" type="/1/@types.1"/>
+      <parameters xsi:type="upctforma:Fixed" type="/1/@types.2"/>
+    </types>
+    <types xsi:type="upctforma:WidgetType" name="ImageTextRight">
+      <parameters xsi:type="upctforma:Fixed" type="/1/@types.1"/>
+      <parameters xsi:type="upctforma:Fixed" type="/1/@types.2"/>
+    </types>
+    <types xsi:type="upctforma:WidgetType" name="VerticalAccordion">
+      <parameters xsi:type="upctforma:Variable" type="/1/@types.0"/>
+    </types>
+    <types xsi:type="upctforma:WidgetType" name="HorizontalTabs">
+      <parameters xsi:type="upctforma:Variable" type="/1/@types.0"/>
+    </types>
+    <types xsi:type="upctforma:WidgetType" name="AnimationInOut">
+      <parameters xsi:type="upctforma:Variable" type="/1/@types.1"/>
+    </types>
+    <types xsi:type="upctforma:WidgetType" name="RectangleDragAndDrop">
+      <parameters xsi:type="upctforma:Variable" type="/1/@types.1"/>
+    </types>
+  </upctforma:ContentDefinition>
+</xmi:XMI>

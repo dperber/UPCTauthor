@@ -1,0 +1,13 @@
+[comment encoding = UTF-8 /]
+[module main('http://cpcd.upct.es/upctformaevalua')/]
+[import org::eclipse::acceleo::module::upctevalua::common::evaluationunit/]
+
+
+[template public mainEvaluation(anEvaluation : Evaluation)]
+	[comment @main /]
+
+	[for (anEvaluationUnit : EvaluationUnit | anEvaluation.units)]
+		[anEvaluationUnit.generateEvaluationUnit()/]
+	[/for]
+
+[/template]

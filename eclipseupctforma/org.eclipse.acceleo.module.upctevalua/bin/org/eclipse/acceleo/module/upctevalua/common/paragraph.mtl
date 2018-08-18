@@ -1,0 +1,9 @@
+[comment encoding = UTF-8 /]
+[module paragraph('http://cpcd.upct.es/upctformaevalua')]
+
+
+[template public generateParagraph(aParagraph : Paragraph)]
+	[file('datos.json', true, 'UTF-8')]
+		"enunciado": "[aParagraph.text /]",
+	[/file]
+[/template]

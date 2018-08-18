@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature id="org.eclipse.acceleo.source" version="3.6.6.201610060831" plugin="org.eclipse.acceleo.common" label="%featureName" provider-name="%providerName">
+  <includes id="org.eclipse.acceleo" version="3.6.6.201610060831"/>
+  <description>
+      %description
+   </description>
+  <copyright url="%copyrightURL">
+      %copyright
+   </copyright>
+  <license url="%licenseURL">
+      %license
+   </license>
+  <plugin id="org.eclipse.acceleo.engine.source" version="3.6.6.201610060831" download-size="0" install-size="0" unpack="false"/>
+  <plugin id="org.eclipse.acceleo.ide.ui.source" version="3.6.6.201610060831" download-size="0" install-size="0" unpack="false"/>
+  <plugin id="org.eclipse.acceleo.model.source" version="3.6.6.201610060831" download-size="0" install-size="0" unpack="false"/>
+  <plugin id="org.eclipse.acceleo.parser.source" version="3.6.6.201610060831" download-size="0" install-size="0" unpack="false"/>
+  <plugin id="org.eclipse.acceleo.common.source" version="3.6.6.201610060831" download-size="0" install-size="0" unpack="false"/>
+  <plugin id="org.eclipse.acceleo.common.ide.source" version="3.6.6.201610060831" download-size="0" install-size="0" unpack="false"/>
+  <plugin id="org.eclipse.acceleo.compatibility.source" version="3.6.6.201610060831" download-size="0" install-size="0" unpack="false"/>
+  <plugin id="org.eclipse.acceleo.compatibility.ui.source" version="3.6.6.201610060831" download-size="0" install-size="0" unpack="false"/>
+  <plugin id="org.eclipse.acceleo.model.edit.source" version="3.6.6.201610060831" download-size="0" install-size="0" unpack="false"/>
+  <plugin id="org.eclipse.acceleo.profiler.source" version="3.6.6.201610060831" download-size="0" install-size="0" unpack="false"/>
+  <plugin id="org.eclipse.acceleo.profiler.edit.source" version="3.6.6.201610060831" download-size="0" install-size="0" unpack="false"/>
+  <plugin id="org.eclipse.acceleo.profiler.editor.source" version="3.6.6.201610060831" download-size="0" install-size="0" unpack="false"/>
+  <plugin id="org.eclipse.acceleo.traceability.source" version="3.6.6.201610060831" download-size="0" install-size="0" unpack="false"/>
+  <plugin id="org.eclipse.acceleo.traceability.model.source" version="3.6.6.201610060831" download-size="0" install-size="0" unpack="false"/>
+  <plugin id="org.eclipse.acceleo.common.ui.source" version="3.6.6.201610060831" download-size="0" install-size="0" unpack="false"/>
+  <plugin id="org.eclipse.acceleo.ui.interpreter.source" version="3.6.6.201610060831" download-size="0" install-size="0" unpack="false"/>
+</feature>

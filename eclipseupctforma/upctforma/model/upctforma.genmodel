@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/upctforma/src" modelPluginID="upctforma" modelName="Upctforma"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="8.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>upctforma.ecore</foreignModel>
+  <genPackages prefix="Upctforma" disposableProviderFactory="true" ecorePackage="upctforma.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="upctforma.ecore#//TypeSimpleElement">
+      <genEnumLiterals ecoreEnumLiteral="upctforma.ecore#//TypeSimpleElement/Text"/>
+      <genEnumLiterals ecoreEnumLiteral="upctforma.ecore#//TypeSimpleElement/Image"/>
+      <genEnumLiterals ecoreEnumLiteral="upctforma.ecore#//TypeSimpleElement/Video"/>
+      <genEnumLiterals ecoreEnumLiteral="upctforma.ecore#//TypeSimpleElement/Undefined"/>
+    </genEnums>
+    <genClasses ecoreClass="upctforma.ecore#//Column">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference upctforma.ecore#//Column/elements"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute upctforma.ecore#//Column/width"/>
+    </genClasses>
+    <genClasses ecoreClass="upctforma.ecore#//TemplateDef">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference upctforma.ecore#//TemplateDef/rows"/>
+    </genClasses>
+    <genClasses ecoreClass="upctforma.ecore#//Image">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute upctforma.ecore#//Image/url"/>
+    </genClasses>
+    <genClasses ecoreClass="upctforma.ecore#//NameElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute upctforma.ecore#//NameElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="upctforma.ecore#//Widget">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference upctforma.ecore#//Widget/widgettype"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference upctforma.ecore#//Widget/widgetarguments"/>
+    </genClasses>
+    <genClasses ecoreClass="upctforma.ecore#//Text">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference upctforma.ecore#//Text/paragraphs"/>
+    </genClasses>
+    <genClasses ecoreClass="upctforma.ecore#//Composite"/>
+    <genClasses ecoreClass="upctforma.ecore#//Video">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute upctforma.ecore#//Video/url"/>
+    </genClasses>
+    <genClasses ecoreClass="upctforma.ecore#//ContentDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference upctforma.ecore#//ContentDefinition/templates"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference upctforma.ecore#//ContentDefinition/imports"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference upctforma.ecore#//ContentDefinition/unit"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference upctforma.ecore#//ContentDefinition/types"/>
+    </genClasses>
+    <genClasses ecoreClass="upctforma.ecore#//ContentElement"/>
+    <genClasses ecoreClass="upctforma.ecore#//SimpleElement"/>
+    <genClasses ecoreClass="upctforma.ecore#//Parameter">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference upctforma.ecore#//Parameter/type"/>
+    </genClasses>
+    <genClasses ecoreClass="upctforma.ecore#//Row">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference upctforma.ecore#//Row/columns"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference upctforma.ecore#//Row/usetemplate"/>
+      <genOperations ecoreOperation="upctforma.ecore#//Row/getArgumentType">
+        <genParameters ecoreParameter="upctforma.ecore#//Row/getArgumentType/elem"/>
+      </genOperations>
+      <genOperations ecoreOperation="upctforma.ecore#//Row/getArguments">
+        <genParameters ecoreParameter="upctforma.ecore#//Row/getArguments/object"/>
+      </genOperations>
+      <genOperations ecoreOperation="upctforma.ecore#//Row/getParameterType">
+        <genParameters ecoreParameter="upctforma.ecore#//Row/getParameterType/e"/>
+      </genOperations>
+      <genOperations ecoreOperation="upctforma.ecore#//Row/getParameters">
+        <genParameters ecoreParameter="upctforma.ecore#//Row/getParameters/object"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="upctforma.ecore#//Unit">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference upctforma.ecore#//Unit/sections"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute upctforma.ecore#//Unit/author"/>
+    </genClasses>
+    <genClasses ecoreClass="upctforma.ecore#//Section">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference upctforma.ecore#//Section/rows"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute upctforma.ecore#//Section/image"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute upctforma.ecore#//Section/title"/>
+    </genClasses>
+    <genClasses ecoreClass="upctforma.ecore#//Import">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute upctforma.ecore#//Import/importedNamespace"/>
+    </genClasses>
+    <genClasses ecoreClass="upctforma.ecore#//Paragraph">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute upctforma.ecore#//Paragraph/text"/>
+    </genClasses>
+    <genClasses ecoreClass="upctforma.ecore#//Argument"/>
+    <genClasses ecoreClass="upctforma.ecore#//Tab"/>
+    <genClasses ecoreClass="upctforma.ecore#//Animation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute upctforma.ecore#//Animation/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute upctforma.ecore#//Animation/image"/>
+    </genClasses>
+    <genClasses ecoreClass="upctforma.ecore#//DragAndDrop"/>
+    <genClasses ecoreClass="upctforma.ecore#//UseTemplate">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference upctforma.ecore#//UseTemplate/typetemplate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference upctforma.ecore#//UseTemplate/arguments"/>
+    </genClasses>
+    <genClasses ecoreClass="upctforma.ecore#//Type"/>
+    <genClasses ecoreClass="upctforma.ecore#//SimpleType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute upctforma.ecore#//SimpleType/type"/>
+    </genClasses>
+    <genClasses ecoreClass="upctforma.ecore#//AggregatedType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference upctforma.ecore#//AggregatedType/type"/>
+    </genClasses>
+    <genClasses ecoreClass="upctforma.ecore#//CompositeArgument">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference upctforma.ecore#//CompositeArgument/arguments"/>
+    </genClasses>
+    <genClasses ecoreClass="upctforma.ecore#//Fixed"/>
+    <genClasses ecoreClass="upctforma.ecore#//Variable"/>
+    <genClasses ecoreClass="upctforma.ecore#//WidgetType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference upctforma.ecore#//WidgetType/parameters"/>
+    </genClasses>
+    <genClasses ecoreClass="upctforma.ecore#//ListType">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference upctforma.ecore#//ListType/listtype"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

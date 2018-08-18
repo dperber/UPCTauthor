@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="upctformagamification" nsURI="http://cpcd.upct.es/upctformagamification"
+    nsPrefix="upctformagamification">
+  <eClassifiers xsi:type="ecore:EClass" name="Gamification">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="units" upperBound="-1"
+        eType="#//UnitGamification" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="widgets" upperBound="-1"
+        eType="#//WidgetGamification" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UnitGamification">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="unit" eType="ecore:EClass ../../upctforma/model/upctforma.ecore#//Unit"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WidgetGamification">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="widget" eType="ecore:EClass ../../upctforma/model/upctforma.ecore#//WidgetDef"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NewEClass4"/>
+</ecore:EPackage>

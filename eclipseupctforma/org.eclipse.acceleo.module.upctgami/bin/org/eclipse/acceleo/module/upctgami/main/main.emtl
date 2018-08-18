@@ -1,0 +1,2616 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
+  <mtl:Module name="main" nsURI="org::eclipse::acceleo::module::upctgami::main::main" startHeaderPosition="29" endHeaderPosition="78">
+    <input>
+      <takesTypesFrom href="http://cpcd.upct.es/upctformagami#/"/>
+    </input>
+    <imports href="../common/WidgetDefPoint.emtl#/0"/>
+    <ownedModuleElement xsi:type="mtl:Template" name="main" visibility="Public" main="true">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+      <body xsi:type="mtl:FileBlock" openMode="OverWrite">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;!DOCTYPE html>&#xA;&lt;?php&#xA;&#xA;$numero = count($_GET);&#xA;$tags = array_keys($_GET);// obtiene los nombres de las varibles&#xA;$valores = array_values($_GET);// obtiene los valores de las varibles&#xA;&#xA;require_once &quot;../config.php&quot;;&#xA;require_once &quot;php/funciones.php&quot;;&#xA;use \Tsugi\Grades\GradeUtil;&#xA;&#xA;use \Tsugi\Core\LTIX;&#xA;use \Tsugi\Util\LTI;&#xA;use \Tsugi\Util\Caliper;&#xA;&#xA;$LTI = LTIX::requireData();&#xA;$p = $CFG->dbprefix;&#xA;?>&#xA;&lt;html>&#xA;  &lt;head>&#xA;   &lt;meta charset=&quot;utf-8&quot;>&#xA;&#x9;&lt;title>Gamification&lt;/title>&#xA;&#x9;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/icomoon.css&quot;>&#xA;    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/custom.css&quot;>&#xA;&#x9; &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/base.css&quot;>&#xA; &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/social.css&quot;>&#xA;    &lt;!-- Bootstrap 3.3.5 -->&#xA;    &lt;link rel=&quot;stylesheet&quot; href=&quot;bootstrap/css/bootstrap.css&quot; media=&quot;screen&quot; charset=&quot;utf-8&quot;>&#xA;    &lt;!-- Font Awesome -->&#xA;    &lt;link rel=&quot;stylesheet&quot; href=&quot;font-awesome/css/font-awesome.min.css&quot; media=&quot;screen&quot; charset=&quot;utf-8&quot;>&#xA;    &lt;script type=&quot;text/javascript&quot; src=&quot;jquery/jquery-1.11.3.min.js&quot;>&lt;/script>&#xA;   &lt;script src=&quot;https://code.jquery.com/ui/1.11.3/jquery-ui.min.js&quot;>&lt;/script>&#xA;   &lt;script src=&quot;jquery-ui-touch-punch-master/jquery.ui.touch-punch.min.js&quot;>&lt;/script>&#xA;  &lt;/head>&#xA;  &lt;body id=&quot;body&quot;>&#xA;&#x9;&lt;section id=&quot;apdo1&quot; class=&quot;section-divider textdividersub divider1&quot; style=&quot;background:url('./images/cabecerat2.jpg');&quot;>&#xA;      &lt;div class=&quot;container&quot;>&#xA;        &lt;h1>&lt;?php echo $CONTEXT->title; ?>&lt;/h1>&#xA;        &lt;hr>&#xA;        &lt;p>&lt;/p>&#xA;      &lt;/div>&#xA;    &lt;/section>&#xA;&#x9;&lt;section style=&quot;margin-top: 70px;margin-bottom: 70px;&quot;>&#xA;&#x9;&lt;div class=&quot;container&quot;>&#xA;&#x9;&lt;div class=&quot;row&quot;>&#xA;&#xA;"/>
+        <body xsi:type="mtl:ForBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&lt;div class=&quot;col-md-3 center-block&quot; style=&quot;margin-bottom: 25px;&quot;>&#x9;&#xA;"/>
+          <body xsi:type="mtl:IfBlock">
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&#x9;&lt;?php&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;if (isCompleteUnitSQL(&quot;"/>
+            <body xsi:type="mtl:TemplateExpression"/>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;,$USER->id,$LINK->id)>0){&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;echo '&lt;input type=&quot;image&quot; src=&quot;'.convertComplete(&quot;"/>
+            <body xsi:type="mtl:TemplateExpression"/>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;).'&quot; width=&quot;250&quot; alt=&quot;"/>
+            <body xsi:type="mtl:IfBlock">
+              <body xsi:type="mtl:TemplateExpression"/>
+              <else>
+                <body xsi:type="mtl:TemplateExpression"/>
+              </else>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot; onclick=&quot;entrarMision('.'\'"/>
+            <body xsi:type="mtl:TemplateExpression"/>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="\''.','.'\'"/>
+            <body xsi:type="mtl:IfBlock">
+              <body xsi:type="mtl:TemplateExpression"/>
+              <else>
+                <body xsi:type="mtl:TemplateExpression"/>
+              </else>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="\''.')&quot;>';&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;}else{ &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;echo '&lt;input type=&quot;image&quot; src=&quot;"/>
+            <body xsi:type="mtl:TemplateExpression"/>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot; width=&quot;250&quot; alt=&quot;"/>
+            <body xsi:type="mtl:IfBlock">
+              <body xsi:type="mtl:TemplateExpression"/>
+              <else>
+                <body xsi:type="mtl:TemplateExpression"/>
+              </else>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot; onclick=&quot;entrarMision('.'\'"/>
+            <body xsi:type="mtl:TemplateExpression"/>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="\''.','.'\'"/>
+            <body xsi:type="mtl:IfBlock">
+              <body xsi:type="mtl:TemplateExpression"/>
+              <else>
+                <body xsi:type="mtl:TemplateExpression"/>
+              </else>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="\''.')&quot;>';&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;&#x9;?>&#xA;"/>
+            <else>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&#x9;&lt;?php&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;if (isCompleteUnitSQL(&quot;"/>
+              <body xsi:type="mtl:TemplateExpression"/>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;,$USER->id,$LINK->id)>0){&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;echo '&lt;input type=&quot;image&quot; src=&quot;'.convertComplete(&quot;"/>
+              <body xsi:type="mtl:TemplateExpression"/>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;).'&quot; width=&quot;250&quot; alt=&quot;"/>
+              <body xsi:type="mtl:IfBlock">
+                <body xsi:type="mtl:TemplateExpression"/>
+                <else>
+                  <body xsi:type="mtl:TemplateExpression"/>
+                </else>
+              </body>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot; onclick=&quot;entrarMision('.'\'"/>
+              <body xsi:type="mtl:TemplateExpression"/>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="\''.','.'\'"/>
+              <body xsi:type="mtl:IfBlock">
+                <body xsi:type="mtl:TemplateExpression"/>
+                <else>
+                  <body xsi:type="mtl:TemplateExpression"/>
+                </else>
+              </body>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="\''.')&quot;>';&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;}else{ &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;if (isOpenUnitSQL(&quot;"/>
+              <body xsi:type="mtl:IfBlock">
+                <body xsi:type="mtl:TemplateExpression"/>
+                <else>
+                  <body xsi:type="mtl:TemplateExpression"/>
+                </else>
+              </body>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;,$USER->id,$LINK->id)==1){&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;echo '&lt;input type=&quot;image&quot; src=&quot;"/>
+              <body xsi:type="mtl:TemplateExpression"/>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot; width=&quot;250&quot; alt=&quot;"/>
+              <body xsi:type="mtl:IfBlock">
+                <body xsi:type="mtl:TemplateExpression"/>
+                <else>
+                  <body xsi:type="mtl:TemplateExpression"/>
+                </else>
+              </body>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot; onclick=&quot;entrarMision('.'\'"/>
+              <body xsi:type="mtl:TemplateExpression"/>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="\''.','.'\'"/>
+              <body xsi:type="mtl:IfBlock">
+                <body xsi:type="mtl:TemplateExpression"/>
+                <else>
+                  <body xsi:type="mtl:TemplateExpression"/>
+                </else>
+              </body>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="\''.')&quot;>';&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;/*else{&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;echo '&lt;input type=&quot;image&quot; style=&quot;opacity:0.5&quot; src=&quot;"/>
+              <body xsi:type="mtl:TemplateExpression"/>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot; "/>
+              <body xsi:type="mtl:IfBlock">
+                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="disabled"/>
+              </body>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" width=&quot;250&quot; alt=&quot;"/>
+              <body xsi:type="mtl:IfBlock">
+                <body xsi:type="mtl:TemplateExpression"/>
+                <else>
+                  <body xsi:type="mtl:TemplateExpression"/>
+                </else>
+              </body>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot; onclick=&quot;entrarMision('.'\'"/>
+              <body xsi:type="mtl:TemplateExpression"/>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="\''.','.'\'"/>
+              <body xsi:type="mtl:IfBlock">
+                <body xsi:type="mtl:TemplateExpression"/>
+                <else>
+                  <body xsi:type="mtl:TemplateExpression"/>
+                </else>
+              </body>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="\''.')&quot;>';&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}*/&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;&#x9;?>&#xA;"/>
+            </else>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&lt;/div>&#xA;"/>
+          <loopVariable name="aUnitPoint">
+            <eAnnotations source="MTL">
+              <details key="type" value="UnitPoint"/>
+            </eAnnotations>
+          </loopVariable>
+          <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/8/OrderedSet(UnitGamify)">
+            <source xsi:type="ocl.ecore:VariableExp" name="aGamification" referredVariable="/0/main/aGamification">
+              <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://cpcd.upct.es/upctformagami#//Gamification/units"/>
+          </iterSet>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&lt;/div>&#x9;&#xA;&#x9;&lt;/div>&#xA;&#x9;&lt;/section>&#xA;&#xA;&#x9;&lt;p id=&quot;demo&quot;>&lt;/p>&#xA;&#xA;&#x9;&lt;script>&#xA;&#x9;var points,pointspre, pointsunit = &quot;&quot;;&#xA;"/>
+        <body xsi:type="mtl:ForBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;var a = {&#xA;"/>
+          <body xsi:type="mtl:ForBlock">
+            <body xsi:type="mtl:IfBlock">
+              <body xsi:type="mtl:IfBlock">
+                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&#x9;&#x9;&quot;"/>
+                <body xsi:type="mtl:TemplateExpression"/>
+                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot; : "/>
+                <body xsi:type="mtl:TemplateExpression"/>
+                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=",&#xA;"/>
+                <else>
+                  <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&#x9;&#x9;&quot;default&quot; : "/>
+                  <body xsi:type="mtl:TemplateExpression"/>
+                  <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=",&#xA;"/>
+                </else>
+              </body>
+            </body>
+            <loopVariable name="aPoint">
+              <eAnnotations source="MTL">
+                <details key="type" value="Point"/>
+              </eAnnotations>
+            </loopVariable>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;};&#xA;&#x9;&#x9;var b = {&#xA;"/>
+          <body xsi:type="mtl:ForBlock">
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&quot;"/>
+            <body xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="aWidgetDef" referredVariable="/0/main/%.1/%.3/%.3/aWidgetDef">
+                <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//WidgetType"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://cpcd.upct.es/upctforma#//NameElement/name"/>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot; : a,&#xA;"/>
+            <loopVariable name="aWidgetDef">
+              <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//WidgetType"/>
+            </loopVariable>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;};&#xA;"/>
+          <body xsi:type="mtl:IfBlock">
+            <body xsi:type="mtl:ForBlock">
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&#x9;pointsunit = Object.assign({}, pointsunit, {&quot;"/>
+              <body xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="aUnit" referredVariable="/0/main/%.1/%.3/%.5/%/aUnit">
+                  <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Unit"/>
+                </source>
+                <referredProperty xsi:type="ecore:EAttribute" href="http://cpcd.upct.es/upctforma#//NameElement/name"/>
+              </body>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot; : b});&#xA;"/>
+              <loopVariable name="aUnit">
+                <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Unit"/>
+              </loopVariable>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+            <else>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;pointspre = Object.assign({}, pointspre, b);&#xA;"/>
+            </else>
+          </body>
+          <loopVariable name="aWidgetDefPoint">
+            <eAnnotations source="MTL">
+              <details key="type" value="WidgetDefPoint"/>
+            </eAnnotations>
+          </loopVariable>
+          <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/8/OrderedSet(WidgetGamify)">
+            <source xsi:type="ocl.ecore:VariableExp" name="aGamification" referredVariable="/0/main/aGamification">
+              <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://cpcd.upct.es/upctformagami#//Gamification/widgets"/>
+          </iterSet>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#x9;var numerounidades = 1;&#xA;&#x9;var unit = &quot;&quot;;&#xA;"/>
+        <body xsi:type="mtl:ForBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;var c = "/>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="[">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+          <body xsi:type="mtl:ForBlock">
+            <body xsi:type="mtl:IfBlock">
+              <body xsi:type="mtl:IfBlock">
+                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&#x9;&#x9;{&quot;"/>
+                <body xsi:type="mtl:TemplateExpression"/>
+                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot; : "/>
+                <body xsi:type="mtl:TemplateExpression"/>
+                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="},&#xA;"/>
+                <else>
+                  <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&#x9;&#x9;{&quot;default&quot; : "/>
+                  <body xsi:type="mtl:TemplateExpression"/>
+                  <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="},&#xA;"/>
+                </else>
+              </body>
+              <else>
+                <body xsi:type="mtl:IfBlock">
+                  <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&#x9;&#x9;{&quot;InitialScore&quot; : "/>
+                  <body xsi:type="mtl:TemplateExpression"/>
+                  <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=", &quot;FinalScore&quot; : "/>
+                  <body xsi:type="mtl:TemplateExpression"/>
+                  <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=", &quot;Points&quot; : "/>
+                  <body xsi:type="mtl:TemplateExpression"/>
+                  <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="},&#xA;"/>
+                </body>
+              </else>
+            </body>
+            <loopVariable name="aPoint">
+              <eAnnotations source="MTL">
+                <details key="type" value="Point"/>
+              </eAnnotations>
+            </loopVariable>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;"/>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="]">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=";&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;var numuni = 0;&#xA;"/>
+          <body xsi:type="mtl:IfBlock">
+            <body xsi:type="mtl:ForBlock">
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&#x9;numuni = numuni + 1;&#xA;"/>
+              <loopVariable name="aMission">
+                <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Mission"/>
+              </loopVariable>
+            </body>
+            <else>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;numuni = 1;&#xA;"/>
+            </else>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;numerounidades = numerounidades + numuni;&#xA;&#xA;&#x9;&#x9;var f = "/>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="[">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+          <body xsi:type="mtl:ForBlock">
+            <body xsi:type="mtl:IfBlock">
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&#x9;{&quot;InitialScore&quot; : "/>
+              <body xsi:type="mtl:TemplateExpression"/>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=", &quot;FinalScore&quot; : "/>
+              <body xsi:type="mtl:TemplateExpression"/>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=", &quot;Points&quot; : '"/>
+              <body xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ecore:EEnum" href="http://cpcd.upct.es/upctformagami#//TypeMissions"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="aMission" referredVariable="/0/main/%.1/%.5/%.11/aMission">
+                  <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Mission"/>
+                </source>
+                <referredProperty xsi:type="ecore:EAttribute" href="http://cpcd.upct.es/upctformagami#//Mission/type"/>
+              </body>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="', &quot;Next&quot; : '"/>
+              <body xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                <source xsi:type="ocl.ecore:PropertyCallExp">
+                  <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Unit"/>
+                  <source xsi:type="ocl.ecore:VariableExp" name="aMission" referredVariable="/0/main/%.1/%.5/%.11/aMission">
+                    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Mission"/>
+                  </source>
+                  <referredProperty xsi:type="ecore:EReference" href="http://cpcd.upct.es/upctformagami#//Mission/nextunit"/>
+                </source>
+                <referredProperty xsi:type="ecore:EAttribute" href="http://cpcd.upct.es/upctforma#//NameElement/name"/>
+              </body>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="'},&#xA;"/>
+              <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+                <source xsi:type="ocl.ecore:OperationCallExp">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                  <source xsi:type="ocl.ecore:CollectionLiteralExp" eType="/8/Set(Unit)">
+                    <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL/Annotations">
+                      <details key="IMPLICIT_SET_CONVERSION" value="true"/>
+                    </eAnnotations>
+                    <part xsi:type="ocl.ecore:CollectionItem">
+                      <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Unit"/>
+                      <item xsi:type="ocl.ecore:PropertyCallExp">
+                        <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Unit"/>
+                        <source xsi:type="ocl.ecore:VariableExp" name="aMission" referredVariable="/0/main/%.1/%.5/%.11/aMission">
+                          <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Mission"/>
+                        </source>
+                        <referredProperty xsi:type="ecore:EReference" href="http://cpcd.upct.es/upctformagami#//Mission/nextunit"/>
+                      </item>
+                    </part>
+                  </source>
+                  <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Set(T)_Class/size"/>
+                </source>
+                <argument xsi:type="ocl.ecore:IntegerLiteralExp" integerSymbol="0">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                </argument>
+                <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/%3E"/>
+              </ifExpr>
+              <else>
+                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&#x9;{&quot;InitialScore&quot; : "/>
+                <body xsi:type="mtl:TemplateExpression"/>
+                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=", &quot;FinalScore&quot; : "/>
+                <body xsi:type="mtl:TemplateExpression"/>
+                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=", &quot;Points&quot; : '"/>
+                <body xsi:type="ocl.ecore:PropertyCallExp">
+                  <eType xsi:type="ecore:EEnum" href="http://cpcd.upct.es/upctformagami#//TypeMissions"/>
+                  <source xsi:type="ocl.ecore:VariableExp" name="aMission" referredVariable="/0/main/%.1/%.5/%.11/aMission">
+                    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Mission"/>
+                  </source>
+                  <referredProperty xsi:type="ecore:EAttribute" href="http://cpcd.upct.es/upctformagami#//Mission/type"/>
+                </body>
+                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="', &quot;Next&quot; : '"/>
+                <body xsi:type="ocl.ecore:PropertyCallExp">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  <source xsi:type="ocl.ecore:PropertyCallExp">
+                    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformaevalua#//EvaluationUnit"/>
+                    <source xsi:type="ocl.ecore:VariableExp" name="aMission" referredVariable="/0/main/%.1/%.5/%.11/aMission">
+                      <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Mission"/>
+                    </source>
+                    <referredProperty xsi:type="ecore:EReference" href="http://cpcd.upct.es/upctformagami#//Mission/nexteval"/>
+                  </source>
+                  <referredProperty xsi:type="ecore:EAttribute" href="http://cpcd.upct.es/upctformaevalua#//NameElement/name"/>
+                </body>
+                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="'},&#xA;"/>
+              </else>
+            </body>
+            <loopVariable name="aMission">
+              <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Mission"/>
+            </loopVariable>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;"/>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="]">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=";&#xA;&#xA;&#x9;&#x9;var e = &quot;&quot;;&#xA;"/>
+          <body xsi:type="mtl:IfBlock">
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;e  = {&quot;tipo&quot; : &quot;unit&quot;,&quot;badget&quot;: &quot;"/>
+            <body xsi:type="mtl:TemplateExpression"/>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;,&quot;points&quot; : c,&quot;missions&quot; : f};&#xA;&#x9;&#x9;&#x9;unit = Object.assign({}, unit, {&quot;"/>
+            <body xsi:type="mtl:TemplateExpression"/>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot; : e});&#xA;"/>
+            <else>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;e  = {&quot;tipo&quot; : &quot;evaluation&quot;,&quot;badget&quot;: &quot;"/>
+              <body xsi:type="mtl:TemplateExpression"/>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;,&quot;points&quot; : c,&quot;missions&quot; : f};&#xA;&#x9;&#x9;&#x9;unit = Object.assign({}, unit, {&quot;"/>
+              <body xsi:type="mtl:TemplateExpression"/>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot; : e});&#xA;"/>
+            </else>
+          </body>
+          <loopVariable name="aUnitPoint">
+            <eAnnotations source="MTL">
+              <details key="type" value="UnitPoint"/>
+            </eAnnotations>
+          </loopVariable>
+          <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/8/OrderedSet(UnitGamify)">
+            <source xsi:type="ocl.ecore:VariableExp" name="aGamification" referredVariable="/0/main/aGamification">
+              <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://cpcd.upct.es/upctformagami#//Gamification/units"/>
+          </iterSet>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#x9;&#x9;function entrarMision(url,unidad) {&#xA;&#x9;&#x9;&#x9;points = pointspre;&#xA;&#x9;&#x9;&#x9;if (pointsunit.hasOwnProperty(unidad)) {&#xA;&#x9;&#x9;&#x9;&#x9;for (var clave in pointsunit"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="[">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="unidad"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="]">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=") {&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;points"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="[">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="clave"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="]">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" = pointsunit"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="[">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="unidad"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="]">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="[">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="clave"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="]">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=";&#xA;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;if (unit.hasOwnProperty(unidad)) {&#xA;&#x9;&#x9;&#x9;&#x9;for (var clave in unit"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="[">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="unidad"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="]">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=") {&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;points"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="[">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="clave"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="]">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" = unit"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="[">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="unidad"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="]">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="[">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="clave"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="]">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=";&#xA;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;&#x9;var url2 = url + &quot;?PHPSESSID=&quot; + '&lt;?php echo session_id(); ?>';&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;var form = '';&#xA;            form += &quot;&lt;input type='hidden' name='unidades' value='&quot;+ numerounidades +&quot;'>&quot;;&#xA;            form += &quot;&lt;input type='hidden' name='identificador' value='&quot;+ url +&quot;'>&quot;;&#xA;            form += &quot;&lt;input type='hidden' name='points' value='&quot;+ JSON.stringify(points) +&quot;'>&quot;;&#xA;&#x9;&#x9;&#x9;$('&lt;form action=&quot;'+url2+'&quot; method=&quot;POST&quot;>'+form+'&lt;/form>').appendTo('body').submit();&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;function entrarRanking(link) {&#xA;&#x9;&#x9;&#x9;url = &quot;ranking.php&quot;;&#xA;&#x9;&#x9;&#x9;var url2 = url + &quot;?PHPSESSID=&quot; + '&lt;?php echo session_id(); ?>';&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;var form = '';&#xA;            form += &quot;&lt;input type='hidden' name='unidades' value='&quot;+ numerounidades +&quot;'>&quot;;&#xA;            form += &quot;&lt;input type='hidden' name='link' value='&quot;+ link +&quot;'>&quot;;&#xA;       &#x9;&#x9;$('&lt;form action=&quot;'+url2+'&quot; method=&quot;POST&quot;>'+form+'&lt;/form>').appendTo('body').submit();&#xA;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;}&#xA;&#x9;&lt;/script>&#xA;&#x9;&lt;div class=&quot;social&quot;>&#xA;&#x9;&#x9;&lt;ul>&#xA;&#x9;&#x9;&#x9;&lt;li>&lt;a onclick=&quot;entrarRanking(&lt;?php echo $LINK->id; ?>)&quot; target=&quot;_blank&quot; >&lt;i class=&quot;fa fa-trophy&quot; style=&quot;font-size:48px;&quot; aria-hidden=&quot;true&quot;>&lt;/i>&lt;/a>&lt;/li>&#xA;&#x9;&#x9;&lt;/ul>&#xA;&#x9;&lt;/div>&#xA;&#xA;&#x9;&lt;footer id=&quot;footerwrap&quot;>&#xA;&#x9;&#x9;&#x9;&lt;div class=&quot;container&quot;>&#xA;&#x9;&#x9;&#x9;&#x9;&lt;div class=&quot;row&quot;>&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;div class=&quot;col-md-12 col-sm-12 col-xs-12&quot;>&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;h6 style=&quot;color: #fff;&quot;>&amp;copy; Polytechnic University of Cartagena - Pza. del Cronista Isidoro Valverde, Edif. La Milagrosa, C.P. 30202 Cartagena. Tlf: 868 07 11 98.&lt;/h6>&#xA;                    &lt;h6 style=&quot;color: #fff;&quot;>&amp;copy; Designed and Developed by &lt;a href=&quot;http://cpcd.upct.es/&quot; target=&quot;_blank&quot;>Center of Production of Digital Contents&lt;/a> of the Polytechnic University of Cartagena&lt;/h6>&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/div>&#xA;&#x9;&#x9;&#x9;&#x9;&lt;/div>&#x9;&#xA;&#x9;&#x9;&#x9;&lt;/div>&#xA;&#x9;&lt;/footer>&#xA;&#x9;&lt;/body>&#xA;&lt;/html>&#xA;&#xA;"/>
+        <fileUrl xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="index.php">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </fileUrl>
+        <charset xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="UTF-8">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </charset>
+      </body>
+      <parameter name="aGamification">
+        <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+      </parameter>
+    </ownedModuleElement>
+  </mtl:Module>
+  <ecore:EPackage name="additions">
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_String_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Integer_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Real_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ecore_EObject_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eAnnotations>
+      <eOperations name="main">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/main"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aGamification">
+          <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OclAny_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Collection(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Sequence(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OrderedSet(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="upctformagami_Gamification_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+      </eAnnotations>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="collections">
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(UnitGamify)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//UnitGamify"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(WidgetGamify)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//WidgetGamify"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SetType" name="Set(OclInvalid)" instanceClassName="java.util.Set">
+      <elementType xsi:type="ocl.ecore:InvalidType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclInvalid"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SetType" name="Set(Unit)" instanceClassName="java.util.Set">
+      <elementType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Unit"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//WidgetType"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//WidgetType"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Unit"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctforma#//Unit"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Mission"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Mission"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Mission"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Mission"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Mission"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Mission"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Mission"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Mission"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Mission"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Mission"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Mission"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//Gamification"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EAnnotation source="positions">
+    <eAnnotations source="positions.0" references="/0/main">
+      <details key="start" value="157"/>
+      <details key="end" value="9048"/>
+      <details key="line" value="6"/>
+    </eAnnotations>
+    <eAnnotations source="positions.1" references="/0/main/%">
+      <details key="start" value="227"/>
+      <details key="end" value="228"/>
+      <details key="line" value="8"/>
+    </eAnnotations>
+    <eAnnotations source="positions.2" references="/0/main/%.1">
+      <details key="start" value="228"/>
+      <details key="end" value="9036"/>
+      <details key="line" value="9"/>
+    </eAnnotations>
+    <eAnnotations source="positions.3" references="/0/main/%.1/%">
+      <details key="start" value="264"/>
+      <details key="end" value="1870"/>
+      <details key="line" value="10"/>
+    </eAnnotations>
+    <eAnnotations source="positions.4" references="/0/main/%.1/%.1">
+      <details key="start" value="1871"/>
+      <details key="end" value="4449"/>
+      <details key="line" value="56"/>
+    </eAnnotations>
+    <eAnnotations source="positions.5" references="/0/main/%.1/%.1/%">
+      <details key="start" value="1924"/>
+      <details key="end" value="1992"/>
+      <details key="line" value="57"/>
+    </eAnnotations>
+    <eAnnotations source="positions.6" references="/0/main/%.1/%.1/%.1">
+      <details key="start" value="1995"/>
+      <details key="end" value="4432"/>
+      <details key="line" value="58"/>
+    </eAnnotations>
+    <eAnnotations source="positions.7" references="/0/main/%.1/%.1/%.1/%">
+      <details key="start" value="2038"/>
+      <details key="end" value="2076"/>
+      <details key="line" value="59"/>
+    </eAnnotations>
+    <eAnnotations source="positions.8" references="/0/main/%.1/%.1/%.1/%.1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.9" references="/0/main/%.1/%.1/%.1/%.2">
+      <details key="start" value="2094"/>
+      <details key="end" value="2177"/>
+      <details key="line" value="60"/>
+    </eAnnotations>
+    <eAnnotations source="positions.10" references="/0/main/%.1/%.1/%.1/%.3">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.11" references="/0/main/%.1/%.1/%.1/%.4">
+      <details key="start" value="2197"/>
+      <details key="end" value="2220"/>
+      <details key="line" value="61"/>
+    </eAnnotations>
+    <eAnnotations source="positions.12" references="/0/main/%.1/%.1/%.1/%.5">
+      <details key="start" value="2220"/>
+      <details key="end" value="2331"/>
+      <details key="line" value="61"/>
+    </eAnnotations>
+    <eAnnotations source="positions.13" references="/0/main/%.1/%.1/%.1/%.5/%">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.14" references="/0/main/%.1/%.1/%.1/%.5/%.1">
+      <details key="start" value="2293"/>
+      <details key="end" value="2326"/>
+      <details key="line" value="61"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/main/%.1/%.1/%.1/%.5/%.1/%">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.16" references="/0/main/%.1/%.1/%.1/%.6">
+      <details key="start" value="2331"/>
+      <details key="end" value="2360"/>
+      <details key="line" value="61"/>
+    </eAnnotations>
+    <eAnnotations source="positions.17" references="/0/main/%.1/%.1/%.1/%.7">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.18" references="/0/main/%.1/%.1/%.1/%.8">
+      <details key="start" value="2378"/>
+      <details key="end" value="2389"/>
+      <details key="line" value="61"/>
+    </eAnnotations>
+    <eAnnotations source="positions.19" references="/0/main/%.1/%.1/%.1/%.9">
+      <details key="start" value="2389"/>
+      <details key="end" value="2500"/>
+      <details key="line" value="61"/>
+    </eAnnotations>
+    <eAnnotations source="positions.20" references="/0/main/%.1/%.1/%.1/%.9/%">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.21" references="/0/main/%.1/%.1/%.1/%.9/%.1">
+      <details key="start" value="2462"/>
+      <details key="end" value="2495"/>
+      <details key="line" value="61"/>
+    </eAnnotations>
+    <eAnnotations source="positions.22" references="/0/main/%.1/%.1/%.1/%.9/%.1/%">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.23" references="/0/main/%.1/%.1/%.1/%.10">
+      <details key="start" value="2500"/>
+      <details key="end" value="2561"/>
+      <details key="line" value="61"/>
+    </eAnnotations>
+    <eAnnotations source="positions.24" references="/0/main/%.1/%.1/%.1/%.11">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.25" references="/0/main/%.1/%.1/%.1/%.12">
+      <details key="start" value="2581"/>
+      <details key="end" value="2600"/>
+      <details key="line" value="63"/>
+    </eAnnotations>
+    <eAnnotations source="positions.26" references="/0/main/%.1/%.1/%.1/%.13">
+      <details key="start" value="2600"/>
+      <details key="end" value="2711"/>
+      <details key="line" value="63"/>
+    </eAnnotations>
+    <eAnnotations source="positions.27" references="/0/main/%.1/%.1/%.1/%.13/%">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.28" references="/0/main/%.1/%.1/%.1/%.13/%.1">
+      <details key="start" value="2673"/>
+      <details key="end" value="2706"/>
+      <details key="line" value="63"/>
+    </eAnnotations>
+    <eAnnotations source="positions.29" references="/0/main/%.1/%.1/%.1/%.13/%.1/%">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.30" references="/0/main/%.1/%.1/%.1/%.14">
+      <details key="start" value="2711"/>
+      <details key="end" value="2740"/>
+      <details key="line" value="63"/>
+    </eAnnotations>
+    <eAnnotations source="positions.31" references="/0/main/%.1/%.1/%.1/%.15">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.32" references="/0/main/%.1/%.1/%.1/%.16">
+      <details key="start" value="2758"/>
+      <details key="end" value="2769"/>
+      <details key="line" value="63"/>
+    </eAnnotations>
+    <eAnnotations source="positions.33" references="/0/main/%.1/%.1/%.1/%.17">
+      <details key="start" value="2769"/>
+      <details key="end" value="2880"/>
+      <details key="line" value="63"/>
+    </eAnnotations>
+    <eAnnotations source="positions.34" references="/0/main/%.1/%.1/%.1/%.17/%">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.35" references="/0/main/%.1/%.1/%.1/%.17/%.1">
+      <details key="start" value="2842"/>
+      <details key="end" value="2875"/>
+      <details key="line" value="63"/>
+    </eAnnotations>
+    <eAnnotations source="positions.36" references="/0/main/%.1/%.1/%.1/%.17/%.1/%">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.37" references="/0/main/%.1/%.1/%.1/%.18">
+      <details key="start" value="2880"/>
+      <details key="end" value="2905"/>
+      <details key="line" value="63"/>
+    </eAnnotations>
+    <eAnnotations source="positions.38" references="/0/main/%.1/%.1/%.1/%.19">
+      <details key="start" value="2908"/>
+      <details key="end" value="4427"/>
+      <details key="line" value="66"/>
+    </eAnnotations>
+    <eAnnotations source="positions.39" references="/0/main/%.1/%.1/%.1/%.19/%">
+      <details key="start" value="2915"/>
+      <details key="end" value="2953"/>
+      <details key="line" value="67"/>
+    </eAnnotations>
+    <eAnnotations source="positions.40" references="/0/main/%.1/%.1/%.1/%.19/%.1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.41" references="/0/main/%.1/%.1/%.1/%.19/%.2">
+      <details key="start" value="2971"/>
+      <details key="end" value="3054"/>
+      <details key="line" value="68"/>
+    </eAnnotations>
+    <eAnnotations source="positions.42" references="/0/main/%.1/%.1/%.1/%.19/%.3">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.43" references="/0/main/%.1/%.1/%.1/%.19/%.4">
+      <details key="start" value="3074"/>
+      <details key="end" value="3097"/>
+      <details key="line" value="69"/>
+    </eAnnotations>
+    <eAnnotations source="positions.44" references="/0/main/%.1/%.1/%.1/%.19/%.5">
+      <details key="start" value="3097"/>
+      <details key="end" value="3208"/>
+      <details key="line" value="69"/>
+    </eAnnotations>
+    <eAnnotations source="positions.45" references="/0/main/%.1/%.1/%.1/%.19/%.5/%">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.46" references="/0/main/%.1/%.1/%.1/%.19/%.5/%.1">
+      <details key="start" value="3170"/>
+      <details key="end" value="3203"/>
+      <details key="line" value="69"/>
+    </eAnnotations>
+    <eAnnotations source="positions.47" references="/0/main/%.1/%.1/%.1/%.19/%.5/%.1/%">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.48" references="/0/main/%.1/%.1/%.1/%.19/%.6">
+      <details key="start" value="3208"/>
+      <details key="end" value="3237"/>
+      <details key="line" value="69"/>
+    </eAnnotations>
+    <eAnnotations source="positions.49" references="/0/main/%.1/%.1/%.1/%.19/%.7">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.50" references="/0/main/%.1/%.1/%.1/%.19/%.8">
+      <details key="start" value="3255"/>
+      <details key="end" value="3266"/>
+      <details key="line" value="69"/>
+    </eAnnotations>
+    <eAnnotations source="positions.51" references="/0/main/%.1/%.1/%.1/%.19/%.9">
+      <details key="start" value="3266"/>
+      <details key="end" value="3377"/>
+      <details key="line" value="69"/>
+    </eAnnotations>
+    <eAnnotations source="positions.52" references="/0/main/%.1/%.1/%.1/%.19/%.9/%">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.53" references="/0/main/%.1/%.1/%.1/%.19/%.9/%.1">
+      <details key="start" value="3339"/>
+      <details key="end" value="3372"/>
+      <details key="line" value="69"/>
+    </eAnnotations>
+    <eAnnotations source="positions.54" references="/0/main/%.1/%.1/%.1/%.19/%.9/%.1/%">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.55" references="/0/main/%.1/%.1/%.1/%.19/%.10">
+      <details key="start" value="3377"/>
+      <details key="end" value="3426"/>
+      <details key="line" value="69"/>
+    </eAnnotations>
+    <eAnnotations source="positions.56" references="/0/main/%.1/%.1/%.1/%.19/%.11">
+      <details key="start" value="3426"/>
+      <details key="end" value="3537"/>
+      <details key="line" value="71"/>
+    </eAnnotations>
+    <eAnnotations source="positions.57" references="/0/main/%.1/%.1/%.1/%.19/%.11/%">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.58" references="/0/main/%.1/%.1/%.1/%.19/%.11/%.1">
+      <details key="start" value="3499"/>
+      <details key="end" value="3532"/>
+      <details key="line" value="71"/>
+    </eAnnotations>
+    <eAnnotations source="positions.59" references="/0/main/%.1/%.1/%.1/%.19/%.11/%.1/%">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.60" references="/0/main/%.1/%.1/%.1/%.19/%.12">
+      <details key="start" value="3537"/>
+      <details key="end" value="3603"/>
+      <details key="line" value="71"/>
+    </eAnnotations>
+    <eAnnotations source="positions.61" references="/0/main/%.1/%.1/%.1/%.19/%.13">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.62" references="/0/main/%.1/%.1/%.1/%.19/%.14">
+      <details key="start" value="3623"/>
+      <details key="end" value="3642"/>
+      <details key="line" value="72"/>
+    </eAnnotations>
+    <eAnnotations source="positions.63" references="/0/main/%.1/%.1/%.1/%.19/%.15">
+      <details key="start" value="3642"/>
+      <details key="end" value="3753"/>
+      <details key="line" value="72"/>
+    </eAnnotations>
+    <eAnnotations source="positions.64" references="/0/main/%.1/%.1/%.1/%.19/%.15/%">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.65" references="/0/main/%.1/%.1/%.1/%.19/%.15/%.1">
+      <details key="start" value="3715"/>
+      <details key="end" value="3748"/>
+      <details key="line" value="72"/>
+    </eAnnotations>
+    <eAnnotations source="positions.66" references="/0/main/%.1/%.1/%.1/%.19/%.15/%.1/%">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.67" references="/0/main/%.1/%.1/%.1/%.19/%.16">
+      <details key="start" value="3753"/>
+      <details key="end" value="3782"/>
+      <details key="line" value="72"/>
+    </eAnnotations>
+    <eAnnotations source="positions.68" references="/0/main/%.1/%.1/%.1/%.19/%.17">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.69" references="/0/main/%.1/%.1/%.1/%.19/%.18">
+      <details key="start" value="3800"/>
+      <details key="end" value="3811"/>
+      <details key="line" value="72"/>
+    </eAnnotations>
+    <eAnnotations source="positions.70" references="/0/main/%.1/%.1/%.1/%.19/%.19">
+      <details key="start" value="3811"/>
+      <details key="end" value="3922"/>
+      <details key="line" value="72"/>
+    </eAnnotations>
+    <eAnnotations source="positions.71" references="/0/main/%.1/%.1/%.1/%.19/%.19/%">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.72" references="/0/main/%.1/%.1/%.1/%.19/%.19/%.1">
+      <details key="start" value="3884"/>
+      <details key="end" value="3917"/>
+      <details key="line" value="72"/>
+    </eAnnotations>
+    <eAnnotations source="positions.73" references="/0/main/%.1/%.1/%.1/%.19/%.19/%.1/%">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.74" references="/0/main/%.1/%.1/%.1/%.19/%.20">
+      <details key="start" value="3922"/>
+      <details key="end" value="4013"/>
+      <details key="line" value="72"/>
+    </eAnnotations>
+    <eAnnotations source="positions.75" references="/0/main/%.1/%.1/%.1/%.19/%.21">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.76" references="/0/main/%.1/%.1/%.1/%.19/%.22">
+      <details key="start" value="4033"/>
+      <details key="end" value="4035"/>
+      <details key="line" value="75"/>
+    </eAnnotations>
+    <eAnnotations source="positions.77" references="/0/main/%.1/%.1/%.1/%.19/%.23">
+      <details key="start" value="4035"/>
+      <details key="end" value="4091"/>
+      <details key="line" value="75"/>
+    </eAnnotations>
+    <eAnnotations source="positions.78" references="/0/main/%.1/%.1/%.1/%.19/%.23/%">
+      <details key="start" value="4078"/>
+      <details key="end" value="4086"/>
+      <details key="line" value="75"/>
+    </eAnnotations>
+    <eAnnotations source="positions.79" references="/0/main/%.1/%.1/%.1/%.19/%.24">
+      <details key="start" value="4091"/>
+      <details key="end" value="4109"/>
+      <details key="line" value="75"/>
+    </eAnnotations>
+    <eAnnotations source="positions.80" references="/0/main/%.1/%.1/%.1/%.19/%.25">
+      <details key="start" value="4109"/>
+      <details key="end" value="4220"/>
+      <details key="line" value="75"/>
+    </eAnnotations>
+    <eAnnotations source="positions.81" references="/0/main/%.1/%.1/%.1/%.19/%.25/%">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.82" references="/0/main/%.1/%.1/%.1/%.19/%.25/%.1">
+      <details key="start" value="4182"/>
+      <details key="end" value="4215"/>
+      <details key="line" value="75"/>
+    </eAnnotations>
+    <eAnnotations source="positions.83" references="/0/main/%.1/%.1/%.1/%.19/%.25/%.1/%">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.84" references="/0/main/%.1/%.1/%.1/%.19/%.26">
+      <details key="start" value="4220"/>
+      <details key="end" value="4249"/>
+      <details key="line" value="75"/>
+    </eAnnotations>
+    <eAnnotations source="positions.85" references="/0/main/%.1/%.1/%.1/%.19/%.27">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.86" references="/0/main/%.1/%.1/%.1/%.19/%.28">
+      <details key="start" value="4267"/>
+      <details key="end" value="4278"/>
+      <details key="line" value="75"/>
+    </eAnnotations>
+    <eAnnotations source="positions.87" references="/0/main/%.1/%.1/%.1/%.19/%.29">
+      <details key="start" value="4278"/>
+      <details key="end" value="4389"/>
+      <details key="line" value="75"/>
+    </eAnnotations>
+    <eAnnotations source="positions.88" references="/0/main/%.1/%.1/%.1/%.19/%.29/%">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.89" references="/0/main/%.1/%.1/%.1/%.19/%.29/%.1">
+      <details key="start" value="4351"/>
+      <details key="end" value="4384"/>
+      <details key="line" value="75"/>
+    </eAnnotations>
+    <eAnnotations source="positions.90" references="/0/main/%.1/%.1/%.1/%.19/%.29/%.1/%">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.91" references="/0/main/%.1/%.1/%.1/%.19/%.30">
+      <details key="start" value="4389"/>
+      <details key="end" value="4424"/>
+      <details key="line" value="75"/>
+    </eAnnotations>
+    <eAnnotations source="positions.92" references="/0/main/%.1/%.1/%.2">
+      <details key="start" value="4433"/>
+      <details key="end" value="4442"/>
+      <details key="line" value="80"/>
+    </eAnnotations>
+    <eAnnotations source="positions.93" references="/0/main/%.1/%.1/aUnitPoint">
+      <details key="start" value="1877"/>
+      <details key="end" value="1899"/>
+      <details key="line" value="56"/>
+    </eAnnotations>
+    <eAnnotations source="positions.94" references="/0/main/%.1/%.1/%.3">
+      <details key="start" value="1902"/>
+      <details key="end" value="1921"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.95" references="/0/main/%.1/%.1/%.3/aGamification">
+      <details key="start" value="1902"/>
+      <details key="end" value="1915"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.96" references="/0/main/%.1/%.2">
+      <details key="start" value="4450"/>
+      <details key="end" value="4550"/>
+      <details key="line" value="82"/>
+    </eAnnotations>
+    <eAnnotations source="positions.97" references="/0/main/%.1/%.3">
+      <details key="start" value="4551"/>
+      <details key="end" value="5276"/>
+      <details key="line" value="90"/>
+    </eAnnotations>
+    <eAnnotations source="positions.98" references="/0/main/%.1/%.3/%">
+      <details key="start" value="4616"/>
+      <details key="end" value="4628"/>
+      <details key="line" value="91"/>
+    </eAnnotations>
+    <eAnnotations source="positions.99" references="/0/main/%.1/%.3/%.1">
+      <details key="start" value="4630"/>
+      <details key="end" value="4882"/>
+      <details key="line" value="92"/>
+    </eAnnotations>
+    <eAnnotations source="positions.100" references="/0/main/%.1/%.3/%.1/%">
+      <details key="start" value="4690"/>
+      <details key="end" value="4873"/>
+      <details key="line" value="93"/>
+    </eAnnotations>
+    <eAnnotations source="positions.101" references="/0/main/%.1/%.3/%.1/%/%">
+      <details key="start" value="4736"/>
+      <details key="end" value="4864"/>
+      <details key="line" value="94"/>
+    </eAnnotations>
+    <eAnnotations source="positions.102" references="/0/main/%.1/%.3/%.1/%/%/%">
+      <details key="start" value="4763"/>
+      <details key="end" value="4769"/>
+      <details key="line" value="95"/>
+    </eAnnotations>
+    <eAnnotations source="positions.103" references="/0/main/%.1/%.3/%.1/%/%/%.1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.104" references="/0/main/%.1/%.3/%.1/%/%/%.2">
+      <details key="start" value="4787"/>
+      <details key="end" value="4791"/>
+      <details key="line" value="95"/>
+    </eAnnotations>
+    <eAnnotations source="positions.105" references="/0/main/%.1/%.3/%.1/%/%/%.3">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.106" references="/0/main/%.1/%.3/%.1/%/%/%.4">
+      <details key="start" value="4807"/>
+      <details key="end" value="4809"/>
+      <details key="line" value="95"/>
+    </eAnnotations>
+    <eAnnotations source="positions.107" references="/0/main/%.1/%.3/%.1/%/%/%.5">
+      <details key="start" value="4813"/>
+      <details key="end" value="4859"/>
+      <details key="line" value="96"/>
+    </eAnnotations>
+    <eAnnotations source="positions.108" references="/0/main/%.1/%.3/%.1/%/%/%.5/%">
+      <details key="start" value="4820"/>
+      <details key="end" value="4837"/>
+      <details key="line" value="97"/>
+    </eAnnotations>
+    <eAnnotations source="positions.109" references="/0/main/%.1/%.3/%.1/%/%/%.5/%.1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.110" references="/0/main/%.1/%.3/%.1/%/%/%.5/%.2">
+      <details key="start" value="4853"/>
+      <details key="end" value="4855"/>
+      <details key="line" value="97"/>
+    </eAnnotations>
+    <eAnnotations source="positions.111" references="/0/main/%.1/%.3/%.1/aPoint">
+      <details key="start" value="4636"/>
+      <details key="end" value="4650"/>
+      <details key="line" value="92"/>
+    </eAnnotations>
+    <eAnnotations source="positions.112" references="/0/main/%.1/%.3/%.2">
+      <details key="start" value="4883"/>
+      <details key="end" value="4900"/>
+      <details key="line" value="101"/>
+    </eAnnotations>
+    <eAnnotations source="positions.113" references="/0/main/%.1/%.3/%.3">
+      <details key="start" value="4902"/>
+      <details key="end" value="5011"/>
+      <details key="line" value="103"/>
+    </eAnnotations>
+    <eAnnotations source="positions.114" references="/0/main/%.1/%.3/%.3/%">
+      <details key="start" value="4973"/>
+      <details key="end" value="4977"/>
+      <details key="line" value="104"/>
+    </eAnnotations>
+    <eAnnotations source="positions.115" references="/0/main/%.1/%.3/%.3/%.1">
+      <details key="start" value="4978"/>
+      <details key="end" value="4993"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.116" references="/0/main/%.1/%.3/%.3/%.1/aWidgetDef">
+      <details key="start" value="4978"/>
+      <details key="end" value="4988"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.117" references="/0/main/%.1/%.3/%.3/%.2">
+      <details key="start" value="4996"/>
+      <details key="end" value="5003"/>
+      <details key="line" value="104"/>
+    </eAnnotations>
+    <eAnnotations source="positions.118" references="/0/main/%.1/%.3/%.3/aWidgetDef">
+      <details key="start" value="4908"/>
+      <details key="end" value="4942"/>
+      <details key="line" value="103"/>
+    </eAnnotations>
+    <eAnnotations source="positions.119" references="/0/main/%.1/%.3/%.4">
+      <details key="start" value="5012"/>
+      <details key="end" value="5017"/>
+      <details key="line" value="106"/>
+    </eAnnotations>
+    <eAnnotations source="positions.120" references="/0/main/%.1/%.3/%.5">
+      <details key="start" value="5019"/>
+      <details key="end" value="5268"/>
+      <details key="line" value="107"/>
+    </eAnnotations>
+    <eAnnotations source="positions.121" references="/0/main/%.1/%.3/%.5/%">
+      <details key="start" value="5063"/>
+      <details key="end" value="5202"/>
+      <details key="line" value="108"/>
+    </eAnnotations>
+    <eAnnotations source="positions.122" references="/0/main/%.1/%.3/%.5/%/%">
+      <details key="start" value="5121"/>
+      <details key="end" value="5170"/>
+      <details key="line" value="109"/>
+    </eAnnotations>
+    <eAnnotations source="positions.123" references="/0/main/%.1/%.3/%.5/%/%.1">
+      <details key="start" value="5171"/>
+      <details key="end" value="5181"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.124" references="/0/main/%.1/%.3/%.5/%/%.1/aUnit">
+      <details key="start" value="5171"/>
+      <details key="end" value="5176"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.125" references="/0/main/%.1/%.3/%.5/%/%.2">
+      <details key="start" value="5184"/>
+      <details key="end" value="5193"/>
+      <details key="line" value="109"/>
+    </eAnnotations>
+    <eAnnotations source="positions.126" references="/0/main/%.1/%.3/%.5/%/aUnit">
+      <details key="start" value="5069"/>
+      <details key="end" value="5092"/>
+      <details key="line" value="108"/>
+    </eAnnotations>
+    <eAnnotations source="positions.127" references="/0/main/%.1/%.3/%.5/%.1">
+      <details key="start" value="5203"/>
+      <details key="end" value="5204"/>
+      <details key="line" value="111"/>
+    </eAnnotations>
+    <eAnnotations source="positions.128" references="/0/main/%.1/%.3/%.5/%.2">
+      <details key="start" value="5206"/>
+      <details key="end" value="5263"/>
+      <details key="line" value="112"/>
+    </eAnnotations>
+    <eAnnotations source="positions.129" references="/0/main/%.1/%.3/%.5/%.2/%">
+      <details key="start" value="5213"/>
+      <details key="end" value="5261"/>
+      <details key="line" value="113"/>
+    </eAnnotations>
+    <eAnnotations source="positions.130" references="/0/main/%.1/%.3/aWidgetDefPoint">
+      <details key="start" value="4557"/>
+      <details key="end" value="4589"/>
+      <details key="line" value="90"/>
+    </eAnnotations>
+    <eAnnotations source="positions.131" references="/0/main/%.1/%.3/%.6">
+      <details key="start" value="4592"/>
+      <details key="end" value="4613"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.132" references="/0/main/%.1/%.3/%.6/aGamification">
+      <details key="start" value="4592"/>
+      <details key="end" value="4605"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.133" references="/0/main/%.1/%.4">
+      <details key="start" value="5277"/>
+      <details key="end" value="5319"/>
+      <details key="line" value="116"/>
+    </eAnnotations>
+    <eAnnotations source="positions.134" references="/0/main/%.1/%.5">
+      <details key="start" value="5320"/>
+      <details key="end" value="6940"/>
+      <details key="line" value="119"/>
+    </eAnnotations>
+    <eAnnotations source="positions.135" references="/0/main/%.1/%.5/%">
+      <details key="start" value="5373"/>
+      <details key="end" value="5383"/>
+      <details key="line" value="120"/>
+    </eAnnotations>
+    <eAnnotations source="positions.136" references="/0/main/%.1/%.5/%.1">
+      <details key="start" value="5384"/>
+      <details key="end" value="5387"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.137" references="/0/main/%.1/%.5/%.2">
+      <details key="start" value="5389"/>
+      <details key="end" value="5390"/>
+      <details key="line" value="121"/>
+    </eAnnotations>
+    <eAnnotations source="positions.138" references="/0/main/%.1/%.5/%.3">
+      <details key="start" value="5392"/>
+      <details key="end" value="5815"/>
+      <details key="line" value="121"/>
+    </eAnnotations>
+    <eAnnotations source="positions.139" references="/0/main/%.1/%.5/%.3/%">
+      <details key="start" value="5442"/>
+      <details key="end" value="5806"/>
+      <details key="line" value="122"/>
+    </eAnnotations>
+    <eAnnotations source="positions.140" references="/0/main/%.1/%.5/%.3/%/%">
+      <details key="start" value="5488"/>
+      <details key="end" value="5620"/>
+      <details key="line" value="123"/>
+    </eAnnotations>
+    <eAnnotations source="positions.141" references="/0/main/%.1/%.5/%.3/%/%/%">
+      <details key="start" value="5515"/>
+      <details key="end" value="5522"/>
+      <details key="line" value="124"/>
+    </eAnnotations>
+    <eAnnotations source="positions.142" references="/0/main/%.1/%.5/%.3/%/%/%.1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.143" references="/0/main/%.1/%.5/%.3/%/%/%.2">
+      <details key="start" value="5540"/>
+      <details key="end" value="5544"/>
+      <details key="line" value="124"/>
+    </eAnnotations>
+    <eAnnotations source="positions.144" references="/0/main/%.1/%.5/%.3/%/%/%.3">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.145" references="/0/main/%.1/%.5/%.3/%/%/%.4">
+      <details key="start" value="5560"/>
+      <details key="end" value="5563"/>
+      <details key="line" value="124"/>
+    </eAnnotations>
+    <eAnnotations source="positions.146" references="/0/main/%.1/%.5/%.3/%/%/%.5">
+      <details key="start" value="5567"/>
+      <details key="end" value="5615"/>
+      <details key="line" value="125"/>
+    </eAnnotations>
+    <eAnnotations source="positions.147" references="/0/main/%.1/%.5/%.3/%/%/%.5/%">
+      <details key="start" value="5574"/>
+      <details key="end" value="5592"/>
+      <details key="line" value="126"/>
+    </eAnnotations>
+    <eAnnotations source="positions.148" references="/0/main/%.1/%.5/%.3/%/%/%.5/%.1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.149" references="/0/main/%.1/%.5/%.3/%/%/%.5/%.2">
+      <details key="start" value="5608"/>
+      <details key="end" value="5611"/>
+      <details key="line" value="126"/>
+    </eAnnotations>
+    <eAnnotations source="positions.150" references="/0/main/%.1/%.5/%.3/%/%.1">
+      <details key="start" value="5624"/>
+      <details key="end" value="5801"/>
+      <details key="line" value="128"/>
+    </eAnnotations>
+    <eAnnotations source="positions.151" references="/0/main/%.1/%.5/%.3/%/%.1/%">
+      <details key="start" value="5635"/>
+      <details key="end" value="5797"/>
+      <details key="line" value="129"/>
+    </eAnnotations>
+    <eAnnotations source="positions.152" references="/0/main/%.1/%.5/%.3/%/%.1/%/%">
+      <details key="start" value="5674"/>
+      <details key="end" value="5697"/>
+      <details key="line" value="130"/>
+    </eAnnotations>
+    <eAnnotations source="positions.153" references="/0/main/%.1/%.5/%.3/%/%.1/%/%.1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.154" references="/0/main/%.1/%.5/%.3/%/%.1/%/%.2">
+      <details key="start" value="5719"/>
+      <details key="end" value="5736"/>
+      <details key="line" value="130"/>
+    </eAnnotations>
+    <eAnnotations source="positions.155" references="/0/main/%.1/%.5/%.3/%/%.1/%/%.3">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.156" references="/0/main/%.1/%.5/%.3/%/%.1/%/%.4">
+      <details key="start" value="5756"/>
+      <details key="end" value="5769"/>
+      <details key="line" value="130"/>
+    </eAnnotations>
+    <eAnnotations source="positions.157" references="/0/main/%.1/%.5/%.3/%/%.1/%/%.5">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.158" references="/0/main/%.1/%.5/%.3/%/%.1/%/%.6">
+      <details key="start" value="5785"/>
+      <details key="end" value="5788"/>
+      <details key="line" value="130"/>
+    </eAnnotations>
+    <eAnnotations source="positions.159" references="/0/main/%.1/%.5/%.3/aPoint">
+      <details key="start" value="5398"/>
+      <details key="end" value="5412"/>
+      <details key="line" value="121"/>
+    </eAnnotations>
+    <eAnnotations source="positions.160" references="/0/main/%.1/%.5/%.4">
+      <details key="start" value="5816"/>
+      <details key="end" value="5818"/>
+      <details key="line" value="134"/>
+    </eAnnotations>
+    <eAnnotations source="positions.161" references="/0/main/%.1/%.5/%.5">
+      <details key="start" value="5819"/>
+      <details key="end" value="5822"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.162" references="/0/main/%.1/%.5/%.6">
+      <details key="start" value="5824"/>
+      <details key="end" value="5847"/>
+      <details key="line" value="134"/>
+    </eAnnotations>
+    <eAnnotations source="positions.163" references="/0/main/%.1/%.5/%.7">
+      <details key="start" value="5849"/>
+      <details key="end" value="6003"/>
+      <details key="line" value="137"/>
+    </eAnnotations>
+    <eAnnotations source="positions.164" references="/0/main/%.1/%.5/%.7/%">
+      <details key="start" value="5888"/>
+      <details key="end" value="5971"/>
+      <details key="line" value="138"/>
+    </eAnnotations>
+    <eAnnotations source="positions.165" references="/0/main/%.1/%.5/%.7/%/%">
+      <details key="start" value="5937"/>
+      <details key="end" value="5962"/>
+      <details key="line" value="139"/>
+    </eAnnotations>
+    <eAnnotations source="positions.166" references="/0/main/%.1/%.5/%.7/%/aMission">
+      <details key="start" value="5894"/>
+      <details key="end" value="5912"/>
+      <details key="line" value="138"/>
+    </eAnnotations>
+    <eAnnotations source="positions.167" references="/0/main/%.1/%.5/%.7/%.1">
+      <details key="start" value="5974"/>
+      <details key="end" value="5998"/>
+      <details key="line" value="141"/>
+    </eAnnotations>
+    <eAnnotations source="positions.168" references="/0/main/%.1/%.5/%.7/%.1/%">
+      <details key="start" value="5981"/>
+      <details key="end" value="5996"/>
+      <details key="line" value="142"/>
+    </eAnnotations>
+    <eAnnotations source="positions.169" references="/0/main/%.1/%.5/%.8">
+      <details key="start" value="6004"/>
+      <details key="end" value="6059"/>
+      <details key="line" value="144"/>
+    </eAnnotations>
+    <eAnnotations source="positions.170" references="/0/main/%.1/%.5/%.9">
+      <details key="start" value="6060"/>
+      <details key="end" value="6063"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.171" references="/0/main/%.1/%.5/%.10">
+      <details key="start" value="6065"/>
+      <details key="end" value="6066"/>
+      <details key="line" value="147"/>
+    </eAnnotations>
+    <eAnnotations source="positions.172" references="/0/main/%.1/%.5/%.11">
+      <details key="start" value="6068"/>
+      <details key="end" value="6498"/>
+      <details key="line" value="147"/>
+    </eAnnotations>
+    <eAnnotations source="positions.173" references="/0/main/%.1/%.5/%.11/%">
+      <details key="start" value="6120"/>
+      <details key="end" value="6489"/>
+      <details key="line" value="148"/>
+    </eAnnotations>
+    <eAnnotations source="positions.174" references="/0/main/%.1/%.5/%.11/%/%">
+      <details key="start" value="6155"/>
+      <details key="end" value="6177"/>
+      <details key="line" value="149"/>
+    </eAnnotations>
+    <eAnnotations source="positions.175" references="/0/main/%.1/%.5/%.11/%/%.1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.176" references="/0/main/%.1/%.5/%.11/%/%.2">
+      <details key="start" value="6201"/>
+      <details key="end" value="6218"/>
+      <details key="line" value="149"/>
+    </eAnnotations>
+    <eAnnotations source="positions.177" references="/0/main/%.1/%.5/%.11/%/%.3">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.178" references="/0/main/%.1/%.5/%.11/%/%.4">
+      <details key="start" value="6240"/>
+      <details key="end" value="6254"/>
+      <details key="line" value="149"/>
+    </eAnnotations>
+    <eAnnotations source="positions.179" references="/0/main/%.1/%.5/%.11/%/%.5">
+      <details key="start" value="6255"/>
+      <details key="end" value="6268"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.180" references="/0/main/%.1/%.5/%.11/%/%.5/aMission">
+      <details key="start" value="6255"/>
+      <details key="end" value="6263"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.181" references="/0/main/%.1/%.5/%.11/%/%.6">
+      <details key="start" value="6270"/>
+      <details key="end" value="6283"/>
+      <details key="line" value="149"/>
+    </eAnnotations>
+    <eAnnotations source="positions.182" references="/0/main/%.1/%.5/%.11/%/%.7">
+      <details key="start" value="6284"/>
+      <details key="end" value="6306"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.183" references="/0/main/%.1/%.5/%.11/%/%.7/%">
+      <details key="start" value="6284"/>
+      <details key="end" value="6301"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.184" references="/0/main/%.1/%.5/%.11/%/%.7/%/aMission">
+      <details key="start" value="6284"/>
+      <details key="end" value="6292"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.185" references="/0/main/%.1/%.5/%.11/%/%.8">
+      <details key="start" value="6309"/>
+      <details key="end" value="6313"/>
+      <details key="line" value="149"/>
+    </eAnnotations>
+    <eAnnotations source="positions.186" references="/0/main/%.1/%.5/%.11/%/%.9">
+      <details key="start" value="6124"/>
+      <details key="end" value="6153"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.187" references="/0/main/%.1/%.5/%.11/%/%.9/%">
+      <details key="start" value="6124"/>
+      <details key="end" value="6149"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.188" references="/0/main/%.1/%.5/%.11/%/%.9/%/%">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.189" references="/0/main/%.1/%.5/%.11/%/%.9/%/%/%/%">
+      <details key="start" value="6124"/>
+      <details key="end" value="6141"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.190" references="/0/main/%.1/%.5/%.11/%/%.9/%/%/%/%/aMission">
+      <details key="start" value="6124"/>
+      <details key="end" value="6132"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.191" references="/0/main/%.1/%.5/%.11/%/%.9/%.1">
+      <details key="start" value="6152"/>
+      <details key="end" value="6153"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.192" references="/0/main/%.1/%.5/%.11/%/%.10">
+      <details key="start" value="6316"/>
+      <details key="end" value="6484"/>
+      <details key="line" value="150"/>
+    </eAnnotations>
+    <eAnnotations source="positions.193" references="/0/main/%.1/%.5/%.11/%/%.10/%">
+      <details key="start" value="6323"/>
+      <details key="end" value="6345"/>
+      <details key="line" value="151"/>
+    </eAnnotations>
+    <eAnnotations source="positions.194" references="/0/main/%.1/%.5/%.11/%/%.10/%.1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.195" references="/0/main/%.1/%.5/%.11/%/%.10/%.2">
+      <details key="start" value="6369"/>
+      <details key="end" value="6386"/>
+      <details key="line" value="151"/>
+    </eAnnotations>
+    <eAnnotations source="positions.196" references="/0/main/%.1/%.5/%.11/%/%.10/%.3">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.197" references="/0/main/%.1/%.5/%.11/%/%.10/%.4">
+      <details key="start" value="6408"/>
+      <details key="end" value="6422"/>
+      <details key="line" value="151"/>
+    </eAnnotations>
+    <eAnnotations source="positions.198" references="/0/main/%.1/%.5/%.11/%/%.10/%.5">
+      <details key="start" value="6423"/>
+      <details key="end" value="6436"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.199" references="/0/main/%.1/%.5/%.11/%/%.10/%.5/aMission">
+      <details key="start" value="6423"/>
+      <details key="end" value="6431"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.200" references="/0/main/%.1/%.5/%.11/%/%.10/%.6">
+      <details key="start" value="6438"/>
+      <details key="end" value="6451"/>
+      <details key="line" value="151"/>
+    </eAnnotations>
+    <eAnnotations source="positions.201" references="/0/main/%.1/%.5/%.11/%/%.10/%.7">
+      <details key="start" value="6452"/>
+      <details key="end" value="6474"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.202" references="/0/main/%.1/%.5/%.11/%/%.10/%.7/%">
+      <details key="start" value="6452"/>
+      <details key="end" value="6469"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.203" references="/0/main/%.1/%.5/%.11/%/%.10/%.7/%/aMission">
+      <details key="start" value="6452"/>
+      <details key="end" value="6460"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.204" references="/0/main/%.1/%.5/%.11/%/%.10/%.8">
+      <details key="start" value="6477"/>
+      <details key="end" value="6481"/>
+      <details key="line" value="151"/>
+    </eAnnotations>
+    <eAnnotations source="positions.205" references="/0/main/%.1/%.5/%.11/aMission">
+      <details key="start" value="6074"/>
+      <details key="end" value="6092"/>
+      <details key="line" value="147"/>
+    </eAnnotations>
+    <eAnnotations source="positions.206" references="/0/main/%.1/%.5/%.12">
+      <details key="start" value="6499"/>
+      <details key="end" value="6501"/>
+      <details key="line" value="154"/>
+    </eAnnotations>
+    <eAnnotations source="positions.207" references="/0/main/%.1/%.5/%.13">
+      <details key="start" value="6502"/>
+      <details key="end" value="6505"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.208" references="/0/main/%.1/%.5/%.14">
+      <details key="start" value="6507"/>
+      <details key="end" value="6524"/>
+      <details key="line" value="154"/>
+    </eAnnotations>
+    <eAnnotations source="positions.209" references="/0/main/%.1/%.5/%.15">
+      <details key="start" value="6526"/>
+      <details key="end" value="6932"/>
+      <details key="line" value="157"/>
+    </eAnnotations>
+    <eAnnotations source="positions.210" references="/0/main/%.1/%.5/%.15/%">
+      <details key="start" value="6562"/>
+      <details key="end" value="6598"/>
+      <details key="line" value="158"/>
+    </eAnnotations>
+    <eAnnotations source="positions.211" references="/0/main/%.1/%.5/%.15/%.1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.212" references="/0/main/%.1/%.5/%.15/%.2">
+      <details key="start" value="6632"/>
+      <details key="end" value="6700"/>
+      <details key="line" value="158"/>
+    </eAnnotations>
+    <eAnnotations source="positions.213" references="/0/main/%.1/%.5/%.15/%.3">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.214" references="/0/main/%.1/%.5/%.15/%.4">
+      <details key="start" value="6727"/>
+      <details key="end" value="6736"/>
+      <details key="line" value="159"/>
+    </eAnnotations>
+    <eAnnotations source="positions.215" references="/0/main/%.1/%.5/%.15/%.5">
+      <details key="start" value="6738"/>
+      <details key="end" value="6927"/>
+      <details key="line" value="160"/>
+    </eAnnotations>
+    <eAnnotations source="positions.216" references="/0/main/%.1/%.5/%.15/%.5/%">
+      <details key="start" value="6745"/>
+      <details key="end" value="6787"/>
+      <details key="line" value="161"/>
+    </eAnnotations>
+    <eAnnotations source="positions.217" references="/0/main/%.1/%.5/%.15/%.5/%.1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.218" references="/0/main/%.1/%.5/%.15/%.5/%.2">
+      <details key="start" value="6821"/>
+      <details key="end" value="6889"/>
+      <details key="line" value="161"/>
+    </eAnnotations>
+    <eAnnotations source="positions.219" references="/0/main/%.1/%.5/%.15/%.5/%.3">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.220" references="/0/main/%.1/%.5/%.15/%.5/%.4">
+      <details key="start" value="6916"/>
+      <details key="end" value="6925"/>
+      <details key="line" value="162"/>
+    </eAnnotations>
+    <eAnnotations source="positions.221" references="/0/main/%.1/%.5/aUnitPoint">
+      <details key="start" value="5326"/>
+      <details key="end" value="5348"/>
+      <details key="line" value="119"/>
+    </eAnnotations>
+    <eAnnotations source="positions.222" references="/0/main/%.1/%.5/%.16">
+      <details key="start" value="5351"/>
+      <details key="end" value="5370"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.223" references="/0/main/%.1/%.5/%.16/aGamification">
+      <details key="start" value="5351"/>
+      <details key="end" value="5364"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.224" references="/0/main/%.1/%.6">
+      <details key="start" value="6941"/>
+      <details key="end" value="7079"/>
+      <details key="line" value="165"/>
+    </eAnnotations>
+    <eAnnotations source="positions.225" references="/0/main/%.1/%.7">
+      <details key="start" value="7080"/>
+      <details key="end" value="7083"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.226" references="/0/main/%.1/%.8">
+      <details key="start" value="7085"/>
+      <details key="end" value="7091"/>
+      <details key="line" value="169"/>
+    </eAnnotations>
+    <eAnnotations source="positions.227" references="/0/main/%.1/%.9">
+      <details key="start" value="7092"/>
+      <details key="end" value="7095"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.228" references="/0/main/%.1/%.10">
+      <details key="start" value="7097"/>
+      <details key="end" value="7112"/>
+      <details key="line" value="169"/>
+    </eAnnotations>
+    <eAnnotations source="positions.229" references="/0/main/%.1/%.11">
+      <details key="start" value="7113"/>
+      <details key="end" value="7116"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.230" references="/0/main/%.1/%.12">
+      <details key="start" value="7118"/>
+      <details key="end" value="7123"/>
+      <details key="line" value="170"/>
+    </eAnnotations>
+    <eAnnotations source="positions.231" references="/0/main/%.1/%.13">
+      <details key="start" value="7124"/>
+      <details key="end" value="7127"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.232" references="/0/main/%.1/%.14">
+      <details key="start" value="7129"/>
+      <details key="end" value="7142"/>
+      <details key="line" value="170"/>
+    </eAnnotations>
+    <eAnnotations source="positions.233" references="/0/main/%.1/%.15">
+      <details key="start" value="7143"/>
+      <details key="end" value="7146"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.234" references="/0/main/%.1/%.16">
+      <details key="start" value="7148"/>
+      <details key="end" value="7154"/>
+      <details key="line" value="170"/>
+    </eAnnotations>
+    <eAnnotations source="positions.235" references="/0/main/%.1/%.17">
+      <details key="start" value="7155"/>
+      <details key="end" value="7158"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.236" references="/0/main/%.1/%.18">
+      <details key="start" value="7161"/>
+      <details key="end" value="7164"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.237" references="/0/main/%.1/%.19">
+      <details key="start" value="7166"/>
+      <details key="end" value="7171"/>
+      <details key="line" value="170"/>
+    </eAnnotations>
+    <eAnnotations source="positions.238" references="/0/main/%.1/%.20">
+      <details key="start" value="7172"/>
+      <details key="end" value="7175"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.239" references="/0/main/%.1/%.21">
+      <details key="start" value="7177"/>
+      <details key="end" value="7254"/>
+      <details key="line" value="170"/>
+    </eAnnotations>
+    <eAnnotations source="positions.240" references="/0/main/%.1/%.22">
+      <details key="start" value="7255"/>
+      <details key="end" value="7258"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.241" references="/0/main/%.1/%.23">
+      <details key="start" value="7260"/>
+      <details key="end" value="7266"/>
+      <details key="line" value="174"/>
+    </eAnnotations>
+    <eAnnotations source="positions.242" references="/0/main/%.1/%.24">
+      <details key="start" value="7267"/>
+      <details key="end" value="7270"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.243" references="/0/main/%.1/%.25">
+      <details key="start" value="7272"/>
+      <details key="end" value="7287"/>
+      <details key="line" value="174"/>
+    </eAnnotations>
+    <eAnnotations source="positions.244" references="/0/main/%.1/%.26">
+      <details key="start" value="7288"/>
+      <details key="end" value="7291"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.245" references="/0/main/%.1/%.27">
+      <details key="start" value="7293"/>
+      <details key="end" value="7298"/>
+      <details key="line" value="175"/>
+    </eAnnotations>
+    <eAnnotations source="positions.246" references="/0/main/%.1/%.28">
+      <details key="start" value="7299"/>
+      <details key="end" value="7302"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.247" references="/0/main/%.1/%.29">
+      <details key="start" value="7304"/>
+      <details key="end" value="7311"/>
+      <details key="line" value="175"/>
+    </eAnnotations>
+    <eAnnotations source="positions.248" references="/0/main/%.1/%.30">
+      <details key="start" value="7312"/>
+      <details key="end" value="7315"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.249" references="/0/main/%.1/%.31">
+      <details key="start" value="7317"/>
+      <details key="end" value="7323"/>
+      <details key="line" value="175"/>
+    </eAnnotations>
+    <eAnnotations source="positions.250" references="/0/main/%.1/%.32">
+      <details key="start" value="7324"/>
+      <details key="end" value="7327"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.251" references="/0/main/%.1/%.33">
+      <details key="start" value="7330"/>
+      <details key="end" value="7333"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.252" references="/0/main/%.1/%.34">
+      <details key="start" value="7335"/>
+      <details key="end" value="7340"/>
+      <details key="line" value="175"/>
+    </eAnnotations>
+    <eAnnotations source="positions.253" references="/0/main/%.1/%.35">
+      <details key="start" value="7341"/>
+      <details key="end" value="7344"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.254" references="/0/main/%.1/%.36">
+      <details key="start" value="7346"/>
+      <details key="end" value="9029"/>
+      <details key="line" value="175"/>
+    </eAnnotations>
+    <eAnnotations source="positions.255" references="/0/main/%.1/%.37">
+      <details key="start" value="234"/>
+      <details key="end" value="245"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.256" references="/0/main/%.1/%.38">
+      <details key="start" value="254"/>
+      <details key="end" value="261"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.257" references="/0/main/aGamification">
+      <details key="start" value="179"/>
+      <details key="end" value="207"/>
+      <details key="line" value="6"/>
+    </eAnnotations>
+  </ecore:EAnnotation>
+</xmi:XMI>
