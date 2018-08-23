@@ -13,10 +13,8 @@ INDEX VERSION 1.127+P:\upctauthor2\eclipseupctforma\.metadata\.plugins\org.eclip
 3395270243.index
 648612256.index
 3280462144.index
-4011655004.index
 3392636851.index
 1184501416.index
-3197924193.index
 2072807198.index
 319363526.index
 194259052.index
@@ -29,11 +27,11 @@ INDEX VERSION 1.127+P:\upctauthor2\eclipseupctforma\.metadata\.plugins\org.eclip
 1875766305.index
 3226929690.index
 1871704436.index
-922380862.index
+89992789.index
 92400416.index
 2033559275.index
+922380862.index
 1360236830.index
-89992789.index
 2126988187.index
 2243690141.index
 559129880.index
@@ -60,9 +58,8 @@ INDEX VERSION 1.127+P:\upctauthor2\eclipseupctforma\.metadata\.plugins\org.eclip
 2709225165.index
 3092005878.index
 668859424.index
-1769393624.index
-1456638786.index
 496976613.index
+1456638786.index
 881160889.index
 1569320499.index
 1457337100.index
@@ -72,8 +69,8 @@ INDEX VERSION 1.127+P:\upctauthor2\eclipseupctforma\.metadata\.plugins\org.eclip
 1689259093.index
 2463084822.index
 2793887408.index
-70451911.index
 3216187790.index
+70451911.index
 1300589860.index
 464052338.index
 3630119489.index
@@ -81,7 +78,6 @@ INDEX VERSION 1.127+P:\upctauthor2\eclipseupctforma\.metadata\.plugins\org.eclip
 3620471903.index
 1018024853.index
 803525430.index
-1367326236.index
 571716628.index
 1286892738.index
 1295965475.index
@@ -108,7 +104,6 @@ INDEX VERSION 1.127+P:\upctauthor2\eclipseupctforma\.metadata\.plugins\org.eclip
 148409970.index
 2457588697.index
 4261344616.index
-762994467.index
 1106281919.index
 3437514020.index
 566614252.index
