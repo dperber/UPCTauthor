@@ -7,30 +7,25 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import upctforma.UpctformaPackage;
-
 import upctforma.impl.UpctformaPackageImpl;
-
 import upctformaevalua.UpctformaevaluaPackage;
-
 import upctformaevalua.impl.UpctformaevaluaPackageImpl;
-
 import upctformagami.Badge;
-import upctformagami.BadgeUnit;
 import upctformagami.Gamification;
 import upctformagami.Import;
 import upctformagami.Mission;
-import upctformagami.Point;
+import upctformagami.PointAchievement;
+import upctformagami.ScoreRange;
 import upctformagami.TypeMissions;
 import upctformagami.TypeRule;
 import upctformagami.TypeState;
-import upctformagami.UnitPoint;
+import upctformagami.UnitBadge;
+import upctformagami.UnitGamify;
 import upctformagami.UpctformagamiFactory;
 import upctformagami.UpctformagamiPackage;
-import upctformagami.WidgetDefPoint;
+import upctformagami.WidgetGamify;
 
 /**
  * <!-- begin-user-doc -->
@@ -51,28 +46,28 @@ public class UpctformagamiPackageImpl extends EPackageImpl implements Upctformag
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass unitPointEClass = null;
+	private EClass unitGamifyEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass widgetDefPointEClass = null;
+	private EClass widgetGamifyEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass pointEClass = null;
+	private EClass pointAchievementEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass badgeUnitEClass = null;
+	private EClass unitBadgeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -94,6 +89,13 @@ public class UpctformagamiPackageImpl extends EPackageImpl implements Upctformag
 	 * @generated
 	 */
 	private EClass missionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass scoreRangeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -235,8 +237,8 @@ public class UpctformagamiPackageImpl extends EPackageImpl implements Upctformag
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getUnitPoint() {
-		return unitPointEClass;
+	public EClass getUnitGamify() {
+		return unitGamifyEClass;
 	}
 
 	/**
@@ -244,8 +246,8 @@ public class UpctformagamiPackageImpl extends EPackageImpl implements Upctformag
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getUnitPoint_Unitref() {
-		return (EReference)unitPointEClass.getEStructuralFeatures().get(0);
+	public EReference getUnitGamify_Unitref() {
+		return (EReference)unitGamifyEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -253,8 +255,8 @@ public class UpctformagamiPackageImpl extends EPackageImpl implements Upctformag
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getUnitPoint_Defbadges() {
-		return (EReference)unitPointEClass.getEStructuralFeatures().get(1);
+	public EReference getUnitGamify_Defbadges() {
+		return (EReference)unitGamifyEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -262,8 +264,8 @@ public class UpctformagamiPackageImpl extends EPackageImpl implements Upctformag
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getUnitPoint_Missions() {
-		return (EReference)unitPointEClass.getEStructuralFeatures().get(2);
+	public EReference getUnitGamify_Missions() {
+		return (EReference)unitGamifyEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -271,8 +273,8 @@ public class UpctformagamiPackageImpl extends EPackageImpl implements Upctformag
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getUnitPoint_Pointsunit() {
-		return (EReference)unitPointEClass.getEStructuralFeatures().get(3);
+	public EReference getUnitGamify_Pointsunit() {
+		return (EReference)unitGamifyEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -280,8 +282,8 @@ public class UpctformagamiPackageImpl extends EPackageImpl implements Upctformag
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getUnitPoint_State() {
-		return (EAttribute)unitPointEClass.getEStructuralFeatures().get(4);
+	public EAttribute getUnitGamify_State() {
+		return (EAttribute)unitGamifyEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -289,8 +291,8 @@ public class UpctformagamiPackageImpl extends EPackageImpl implements Upctformag
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getUnitPoint_URL() {
-		return (EAttribute)unitPointEClass.getEStructuralFeatures().get(5);
+	public EAttribute getUnitGamify_URL() {
+		return (EAttribute)unitGamifyEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -298,8 +300,8 @@ public class UpctformagamiPackageImpl extends EPackageImpl implements Upctformag
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getUnitPoint_Evalref() {
-		return (EReference)unitPointEClass.getEStructuralFeatures().get(6);
+	public EReference getUnitGamify_Evalref() {
+		return (EReference)unitGamifyEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -307,8 +309,8 @@ public class UpctformagamiPackageImpl extends EPackageImpl implements Upctformag
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getUnitPoint_Image() {
-		return (EAttribute)unitPointEClass.getEStructuralFeatures().get(7);
+	public EAttribute getUnitGamify_Image() {
+		return (EAttribute)unitGamifyEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -316,8 +318,8 @@ public class UpctformagamiPackageImpl extends EPackageImpl implements Upctformag
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getWidgetDefPoint() {
-		return widgetDefPointEClass;
+	public EClass getWidgetGamify() {
+		return widgetGamifyEClass;
 	}
 
 	/**
@@ -325,8 +327,8 @@ public class UpctformagamiPackageImpl extends EPackageImpl implements Upctformag
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getWidgetDefPoint_Pointswidgetdef() {
-		return (EReference)widgetDefPointEClass.getEStructuralFeatures().get(0);
+	public EReference getWidgetGamify_Pointswidgetdef() {
+		return (EReference)widgetGamifyEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -334,8 +336,8 @@ public class UpctformagamiPackageImpl extends EPackageImpl implements Upctformag
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getWidgetDefPoint_Unitref() {
-		return (EReference)widgetDefPointEClass.getEStructuralFeatures().get(1);
+	public EReference getWidgetGamify_Unitref() {
+		return (EReference)widgetGamifyEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -343,8 +345,8 @@ public class UpctformagamiPackageImpl extends EPackageImpl implements Upctformag
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getWidgetDefPoint_Widgetref() {
-		return (EReference)widgetDefPointEClass.getEStructuralFeatures().get(2);
+	public EReference getWidgetGamify_Widgetref() {
+		return (EReference)widgetGamifyEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -352,8 +354,8 @@ public class UpctformagamiPackageImpl extends EPackageImpl implements Upctformag
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getPoint() {
-		return pointEClass;
+	public EClass getPointAchievement() {
+		return pointAchievementEClass;
 	}
 
 	/**
@@ -361,8 +363,8 @@ public class UpctformagamiPackageImpl extends EPackageImpl implements Upctformag
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPoint_Type() {
-		return (EAttribute)pointEClass.getEStructuralFeatures().get(0);
+	public EAttribute getPointAchievement_Type() {
+		return (EAttribute)pointAchievementEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -370,8 +372,8 @@ public class UpctformagamiPackageImpl extends EPackageImpl implements Upctformag
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPoint_Points() {
-		return (EAttribute)pointEClass.getEStructuralFeatures().get(1);
+	public EAttribute getPointAchievement_Points() {
+		return (EAttribute)pointAchievementEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -379,8 +381,8 @@ public class UpctformagamiPackageImpl extends EPackageImpl implements Upctformag
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPoint_Attempt() {
-		return (EAttribute)pointEClass.getEStructuralFeatures().get(2);
+	public EAttribute getPointAchievement_Attempt() {
+		return (EAttribute)pointAchievementEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -388,8 +390,8 @@ public class UpctformagamiPackageImpl extends EPackageImpl implements Upctformag
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPoint_InitialScore() {
-		return (EAttribute)pointEClass.getEStructuralFeatures().get(3);
+	public EReference getPointAchievement_Pointrange() {
+		return (EReference)pointAchievementEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -397,8 +399,8 @@ public class UpctformagamiPackageImpl extends EPackageImpl implements Upctformag
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPoint_FinalScore() {
-		return (EAttribute)pointEClass.getEStructuralFeatures().get(4);
+	public EClass getUnitBadge() {
+		return unitBadgeEClass;
 	}
 
 	/**
@@ -406,8 +408,8 @@ public class UpctformagamiPackageImpl extends EPackageImpl implements Upctformag
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getBadgeUnit() {
-		return badgeUnitEClass;
+	public EReference getUnitBadge_Badge() {
+		return (EReference)unitBadgeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -415,17 +417,8 @@ public class UpctformagamiPackageImpl extends EPackageImpl implements Upctformag
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getBadgeUnit_Badge() {
-		return (EReference)badgeUnitEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getBadgeUnit_Type() {
-		return (EAttribute)badgeUnitEClass.getEStructuralFeatures().get(1);
+	public EAttribute getUnitBadge_Type() {
+		return (EAttribute)unitBadgeEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -514,26 +507,44 @@ public class UpctformagamiPackageImpl extends EPackageImpl implements Upctformag
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMission_InitialScore() {
-		return (EAttribute)missionEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMission_FinalScore() {
-		return (EAttribute)missionEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getMission_Nexteval() {
-		return (EReference)missionEClass.getEStructuralFeatures().get(4);
+		return (EReference)missionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMission_Missionrange() {
+		return (EReference)missionEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getScoreRange() {
+		return scoreRangeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getScoreRange_InitialScore() {
+		return (EAttribute)scoreRangeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getScoreRange_FinalScore() {
+		return (EAttribute)scoreRangeEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -597,31 +608,30 @@ public class UpctformagamiPackageImpl extends EPackageImpl implements Upctformag
 		createEReference(gamificationEClass, GAMIFICATION__BADGES);
 		createEReference(gamificationEClass, GAMIFICATION__UNITS);
 
-		unitPointEClass = createEClass(UNIT_POINT);
-		createEReference(unitPointEClass, UNIT_POINT__UNITREF);
-		createEReference(unitPointEClass, UNIT_POINT__DEFBADGES);
-		createEReference(unitPointEClass, UNIT_POINT__MISSIONS);
-		createEReference(unitPointEClass, UNIT_POINT__POINTSUNIT);
-		createEAttribute(unitPointEClass, UNIT_POINT__STATE);
-		createEAttribute(unitPointEClass, UNIT_POINT__URL);
-		createEReference(unitPointEClass, UNIT_POINT__EVALREF);
-		createEAttribute(unitPointEClass, UNIT_POINT__IMAGE);
+		unitGamifyEClass = createEClass(UNIT_GAMIFY);
+		createEReference(unitGamifyEClass, UNIT_GAMIFY__UNITREF);
+		createEReference(unitGamifyEClass, UNIT_GAMIFY__DEFBADGES);
+		createEReference(unitGamifyEClass, UNIT_GAMIFY__MISSIONS);
+		createEReference(unitGamifyEClass, UNIT_GAMIFY__POINTSUNIT);
+		createEAttribute(unitGamifyEClass, UNIT_GAMIFY__STATE);
+		createEAttribute(unitGamifyEClass, UNIT_GAMIFY__URL);
+		createEReference(unitGamifyEClass, UNIT_GAMIFY__EVALREF);
+		createEAttribute(unitGamifyEClass, UNIT_GAMIFY__IMAGE);
 
-		widgetDefPointEClass = createEClass(WIDGET_DEF_POINT);
-		createEReference(widgetDefPointEClass, WIDGET_DEF_POINT__POINTSWIDGETDEF);
-		createEReference(widgetDefPointEClass, WIDGET_DEF_POINT__UNITREF);
-		createEReference(widgetDefPointEClass, WIDGET_DEF_POINT__WIDGETREF);
+		widgetGamifyEClass = createEClass(WIDGET_GAMIFY);
+		createEReference(widgetGamifyEClass, WIDGET_GAMIFY__POINTSWIDGETDEF);
+		createEReference(widgetGamifyEClass, WIDGET_GAMIFY__UNITREF);
+		createEReference(widgetGamifyEClass, WIDGET_GAMIFY__WIDGETREF);
 
-		pointEClass = createEClass(POINT);
-		createEAttribute(pointEClass, POINT__TYPE);
-		createEAttribute(pointEClass, POINT__POINTS);
-		createEAttribute(pointEClass, POINT__ATTEMPT);
-		createEAttribute(pointEClass, POINT__INITIAL_SCORE);
-		createEAttribute(pointEClass, POINT__FINAL_SCORE);
+		pointAchievementEClass = createEClass(POINT_ACHIEVEMENT);
+		createEAttribute(pointAchievementEClass, POINT_ACHIEVEMENT__TYPE);
+		createEAttribute(pointAchievementEClass, POINT_ACHIEVEMENT__POINTS);
+		createEAttribute(pointAchievementEClass, POINT_ACHIEVEMENT__ATTEMPT);
+		createEReference(pointAchievementEClass, POINT_ACHIEVEMENT__POINTRANGE);
 
-		badgeUnitEClass = createEClass(BADGE_UNIT);
-		createEReference(badgeUnitEClass, BADGE_UNIT__BADGE);
-		createEAttribute(badgeUnitEClass, BADGE_UNIT__TYPE);
+		unitBadgeEClass = createEClass(UNIT_BADGE);
+		createEReference(unitBadgeEClass, UNIT_BADGE__BADGE);
+		createEAttribute(unitBadgeEClass, UNIT_BADGE__TYPE);
 
 		badgeEClass = createEClass(BADGE);
 		createEAttribute(badgeEClass, BADGE__NAME);
@@ -634,9 +644,12 @@ public class UpctformagamiPackageImpl extends EPackageImpl implements Upctformag
 		missionEClass = createEClass(MISSION);
 		createEAttribute(missionEClass, MISSION__TYPE);
 		createEReference(missionEClass, MISSION__NEXTUNIT);
-		createEAttribute(missionEClass, MISSION__INITIAL_SCORE);
-		createEAttribute(missionEClass, MISSION__FINAL_SCORE);
 		createEReference(missionEClass, MISSION__NEXTEVAL);
+		createEReference(missionEClass, MISSION__MISSIONRANGE);
+
+		scoreRangeEClass = createEClass(SCORE_RANGE);
+		createEAttribute(scoreRangeEClass, SCORE_RANGE__INITIAL_SCORE);
+		createEAttribute(scoreRangeEClass, SCORE_RANGE__FINAL_SCORE);
 
 		// Create enums
 		typeRuleEEnum = createEEnum(TYPE_RULE);
@@ -680,35 +693,34 @@ public class UpctformagamiPackageImpl extends EPackageImpl implements Upctformag
 		// Initialize classes, features, and operations; add parameters
 		initEClass(gamificationEClass, Gamification.class, "Gamification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGamification_Imports(), this.getImport(), null, "imports", null, 0, -1, Gamification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGamification_Widgets(), this.getWidgetDefPoint(), null, "widgets", null, 0, -1, Gamification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGamification_Widgets(), this.getWidgetGamify(), null, "widgets", null, 0, -1, Gamification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGamification_Badges(), this.getBadge(), null, "badges", null, 0, -1, Gamification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGamification_Units(), this.getUnitPoint(), null, "units", null, 0, -1, Gamification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGamification_Units(), this.getUnitGamify(), null, "units", null, 0, -1, Gamification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(unitPointEClass, UnitPoint.class, "UnitPoint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getUnitPoint_Unitref(), theUpctformaPackage.getUnit(), null, "unitref", null, 0, 1, UnitPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getUnitPoint_Defbadges(), this.getBadgeUnit(), null, "defbadges", null, 0, -1, UnitPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getUnitPoint_Missions(), this.getMission(), null, "missions", null, 0, -1, UnitPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getUnitPoint_Pointsunit(), this.getPoint(), null, "pointsunit", null, 0, -1, UnitPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getUnitPoint_State(), this.getTypeState(), "state", null, 0, 1, UnitPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getUnitPoint_URL(), ecorePackage.getEString(), "URL", null, 0, 1, UnitPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getUnitPoint_Evalref(), theUpctformaevaluaPackage.getEvaluationUnit(), null, "evalref", null, 0, 1, UnitPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getUnitPoint_Image(), ecorePackage.getEString(), "image", null, 0, 1, UnitPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(unitGamifyEClass, UnitGamify.class, "UnitGamify", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getUnitGamify_Unitref(), theUpctformaPackage.getUnit(), null, "unitref", null, 0, 1, UnitGamify.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUnitGamify_Defbadges(), this.getUnitBadge(), null, "defbadges", null, 0, -1, UnitGamify.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUnitGamify_Missions(), this.getMission(), null, "missions", null, 0, -1, UnitGamify.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUnitGamify_Pointsunit(), this.getPointAchievement(), null, "pointsunit", null, 0, -1, UnitGamify.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUnitGamify_State(), this.getTypeState(), "state", null, 0, 1, UnitGamify.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUnitGamify_URL(), ecorePackage.getEString(), "URL", null, 0, 1, UnitGamify.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUnitGamify_Evalref(), theUpctformaevaluaPackage.getEvaluationUnit(), null, "evalref", null, 0, 1, UnitGamify.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUnitGamify_Image(), ecorePackage.getEString(), "image", null, 0, 1, UnitGamify.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(widgetDefPointEClass, WidgetDefPoint.class, "WidgetDefPoint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getWidgetDefPoint_Pointswidgetdef(), this.getPoint(), null, "pointswidgetdef", null, 0, -1, WidgetDefPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getWidgetDefPoint_Unitref(), theUpctformaPackage.getUnit(), null, "unitref", null, 0, -1, WidgetDefPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getWidgetDefPoint_Widgetref(), theUpctformaPackage.getWidgetType(), null, "widgetref", null, 0, -1, WidgetDefPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(widgetGamifyEClass, WidgetGamify.class, "WidgetGamify", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getWidgetGamify_Pointswidgetdef(), this.getPointAchievement(), null, "pointswidgetdef", null, 0, -1, WidgetGamify.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWidgetGamify_Unitref(), theUpctformaPackage.getUnit(), null, "unitref", null, 0, -1, WidgetGamify.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWidgetGamify_Widgetref(), theUpctformaPackage.getWidgetType(), null, "widgetref", null, 0, -1, WidgetGamify.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(pointEClass, Point.class, "Point", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getPoint_Type(), this.getTypeRule(), "type", null, 0, 1, Point.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPoint_Points(), ecorePackage.getEInt(), "points", null, 0, 1, Point.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPoint_Attempt(), ecorePackage.getEInt(), "attempt", null, 0, 1, Point.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPoint_InitialScore(), ecorePackage.getEDouble(), "InitialScore", null, 0, 1, Point.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPoint_FinalScore(), ecorePackage.getEDouble(), "FinalScore", null, 0, 1, Point.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(pointAchievementEClass, PointAchievement.class, "PointAchievement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPointAchievement_Type(), this.getTypeRule(), "type", null, 0, 1, PointAchievement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPointAchievement_Points(), ecorePackage.getEInt(), "points", null, 0, 1, PointAchievement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPointAchievement_Attempt(), ecorePackage.getEInt(), "attempt", null, 0, 1, PointAchievement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPointAchievement_Pointrange(), this.getScoreRange(), null, "pointrange", null, 0, -1, PointAchievement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(badgeUnitEClass, BadgeUnit.class, "BadgeUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBadgeUnit_Badge(), this.getBadge(), null, "badge", null, 0, 1, BadgeUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getBadgeUnit_Type(), this.getTypeRule(), "type", null, 0, 1, BadgeUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(unitBadgeEClass, UnitBadge.class, "UnitBadge", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getUnitBadge_Badge(), this.getBadge(), null, "badge", null, 0, 1, UnitBadge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUnitBadge_Type(), this.getTypeRule(), "type", null, 0, 1, UnitBadge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(badgeEClass, Badge.class, "Badge", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBadge_Name(), ecorePackage.getEString(), "name", null, 0, 1, Badge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -721,9 +733,12 @@ public class UpctformagamiPackageImpl extends EPackageImpl implements Upctformag
 		initEClass(missionEClass, Mission.class, "Mission", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMission_Type(), this.getTypeMissions(), "type", null, 0, 1, Mission.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMission_Nextunit(), theUpctformaPackage.getUnit(), null, "nextunit", null, 0, 1, Mission.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMission_InitialScore(), ecorePackage.getEDouble(), "InitialScore", null, 0, 1, Mission.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMission_FinalScore(), ecorePackage.getEDouble(), "FinalScore", null, 0, 1, Mission.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMission_Nexteval(), theUpctformaevaluaPackage.getEvaluationUnit(), null, "nexteval", null, 0, 1, Mission.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMission_Missionrange(), this.getScoreRange(), null, "missionrange", null, 0, -1, Mission.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(scoreRangeEClass, ScoreRange.class, "ScoreRange", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getScoreRange_InitialScore(), ecorePackage.getEDouble(), "InitialScore", null, 0, 1, ScoreRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getScoreRange_FinalScore(), ecorePackage.getEDouble(), "FinalScore", null, 0, 1, ScoreRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(typeRuleEEnum, TypeRule.class, "TypeRule");

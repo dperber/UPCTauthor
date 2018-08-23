@@ -26,19 +26,19 @@ public class UpctformaFormatter extends AbstractFormatter2 {
   private UpctformaGrammarAccess _upctformaGrammarAccess;
   
   protected void _format(final ContentDefinition contentDefinition, @Extension final IFormattableDocument document) {
-    EList<TemplateDef> _templates = contentDefinition.getTemplates();
-    for (final TemplateDef templateDef : _templates) {
-      document.<TemplateDef>format(templateDef);
-    }
     EList<Import> _imports = contentDefinition.getImports();
     for (final Import _import : _imports) {
       document.<Import>format(_import);
     }
-    document.<Unit>format(contentDefinition.getUnit());
     EList<Type> _types = contentDefinition.getTypes();
     for (final Type type : _types) {
       document.<Type>format(type);
     }
+    EList<TemplateDef> _templates = contentDefinition.getTemplates();
+    for (final TemplateDef templateDef : _templates) {
+      document.<TemplateDef>format(templateDef);
+    }
+    document.<Unit>format(contentDefinition.getUnit());
   }
   
   protected void _format(final TemplateDef templateDef, @Extension final IFormattableDocument document) {

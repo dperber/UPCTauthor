@@ -14,28 +14,5 @@
             genModel="model/upctforma.genmodel"/>
    </extension>
 
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated upctforma -->
-      <package
-            uri="http://cpcd.upct.es/upctforma"
-            class="upctforma.UpctformaPackage"
-            genModel="model/upctforma.genmodel"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated upctforma -->
-      <package
-            uri="http://cpcd.upct.es/upctformagami"
-            class="upctformagami.UpctformagamiPackage"
-            genModel="model/upctforma.genmodel"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated upctforma -->
-      <package
-            uri="http://cpcd.upct.es/upctformaevalua"
-            class="upctformaevalua.UpctformaevaluaPackage"
-            genModel="model/upctforma.genmodel"/>
-   </extension>
-
+null
 </plugin>

@@ -121,13 +121,13 @@ public interface UpctformaFactory extends EFactory {
 	SimpleElement createSimpleElement();
 
 	/**
-	 * Returns a new object of class '<em>Parameter</em>'.
+	 * Returns a new object of class '<em>Place Holder</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Parameter</em>'.
+	 * @return a new object of class '<em>Place Holder</em>'.
 	 * @generated
 	 */
-	Parameter createParameter();
+	PlaceHolder createPlaceHolder();
 
 	/**
 	 * Returns a new object of class '<em>Row</em>'.
@@ -175,42 +175,6 @@ public interface UpctformaFactory extends EFactory {
 	Paragraph createParagraph();
 
 	/**
-	 * Returns a new object of class '<em>Argument</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Argument</em>'.
-	 * @generated
-	 */
-	Argument createArgument();
-
-	/**
-	 * Returns a new object of class '<em>Tab</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Tab</em>'.
-	 * @generated
-	 */
-	Tab createTab();
-
-	/**
-	 * Returns a new object of class '<em>Animation</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Animation</em>'.
-	 * @generated
-	 */
-	Animation createAnimation();
-
-	/**
-	 * Returns a new object of class '<em>Drag And Drop</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Drag And Drop</em>'.
-	 * @generated
-	 */
-	DragAndDrop createDragAndDrop();
-
-	/**
 	 * Returns a new object of class '<em>Use Template</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -238,40 +202,13 @@ public interface UpctformaFactory extends EFactory {
 	SimpleType createSimpleType();
 
 	/**
-	 * Returns a new object of class '<em>Aggregated Type</em>'.
+	 * Returns a new object of class '<em>Record Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Aggregated Type</em>'.
+	 * @return a new object of class '<em>Record Type</em>'.
 	 * @generated
 	 */
-	AggregatedType createAggregatedType();
-
-	/**
-	 * Returns a new object of class '<em>Composite Argument</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Composite Argument</em>'.
-	 * @generated
-	 */
-	CompositeArgument createCompositeArgument();
-
-	/**
-	 * Returns a new object of class '<em>Fixed</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Fixed</em>'.
-	 * @generated
-	 */
-	Fixed createFixed();
-
-	/**
-	 * Returns a new object of class '<em>Variable</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Variable</em>'.
-	 * @generated
-	 */
-	Variable createVariable();
+	RecordType createRecordType();
 
 	/**
 	 * Returns a new object of class '<em>Widget Type</em>'.
@@ -290,6 +227,60 @@ public interface UpctformaFactory extends EFactory {
 	 * @generated
 	 */
 	ListType createListType();
+
+	/**
+	 * Returns a new object of class '<em>Game</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Game</em>'.
+	 * @generated
+	 */
+	Game createGame();
+
+	/**
+	 * Returns a new object of class '<em>Composite Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Composite Type</em>'.
+	 * @generated
+	 */
+	CompositeType createCompositeType();
+
+	/**
+	 * Returns a new object of class '<em>Field</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Field</em>'.
+	 * @generated
+	 */
+	Field createField();
+
+	/**
+	 * Returns a new object of class '<em>Record Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Record Value</em>'.
+	 * @generated
+	 */
+	RecordValue createRecordValue();
+
+	/**
+	 * Returns a new object of class '<em>List Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>List Value</em>'.
+	 * @generated
+	 */
+	ListValue createListValue();
+
+	/**
+	 * Returns a new object of class '<em>Field Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Field Value</em>'.
+	 * @generated
+	 */
+	FieldValue createFieldValue();
 
 	/**
 	 * Returns the package supported by this factory.

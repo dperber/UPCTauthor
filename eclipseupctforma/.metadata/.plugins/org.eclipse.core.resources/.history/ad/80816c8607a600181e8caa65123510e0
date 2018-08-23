@@ -1,0 +1,17 @@
+/**
+ */
+package upctforma;
+
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Game</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ *
+ * @see upctforma.UpctformaPackage#getGame()
+ * @model
+ * @generated
+ */
+public interface Game extends SimpleElement {
+} // Game

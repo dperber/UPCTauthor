@@ -2,19 +2,25 @@
  */
 package upctformagami.impl;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 import upctforma.Unit;
 
 import upctformaevalua.EvaluationUnit;
 
 import upctformagami.Mission;
+import upctformagami.ScoreRange;
 import upctformagami.TypeMissions;
 import upctformagami.UpctformagamiPackage;
 
@@ -28,9 +34,8 @@ import upctformagami.UpctformagamiPackage;
  * <ul>
  *   <li>{@link upctformagami.impl.MissionImpl#getType <em>Type</em>}</li>
  *   <li>{@link upctformagami.impl.MissionImpl#getNextunit <em>Nextunit</em>}</li>
- *   <li>{@link upctformagami.impl.MissionImpl#getInitialScore <em>Initial Score</em>}</li>
- *   <li>{@link upctformagami.impl.MissionImpl#getFinalScore <em>Final Score</em>}</li>
  *   <li>{@link upctformagami.impl.MissionImpl#getNexteval <em>Nexteval</em>}</li>
+ *   <li>{@link upctformagami.impl.MissionImpl#getMissionrange <em>Missionrange</em>}</li>
  * </ul>
  *
  * @generated
@@ -67,46 +72,6 @@ public class MissionImpl extends MinimalEObjectImpl.Container implements Mission
 	protected Unit nextunit;
 
 	/**
-	 * The default value of the '{@link #getInitialScore() <em>Initial Score</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getInitialScore()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final double INITIAL_SCORE_EDEFAULT = 0.0;
-
-	/**
-	 * The cached value of the '{@link #getInitialScore() <em>Initial Score</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getInitialScore()
-	 * @generated
-	 * @ordered
-	 */
-	protected double initialScore = INITIAL_SCORE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getFinalScore() <em>Final Score</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFinalScore()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final double FINAL_SCORE_EDEFAULT = 0.0;
-
-	/**
-	 * The cached value of the '{@link #getFinalScore() <em>Final Score</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFinalScore()
-	 * @generated
-	 * @ordered
-	 */
-	protected double finalScore = FINAL_SCORE_EDEFAULT;
-
-	/**
 	 * The cached value of the '{@link #getNexteval() <em>Nexteval</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -115,6 +80,16 @@ public class MissionImpl extends MinimalEObjectImpl.Container implements Mission
 	 * @ordered
 	 */
 	protected EvaluationUnit nexteval;
+
+	/**
+	 * The cached value of the '{@link #getMissionrange() <em>Missionrange</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMissionrange()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ScoreRange> missionrange;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -199,48 +174,6 @@ public class MissionImpl extends MinimalEObjectImpl.Container implements Mission
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double getInitialScore() {
-		return initialScore;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setInitialScore(double newInitialScore) {
-		double oldInitialScore = initialScore;
-		initialScore = newInitialScore;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UpctformagamiPackage.MISSION__INITIAL_SCORE, oldInitialScore, initialScore));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public double getFinalScore() {
-		return finalScore;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setFinalScore(double newFinalScore) {
-		double oldFinalScore = finalScore;
-		finalScore = newFinalScore;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UpctformagamiPackage.MISSION__FINAL_SCORE, oldFinalScore, finalScore));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EvaluationUnit getNexteval() {
 		if (nexteval != null && nexteval.eIsProxy()) {
 			InternalEObject oldNexteval = (InternalEObject)nexteval;
@@ -279,6 +212,32 @@ public class MissionImpl extends MinimalEObjectImpl.Container implements Mission
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<ScoreRange> getMissionrange() {
+		if (missionrange == null) {
+			missionrange = new EObjectContainmentEList<ScoreRange>(ScoreRange.class, this, UpctformagamiPackage.MISSION__MISSIONRANGE);
+		}
+		return missionrange;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case UpctformagamiPackage.MISSION__MISSIONRANGE:
+				return ((InternalEList<?>)getMissionrange()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -287,13 +246,11 @@ public class MissionImpl extends MinimalEObjectImpl.Container implements Mission
 			case UpctformagamiPackage.MISSION__NEXTUNIT:
 				if (resolve) return getNextunit();
 				return basicGetNextunit();
-			case UpctformagamiPackage.MISSION__INITIAL_SCORE:
-				return getInitialScore();
-			case UpctformagamiPackage.MISSION__FINAL_SCORE:
-				return getFinalScore();
 			case UpctformagamiPackage.MISSION__NEXTEVAL:
 				if (resolve) return getNexteval();
 				return basicGetNexteval();
+			case UpctformagamiPackage.MISSION__MISSIONRANGE:
+				return getMissionrange();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -303,6 +260,7 @@ public class MissionImpl extends MinimalEObjectImpl.Container implements Mission
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -312,14 +270,12 @@ public class MissionImpl extends MinimalEObjectImpl.Container implements Mission
 			case UpctformagamiPackage.MISSION__NEXTUNIT:
 				setNextunit((Unit)newValue);
 				return;
-			case UpctformagamiPackage.MISSION__INITIAL_SCORE:
-				setInitialScore((Double)newValue);
-				return;
-			case UpctformagamiPackage.MISSION__FINAL_SCORE:
-				setFinalScore((Double)newValue);
-				return;
 			case UpctformagamiPackage.MISSION__NEXTEVAL:
 				setNexteval((EvaluationUnit)newValue);
+				return;
+			case UpctformagamiPackage.MISSION__MISSIONRANGE:
+				getMissionrange().clear();
+				getMissionrange().addAll((Collection<? extends ScoreRange>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -339,14 +295,11 @@ public class MissionImpl extends MinimalEObjectImpl.Container implements Mission
 			case UpctformagamiPackage.MISSION__NEXTUNIT:
 				setNextunit((Unit)null);
 				return;
-			case UpctformagamiPackage.MISSION__INITIAL_SCORE:
-				setInitialScore(INITIAL_SCORE_EDEFAULT);
-				return;
-			case UpctformagamiPackage.MISSION__FINAL_SCORE:
-				setFinalScore(FINAL_SCORE_EDEFAULT);
-				return;
 			case UpctformagamiPackage.MISSION__NEXTEVAL:
 				setNexteval((EvaluationUnit)null);
+				return;
+			case UpctformagamiPackage.MISSION__MISSIONRANGE:
+				getMissionrange().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -364,12 +317,10 @@ public class MissionImpl extends MinimalEObjectImpl.Container implements Mission
 				return type != TYPE_EDEFAULT;
 			case UpctformagamiPackage.MISSION__NEXTUNIT:
 				return nextunit != null;
-			case UpctformagamiPackage.MISSION__INITIAL_SCORE:
-				return initialScore != INITIAL_SCORE_EDEFAULT;
-			case UpctformagamiPackage.MISSION__FINAL_SCORE:
-				return finalScore != FINAL_SCORE_EDEFAULT;
 			case UpctformagamiPackage.MISSION__NEXTEVAL:
 				return nexteval != null;
+			case UpctformagamiPackage.MISSION__MISSIONRANGE:
+				return missionrange != null && !missionrange.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -386,10 +337,6 @@ public class MissionImpl extends MinimalEObjectImpl.Container implements Mission
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (type: ");
 		result.append(type);
-		result.append(", InitialScore: ");
-		result.append(initialScore);
-		result.append(", FinalScore: ");
-		result.append(finalScore);
 		result.append(')');
 		return result.toString();
 	}

@@ -19,16 +19,16 @@ class UpctformaFormatter extends AbstractFormatter2 {
 
 	def dispatch void format(ContentDefinition contentDefinition, extension IFormattableDocument document) {
 		// TODO: format HiddenRegions around keywords, attributes, cross references, etc. 
-		for (TemplateDef templateDef : contentDefinition.getTemplates()) {
-			templateDef.format;
-		}
 		for (Import _import : contentDefinition.getImports()) {
 			_import.format;
 		}
-		contentDefinition.getUnit.format;
 		for (Type type : contentDefinition.getTypes()) {
 			type.format;
 		}
+		for (TemplateDef templateDef : contentDefinition.getTemplates()) {
+			templateDef.format;
+		}
+		contentDefinition.getUnit.format;
 	}
 
 	def dispatch void format(TemplateDef templateDef, extension IFormattableDocument document) {
@@ -38,5 +38,5 @@ class UpctformaFormatter extends AbstractFormatter2 {
 		}
 	}
 	
-	// TODO: implement for Unit, Row, Column, UseTemplate, Widget, Text, WidgetType, Tab, Animation, DragAndDrop, CompositeArgument, Section, AggregatedType
+	// TODO: implement for Unit, Row, Column, UseTemplate, Widget, Text, WidgetType, Section, RecordType
 }

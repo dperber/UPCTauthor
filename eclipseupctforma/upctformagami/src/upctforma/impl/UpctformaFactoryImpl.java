@@ -3,14 +3,10 @@
 package upctforma.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-
 import upctforma.*;
 
 /**
@@ -68,57 +64,26 @@ public class UpctformaFactoryImpl extends EFactoryImpl implements UpctformaFacto
 			case UpctformaPackage.CONTENT_DEFINITION: return createContentDefinition();
 			case UpctformaPackage.CONTENT_ELEMENT: return createContentElement();
 			case UpctformaPackage.SIMPLE_ELEMENT: return createSimpleElement();
-			case UpctformaPackage.PARAMETER: return createParameter();
+			case UpctformaPackage.PLACE_HOLDER: return createPlaceHolder();
 			case UpctformaPackage.ROW: return createRow();
 			case UpctformaPackage.UNIT: return createUnit();
 			case UpctformaPackage.SECTION: return createSection();
 			case UpctformaPackage.IMPORT: return createImport();
 			case UpctformaPackage.PARAGRAPH: return createParagraph();
-			case UpctformaPackage.ARGUMENT: return createArgument();
-			case UpctformaPackage.TAB: return createTab();
-			case UpctformaPackage.ANIMATION: return createAnimation();
-			case UpctformaPackage.DRAG_AND_DROP: return createDragAndDrop();
 			case UpctformaPackage.USE_TEMPLATE: return createUseTemplate();
 			case UpctformaPackage.TYPE: return createType();
 			case UpctformaPackage.SIMPLE_TYPE: return createSimpleType();
-			case UpctformaPackage.AGGREGATED_TYPE: return createAggregatedType();
-			case UpctformaPackage.COMPOSITE_ARGUMENT: return createCompositeArgument();
-			case UpctformaPackage.FIXED: return createFixed();
-			case UpctformaPackage.VARIABLE: return createVariable();
+			case UpctformaPackage.RECORD_TYPE: return createRecordType();
 			case UpctformaPackage.WIDGET_TYPE: return createWidgetType();
 			case UpctformaPackage.LIST_TYPE: return createListType();
+			case UpctformaPackage.GAME: return createGame();
+			case UpctformaPackage.COMPOSITE_TYPE: return createCompositeType();
+			case UpctformaPackage.FIELD: return createField();
+			case UpctformaPackage.RECORD_VALUE: return createRecordValue();
+			case UpctformaPackage.LIST_VALUE: return createListValue();
+			case UpctformaPackage.FIELD_VALUE: return createFieldValue();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object createFromString(EDataType eDataType, String initialValue) {
-		switch (eDataType.getClassifierID()) {
-			case UpctformaPackage.TYPE_SIMPLE_ELEMENT:
-				return createTypeSimpleElementFromString(eDataType, initialValue);
-			default:
-				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String convertToString(EDataType eDataType, Object instanceValue) {
-		switch (eDataType.getClassifierID()) {
-			case UpctformaPackage.TYPE_SIMPLE_ELEMENT:
-				return convertTypeSimpleElementToString(eDataType, instanceValue);
-			default:
-				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -237,9 +202,9 @@ public class UpctformaFactoryImpl extends EFactoryImpl implements UpctformaFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Parameter createParameter() {
-		ParameterImpl parameter = new ParameterImpl();
-		return parameter;
+	public PlaceHolder createPlaceHolder() {
+		PlaceHolderImpl placeHolder = new PlaceHolderImpl();
+		return placeHolder;
 	}
 
 	/**
@@ -297,46 +262,6 @@ public class UpctformaFactoryImpl extends EFactoryImpl implements UpctformaFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Argument createArgument() {
-		ArgumentImpl argument = new ArgumentImpl();
-		return argument;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Tab createTab() {
-		TabImpl tab = new TabImpl();
-		return tab;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Animation createAnimation() {
-		AnimationImpl animation = new AnimationImpl();
-		return animation;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DragAndDrop createDragAndDrop() {
-		DragAndDropImpl dragAndDrop = new DragAndDropImpl();
-		return dragAndDrop;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public UseTemplate createUseTemplate() {
 		UseTemplateImpl useTemplate = new UseTemplateImpl();
 		return useTemplate;
@@ -367,39 +292,9 @@ public class UpctformaFactoryImpl extends EFactoryImpl implements UpctformaFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AggregatedType createAggregatedType() {
-		AggregatedTypeImpl aggregatedType = new AggregatedTypeImpl();
-		return aggregatedType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public CompositeArgument createCompositeArgument() {
-		CompositeArgumentImpl compositeArgument = new CompositeArgumentImpl();
-		return compositeArgument;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Fixed createFixed() {
-		FixedImpl fixed = new FixedImpl();
-		return fixed;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Variable createVariable() {
-		VariableImpl variable = new VariableImpl();
-		return variable;
+	public RecordType createRecordType() {
+		RecordTypeImpl recordType = new RecordTypeImpl();
+		return recordType;
 	}
 
 	/**
@@ -427,10 +322,9 @@ public class UpctformaFactoryImpl extends EFactoryImpl implements UpctformaFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypeSimpleElement createTypeSimpleElementFromString(EDataType eDataType, String initialValue) {
-		TypeSimpleElement result = TypeSimpleElement.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
+	public Game createGame() {
+		GameImpl game = new GameImpl();
+		return game;
 	}
 
 	/**
@@ -438,8 +332,49 @@ public class UpctformaFactoryImpl extends EFactoryImpl implements UpctformaFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertTypeSimpleElementToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
+	public CompositeType createCompositeType() {
+		CompositeTypeImpl compositeType = new CompositeTypeImpl();
+		return compositeType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Field createField() {
+		FieldImpl field = new FieldImpl();
+		return field;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RecordValue createRecordValue() {
+		RecordValueImpl recordValue = new RecordValueImpl();
+		return recordValue;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ListValue createListValue() {
+		ListValueImpl listValue = new ListValueImpl();
+		return listValue;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FieldValue createFieldValue() {
+		FieldValueImpl fieldValue = new FieldValueImpl();
+		return fieldValue;
 	}
 
 	/**

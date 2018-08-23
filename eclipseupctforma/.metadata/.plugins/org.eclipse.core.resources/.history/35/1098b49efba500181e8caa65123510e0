@@ -1,0 +1,156 @@
+/**
+ */
+package upctforma.impl;
+
+import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import upctforma.Pair;
+import upctforma.Type;
+import upctforma.UpctformaPackage;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Pair</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link upctforma.impl.PairImpl#getPairtype <em>Pairtype</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class PairImpl extends NameElementImpl implements Pair {
+	/**
+	 * The cached value of the '{@link #getPairtype() <em>Pairtype</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPairtype()
+	 * @generated
+	 * @ordered
+	 */
+	protected Type pairtype;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PairImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return UpctformaPackage.Literals.PAIR;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Type getPairtype() {
+		if (pairtype != null && pairtype.eIsProxy()) {
+			InternalEObject oldPairtype = (InternalEObject)pairtype;
+			pairtype = (Type)eResolveProxy(oldPairtype);
+			if (pairtype != oldPairtype) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UpctformaPackage.PAIR__PAIRTYPE, oldPairtype, pairtype));
+			}
+		}
+		return pairtype;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Type basicGetPairtype() {
+		return pairtype;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPairtype(Type newPairtype) {
+		Type oldPairtype = pairtype;
+		pairtype = newPairtype;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UpctformaPackage.PAIR__PAIRTYPE, oldPairtype, pairtype));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case UpctformaPackage.PAIR__PAIRTYPE:
+				if (resolve) return getPairtype();
+				return basicGetPairtype();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case UpctformaPackage.PAIR__PAIRTYPE:
+				setPairtype((Type)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case UpctformaPackage.PAIR__PAIRTYPE:
+				setPairtype((Type)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case UpctformaPackage.PAIR__PAIRTYPE:
+				return pairtype != null;
+		}
+		return super.eIsSet(featureID);
+	}
+
+} //PairImpl

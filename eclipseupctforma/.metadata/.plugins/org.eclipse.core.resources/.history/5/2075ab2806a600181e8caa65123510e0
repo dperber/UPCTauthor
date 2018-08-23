@@ -1,0 +1,17 @@
+/**
+ */
+package upctforma;
+
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Record Value</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ *
+ * @see upctforma.UpctformaPackage#getRecordValue()
+ * @model
+ * @generated
+ */
+public interface RecordValue extends ContentElement {
+} // RecordValue

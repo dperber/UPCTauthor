@@ -19,7 +19,7 @@ package upctforma;
  * @model
  * @generated
  */
-public interface Parameter extends ContentElement {
+public interface Parameter extends ContentElement, NameElement {
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' reference.
 	 * <!-- begin-user-doc -->

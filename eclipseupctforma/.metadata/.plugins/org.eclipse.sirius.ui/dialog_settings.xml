@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="ExportRepresentationsAsImagesDialog">
-		<item value="JPG" key="ExportRepresentationsAsImagesDialog.imageFormat"/>
+		<item value="PNG" key="ExportRepresentationsAsImagesDialog.imageFormat"/>
 		<list key="ExportRepresentationsAsImagesDialog.folder">
 			<item value="P:\eclipseupctforma\upctformagami\model"/>
 		</list>
 		<list key="ExportRepresentationsAsImagesDialog.file">
+			<item value="P:\modelocaracteristicas\artículo"/>
 			<item value="P:\modelocaracteristicas"/>
 			<item value="P:\tempupctforma\imagenes"/>
 			<item value="P:\tempupctforma"/>
 			<item value="C:\Users\CPCD\Desktop\lit-applications"/>
-			<item value="C:\Users\CPCD\Desktop"/>
 		</list>
 	</section>
 </section>

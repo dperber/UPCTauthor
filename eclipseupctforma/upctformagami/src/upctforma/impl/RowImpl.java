@@ -2,30 +2,17 @@
  */
 package upctforma.impl;
 
-import java.lang.reflect.InvocationTargetException;
-
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.common.util.WrappedException;
-
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
 import upctforma.Column;
 import upctforma.Row;
-import upctforma.SimpleElement;
-import upctforma.TypeSimpleElement;
 import upctforma.UpctformaPackage;
 import upctforma.UseTemplate;
 
@@ -139,104 +126,6 @@ public class RowImpl extends CompositeImpl implements Row {
 	}
 
 	/**
-	 * The cached invocation delegate for the '{@link #getArgumentType(upctforma.SimpleElement) <em>Get Argument Type</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getArgumentType(upctforma.SimpleElement)
-	 * @generated
-	 * @ordered
-	 */
-	protected static final EOperation.Internal.InvocationDelegate GET_ARGUMENT_TYPE_SIMPLE_ELEMENT__EINVOCATION_DELEGATE = ((EOperation.Internal)UpctformaPackage.Literals.ROW___GET_ARGUMENT_TYPE__SIMPLEELEMENT).getInvocationDelegate();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getArgumentType(SimpleElement elem) {
-		try {
-			return (String)GET_ARGUMENT_TYPE_SIMPLE_ELEMENT__EINVOCATION_DELEGATE.dynamicInvoke(this, new BasicEList.UnmodifiableEList<Object>(1, new Object[]{elem}));
-		}
-		catch (InvocationTargetException ite) {
-			throw new WrappedException(ite);
-		}
-	}
-
-	/**
-	 * The cached invocation delegate for the '{@link #getArguments(upctforma.Row) <em>Get Arguments</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getArguments(upctforma.Row)
-	 * @generated
-	 * @ordered
-	 */
-	protected static final EOperation.Internal.InvocationDelegate GET_ARGUMENTS_ROW__EINVOCATION_DELEGATE = ((EOperation.Internal)UpctformaPackage.Literals.ROW___GET_ARGUMENTS__ROW).getInvocationDelegate();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<String> getArguments(Row object) {
-		try {
-			return (EList<String>)GET_ARGUMENTS_ROW__EINVOCATION_DELEGATE.dynamicInvoke(this, new BasicEList.UnmodifiableEList<Object>(1, new Object[]{object}));
-		}
-		catch (InvocationTargetException ite) {
-			throw new WrappedException(ite);
-		}
-	}
-
-	/**
-	 * The cached invocation delegate for the '{@link #getParameterType(upctforma.TypeSimpleElement) <em>Get Parameter Type</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getParameterType(upctforma.TypeSimpleElement)
-	 * @generated
-	 * @ordered
-	 */
-	protected static final EOperation.Internal.InvocationDelegate GET_PARAMETER_TYPE_TYPE_SIMPLE_ELEMENT__EINVOCATION_DELEGATE = ((EOperation.Internal)UpctformaPackage.Literals.ROW___GET_PARAMETER_TYPE__TYPESIMPLEELEMENT).getInvocationDelegate();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getParameterType(TypeSimpleElement e) {
-		try {
-			return (String)GET_PARAMETER_TYPE_TYPE_SIMPLE_ELEMENT__EINVOCATION_DELEGATE.dynamicInvoke(this, new BasicEList.UnmodifiableEList<Object>(1, new Object[]{e}));
-		}
-		catch (InvocationTargetException ite) {
-			throw new WrappedException(ite);
-		}
-	}
-
-	/**
-	 * The cached invocation delegate for the '{@link #getParameters(upctforma.Row) <em>Get Parameters</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getParameters(upctforma.Row)
-	 * @generated
-	 * @ordered
-	 */
-	protected static final EOperation.Internal.InvocationDelegate GET_PARAMETERS_ROW__EINVOCATION_DELEGATE = ((EOperation.Internal)UpctformaPackage.Literals.ROW___GET_PARAMETERS__ROW).getInvocationDelegate();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<String> getParameters(Row object) {
-		try {
-			return (EList<String>)GET_PARAMETERS_ROW__EINVOCATION_DELEGATE.dynamicInvoke(this, new BasicEList.UnmodifiableEList<Object>(1, new Object[]{object}));
-		}
-		catch (InvocationTargetException ite) {
-			throw new WrappedException(ite);
-		}
-	}
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -320,26 +209,6 @@ public class RowImpl extends CompositeImpl implements Row {
 				return usetemplate != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case UpctformaPackage.ROW___GET_ARGUMENT_TYPE__SIMPLEELEMENT:
-				return getArgumentType((SimpleElement)arguments.get(0));
-			case UpctformaPackage.ROW___GET_ARGUMENTS__ROW:
-				return getArguments((Row)arguments.get(0));
-			case UpctformaPackage.ROW___GET_PARAMETER_TYPE__TYPESIMPLEELEMENT:
-				return getParameterType((TypeSimpleElement)arguments.get(0));
-			case UpctformaPackage.ROW___GET_PARAMETERS__ROW:
-				return getParameters((Row)arguments.get(0));
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 } //RowImpl

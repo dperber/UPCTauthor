@@ -24,21 +24,16 @@ Import:
 QualifiedNameWithWildcard: QualifiedName '.*'? ;
 
 Type returns Type:
-	Type_Impl | SimpleType | AggregatedType | WidgetType | ListType;
-
-
-Parameter returns Parameter:
-	Parameter_Impl | Fixed | Variable ;
+	Type_Impl | SimpleType | RecordType | WidgetType | ListType | CompositeType_Impl;
 
 
 ContentElement returns ContentElement:
-	ContentElement_Impl | Column | Image | Widget | Text | Composite_Impl | Video | SimpleArgument_Impl | Parameter_Impl | Row | Fixed | Variable ;
+	ContentElement_Impl | Column | Image | Widget | Text | Composite_Impl | Video | SimpleElement_Impl | PlaceHolder | Row | Game | RecordValue | ListValue;
 
-Argument returns Argument:
-	Argument_Impl | Image | Widget | Text | Video | SimpleArgument_Impl | Tab | Animation | DragAndDrop | CompositeArgument_Impl;
 
-SimpleArgument returns SimpleElement:
-	SimpleArgument_Impl | Image | Text | Video;
+	
+CompositeType returns CompositeType:
+	CompositeType_Impl | RecordType | ListType;
 
 EString returns ecore::EString:
 	STRING | ID;
@@ -83,7 +78,7 @@ Column returns Column:
 UseTemplate returns UseTemplate:
 	{UseTemplate}
 	(typetemplate=[TemplateDef|EString])?
-	('{' arguments+=Argument ( "," arguments+=Argument)* )? '}'
+	('{' templateelements+=ContentElement ( "," templateelements+=ContentElement)* )? '}'
 	;
 
 ContentElement_Impl returns ContentElement:
@@ -101,8 +96,8 @@ Image returns Image:
 Widget returns Widget:
 	'Widget'
 	name=EString
-		'type' widgettype=[WidgetType|EString]
-		('{' widgetarguments+=Argument ( "," widgetarguments+=Argument)* )? '}'
+		':' widgettype=[WidgetType|EString]
+		('{' widgetelements+=ContentElement ( "," widgetelements+=ContentElement)* )? '}'
 	;
 
 Text returns Text:
@@ -120,105 +115,66 @@ Video returns Video:
 	{Video}
 	'Video'
 	'{'
-		('url' url=EString)?
+		('id' id=EString)?
 	'}';
 
-SimpleArgument_Impl returns SimpleElement:
+
+
+SimpleElement_Impl returns SimpleElement:
 	{SimpleElement}
-	'SimpleArgument'
+	'SimpleElement'
 	;
-
-Parameter_Impl returns Parameter:
-	{Parameter}
-	'Parameter'
-	;
-
-Fixed returns Fixed:
-	{Fixed}
-	'Param'
-	(type=[Type|EString])?
-	;
-
-Variable returns Variable:
-	{Variable}
-	'VarParam'
-	(type=[Type|EString])?
+	
+PlaceHolder returns PlaceHolder:
+	'Placeholder'
+	(type=[Type|EPrimitiveTypes])
 	;
 
 
-
-Argument_Impl returns Argument:
-	{Argument}
-	'Argument'
-	;
-
-Tab returns Tab:
-	{Tab}
-	'Tab'
+Game returns Game:
+	{Game}
+	'Game'
 	'{'
-		(arguments+=SimpleArgument ( "," arguments+=SimpleArgument)* )?
+		('id' id=EString)?
 	'}';
 
-Animation returns Animation:
-	{Animation}
-	'Animation'
+
+FieldValue returns FieldValue:
+	name=EString
+	':' fieldvalue=ContentElement
+	;
+
+
+RecordValue returns RecordValue:
 	'{'
-		('width' width=EString)?
-		('image' image=EString)?
-		(arguments+=SimpleArgument ( "," arguments+=SimpleArgument)* )?
+		recordvalues+=FieldValue ( "," recordvalues+=FieldValue)* 
 	'}';
 
-DragAndDrop returns DragAndDrop:
-	{DragAndDrop}
-	'DragAndDrop'
+ListValue returns ListValue:
+	'['
+		listvalues+=ContentElement ( "," listvalues+=ContentElement)* 
+	']';
+	
+WidgetType returns WidgetType:
+	{WidgetType}
+	'widget'
+	name=EString
 	'{'
-		(arguments+=SimpleArgument ( "," arguments+=SimpleArgument)* )?
-	'}';
+		widgettypeelements+=[Type|EPrimitiveTypes] ( "," widgettypeelements+=[Type|EPrimitiveTypes])* 
+		
+	'}';	
 
-CompositeArgument_Impl returns CompositeArgument:
-	{CompositeArgument}
-	'CompositeArgument'
-	'{'
-		('arguments' '{' arguments+=SimpleArgument ( "," arguments+=SimpleArgument)* '}' )?
-	'}';
+CompositeType_Impl returns CompositeType:
+	{CompositeType}
+	'CompositeType'
+	name=EString;
+
 
 Paragraph returns Paragraph:
 	{Paragraph}
 	('p' text=EString)?
 	;
 
-enum TypeSimpleElement returns TypeSimpleElement:
-				Text = 'Text' | Image = 'Image' | Video = 'Video' | Undefined = 'Undefined';
-
-
-
-SimpleType returns SimpleType:
-	{SimpleType}
-	name=EString
-	(type=TypeSimpleElement)?
-	;
-
-AggregatedType returns AggregatedType:
-	{AggregatedType}
-	name=EString
-	'{'
-		(type+=SimpleType ( "," type+=SimpleType)* )?
-	'}';
-WidgetType returns WidgetType:
-	{WidgetType}
-	'widget'
-	name=EString
-	'{'
-		(parameters+=Parameter ( "," parameters+=Parameter)* )?
-	'}';
-
-ListType returns ListType:
-	{ListType}
-	'List'
-	name=EString
-	(listtype=[SimpleType|EString])?
-	;
-	
 Section returns Section:
 	{Section}
 	'Section'
@@ -228,3 +184,36 @@ Section returns Section:
 		('title' title=EString)?
 		(rows+=Row ( "," rows+=Row)* )?
 	'}';
+
+terminal PrimitiveTypes:
+	'VideoType' | 'ImageType' | 'TextType' | 'GameType' | 'Any'
+;
+
+EPrimitiveTypes returns ecore::EString:
+	EString | PrimitiveTypes;
+	
+SimpleType returns SimpleType:
+	{SimpleType}
+	name=PrimitiveTypes
+	;
+	
+
+RecordType returns RecordType:
+	name=EString
+	'{'
+		recordtype+=Field ( "," recordtype+=Field)*
+	'}';
+
+
+Field returns Field:
+	name=EString
+	':' fieldtype=[Type|EPrimitiveTypes]
+	;
+
+
+ListType returns ListType:
+	name=EString
+	'{'
+	'list_of' listtype=[Type|EPrimitiveTypes]
+	'}';
+	

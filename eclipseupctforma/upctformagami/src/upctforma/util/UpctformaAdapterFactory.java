@@ -112,8 +112,8 @@ public class UpctformaAdapterFactory extends AdapterFactoryImpl {
 				return createSimpleElementAdapter();
 			}
 			@Override
-			public Adapter caseParameter(Parameter object) {
-				return createParameterAdapter();
+			public Adapter casePlaceHolder(PlaceHolder object) {
+				return createPlaceHolderAdapter();
 			}
 			@Override
 			public Adapter caseRow(Row object) {
@@ -136,22 +136,6 @@ public class UpctformaAdapterFactory extends AdapterFactoryImpl {
 				return createParagraphAdapter();
 			}
 			@Override
-			public Adapter caseArgument(Argument object) {
-				return createArgumentAdapter();
-			}
-			@Override
-			public Adapter caseTab(Tab object) {
-				return createTabAdapter();
-			}
-			@Override
-			public Adapter caseAnimation(Animation object) {
-				return createAnimationAdapter();
-			}
-			@Override
-			public Adapter caseDragAndDrop(DragAndDrop object) {
-				return createDragAndDropAdapter();
-			}
-			@Override
 			public Adapter caseUseTemplate(UseTemplate object) {
 				return createUseTemplateAdapter();
 			}
@@ -164,20 +148,8 @@ public class UpctformaAdapterFactory extends AdapterFactoryImpl {
 				return createSimpleTypeAdapter();
 			}
 			@Override
-			public Adapter caseAggregatedType(AggregatedType object) {
-				return createAggregatedTypeAdapter();
-			}
-			@Override
-			public Adapter caseCompositeArgument(CompositeArgument object) {
-				return createCompositeArgumentAdapter();
-			}
-			@Override
-			public Adapter caseFixed(Fixed object) {
-				return createFixedAdapter();
-			}
-			@Override
-			public Adapter caseVariable(Variable object) {
-				return createVariableAdapter();
+			public Adapter caseRecordType(RecordType object) {
+				return createRecordTypeAdapter();
 			}
 			@Override
 			public Adapter caseWidgetType(WidgetType object) {
@@ -186,6 +158,30 @@ public class UpctformaAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseListType(ListType object) {
 				return createListTypeAdapter();
+			}
+			@Override
+			public Adapter caseGame(Game object) {
+				return createGameAdapter();
+			}
+			@Override
+			public Adapter caseCompositeType(CompositeType object) {
+				return createCompositeTypeAdapter();
+			}
+			@Override
+			public Adapter caseField(Field object) {
+				return createFieldAdapter();
+			}
+			@Override
+			public Adapter caseRecordValue(RecordValue object) {
+				return createRecordValueAdapter();
+			}
+			@Override
+			public Adapter caseListValue(ListValue object) {
+				return createListValueAdapter();
+			}
+			@Override
+			public Adapter caseFieldValue(FieldValue object) {
+				return createFieldValueAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -362,16 +358,16 @@ public class UpctformaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link upctforma.Parameter <em>Parameter</em>}'.
+	 * Creates a new adapter for an object of class '{@link upctforma.PlaceHolder <em>Place Holder</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see upctforma.Parameter
+	 * @see upctforma.PlaceHolder
 	 * @generated
 	 */
-	public Adapter createParameterAdapter() {
+	public Adapter createPlaceHolderAdapter() {
 		return null;
 	}
 
@@ -446,62 +442,6 @@ public class UpctformaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link upctforma.Argument <em>Argument</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see upctforma.Argument
-	 * @generated
-	 */
-	public Adapter createArgumentAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link upctforma.Tab <em>Tab</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see upctforma.Tab
-	 * @generated
-	 */
-	public Adapter createTabAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link upctforma.Animation <em>Animation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see upctforma.Animation
-	 * @generated
-	 */
-	public Adapter createAnimationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link upctforma.DragAndDrop <em>Drag And Drop</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see upctforma.DragAndDrop
-	 * @generated
-	 */
-	public Adapter createDragAndDropAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link upctforma.UseTemplate <em>Use Template</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -544,58 +484,16 @@ public class UpctformaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link upctforma.AggregatedType <em>Aggregated Type</em>}'.
+	 * Creates a new adapter for an object of class '{@link upctforma.RecordType <em>Record Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see upctforma.AggregatedType
+	 * @see upctforma.RecordType
 	 * @generated
 	 */
-	public Adapter createAggregatedTypeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link upctforma.CompositeArgument <em>Composite Argument</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see upctforma.CompositeArgument
-	 * @generated
-	 */
-	public Adapter createCompositeArgumentAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link upctforma.Fixed <em>Fixed</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see upctforma.Fixed
-	 * @generated
-	 */
-	public Adapter createFixedAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link upctforma.Variable <em>Variable</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see upctforma.Variable
-	 * @generated
-	 */
-	public Adapter createVariableAdapter() {
+	public Adapter createRecordTypeAdapter() {
 		return null;
 	}
 
@@ -624,6 +522,90 @@ public class UpctformaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createListTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link upctforma.Game <em>Game</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see upctforma.Game
+	 * @generated
+	 */
+	public Adapter createGameAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link upctforma.CompositeType <em>Composite Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see upctforma.CompositeType
+	 * @generated
+	 */
+	public Adapter createCompositeTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link upctforma.Field <em>Field</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see upctforma.Field
+	 * @generated
+	 */
+	public Adapter createFieldAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link upctforma.RecordValue <em>Record Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see upctforma.RecordValue
+	 * @generated
+	 */
+	public Adapter createRecordValueAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link upctforma.ListValue <em>List Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see upctforma.ListValue
+	 * @generated
+	 */
+	public Adapter createListValueAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link upctforma.FieldValue <em>Field Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see upctforma.FieldValue
+	 * @generated
+	 */
+	public Adapter createFieldValueAdapter() {
 		return null;
 	}
 

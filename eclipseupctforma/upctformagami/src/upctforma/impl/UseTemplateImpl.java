@@ -3,22 +3,16 @@
 package upctforma.impl;
 
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
-import upctforma.Argument;
+import upctforma.ContentElement;
 import upctforma.TemplateDef;
 import upctforma.UpctformaPackage;
 import upctforma.UseTemplate;
@@ -32,7 +26,7 @@ import upctforma.UseTemplate;
  * </p>
  * <ul>
  *   <li>{@link upctforma.impl.UseTemplateImpl#getTypetemplate <em>Typetemplate</em>}</li>
- *   <li>{@link upctforma.impl.UseTemplateImpl#getArguments <em>Arguments</em>}</li>
+ *   <li>{@link upctforma.impl.UseTemplateImpl#getTemplateelements <em>Templateelements</em>}</li>
  * </ul>
  *
  * @generated
@@ -49,14 +43,14 @@ public class UseTemplateImpl extends MinimalEObjectImpl.Container implements Use
 	protected TemplateDef typetemplate;
 
 	/**
-	 * The cached value of the '{@link #getArguments() <em>Arguments</em>}' containment reference list.
+	 * The cached value of the '{@link #getTemplateelements() <em>Templateelements</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getArguments()
+	 * @see #getTemplateelements()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Argument> arguments;
+	protected EList<ContentElement> templateelements;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -120,11 +114,11 @@ public class UseTemplateImpl extends MinimalEObjectImpl.Container implements Use
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Argument> getArguments() {
-		if (arguments == null) {
-			arguments = new EObjectContainmentEList<Argument>(Argument.class, this, UpctformaPackage.USE_TEMPLATE__ARGUMENTS);
+	public EList<ContentElement> getTemplateelements() {
+		if (templateelements == null) {
+			templateelements = new EObjectContainmentEList<ContentElement>(ContentElement.class, this, UpctformaPackage.USE_TEMPLATE__TEMPLATEELEMENTS);
 		}
-		return arguments;
+		return templateelements;
 	}
 
 	/**
@@ -135,8 +129,8 @@ public class UseTemplateImpl extends MinimalEObjectImpl.Container implements Use
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case UpctformaPackage.USE_TEMPLATE__ARGUMENTS:
-				return ((InternalEList<?>)getArguments()).basicRemove(otherEnd, msgs);
+			case UpctformaPackage.USE_TEMPLATE__TEMPLATEELEMENTS:
+				return ((InternalEList<?>)getTemplateelements()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -152,8 +146,8 @@ public class UseTemplateImpl extends MinimalEObjectImpl.Container implements Use
 			case UpctformaPackage.USE_TEMPLATE__TYPETEMPLATE:
 				if (resolve) return getTypetemplate();
 				return basicGetTypetemplate();
-			case UpctformaPackage.USE_TEMPLATE__ARGUMENTS:
-				return getArguments();
+			case UpctformaPackage.USE_TEMPLATE__TEMPLATEELEMENTS:
+				return getTemplateelements();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -170,9 +164,9 @@ public class UseTemplateImpl extends MinimalEObjectImpl.Container implements Use
 			case UpctformaPackage.USE_TEMPLATE__TYPETEMPLATE:
 				setTypetemplate((TemplateDef)newValue);
 				return;
-			case UpctformaPackage.USE_TEMPLATE__ARGUMENTS:
-				getArguments().clear();
-				getArguments().addAll((Collection<? extends Argument>)newValue);
+			case UpctformaPackage.USE_TEMPLATE__TEMPLATEELEMENTS:
+				getTemplateelements().clear();
+				getTemplateelements().addAll((Collection<? extends ContentElement>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -189,8 +183,8 @@ public class UseTemplateImpl extends MinimalEObjectImpl.Container implements Use
 			case UpctformaPackage.USE_TEMPLATE__TYPETEMPLATE:
 				setTypetemplate((TemplateDef)null);
 				return;
-			case UpctformaPackage.USE_TEMPLATE__ARGUMENTS:
-				getArguments().clear();
+			case UpctformaPackage.USE_TEMPLATE__TEMPLATEELEMENTS:
+				getTemplateelements().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -206,8 +200,8 @@ public class UseTemplateImpl extends MinimalEObjectImpl.Container implements Use
 		switch (featureID) {
 			case UpctformaPackage.USE_TEMPLATE__TYPETEMPLATE:
 				return typetemplate != null;
-			case UpctformaPackage.USE_TEMPLATE__ARGUMENTS:
-				return arguments != null && !arguments.isEmpty();
+			case UpctformaPackage.USE_TEMPLATE__TEMPLATEELEMENTS:
+				return templateelements != null && !templateelements.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

@@ -86,7 +86,6 @@ public class UpctformaSwitch<T> extends Switch<T> {
 				T result = caseImage(image);
 				if (result == null) result = caseSimpleElement(image);
 				if (result == null) result = caseContentElement(image);
-				if (result == null) result = caseArgument(image);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -100,7 +99,6 @@ public class UpctformaSwitch<T> extends Switch<T> {
 				Widget widget = (Widget)theEObject;
 				T result = caseWidget(widget);
 				if (result == null) result = caseContentElement(widget);
-				if (result == null) result = caseArgument(widget);
 				if (result == null) result = caseNameElement(widget);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -110,7 +108,6 @@ public class UpctformaSwitch<T> extends Switch<T> {
 				T result = caseText(text);
 				if (result == null) result = caseSimpleElement(text);
 				if (result == null) result = caseContentElement(text);
-				if (result == null) result = caseArgument(text);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -126,7 +123,6 @@ public class UpctformaSwitch<T> extends Switch<T> {
 				T result = caseVideo(video);
 				if (result == null) result = caseSimpleElement(video);
 				if (result == null) result = caseContentElement(video);
-				if (result == null) result = caseArgument(video);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -147,14 +143,13 @@ public class UpctformaSwitch<T> extends Switch<T> {
 				SimpleElement simpleElement = (SimpleElement)theEObject;
 				T result = caseSimpleElement(simpleElement);
 				if (result == null) result = caseContentElement(simpleElement);
-				if (result == null) result = caseArgument(simpleElement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UpctformaPackage.PARAMETER: {
-				Parameter parameter = (Parameter)theEObject;
-				T result = caseParameter(parameter);
-				if (result == null) result = caseContentElement(parameter);
+			case UpctformaPackage.PLACE_HOLDER: {
+				PlaceHolder placeHolder = (PlaceHolder)theEObject;
+				T result = casePlaceHolder(placeHolder);
+				if (result == null) result = caseContentElement(placeHolder);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -192,36 +187,6 @@ public class UpctformaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UpctformaPackage.ARGUMENT: {
-				Argument argument = (Argument)theEObject;
-				T result = caseArgument(argument);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case UpctformaPackage.TAB: {
-				Tab tab = (Tab)theEObject;
-				T result = caseTab(tab);
-				if (result == null) result = caseCompositeArgument(tab);
-				if (result == null) result = caseArgument(tab);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case UpctformaPackage.ANIMATION: {
-				Animation animation = (Animation)theEObject;
-				T result = caseAnimation(animation);
-				if (result == null) result = caseCompositeArgument(animation);
-				if (result == null) result = caseArgument(animation);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case UpctformaPackage.DRAG_AND_DROP: {
-				DragAndDrop dragAndDrop = (DragAndDrop)theEObject;
-				T result = caseDragAndDrop(dragAndDrop);
-				if (result == null) result = caseCompositeArgument(dragAndDrop);
-				if (result == null) result = caseArgument(dragAndDrop);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case UpctformaPackage.USE_TEMPLATE: {
 				UseTemplate useTemplate = (UseTemplate)theEObject;
 				T result = caseUseTemplate(useTemplate);
@@ -243,34 +208,12 @@ public class UpctformaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UpctformaPackage.AGGREGATED_TYPE: {
-				AggregatedType aggregatedType = (AggregatedType)theEObject;
-				T result = caseAggregatedType(aggregatedType);
-				if (result == null) result = caseType(aggregatedType);
-				if (result == null) result = caseNameElement(aggregatedType);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case UpctformaPackage.COMPOSITE_ARGUMENT: {
-				CompositeArgument compositeArgument = (CompositeArgument)theEObject;
-				T result = caseCompositeArgument(compositeArgument);
-				if (result == null) result = caseArgument(compositeArgument);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case UpctformaPackage.FIXED: {
-				Fixed fixed = (Fixed)theEObject;
-				T result = caseFixed(fixed);
-				if (result == null) result = caseParameter(fixed);
-				if (result == null) result = caseContentElement(fixed);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case UpctformaPackage.VARIABLE: {
-				Variable variable = (Variable)theEObject;
-				T result = caseVariable(variable);
-				if (result == null) result = caseParameter(variable);
-				if (result == null) result = caseContentElement(variable);
+			case UpctformaPackage.RECORD_TYPE: {
+				RecordType recordType = (RecordType)theEObject;
+				T result = caseRecordType(recordType);
+				if (result == null) result = caseCompositeType(recordType);
+				if (result == null) result = caseType(recordType);
+				if (result == null) result = caseNameElement(recordType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -285,8 +228,53 @@ public class UpctformaSwitch<T> extends Switch<T> {
 			case UpctformaPackage.LIST_TYPE: {
 				ListType listType = (ListType)theEObject;
 				T result = caseListType(listType);
+				if (result == null) result = caseCompositeType(listType);
 				if (result == null) result = caseType(listType);
 				if (result == null) result = caseNameElement(listType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UpctformaPackage.GAME: {
+				Game game = (Game)theEObject;
+				T result = caseGame(game);
+				if (result == null) result = caseSimpleElement(game);
+				if (result == null) result = caseContentElement(game);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UpctformaPackage.COMPOSITE_TYPE: {
+				CompositeType compositeType = (CompositeType)theEObject;
+				T result = caseCompositeType(compositeType);
+				if (result == null) result = caseType(compositeType);
+				if (result == null) result = caseNameElement(compositeType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UpctformaPackage.FIELD: {
+				Field field = (Field)theEObject;
+				T result = caseField(field);
+				if (result == null) result = caseNameElement(field);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UpctformaPackage.RECORD_VALUE: {
+				RecordValue recordValue = (RecordValue)theEObject;
+				T result = caseRecordValue(recordValue);
+				if (result == null) result = caseContentElement(recordValue);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UpctformaPackage.LIST_VALUE: {
+				ListValue listValue = (ListValue)theEObject;
+				T result = caseListValue(listValue);
+				if (result == null) result = caseContentElement(listValue);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UpctformaPackage.FIELD_VALUE: {
+				FieldValue fieldValue = (FieldValue)theEObject;
+				T result = caseFieldValue(fieldValue);
+				if (result == null) result = caseNameElement(fieldValue);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -460,17 +448,17 @@ public class UpctformaSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Parameter</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Place Holder</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Parameter</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Place Holder</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseParameter(Parameter object) {
+	public T casePlaceHolder(PlaceHolder object) {
 		return null;
 	}
 
@@ -550,66 +538,6 @@ public class UpctformaSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Argument</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Argument</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseArgument(Argument object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Tab</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Tab</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTab(Tab object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Animation</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Animation</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseAnimation(Animation object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Drag And Drop</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Drag And Drop</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseDragAndDrop(DragAndDrop object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Use Template</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -655,62 +583,17 @@ public class UpctformaSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Aggregated Type</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Record Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Aggregated Type</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Record Type</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAggregatedType(AggregatedType object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Composite Argument</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Composite Argument</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseCompositeArgument(CompositeArgument object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Fixed</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Fixed</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseFixed(Fixed object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Variable</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Variable</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseVariable(Variable object) {
+	public T caseRecordType(RecordType object) {
 		return null;
 	}
 
@@ -741,6 +624,96 @@ public class UpctformaSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseListType(ListType object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Game</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Game</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGame(Game object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Composite Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Composite Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCompositeType(CompositeType object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Field</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Field</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseField(Field object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Record Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Record Value</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRecordValue(RecordValue object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>List Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>List Value</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseListValue(ListValue object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Field Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Field Value</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFieldValue(FieldValue object) {
 		return null;
 	}
 

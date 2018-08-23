@@ -3,6 +3,7 @@
 package upctformaevalua;
 
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,7 +22,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface EvaluationUnit extends NameElement {
+public interface EvaluationUnit extends NameElement, EObject {
 	/**
 	 * Returns the value of the '<em><b>Questions</b></em>' containment reference list.
 	 * The list contents are of type {@link upctformaevalua.Question}.

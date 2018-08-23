@@ -19,7 +19,7 @@ package upctforma;
  * @model
  * @generated
  */
-public interface ListType extends Type {
+public interface ListType extends CompositeType {
 	/**
 	 * Returns the value of the '<em><b>Listtype</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -29,12 +29,12 @@ public interface ListType extends Type {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Listtype</em>' reference.
-	 * @see #setListtype(SimpleType)
+	 * @see #setListtype(Type)
 	 * @see upctforma.UpctformaPackage#getListType_Listtype()
 	 * @model required="true"
 	 * @generated
 	 */
-	SimpleType getListtype();
+	Type getListtype();
 
 	/**
 	 * Sets the value of the '{@link upctforma.ListType#getListtype <em>Listtype</em>}' reference.
@@ -44,6 +44,6 @@ public interface ListType extends Type {
 	 * @see #getListtype()
 	 * @generated
 	 */
-	void setListtype(SimpleType value);
+	void setListtype(Type value);
 
 } // ListType

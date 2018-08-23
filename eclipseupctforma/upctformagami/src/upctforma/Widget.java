@@ -14,14 +14,14 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link upctforma.Widget#getWidgettype <em>Widgettype</em>}</li>
- *   <li>{@link upctforma.Widget#getWidgetarguments <em>Widgetarguments</em>}</li>
+ *   <li>{@link upctforma.Widget#getWidgetelements <em>Widgetelements</em>}</li>
  * </ul>
  *
  * @see upctforma.UpctformaPackage#getWidget()
  * @model
  * @generated
  */
-public interface Widget extends ContentElement, Argument, NameElement {
+public interface Widget extends ContentElement, NameElement {
 	/**
 	 * Returns the value of the '<em><b>Widgettype</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -49,19 +49,19 @@ public interface Widget extends ContentElement, Argument, NameElement {
 	void setWidgettype(WidgetType value);
 
 	/**
-	 * Returns the value of the '<em><b>Widgetarguments</b></em>' containment reference list.
-	 * The list contents are of type {@link upctforma.Argument}.
+	 * Returns the value of the '<em><b>Widgetelements</b></em>' containment reference list.
+	 * The list contents are of type {@link upctforma.ContentElement}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Widgetarguments</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Widgetelements</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Widgetarguments</em>' containment reference list.
-	 * @see upctforma.UpctformaPackage#getWidget_Widgetarguments()
+	 * @return the value of the '<em>Widgetelements</em>' containment reference list.
+	 * @see upctforma.UpctformaPackage#getWidget_Widgetelements()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Argument> getWidgetarguments();
+	EList<ContentElement> getWidgetelements();
 
 } // Widget

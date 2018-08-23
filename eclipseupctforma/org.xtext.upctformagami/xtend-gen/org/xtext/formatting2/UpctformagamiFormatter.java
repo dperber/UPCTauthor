@@ -12,11 +12,8 @@ import org.eclipse.xtext.formatting2.IFormattableDocument;
 import org.eclipse.xtext.resource.XtextResource;
 import org.eclipse.xtext.xbase.lib.Extension;
 import org.xtext.services.UpctformagamiGrammarAccess;
-import upctformagami.Badge;
 import upctformagami.Gamification;
-import upctformagami.Import;
 import upctformagami.Point;
-import upctformagami.UnitPoint;
 import upctformagami.WidgetDefPoint;
 
 @SuppressWarnings("all")
@@ -26,22 +23,11 @@ public class UpctformagamiFormatter extends AbstractFormatter2 {
   private UpctformagamiGrammarAccess _upctformagamiGrammarAccess;
   
   protected void _format(final Gamification gamification, @Extension final IFormattableDocument document) {
-    EList<Import> _imports = gamification.getImports();
-    for (final Import _import : _imports) {
-      document.<Import>format(_import);
-    }
-    EList<Badge> _badges = gamification.getBadges();
-    for (final Badge badge : _badges) {
-      document.<Badge>format(badge);
-    }
-    EList<WidgetDefPoint> _widgets = gamification.getWidgets();
-    for (final WidgetDefPoint widgetDefPoint : _widgets) {
-      document.<WidgetDefPoint>format(widgetDefPoint);
-    }
-    EList<UnitPoint> _units = gamification.getUnits();
-    for (final UnitPoint unitPoint : _units) {
-      document.<UnitPoint>format(unitPoint);
-    }
+    throw new Error("Unresolved compilation problems:"
+      + "\nType mismatch: cannot convert from element type WidgetGamify to WidgetDefPoint"
+      + "\nType mismatch: cannot convert from element type UnitGamify to UnitPoint"
+      + "\nType mismatch: cannot convert from EList<WidgetGamify> to Iterable<? extends WidgetDefPoint> | WidgetDefPoint[]"
+      + "\nType mismatch: cannot convert from EList<UnitGamify> to Iterable<? extends UnitPoint> | UnitPoint[]");
   }
   
   protected void _format(final WidgetDefPoint widgetDefPoint, @Extension final IFormattableDocument document) {

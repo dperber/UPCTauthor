@@ -18,8 +18,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  *
  * @see upctforma.UpctformaPackage#getColumn()
- * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='checkNoParameterVariable'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot checkNoParameterVariable='self.elements->forAll( e | e.oclIsKindOf(Variable)=false)'"
+ * @model
  * @generated
  */
 public interface Column extends Composite {

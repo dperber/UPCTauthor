@@ -1,5 +1,5 @@
-#Fri Aug 03 20:51:39 CEST 2018
-viewport.x=-388
+#Thu Aug 23 11:55:19 CEST 2018
+viewport.x=-123
 zoom=1.0
 print.margin.right=0.5
 rulergrid.rulerunit=1
@@ -16,4 +16,4 @@ rulergrid.gridlevel=true
 print.margin.top=0.5
 print.useMillim=true
 print.usePortrait=true
-viewport.y=65
+viewport.y=-49

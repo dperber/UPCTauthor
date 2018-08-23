@@ -1,0 +1,37 @@
+/**
+ */
+package upctforma.impl;
+
+import org.eclipse.emf.ecore.EClass;
+
+import upctforma.RecordValue;
+import upctforma.UpctformaPackage;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Record Value</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * @generated
+ */
+public class RecordValueImpl extends ContentElementImpl implements RecordValue {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RecordValueImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return UpctformaPackage.Literals.RECORD_VALUE;
+	}
+
+} //RecordValueImpl

@@ -3,21 +3,15 @@
 package upctforma.impl;
 
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
-import upctforma.Argument;
+import upctforma.ContentElement;
 import upctforma.NameElement;
 import upctforma.UpctformaPackage;
 import upctforma.Widget;
@@ -33,7 +27,7 @@ import upctforma.WidgetType;
  * <ul>
  *   <li>{@link upctforma.impl.WidgetImpl#getName <em>Name</em>}</li>
  *   <li>{@link upctforma.impl.WidgetImpl#getWidgettype <em>Widgettype</em>}</li>
- *   <li>{@link upctforma.impl.WidgetImpl#getWidgetarguments <em>Widgetarguments</em>}</li>
+ *   <li>{@link upctforma.impl.WidgetImpl#getWidgetelements <em>Widgetelements</em>}</li>
  * </ul>
  *
  * @generated
@@ -70,14 +64,14 @@ public class WidgetImpl extends ContentElementImpl implements Widget {
 	protected WidgetType widgettype;
 
 	/**
-	 * The cached value of the '{@link #getWidgetarguments() <em>Widgetarguments</em>}' containment reference list.
+	 * The cached value of the '{@link #getWidgetelements() <em>Widgetelements</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getWidgetarguments()
+	 * @see #getWidgetelements()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Argument> widgetarguments;
+	protected EList<ContentElement> widgetelements;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -162,11 +156,11 @@ public class WidgetImpl extends ContentElementImpl implements Widget {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Argument> getWidgetarguments() {
-		if (widgetarguments == null) {
-			widgetarguments = new EObjectContainmentEList<Argument>(Argument.class, this, UpctformaPackage.WIDGET__WIDGETARGUMENTS);
+	public EList<ContentElement> getWidgetelements() {
+		if (widgetelements == null) {
+			widgetelements = new EObjectContainmentEList<ContentElement>(ContentElement.class, this, UpctformaPackage.WIDGET__WIDGETELEMENTS);
 		}
-		return widgetarguments;
+		return widgetelements;
 	}
 
 	/**
@@ -177,8 +171,8 @@ public class WidgetImpl extends ContentElementImpl implements Widget {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case UpctformaPackage.WIDGET__WIDGETARGUMENTS:
-				return ((InternalEList<?>)getWidgetarguments()).basicRemove(otherEnd, msgs);
+			case UpctformaPackage.WIDGET__WIDGETELEMENTS:
+				return ((InternalEList<?>)getWidgetelements()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -196,8 +190,8 @@ public class WidgetImpl extends ContentElementImpl implements Widget {
 			case UpctformaPackage.WIDGET__WIDGETTYPE:
 				if (resolve) return getWidgettype();
 				return basicGetWidgettype();
-			case UpctformaPackage.WIDGET__WIDGETARGUMENTS:
-				return getWidgetarguments();
+			case UpctformaPackage.WIDGET__WIDGETELEMENTS:
+				return getWidgetelements();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -217,9 +211,9 @@ public class WidgetImpl extends ContentElementImpl implements Widget {
 			case UpctformaPackage.WIDGET__WIDGETTYPE:
 				setWidgettype((WidgetType)newValue);
 				return;
-			case UpctformaPackage.WIDGET__WIDGETARGUMENTS:
-				getWidgetarguments().clear();
-				getWidgetarguments().addAll((Collection<? extends Argument>)newValue);
+			case UpctformaPackage.WIDGET__WIDGETELEMENTS:
+				getWidgetelements().clear();
+				getWidgetelements().addAll((Collection<? extends ContentElement>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -239,8 +233,8 @@ public class WidgetImpl extends ContentElementImpl implements Widget {
 			case UpctformaPackage.WIDGET__WIDGETTYPE:
 				setWidgettype((WidgetType)null);
 				return;
-			case UpctformaPackage.WIDGET__WIDGETARGUMENTS:
-				getWidgetarguments().clear();
+			case UpctformaPackage.WIDGET__WIDGETELEMENTS:
+				getWidgetelements().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -258,8 +252,8 @@ public class WidgetImpl extends ContentElementImpl implements Widget {
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case UpctformaPackage.WIDGET__WIDGETTYPE:
 				return widgettype != null;
-			case UpctformaPackage.WIDGET__WIDGETARGUMENTS:
-				return widgetarguments != null && !widgetarguments.isEmpty();
+			case UpctformaPackage.WIDGET__WIDGETELEMENTS:
+				return widgetelements != null && !widgetelements.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -271,11 +265,6 @@ public class WidgetImpl extends ContentElementImpl implements Widget {
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == Argument.class) {
-			switch (derivedFeatureID) {
-				default: return -1;
-			}
-		}
 		if (baseClass == NameElement.class) {
 			switch (derivedFeatureID) {
 				case UpctformaPackage.WIDGET__NAME: return UpctformaPackage.NAME_ELEMENT__NAME;
@@ -292,11 +281,6 @@ public class WidgetImpl extends ContentElementImpl implements Widget {
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == Argument.class) {
-			switch (baseFeatureID) {
-				default: return -1;
-			}
-		}
 		if (baseClass == NameElement.class) {
 			switch (baseFeatureID) {
 				case UpctformaPackage.NAME_ELEMENT__NAME: return UpctformaPackage.WIDGET__NAME;

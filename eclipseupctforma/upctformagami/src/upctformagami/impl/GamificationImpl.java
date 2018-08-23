@@ -3,25 +3,19 @@
 package upctformagami.impl;
 
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
 import upctformagami.Badge;
 import upctformagami.Gamification;
 import upctformagami.Import;
-import upctformagami.UnitPoint;
+import upctformagami.UnitGamify;
 import upctformagami.UpctformagamiPackage;
-import upctformagami.WidgetDefPoint;
+import upctformagami.WidgetGamify;
 
 /**
  * <!-- begin-user-doc -->
@@ -58,7 +52,7 @@ public class GamificationImpl extends MinimalEObjectImpl.Container implements Ga
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<WidgetDefPoint> widgets;
+	protected EList<WidgetGamify> widgets;
 
 	/**
 	 * The cached value of the '{@link #getBadges() <em>Badges</em>}' containment reference list.
@@ -78,7 +72,7 @@ public class GamificationImpl extends MinimalEObjectImpl.Container implements Ga
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<UnitPoint> units;
+	protected EList<UnitGamify> units;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -116,9 +110,9 @@ public class GamificationImpl extends MinimalEObjectImpl.Container implements Ga
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<WidgetDefPoint> getWidgets() {
+	public EList<WidgetGamify> getWidgets() {
 		if (widgets == null) {
-			widgets = new EObjectContainmentEList<WidgetDefPoint>(WidgetDefPoint.class, this, UpctformagamiPackage.GAMIFICATION__WIDGETS);
+			widgets = new EObjectContainmentEList<WidgetGamify>(WidgetGamify.class, this, UpctformagamiPackage.GAMIFICATION__WIDGETS);
 		}
 		return widgets;
 	}
@@ -140,9 +134,9 @@ public class GamificationImpl extends MinimalEObjectImpl.Container implements Ga
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<UnitPoint> getUnits() {
+	public EList<UnitGamify> getUnits() {
 		if (units == null) {
-			units = new EObjectContainmentEList<UnitPoint>(UnitPoint.class, this, UpctformagamiPackage.GAMIFICATION__UNITS);
+			units = new EObjectContainmentEList<UnitGamify>(UnitGamify.class, this, UpctformagamiPackage.GAMIFICATION__UNITS);
 		}
 		return units;
 	}
@@ -202,7 +196,7 @@ public class GamificationImpl extends MinimalEObjectImpl.Container implements Ga
 				return;
 			case UpctformagamiPackage.GAMIFICATION__WIDGETS:
 				getWidgets().clear();
-				getWidgets().addAll((Collection<? extends WidgetDefPoint>)newValue);
+				getWidgets().addAll((Collection<? extends WidgetGamify>)newValue);
 				return;
 			case UpctformagamiPackage.GAMIFICATION__BADGES:
 				getBadges().clear();
@@ -210,7 +204,7 @@ public class GamificationImpl extends MinimalEObjectImpl.Container implements Ga
 				return;
 			case UpctformagamiPackage.GAMIFICATION__UNITS:
 				getUnits().clear();
-				getUnits().addAll((Collection<? extends UnitPoint>)newValue);
+				getUnits().addAll((Collection<? extends UnitGamify>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

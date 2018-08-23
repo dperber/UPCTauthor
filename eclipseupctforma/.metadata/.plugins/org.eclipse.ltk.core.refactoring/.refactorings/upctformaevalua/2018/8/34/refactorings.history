@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 3 elements from project &apos;upctformaevalua&apos;&#x0D;&#x0A;- Original project: &apos;upctformaevalua&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     upctforma.impl.ArgumentImpl.java&#x0D;&#x0A;     upctforma.impl.PairImpl.java&#x0D;&#x0A;     upctforma.impl.ParameterImpl.java" description="Delete elements" element1="/src&lt;upctforma.impl{ArgumentImpl.java" element2="/src&lt;upctforma.impl{PairImpl.java" element3="/src&lt;upctforma.impl{ParameterImpl.java" elements="3" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1534941203011" subPackages="false" version="1.0"/>
+</session>

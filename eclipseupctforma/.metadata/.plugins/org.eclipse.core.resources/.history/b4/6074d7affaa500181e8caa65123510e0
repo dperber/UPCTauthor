@@ -1,0 +1,49 @@
+/**
+ */
+package upctforma;
+
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Widget Type</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link upctforma.WidgetType#getElements <em>Elements</em>}</li>
+ * </ul>
+ *
+ * @see upctforma.UpctformaPackage#getWidgetType()
+ * @model
+ * @generated
+ */
+public interface WidgetType extends Type {
+	/**
+	 * Returns the value of the '<em><b>Elements</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Elements</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Elements</em>' containment reference.
+	 * @see #setElements(CompositeType)
+	 * @see upctforma.UpctformaPackage#getWidgetType_Elements()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	CompositeType getElements();
+
+	/**
+	 * Sets the value of the '{@link upctforma.WidgetType#getElements <em>Elements</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Elements</em>' containment reference.
+	 * @see #getElements()
+	 * @generated
+	 */
+	void setElements(CompositeType value);
+
+} // WidgetType

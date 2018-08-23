@@ -19,31 +19,31 @@ import upctforma.Video;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link upctforma.impl.VideoImpl#getUrl <em>Url</em>}</li>
+ *   <li>{@link upctforma.impl.VideoImpl#getId <em>Id</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class VideoImpl extends SimpleElementImpl implements Video {
 	/**
-	 * The default value of the '{@link #getUrl() <em>Url</em>}' attribute.
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUrl()
+	 * @see #getId()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String URL_EDEFAULT = null;
+	protected static final String ID_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getUrl() <em>Url</em>}' attribute.
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUrl()
+	 * @see #getId()
 	 * @generated
 	 * @ordered
 	 */
-	protected String url = URL_EDEFAULT;
+	protected String id = ID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -69,8 +69,8 @@ public class VideoImpl extends SimpleElementImpl implements Video {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getUrl() {
-		return url;
+	public String getId() {
+		return id;
 	}
 
 	/**
@@ -78,11 +78,11 @@ public class VideoImpl extends SimpleElementImpl implements Video {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUrl(String newUrl) {
-		String oldUrl = url;
-		url = newUrl;
+	public void setId(String newId) {
+		String oldId = id;
+		id = newId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UpctformaPackage.VIDEO__URL, oldUrl, url));
+			eNotify(new ENotificationImpl(this, Notification.SET, UpctformaPackage.VIDEO__ID, oldId, id));
 	}
 
 	/**
@@ -93,8 +93,8 @@ public class VideoImpl extends SimpleElementImpl implements Video {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case UpctformaPackage.VIDEO__URL:
-				return getUrl();
+			case UpctformaPackage.VIDEO__ID:
+				return getId();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -107,8 +107,8 @@ public class VideoImpl extends SimpleElementImpl implements Video {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case UpctformaPackage.VIDEO__URL:
-				setUrl((String)newValue);
+			case UpctformaPackage.VIDEO__ID:
+				setId((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -122,8 +122,8 @@ public class VideoImpl extends SimpleElementImpl implements Video {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case UpctformaPackage.VIDEO__URL:
-				setUrl(URL_EDEFAULT);
+			case UpctformaPackage.VIDEO__ID:
+				setId(ID_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -137,8 +137,8 @@ public class VideoImpl extends SimpleElementImpl implements Video {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case UpctformaPackage.VIDEO__URL:
-				return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
+			case UpctformaPackage.VIDEO__ID:
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -153,8 +153,8 @@ public class VideoImpl extends SimpleElementImpl implements Video {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (url: ");
-		result.append(url);
+		result.append(" (id: ");
+		result.append(id);
 		result.append(')');
 		return result.toString();
 	}

@@ -15,32 +15,32 @@ import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
 import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 import org.xtext.services.UpctformaGrammarAccess;
-import upctforma.AggregatedType;
-import upctforma.Animation;
-import upctforma.Argument;
 import upctforma.Column;
 import upctforma.Composite;
-import upctforma.CompositeArgument;
+import upctforma.CompositeType;
 import upctforma.ContentDefinition;
 import upctforma.ContentElement;
-import upctforma.DragAndDrop;
-import upctforma.Fixed;
+import upctforma.Field;
+import upctforma.FieldValue;
+import upctforma.Game;
 import upctforma.Image;
 import upctforma.Import;
 import upctforma.ListType;
+import upctforma.ListValue;
 import upctforma.Paragraph;
+import upctforma.PlaceHolder;
+import upctforma.RecordType;
+import upctforma.RecordValue;
 import upctforma.Row;
 import upctforma.Section;
 import upctforma.SimpleElement;
 import upctforma.SimpleType;
-import upctforma.Tab;
 import upctforma.TemplateDef;
 import upctforma.Text;
 import upctforma.Type;
 import upctforma.Unit;
 import upctforma.UpctformaPackage;
 import upctforma.UseTemplate;
-import upctforma.Variable;
 import upctforma.Video;
 import upctforma.Widget;
 import upctforma.WidgetType;
@@ -59,23 +59,14 @@ public class UpctformaSemanticSequencer extends AbstractDelegatingSemanticSequen
 		Set<Parameter> parameters = context.getEnabledBooleanParameters();
 		if (epackage == UpctformaPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
-			case UpctformaPackage.AGGREGATED_TYPE:
-				sequence_AggregatedType(context, (AggregatedType) semanticObject); 
-				return; 
-			case UpctformaPackage.ANIMATION:
-				sequence_Animation(context, (Animation) semanticObject); 
-				return; 
-			case UpctformaPackage.ARGUMENT:
-				sequence_Argument_Impl(context, (Argument) semanticObject); 
-				return; 
 			case UpctformaPackage.COLUMN:
 				sequence_Column(context, (Column) semanticObject); 
 				return; 
 			case UpctformaPackage.COMPOSITE:
 				sequence_Composite_Impl(context, (Composite) semanticObject); 
 				return; 
-			case UpctformaPackage.COMPOSITE_ARGUMENT:
-				sequence_CompositeArgument_Impl(context, (CompositeArgument) semanticObject); 
+			case UpctformaPackage.COMPOSITE_TYPE:
+				sequence_CompositeType_Impl(context, (CompositeType) semanticObject); 
 				return; 
 			case UpctformaPackage.CONTENT_DEFINITION:
 				sequence_ContentDefinition(context, (ContentDefinition) semanticObject); 
@@ -83,11 +74,14 @@ public class UpctformaSemanticSequencer extends AbstractDelegatingSemanticSequen
 			case UpctformaPackage.CONTENT_ELEMENT:
 				sequence_ContentElement_Impl(context, (ContentElement) semanticObject); 
 				return; 
-			case UpctformaPackage.DRAG_AND_DROP:
-				sequence_DragAndDrop(context, (DragAndDrop) semanticObject); 
+			case UpctformaPackage.FIELD:
+				sequence_Field(context, (Field) semanticObject); 
 				return; 
-			case UpctformaPackage.FIXED:
-				sequence_Fixed(context, (Fixed) semanticObject); 
+			case UpctformaPackage.FIELD_VALUE:
+				sequence_FieldValue(context, (FieldValue) semanticObject); 
+				return; 
+			case UpctformaPackage.GAME:
+				sequence_Game(context, (Game) semanticObject); 
 				return; 
 			case UpctformaPackage.IMAGE:
 				sequence_Image(context, (Image) semanticObject); 
@@ -98,11 +92,20 @@ public class UpctformaSemanticSequencer extends AbstractDelegatingSemanticSequen
 			case UpctformaPackage.LIST_TYPE:
 				sequence_ListType(context, (ListType) semanticObject); 
 				return; 
+			case UpctformaPackage.LIST_VALUE:
+				sequence_ListValue(context, (ListValue) semanticObject); 
+				return; 
 			case UpctformaPackage.PARAGRAPH:
 				sequence_Paragraph(context, (Paragraph) semanticObject); 
 				return; 
-			case UpctformaPackage.PARAMETER:
-				sequence_Parameter_Impl(context, (upctforma.Parameter) semanticObject); 
+			case UpctformaPackage.PLACE_HOLDER:
+				sequence_PlaceHolder(context, (PlaceHolder) semanticObject); 
+				return; 
+			case UpctformaPackage.RECORD_TYPE:
+				sequence_RecordType(context, (RecordType) semanticObject); 
+				return; 
+			case UpctformaPackage.RECORD_VALUE:
+				sequence_RecordValue(context, (RecordValue) semanticObject); 
 				return; 
 			case UpctformaPackage.ROW:
 				sequence_Row(context, (Row) semanticObject); 
@@ -111,13 +114,10 @@ public class UpctformaSemanticSequencer extends AbstractDelegatingSemanticSequen
 				sequence_Section(context, (Section) semanticObject); 
 				return; 
 			case UpctformaPackage.SIMPLE_ELEMENT:
-				sequence_SimpleArgument_Impl(context, (SimpleElement) semanticObject); 
+				sequence_SimpleElement_Impl(context, (SimpleElement) semanticObject); 
 				return; 
 			case UpctformaPackage.SIMPLE_TYPE:
 				sequence_SimpleType(context, (SimpleType) semanticObject); 
-				return; 
-			case UpctformaPackage.TAB:
-				sequence_Tab(context, (Tab) semanticObject); 
 				return; 
 			case UpctformaPackage.TEMPLATE_DEF:
 				sequence_TemplateDef(context, (TemplateDef) semanticObject); 
@@ -133,9 +133,6 @@ public class UpctformaSemanticSequencer extends AbstractDelegatingSemanticSequen
 				return; 
 			case UpctformaPackage.USE_TEMPLATE:
 				sequence_UseTemplate(context, (UseTemplate) semanticObject); 
-				return; 
-			case UpctformaPackage.VARIABLE:
-				sequence_Variable(context, (Variable) semanticObject); 
 				return; 
 			case UpctformaPackage.VIDEO:
 				sequence_Video(context, (Video) semanticObject); 
@@ -153,45 +150,6 @@ public class UpctformaSemanticSequencer extends AbstractDelegatingSemanticSequen
 	
 	/**
 	 * Contexts:
-	 *     Type returns AggregatedType
-	 *     AggregatedType returns AggregatedType
-	 *
-	 * Constraint:
-	 *     (name=EString (type+=SimpleType type+=SimpleType*)?)
-	 */
-	protected void sequence_AggregatedType(ISerializationContext context, AggregatedType semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     Argument returns Animation
-	 *     Animation returns Animation
-	 *
-	 * Constraint:
-	 *     (width=EString? image=EString? (arguments+=SimpleArgument arguments+=SimpleArgument*)?)
-	 */
-	protected void sequence_Animation(ISerializationContext context, Animation semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     Argument returns Argument
-	 *     Argument_Impl returns Argument
-	 *
-	 * Constraint:
-	 *     {Argument}
-	 */
-	protected void sequence_Argument_Impl(ISerializationContext context, Argument semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
 	 *     ContentElement returns Column
 	 *     Column returns Column
 	 *
@@ -205,14 +163,21 @@ public class UpctformaSemanticSequencer extends AbstractDelegatingSemanticSequen
 	
 	/**
 	 * Contexts:
-	 *     Argument returns CompositeArgument
-	 *     CompositeArgument_Impl returns CompositeArgument
+	 *     Type returns CompositeType
+	 *     CompositeType returns CompositeType
+	 *     CompositeType_Impl returns CompositeType
 	 *
 	 * Constraint:
-	 *     (arguments+=SimpleArgument arguments+=SimpleArgument*)?
+	 *     name=EString
 	 */
-	protected void sequence_CompositeArgument_Impl(ISerializationContext context, CompositeArgument semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+	protected void sequence_CompositeType_Impl(ISerializationContext context, CompositeType semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, UpctformaPackage.Literals.NAME_ELEMENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, UpctformaPackage.Literals.NAME_ELEMENT__NAME));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getCompositeType_ImplAccess().getNameEStringParserRuleCall_2_0(), semanticObject.getName());
+		feeder.finish();
 	}
 	
 	
@@ -263,27 +228,55 @@ public class UpctformaSemanticSequencer extends AbstractDelegatingSemanticSequen
 	
 	/**
 	 * Contexts:
-	 *     Argument returns DragAndDrop
-	 *     DragAndDrop returns DragAndDrop
+	 *     FieldValue returns FieldValue
 	 *
 	 * Constraint:
-	 *     (arguments+=SimpleArgument arguments+=SimpleArgument*)?
+	 *     (name=EString fieldvalue=ContentElement)
 	 */
-	protected void sequence_DragAndDrop(ISerializationContext context, DragAndDrop semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+	protected void sequence_FieldValue(ISerializationContext context, FieldValue semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, UpctformaPackage.Literals.NAME_ELEMENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, UpctformaPackage.Literals.NAME_ELEMENT__NAME));
+			if (transientValues.isValueTransient(semanticObject, UpctformaPackage.Literals.FIELD_VALUE__FIELDVALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, UpctformaPackage.Literals.FIELD_VALUE__FIELDVALUE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getFieldValueAccess().getNameEStringParserRuleCall_0_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getFieldValueAccess().getFieldvalueContentElementParserRuleCall_2_0(), semanticObject.getFieldvalue());
+		feeder.finish();
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     Parameter returns Fixed
-	 *     ContentElement returns Fixed
-	 *     Fixed returns Fixed
+	 *     Field returns Field
 	 *
 	 * Constraint:
-	 *     type=[Type|EString]?
+	 *     (name=EString fieldtype=[Type|EPrimitiveTypes])
 	 */
-	protected void sequence_Fixed(ISerializationContext context, Fixed semanticObject) {
+	protected void sequence_Field(ISerializationContext context, Field semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, UpctformaPackage.Literals.NAME_ELEMENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, UpctformaPackage.Literals.NAME_ELEMENT__NAME));
+			if (transientValues.isValueTransient(semanticObject, UpctformaPackage.Literals.FIELD__FIELDTYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, UpctformaPackage.Literals.FIELD__FIELDTYPE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getFieldAccess().getNameEStringParserRuleCall_0_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getFieldAccess().getFieldtypeTypeEPrimitiveTypesParserRuleCall_2_0_1(), semanticObject.eGet(UpctformaPackage.Literals.FIELD__FIELDTYPE, false));
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     ContentElement returns Game
+	 *     Game returns Game
+	 *
+	 * Constraint:
+	 *     id=EString?
+	 */
+	protected void sequence_Game(ISerializationContext context, Game semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -291,8 +284,6 @@ public class UpctformaSemanticSequencer extends AbstractDelegatingSemanticSequen
 	/**
 	 * Contexts:
 	 *     ContentElement returns Image
-	 *     Argument returns Image
-	 *     SimpleArgument returns Image
 	 *     Image returns Image
 	 *
 	 * Constraint:
@@ -324,12 +315,35 @@ public class UpctformaSemanticSequencer extends AbstractDelegatingSemanticSequen
 	/**
 	 * Contexts:
 	 *     Type returns ListType
+	 *     CompositeType returns ListType
 	 *     ListType returns ListType
 	 *
 	 * Constraint:
-	 *     (name=EString listtype=[SimpleType|EString]?)
+	 *     (name=EString listtype=[Type|EPrimitiveTypes])
 	 */
 	protected void sequence_ListType(ISerializationContext context, ListType semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, UpctformaPackage.Literals.NAME_ELEMENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, UpctformaPackage.Literals.NAME_ELEMENT__NAME));
+			if (transientValues.isValueTransient(semanticObject, UpctformaPackage.Literals.LIST_TYPE__LISTTYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, UpctformaPackage.Literals.LIST_TYPE__LISTTYPE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getListTypeAccess().getNameEStringParserRuleCall_0_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getListTypeAccess().getListtypeTypeEPrimitiveTypesParserRuleCall_3_0_1(), semanticObject.eGet(UpctformaPackage.Literals.LIST_TYPE__LISTTYPE, false));
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     ContentElement returns ListValue
+	 *     ListValue returns ListValue
+	 *
+	 * Constraint:
+	 *     (listvalues+=ContentElement listvalues+=ContentElement*)
+	 */
+	protected void sequence_ListValue(ISerializationContext context, ListValue semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -348,14 +362,46 @@ public class UpctformaSemanticSequencer extends AbstractDelegatingSemanticSequen
 	
 	/**
 	 * Contexts:
-	 *     Parameter returns Parameter
-	 *     ContentElement returns Parameter
-	 *     Parameter_Impl returns Parameter
+	 *     ContentElement returns PlaceHolder
+	 *     PlaceHolder returns PlaceHolder
 	 *
 	 * Constraint:
-	 *     {Parameter}
+	 *     type=[Type|EPrimitiveTypes]
 	 */
-	protected void sequence_Parameter_Impl(ISerializationContext context, upctforma.Parameter semanticObject) {
+	protected void sequence_PlaceHolder(ISerializationContext context, PlaceHolder semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, UpctformaPackage.Literals.PLACE_HOLDER__TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, UpctformaPackage.Literals.PLACE_HOLDER__TYPE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getPlaceHolderAccess().getTypeTypeEPrimitiveTypesParserRuleCall_1_0_1(), semanticObject.eGet(UpctformaPackage.Literals.PLACE_HOLDER__TYPE, false));
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Type returns RecordType
+	 *     CompositeType returns RecordType
+	 *     RecordType returns RecordType
+	 *
+	 * Constraint:
+	 *     (name=EString recordtype+=Field recordtype+=Field*)
+	 */
+	protected void sequence_RecordType(ISerializationContext context, RecordType semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     ContentElement returns RecordValue
+	 *     RecordValue returns RecordValue
+	 *
+	 * Constraint:
+	 *     (recordvalues+=FieldValue recordvalues+=FieldValue*)
+	 */
+	protected void sequence_RecordValue(ISerializationContext context, RecordValue semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -388,14 +434,12 @@ public class UpctformaSemanticSequencer extends AbstractDelegatingSemanticSequen
 	/**
 	 * Contexts:
 	 *     ContentElement returns SimpleElement
-	 *     Argument returns SimpleElement
-	 *     SimpleArgument returns SimpleElement
-	 *     SimpleArgument_Impl returns SimpleElement
+	 *     SimpleElement_Impl returns SimpleElement
 	 *
 	 * Constraint:
 	 *     {SimpleElement}
 	 */
-	protected void sequence_SimpleArgument_Impl(ISerializationContext context, SimpleElement semanticObject) {
+	protected void sequence_SimpleElement_Impl(ISerializationContext context, SimpleElement semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -406,23 +450,16 @@ public class UpctformaSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *     SimpleType returns SimpleType
 	 *
 	 * Constraint:
-	 *     (name=EString type=TypeSimpleElement?)
+	 *     name=PrimitiveTypes
 	 */
 	protected void sequence_SimpleType(ISerializationContext context, SimpleType semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     Argument returns Tab
-	 *     Tab returns Tab
-	 *
-	 * Constraint:
-	 *     (arguments+=SimpleArgument arguments+=SimpleArgument*)?
-	 */
-	protected void sequence_Tab(ISerializationContext context, Tab semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, UpctformaPackage.Literals.NAME_ELEMENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, UpctformaPackage.Literals.NAME_ELEMENT__NAME));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getSimpleTypeAccess().getNamePrimitiveTypesTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.finish();
 	}
 	
 	
@@ -441,8 +478,6 @@ public class UpctformaSemanticSequencer extends AbstractDelegatingSemanticSequen
 	/**
 	 * Contexts:
 	 *     ContentElement returns Text
-	 *     Argument returns Text
-	 *     SimpleArgument returns Text
 	 *     Text returns Text
 	 *
 	 * Constraint:
@@ -489,7 +524,7 @@ public class UpctformaSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *     UseTemplate returns UseTemplate
 	 *
 	 * Constraint:
-	 *     (typetemplate=[TemplateDef|EString]? (arguments+=Argument arguments+=Argument*)?)
+	 *     (typetemplate=[TemplateDef|EString]? (templateelements+=ContentElement templateelements+=ContentElement*)?)
 	 */
 	protected void sequence_UseTemplate(ISerializationContext context, UseTemplate semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -498,27 +533,11 @@ public class UpctformaSemanticSequencer extends AbstractDelegatingSemanticSequen
 	
 	/**
 	 * Contexts:
-	 *     Parameter returns Variable
-	 *     ContentElement returns Variable
-	 *     Variable returns Variable
-	 *
-	 * Constraint:
-	 *     type=[Type|EString]?
-	 */
-	protected void sequence_Variable(ISerializationContext context, Variable semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
 	 *     ContentElement returns Video
-	 *     Argument returns Video
-	 *     SimpleArgument returns Video
 	 *     Video returns Video
 	 *
 	 * Constraint:
-	 *     url=EString?
+	 *     id=EString?
 	 */
 	protected void sequence_Video(ISerializationContext context, Video semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -531,7 +550,7 @@ public class UpctformaSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *     WidgetType returns WidgetType
 	 *
 	 * Constraint:
-	 *     (name=EString (parameters+=Parameter parameters+=Parameter*)?)
+	 *     (name=EString widgettypeelements+=[Type|EPrimitiveTypes] widgettypeelements+=[Type|EPrimitiveTypes]*)
 	 */
 	protected void sequence_WidgetType(ISerializationContext context, WidgetType semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -541,11 +560,10 @@ public class UpctformaSemanticSequencer extends AbstractDelegatingSemanticSequen
 	/**
 	 * Contexts:
 	 *     ContentElement returns Widget
-	 *     Argument returns Widget
 	 *     Widget returns Widget
 	 *
 	 * Constraint:
-	 *     (name=EString widgettype=[WidgetType|EString] (widgetarguments+=Argument widgetarguments+=Argument*)?)
+	 *     (name=EString widgettype=[WidgetType|EString] (widgetelements+=ContentElement widgetelements+=ContentElement*)?)
 	 */
 	protected void sequence_Widget(ISerializationContext context, Widget semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

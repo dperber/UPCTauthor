@@ -2,6 +2,7 @@
  */
 package upctformagami;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 import upctforma.Unit;
@@ -19,9 +20,8 @@ import upctformaevalua.EvaluationUnit;
  * <ul>
  *   <li>{@link upctformagami.Mission#getType <em>Type</em>}</li>
  *   <li>{@link upctformagami.Mission#getNextunit <em>Nextunit</em>}</li>
- *   <li>{@link upctformagami.Mission#getInitialScore <em>Initial Score</em>}</li>
- *   <li>{@link upctformagami.Mission#getFinalScore <em>Final Score</em>}</li>
  *   <li>{@link upctformagami.Mission#getNexteval <em>Nexteval</em>}</li>
+ *   <li>{@link upctformagami.Mission#getMissionrange <em>Missionrange</em>}</li>
  * </ul>
  *
  * @see upctformagami.UpctformagamiPackage#getMission()
@@ -85,58 +85,6 @@ public interface Mission extends EObject {
 	void setNextunit(Unit value);
 
 	/**
-	 * Returns the value of the '<em><b>Initial Score</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Initial Score</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Initial Score</em>' attribute.
-	 * @see #setInitialScore(double)
-	 * @see upctformagami.UpctformagamiPackage#getMission_InitialScore()
-	 * @model
-	 * @generated
-	 */
-	double getInitialScore();
-
-	/**
-	 * Sets the value of the '{@link upctformagami.Mission#getInitialScore <em>Initial Score</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Initial Score</em>' attribute.
-	 * @see #getInitialScore()
-	 * @generated
-	 */
-	void setInitialScore(double value);
-
-	/**
-	 * Returns the value of the '<em><b>Final Score</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Final Score</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Final Score</em>' attribute.
-	 * @see #setFinalScore(double)
-	 * @see upctformagami.UpctformagamiPackage#getMission_FinalScore()
-	 * @model
-	 * @generated
-	 */
-	double getFinalScore();
-
-	/**
-	 * Sets the value of the '{@link upctformagami.Mission#getFinalScore <em>Final Score</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Final Score</em>' attribute.
-	 * @see #getFinalScore()
-	 * @generated
-	 */
-	void setFinalScore(double value);
-
-	/**
 	 * Returns the value of the '<em><b>Nexteval</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -161,5 +109,21 @@ public interface Mission extends EObject {
 	 * @generated
 	 */
 	void setNexteval(EvaluationUnit value);
+
+	/**
+	 * Returns the value of the '<em><b>Missionrange</b></em>' containment reference list.
+	 * The list contents are of type {@link upctformagami.ScoreRange}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Missionrange</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Missionrange</em>' containment reference list.
+	 * @see upctformagami.UpctformagamiPackage#getMission_Missionrange()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<ScoreRange> getMissionrange();
 
 } // Mission

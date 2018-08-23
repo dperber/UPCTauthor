@@ -10,6 +10,8 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import upctforma.UpctformaPackage;
+import upctforma.impl.UpctformaPackageImpl;
 import upctformaevalua.Answer;
 import upctformaevalua.Assertion;
 import upctformaevalua.Evaluation;
@@ -31,6 +33,8 @@ import upctformaevalua.Unique;
 import upctformaevalua.UniqueAnswer;
 import upctformaevalua.UpctformaevaluaFactory;
 import upctformaevalua.UpctformaevaluaPackage;
+import upctformagami.UpctformagamiPackage;
+import upctformagami.impl.UpctformagamiPackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -218,11 +222,19 @@ public class UpctformaevaluaPackageImpl extends EPackageImpl implements Upctform
 
 		isInited = true;
 
+		// Obtain or create and register interdependencies
+		UpctformagamiPackageImpl theUpctformagamiPackage = (UpctformagamiPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(UpctformagamiPackage.eNS_URI) instanceof UpctformagamiPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(UpctformagamiPackage.eNS_URI) : UpctformagamiPackage.eINSTANCE);
+		UpctformaPackageImpl theUpctformaPackage = (UpctformaPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(UpctformaPackage.eNS_URI) instanceof UpctformaPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(UpctformaPackage.eNS_URI) : UpctformaPackage.eINSTANCE);
+
 		// Create package meta-data objects
 		theUpctformaevaluaPackage.createPackageContents();
+		theUpctformagamiPackage.createPackageContents();
+		theUpctformaPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theUpctformaevaluaPackage.initializePackageContents();
+		theUpctformagamiPackage.initializePackageContents();
+		theUpctformaPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theUpctformaevaluaPackage.freeze();
@@ -701,6 +713,7 @@ public class UpctformaevaluaPackageImpl extends EPackageImpl implements Upctform
 		// Add supertypes to classes
 		evaluationEClass.getESuperTypes().add(this.getNameElement());
 		evaluationUnitEClass.getESuperTypes().add(this.getNameElement());
+		evaluationUnitEClass.getESuperTypes().add(ecorePackage.getEObject());
 		trainingEClass.getESuperTypes().add(this.getEvaluationUnit());
 		finalEClass.getESuperTypes().add(this.getEvaluationUnit());
 		paragraphEClass.getESuperTypes().add(this.getStatement());

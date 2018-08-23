@@ -13,5 +13,5 @@ package upctforma;
  * @model
  * @generated
  */
-public interface SimpleElement extends ContentElement, Argument {
+public interface SimpleElement extends ContentElement {
 } // SimpleElement

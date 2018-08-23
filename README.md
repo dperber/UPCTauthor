@@ -1,2 +1,1 @@
-# upctauthor
 # UPCTauthor

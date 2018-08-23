@@ -3,14 +3,11 @@
 package upctforma.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import upctforma.ListType;
-import upctforma.SimpleType;
+import upctforma.Type;
 import upctforma.UpctformaPackage;
 
 /**
@@ -26,7 +23,7 @@ import upctforma.UpctformaPackage;
  *
  * @generated
  */
-public class ListTypeImpl extends TypeImpl implements ListType {
+public class ListTypeImpl extends CompositeTypeImpl implements ListType {
 	/**
 	 * The cached value of the '{@link #getListtype() <em>Listtype</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -35,7 +32,7 @@ public class ListTypeImpl extends TypeImpl implements ListType {
 	 * @generated
 	 * @ordered
 	 */
-	protected SimpleType listtype;
+	protected Type listtype;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -61,10 +58,10 @@ public class ListTypeImpl extends TypeImpl implements ListType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SimpleType getListtype() {
+	public Type getListtype() {
 		if (listtype != null && listtype.eIsProxy()) {
 			InternalEObject oldListtype = (InternalEObject)listtype;
-			listtype = (SimpleType)eResolveProxy(oldListtype);
+			listtype = (Type)eResolveProxy(oldListtype);
 			if (listtype != oldListtype) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UpctformaPackage.LIST_TYPE__LISTTYPE, oldListtype, listtype));
@@ -78,7 +75,7 @@ public class ListTypeImpl extends TypeImpl implements ListType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SimpleType basicGetListtype() {
+	public Type basicGetListtype() {
 		return listtype;
 	}
 
@@ -87,8 +84,8 @@ public class ListTypeImpl extends TypeImpl implements ListType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setListtype(SimpleType newListtype) {
-		SimpleType oldListtype = listtype;
+	public void setListtype(Type newListtype) {
+		Type oldListtype = listtype;
 		listtype = newListtype;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, UpctformaPackage.LIST_TYPE__LISTTYPE, oldListtype, listtype));
@@ -118,7 +115,7 @@ public class ListTypeImpl extends TypeImpl implements ListType {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case UpctformaPackage.LIST_TYPE__LISTTYPE:
-				setListtype((SimpleType)newValue);
+				setListtype((Type)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -133,7 +130,7 @@ public class ListTypeImpl extends TypeImpl implements ListType {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case UpctformaPackage.LIST_TYPE__LISTTYPE:
-				setListtype((SimpleType)null);
+				setListtype((Type)null);
 				return;
 		}
 		super.eUnset(featureID);

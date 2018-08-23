@@ -4,8 +4,6 @@ package upctforma;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EEnum;
-import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -23,7 +21,6 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see upctforma.UpctformaFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore invocationDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot' settingDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot' validationDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot'"
  * @generated
  */
 public interface UpctformaPackage extends EPackage {
@@ -70,42 +67,6 @@ public interface UpctformaPackage extends EPackage {
 	int COLUMN = 0;
 
 	/**
-	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLUMN__ELEMENTS = UpctformaPackage.COMPOSITE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Width</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLUMN__WIDTH = UpctformaPackage.COMPOSITE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Column</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLUMN_FEATURE_COUNT = UpctformaPackage.COMPOSITE_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Column</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLUMN_OPERATION_COUNT = UpctformaPackage.COMPOSITE_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link upctforma.impl.TemplateDefImpl <em>Template Def</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -114,42 +75,6 @@ public interface UpctformaPackage extends EPackage {
 	 * @generated
 	 */
 	int TEMPLATE_DEF = 1;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEMPLATE_DEF__NAME = UpctformaPackage.NAME_ELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Rows</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEMPLATE_DEF__ROWS = UpctformaPackage.NAME_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Template Def</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEMPLATE_DEF_FEATURE_COUNT = UpctformaPackage.NAME_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Template Def</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEMPLATE_DEF_OPERATION_COUNT = UpctformaPackage.NAME_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link upctforma.impl.ImageImpl <em>Image</em>}' class.
@@ -162,33 +87,6 @@ public interface UpctformaPackage extends EPackage {
 	int IMAGE = 2;
 
 	/**
-	 * The feature id for the '<em><b>Url</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE__URL = UpctformaPackage.SIMPLE_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Image</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_FEATURE_COUNT = UpctformaPackage.SIMPLE_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Image</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_OPERATION_COUNT = UpctformaPackage.SIMPLE_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link upctforma.impl.NameElementImpl <em>Name Element</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -197,33 +95,6 @@ public interface UpctformaPackage extends EPackage {
 	 * @generated
 	 */
 	int NAME_ELEMENT = 3;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NAME_ELEMENT__NAME = 0;
-
-	/**
-	 * The number of structural features of the '<em>Name Element</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NAME_ELEMENT_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Name Element</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NAME_ELEMENT_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link upctforma.impl.WidgetImpl <em>Widget</em>}' class.
@@ -236,51 +107,6 @@ public interface UpctformaPackage extends EPackage {
 	int WIDGET = 4;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WIDGET__NAME = UpctformaPackage.CONTENT_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Widgettype</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WIDGET__WIDGETTYPE = UpctformaPackage.CONTENT_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Widgetarguments</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WIDGET__WIDGETARGUMENTS = UpctformaPackage.CONTENT_ELEMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of structural features of the '<em>Widget</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WIDGET_FEATURE_COUNT = UpctformaPackage.CONTENT_ELEMENT_FEATURE_COUNT + 3;
-
-	/**
-	 * The number of operations of the '<em>Widget</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WIDGET_OPERATION_COUNT = UpctformaPackage.CONTENT_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link upctforma.impl.TextImpl <em>Text</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -289,33 +115,6 @@ public interface UpctformaPackage extends EPackage {
 	 * @generated
 	 */
 	int TEXT = 5;
-
-	/**
-	 * The feature id for the '<em><b>Paragraphs</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT__PARAGRAPHS = UpctformaPackage.SIMPLE_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Text</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_FEATURE_COUNT = UpctformaPackage.SIMPLE_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Text</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_OPERATION_COUNT = UpctformaPackage.SIMPLE_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link upctforma.impl.CompositeImpl <em>Composite</em>}' class.
@@ -328,24 +127,6 @@ public interface UpctformaPackage extends EPackage {
 	int COMPOSITE = 6;
 
 	/**
-	 * The number of structural features of the '<em>Composite</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPOSITE_FEATURE_COUNT = UpctformaPackage.CONTENT_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Composite</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPOSITE_OPERATION_COUNT = UpctformaPackage.CONTENT_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link upctforma.impl.VideoImpl <em>Video</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -356,33 +137,6 @@ public interface UpctformaPackage extends EPackage {
 	int VIDEO = 7;
 
 	/**
-	 * The feature id for the '<em><b>Url</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIDEO__URL = UpctformaPackage.SIMPLE_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Video</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIDEO_FEATURE_COUNT = UpctformaPackage.SIMPLE_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Video</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIDEO_OPERATION_COUNT = UpctformaPackage.SIMPLE_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link upctforma.impl.ContentDefinitionImpl <em>Content Definition</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -391,69 +145,6 @@ public interface UpctformaPackage extends EPackage {
 	 * @generated
 	 */
 	int CONTENT_DEFINITION = 8;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTENT_DEFINITION__NAME = UpctformaPackage.NAME_ELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Templates</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTENT_DEFINITION__TEMPLATES = UpctformaPackage.NAME_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Imports</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTENT_DEFINITION__IMPORTS = UpctformaPackage.NAME_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Unit</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTENT_DEFINITION__UNIT = UpctformaPackage.NAME_ELEMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Types</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTENT_DEFINITION__TYPES = UpctformaPackage.NAME_ELEMENT_FEATURE_COUNT + 3;
-
-	/**
-	 * The number of structural features of the '<em>Content Definition</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTENT_DEFINITION_FEATURE_COUNT = UpctformaPackage.NAME_ELEMENT_FEATURE_COUNT + 4;
-
-	/**
-	 * The number of operations of the '<em>Content Definition</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTENT_DEFINITION_OPERATION_COUNT = UpctformaPackage.NAME_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link upctforma.impl.ContentElementImpl <em>Content Element</em>}' class.
@@ -484,6 +175,123 @@ public interface UpctformaPackage extends EPackage {
 	int CONTENT_ELEMENT_OPERATION_COUNT = 0;
 
 	/**
+	 * The number of structural features of the '<em>Composite</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_FEATURE_COUNT = CONTENT_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Composite</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_OPERATION_COUNT = CONTENT_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLUMN__ELEMENTS = COMPOSITE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLUMN__WIDTH = COMPOSITE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Column</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLUMN_FEATURE_COUNT = COMPOSITE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Column</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLUMN_OPERATION_COUNT = COMPOSITE_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAME_ELEMENT__NAME = 0;
+
+	/**
+	 * The number of structural features of the '<em>Name Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAME_ELEMENT_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Name Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAME_ELEMENT_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEMPLATE_DEF__NAME = NAME_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Rows</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEMPLATE_DEF__ROWS = NAME_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Template Def</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEMPLATE_DEF_FEATURE_COUNT = NAME_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Template Def</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEMPLATE_DEF_OPERATION_COUNT = NAME_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link upctforma.impl.SimpleElementImpl <em>Simple Element</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -500,7 +308,7 @@ public interface UpctformaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_ELEMENT_FEATURE_COUNT = UpctformaPackage.CONTENT_ELEMENT_FEATURE_COUNT + 0;
+	int SIMPLE_ELEMENT_FEATURE_COUNT = CONTENT_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Simple Element</em>' class.
@@ -509,17 +317,206 @@ public interface UpctformaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_ELEMENT_OPERATION_COUNT = UpctformaPackage.CONTENT_ELEMENT_OPERATION_COUNT + 0;
+	int SIMPLE_ELEMENT_OPERATION_COUNT = CONTENT_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link upctforma.impl.ParameterImpl <em>Parameter</em>}' class.
+	 * The feature id for the '<em><b>Url</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see upctforma.impl.ParameterImpl
-	 * @see upctforma.impl.UpctformaPackageImpl#getParameter()
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE__URL = SIMPLE_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Image</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_FEATURE_COUNT = SIMPLE_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Image</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_OPERATION_COUNT = SIMPLE_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WIDGET__NAME = CONTENT_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Widgettype</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WIDGET__WIDGETTYPE = CONTENT_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Widgetelements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WIDGET__WIDGETELEMENTS = CONTENT_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Widget</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WIDGET_FEATURE_COUNT = CONTENT_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of operations of the '<em>Widget</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WIDGET_OPERATION_COUNT = CONTENT_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Paragraphs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT__PARAGRAPHS = SIMPLE_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Text</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_FEATURE_COUNT = SIMPLE_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Text</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_OPERATION_COUNT = SIMPLE_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIDEO__ID = SIMPLE_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Video</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIDEO_FEATURE_COUNT = SIMPLE_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Video</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIDEO_OPERATION_COUNT = SIMPLE_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTENT_DEFINITION__NAME = NAME_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Templates</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTENT_DEFINITION__TEMPLATES = NAME_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Imports</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTENT_DEFINITION__IMPORTS = NAME_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Unit</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTENT_DEFINITION__UNIT = NAME_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Types</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTENT_DEFINITION__TYPES = NAME_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>Content Definition</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTENT_DEFINITION_FEATURE_COUNT = NAME_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of operations of the '<em>Content Definition</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTENT_DEFINITION_OPERATION_COUNT = NAME_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link upctforma.impl.PlaceHolderImpl <em>Place Holder</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see upctforma.impl.PlaceHolderImpl
+	 * @see upctforma.impl.UpctformaPackageImpl#getPlaceHolder()
 	 * @generated
 	 */
-	int PARAMETER = 11;
+	int PLACE_HOLDER = 11;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.
@@ -528,25 +525,25 @@ public interface UpctformaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER__TYPE = UpctformaPackage.CONTENT_ELEMENT_FEATURE_COUNT + 0;
+	int PLACE_HOLDER__TYPE = CONTENT_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Parameter</em>' class.
+	 * The number of structural features of the '<em>Place Holder</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_FEATURE_COUNT = UpctformaPackage.CONTENT_ELEMENT_FEATURE_COUNT + 1;
+	int PLACE_HOLDER_FEATURE_COUNT = CONTENT_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Parameter</em>' class.
+	 * The number of operations of the '<em>Place Holder</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_OPERATION_COUNT = UpctformaPackage.CONTENT_ELEMENT_OPERATION_COUNT + 0;
+	int PLACE_HOLDER_OPERATION_COUNT = CONTENT_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link upctforma.impl.RowImpl <em>Row</em>}' class.
@@ -565,7 +562,7 @@ public interface UpctformaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROW__COLUMNS = UpctformaPackage.COMPOSITE_FEATURE_COUNT + 0;
+	int ROW__COLUMNS = COMPOSITE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Usetemplate</b></em>' containment reference.
@@ -574,7 +571,7 @@ public interface UpctformaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROW__USETEMPLATE = UpctformaPackage.COMPOSITE_FEATURE_COUNT + 1;
+	int ROW__USETEMPLATE = COMPOSITE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Row</em>' class.
@@ -583,43 +580,7 @@ public interface UpctformaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROW_FEATURE_COUNT = UpctformaPackage.COMPOSITE_FEATURE_COUNT + 2;
-
-	/**
-	 * The operation id for the '<em>Get Argument Type</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROW___GET_ARGUMENT_TYPE__SIMPLEELEMENT = UpctformaPackage.COMPOSITE_OPERATION_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Get Arguments</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROW___GET_ARGUMENTS__ROW = UpctformaPackage.COMPOSITE_OPERATION_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Get Parameter Type</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROW___GET_PARAMETER_TYPE__TYPESIMPLEELEMENT = UpctformaPackage.COMPOSITE_OPERATION_COUNT + 2;
-
-	/**
-	 * The operation id for the '<em>Get Parameters</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROW___GET_PARAMETERS__ROW = UpctformaPackage.COMPOSITE_OPERATION_COUNT + 3;
+	int ROW_FEATURE_COUNT = COMPOSITE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Row</em>' class.
@@ -628,7 +589,7 @@ public interface UpctformaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROW_OPERATION_COUNT = UpctformaPackage.COMPOSITE_OPERATION_COUNT + 4;
+	int ROW_OPERATION_COUNT = COMPOSITE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link upctforma.impl.UnitImpl <em>Unit</em>}' class.
@@ -647,7 +608,7 @@ public interface UpctformaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT__NAME = UpctformaPackage.NAME_ELEMENT__NAME;
+	int UNIT__NAME = NAME_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Sections</b></em>' containment reference list.
@@ -656,7 +617,7 @@ public interface UpctformaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT__SECTIONS = UpctformaPackage.NAME_ELEMENT_FEATURE_COUNT + 0;
+	int UNIT__SECTIONS = NAME_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Author</b></em>' attribute.
@@ -665,7 +626,7 @@ public interface UpctformaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT__AUTHOR = UpctformaPackage.NAME_ELEMENT_FEATURE_COUNT + 1;
+	int UNIT__AUTHOR = NAME_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Unit</em>' class.
@@ -674,7 +635,7 @@ public interface UpctformaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE_COUNT = UpctformaPackage.NAME_ELEMENT_FEATURE_COUNT + 2;
+	int UNIT_FEATURE_COUNT = NAME_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Unit</em>' class.
@@ -683,7 +644,7 @@ public interface UpctformaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_OPERATION_COUNT = UpctformaPackage.NAME_ELEMENT_OPERATION_COUNT + 0;
+	int UNIT_OPERATION_COUNT = NAME_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link upctforma.impl.SectionImpl <em>Section</em>}' class.
@@ -702,7 +663,7 @@ public interface UpctformaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SECTION__NAME = UpctformaPackage.NAME_ELEMENT__NAME;
+	int SECTION__NAME = NAME_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Rows</b></em>' containment reference list.
@@ -711,7 +672,7 @@ public interface UpctformaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SECTION__ROWS = UpctformaPackage.NAME_ELEMENT_FEATURE_COUNT + 0;
+	int SECTION__ROWS = NAME_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Image</b></em>' attribute.
@@ -720,7 +681,7 @@ public interface UpctformaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SECTION__IMAGE = UpctformaPackage.NAME_ELEMENT_FEATURE_COUNT + 1;
+	int SECTION__IMAGE = NAME_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' attribute.
@@ -729,7 +690,7 @@ public interface UpctformaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SECTION__TITLE = UpctformaPackage.NAME_ELEMENT_FEATURE_COUNT + 2;
+	int SECTION__TITLE = NAME_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Section</em>' class.
@@ -738,7 +699,7 @@ public interface UpctformaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SECTION_FEATURE_COUNT = UpctformaPackage.NAME_ELEMENT_FEATURE_COUNT + 3;
+	int SECTION_FEATURE_COUNT = NAME_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Section</em>' class.
@@ -747,7 +708,7 @@ public interface UpctformaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SECTION_OPERATION_COUNT = UpctformaPackage.NAME_ELEMENT_OPERATION_COUNT + 0;
+	int SECTION_OPERATION_COUNT = NAME_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link upctforma.impl.ImportImpl <em>Import</em>}' class.
@@ -824,163 +785,6 @@ public interface UpctformaPackage extends EPackage {
 	int PARAGRAPH_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link upctforma.impl.ArgumentImpl <em>Argument</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see upctforma.impl.ArgumentImpl
-	 * @see upctforma.impl.UpctformaPackageImpl#getArgument()
-	 * @generated
-	 */
-	int ARGUMENT = 17;
-
-	/**
-	 * The number of structural features of the '<em>Argument</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARGUMENT_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Argument</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARGUMENT_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link upctforma.impl.TabImpl <em>Tab</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see upctforma.impl.TabImpl
-	 * @see upctforma.impl.UpctformaPackageImpl#getTab()
-	 * @generated
-	 */
-	int TAB = 18;
-
-	/**
-	 * The feature id for the '<em><b>Arguments</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TAB__ARGUMENTS = UpctformaPackage.COMPOSITE_ARGUMENT__ARGUMENTS;
-
-	/**
-	 * The number of structural features of the '<em>Tab</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TAB_FEATURE_COUNT = UpctformaPackage.COMPOSITE_ARGUMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Tab</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TAB_OPERATION_COUNT = UpctformaPackage.COMPOSITE_ARGUMENT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link upctforma.impl.AnimationImpl <em>Animation</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see upctforma.impl.AnimationImpl
-	 * @see upctforma.impl.UpctformaPackageImpl#getAnimation()
-	 * @generated
-	 */
-	int ANIMATION = 19;
-
-	/**
-	 * The feature id for the '<em><b>Arguments</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ANIMATION__ARGUMENTS = UpctformaPackage.COMPOSITE_ARGUMENT__ARGUMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Width</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ANIMATION__WIDTH = UpctformaPackage.COMPOSITE_ARGUMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Image</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ANIMATION__IMAGE = UpctformaPackage.COMPOSITE_ARGUMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Animation</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ANIMATION_FEATURE_COUNT = UpctformaPackage.COMPOSITE_ARGUMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Animation</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ANIMATION_OPERATION_COUNT = UpctformaPackage.COMPOSITE_ARGUMENT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link upctforma.impl.DragAndDropImpl <em>Drag And Drop</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see upctforma.impl.DragAndDropImpl
-	 * @see upctforma.impl.UpctformaPackageImpl#getDragAndDrop()
-	 * @generated
-	 */
-	int DRAG_AND_DROP = 20;
-
-	/**
-	 * The feature id for the '<em><b>Arguments</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DRAG_AND_DROP__ARGUMENTS = UpctformaPackage.COMPOSITE_ARGUMENT__ARGUMENTS;
-
-	/**
-	 * The number of structural features of the '<em>Drag And Drop</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DRAG_AND_DROP_FEATURE_COUNT = UpctformaPackage.COMPOSITE_ARGUMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Drag And Drop</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DRAG_AND_DROP_OPERATION_COUNT = UpctformaPackage.COMPOSITE_ARGUMENT_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link upctforma.impl.UseTemplateImpl <em>Use Template</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -988,7 +792,7 @@ public interface UpctformaPackage extends EPackage {
 	 * @see upctforma.impl.UpctformaPackageImpl#getUseTemplate()
 	 * @generated
 	 */
-	int USE_TEMPLATE = 21;
+	int USE_TEMPLATE = 17;
 
 	/**
 	 * The feature id for the '<em><b>Typetemplate</b></em>' reference.
@@ -1000,13 +804,13 @@ public interface UpctformaPackage extends EPackage {
 	int USE_TEMPLATE__TYPETEMPLATE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Arguments</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Templateelements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int USE_TEMPLATE__ARGUMENTS = 1;
+	int USE_TEMPLATE__TEMPLATEELEMENTS = 1;
 
 	/**
 	 * The number of structural features of the '<em>Use Template</em>' class.
@@ -1034,7 +838,7 @@ public interface UpctformaPackage extends EPackage {
 	 * @see upctforma.impl.UpctformaPackageImpl#getType()
 	 * @generated
 	 */
-	int TYPE = 22;
+	int TYPE = 18;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1043,7 +847,7 @@ public interface UpctformaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TYPE__NAME = UpctformaPackage.NAME_ELEMENT__NAME;
+	int TYPE__NAME = NAME_ELEMENT__NAME;
 
 	/**
 	 * The number of structural features of the '<em>Type</em>' class.
@@ -1052,7 +856,7 @@ public interface UpctformaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TYPE_FEATURE_COUNT = UpctformaPackage.NAME_ELEMENT_FEATURE_COUNT + 0;
+	int TYPE_FEATURE_COUNT = NAME_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Type</em>' class.
@@ -1061,7 +865,7 @@ public interface UpctformaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TYPE_OPERATION_COUNT = UpctformaPackage.NAME_ELEMENT_OPERATION_COUNT + 0;
+	int TYPE_OPERATION_COUNT = NAME_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link upctforma.impl.SimpleTypeImpl <em>Simple Type</em>}' class.
@@ -1071,7 +875,7 @@ public interface UpctformaPackage extends EPackage {
 	 * @see upctforma.impl.UpctformaPackageImpl#getSimpleType()
 	 * @generated
 	 */
-	int SIMPLE_TYPE = 23;
+	int SIMPLE_TYPE = 19;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1080,16 +884,7 @@ public interface UpctformaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_TYPE__NAME = UpctformaPackage.TYPE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_TYPE__TYPE = UpctformaPackage.TYPE_FEATURE_COUNT + 0;
+	int SIMPLE_TYPE__NAME = TYPE__NAME;
 
 	/**
 	 * The number of structural features of the '<em>Simple Type</em>' class.
@@ -1098,7 +893,7 @@ public interface UpctformaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_TYPE_FEATURE_COUNT = UpctformaPackage.TYPE_FEATURE_COUNT + 1;
+	int SIMPLE_TYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Simple Type</em>' class.
@@ -1107,17 +902,17 @@ public interface UpctformaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_TYPE_OPERATION_COUNT = UpctformaPackage.TYPE_OPERATION_COUNT + 0;
+	int SIMPLE_TYPE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link upctforma.impl.AggregatedTypeImpl <em>Aggregated Type</em>}' class.
+	 * The meta object id for the '{@link upctforma.impl.CompositeTypeImpl <em>Composite Type</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see upctforma.impl.AggregatedTypeImpl
-	 * @see upctforma.impl.UpctformaPackageImpl#getAggregatedType()
+	 * @see upctforma.impl.CompositeTypeImpl
+	 * @see upctforma.impl.UpctformaPackageImpl#getCompositeType()
 	 * @generated
 	 */
-	int AGGREGATED_TYPE = 24;
+	int COMPOSITE_TYPE = 24;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1126,145 +921,71 @@ public interface UpctformaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AGGREGATED_TYPE__NAME = UpctformaPackage.TYPE__NAME;
+	int COMPOSITE_TYPE__NAME = TYPE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
+	 * The number of structural features of the '<em>Composite Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AGGREGATED_TYPE__TYPE = UpctformaPackage.TYPE_FEATURE_COUNT + 0;
+	int COMPOSITE_TYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Aggregated Type</em>' class.
+	 * The number of operations of the '<em>Composite Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AGGREGATED_TYPE_FEATURE_COUNT = UpctformaPackage.TYPE_FEATURE_COUNT + 1;
+	int COMPOSITE_TYPE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>Aggregated Type</em>' class.
+	 * The meta object id for the '{@link upctforma.impl.RecordTypeImpl <em>Record Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see upctforma.impl.RecordTypeImpl
+	 * @see upctforma.impl.UpctformaPackageImpl#getRecordType()
+	 * @generated
+	 */
+	int RECORD_TYPE = 20;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AGGREGATED_TYPE_OPERATION_COUNT = UpctformaPackage.TYPE_OPERATION_COUNT + 0;
+	int RECORD_TYPE__NAME = COMPOSITE_TYPE__NAME;
 
 	/**
-	 * The meta object id for the '{@link upctforma.impl.CompositeArgumentImpl <em>Composite Argument</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see upctforma.impl.CompositeArgumentImpl
-	 * @see upctforma.impl.UpctformaPackageImpl#getCompositeArgument()
-	 * @generated
-	 */
-	int COMPOSITE_ARGUMENT = 25;
-
-	/**
-	 * The feature id for the '<em><b>Arguments</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Recordtype</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSITE_ARGUMENT__ARGUMENTS = UpctformaPackage.ARGUMENT_FEATURE_COUNT + 0;
+	int RECORD_TYPE__RECORDTYPE = COMPOSITE_TYPE_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Composite Argument</em>' class.
+	 * The number of structural features of the '<em>Record Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSITE_ARGUMENT_FEATURE_COUNT = UpctformaPackage.ARGUMENT_FEATURE_COUNT + 1;
+	int RECORD_TYPE_FEATURE_COUNT = COMPOSITE_TYPE_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Composite Argument</em>' class.
+	 * The number of operations of the '<em>Record Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSITE_ARGUMENT_OPERATION_COUNT = UpctformaPackage.ARGUMENT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link upctforma.impl.FixedImpl <em>Fixed</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see upctforma.impl.FixedImpl
-	 * @see upctforma.impl.UpctformaPackageImpl#getFixed()
-	 * @generated
-	 */
-	int FIXED = 26;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIXED__TYPE = UpctformaPackage.PARAMETER__TYPE;
-
-	/**
-	 * The number of structural features of the '<em>Fixed</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIXED_FEATURE_COUNT = UpctformaPackage.PARAMETER_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Fixed</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIXED_OPERATION_COUNT = UpctformaPackage.PARAMETER_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link upctforma.impl.VariableImpl <em>Variable</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see upctforma.impl.VariableImpl
-	 * @see upctforma.impl.UpctformaPackageImpl#getVariable()
-	 * @generated
-	 */
-	int VARIABLE = 27;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VARIABLE__TYPE = UpctformaPackage.PARAMETER__TYPE;
-
-	/**
-	 * The number of structural features of the '<em>Variable</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VARIABLE_FEATURE_COUNT = UpctformaPackage.PARAMETER_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Variable</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VARIABLE_OPERATION_COUNT = UpctformaPackage.PARAMETER_OPERATION_COUNT + 0;
+	int RECORD_TYPE_OPERATION_COUNT = COMPOSITE_TYPE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link upctforma.impl.WidgetTypeImpl <em>Widget Type</em>}' class.
@@ -1274,7 +995,7 @@ public interface UpctformaPackage extends EPackage {
 	 * @see upctforma.impl.UpctformaPackageImpl#getWidgetType()
 	 * @generated
 	 */
-	int WIDGET_TYPE = 28;
+	int WIDGET_TYPE = 21;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1283,16 +1004,16 @@ public interface UpctformaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WIDGET_TYPE__NAME = UpctformaPackage.TYPE__NAME;
+	int WIDGET_TYPE__NAME = TYPE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Widgettypeelements</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WIDGET_TYPE__PARAMETERS = UpctformaPackage.TYPE_FEATURE_COUNT + 0;
+	int WIDGET_TYPE__WIDGETTYPEELEMENTS = TYPE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Widget Type</em>' class.
@@ -1301,7 +1022,7 @@ public interface UpctformaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WIDGET_TYPE_FEATURE_COUNT = UpctformaPackage.TYPE_FEATURE_COUNT + 1;
+	int WIDGET_TYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Widget Type</em>' class.
@@ -1310,7 +1031,7 @@ public interface UpctformaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WIDGET_TYPE_OPERATION_COUNT = UpctformaPackage.TYPE_OPERATION_COUNT + 0;
+	int WIDGET_TYPE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link upctforma.impl.ListTypeImpl <em>List Type</em>}' class.
@@ -1320,7 +1041,7 @@ public interface UpctformaPackage extends EPackage {
 	 * @see upctforma.impl.UpctformaPackageImpl#getListType()
 	 * @generated
 	 */
-	int LIST_TYPE = 29;
+	int LIST_TYPE = 22;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1329,7 +1050,7 @@ public interface UpctformaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIST_TYPE__NAME = UpctformaPackage.TYPE__NAME;
+	int LIST_TYPE__NAME = COMPOSITE_TYPE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Listtype</b></em>' reference.
@@ -1338,7 +1059,7 @@ public interface UpctformaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIST_TYPE__LISTTYPE = UpctformaPackage.TYPE_FEATURE_COUNT + 0;
+	int LIST_TYPE__LISTTYPE = COMPOSITE_TYPE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>List Type</em>' class.
@@ -1347,7 +1068,7 @@ public interface UpctformaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIST_TYPE_FEATURE_COUNT = UpctformaPackage.TYPE_FEATURE_COUNT + 1;
+	int LIST_TYPE_FEATURE_COUNT = COMPOSITE_TYPE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>List Type</em>' class.
@@ -1356,18 +1077,210 @@ public interface UpctformaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIST_TYPE_OPERATION_COUNT = UpctformaPackage.TYPE_OPERATION_COUNT + 0;
+	int LIST_TYPE_OPERATION_COUNT = COMPOSITE_TYPE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link upctforma.TypeSimpleElement <em>Type Simple Element</em>}' enum.
+	 * The meta object id for the '{@link upctforma.impl.GameImpl <em>Game</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see upctforma.TypeSimpleElement
-	 * @see upctforma.impl.UpctformaPackageImpl#getTypeSimpleElement()
+	 * @see upctforma.impl.GameImpl
+	 * @see upctforma.impl.UpctformaPackageImpl#getGame()
 	 * @generated
 	 */
-	int TYPE_SIMPLE_ELEMENT = 30;
+	int GAME = 23;
 
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAME__ID = SIMPLE_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Game</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAME_FEATURE_COUNT = SIMPLE_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Game</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAME_OPERATION_COUNT = SIMPLE_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link upctforma.impl.FieldImpl <em>Field</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see upctforma.impl.FieldImpl
+	 * @see upctforma.impl.UpctformaPackageImpl#getField()
+	 * @generated
+	 */
+	int FIELD = 25;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIELD__NAME = NAME_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Fieldtype</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIELD__FIELDTYPE = NAME_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Field</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIELD_FEATURE_COUNT = NAME_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Field</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIELD_OPERATION_COUNT = NAME_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link upctforma.impl.RecordValueImpl <em>Record Value</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see upctforma.impl.RecordValueImpl
+	 * @see upctforma.impl.UpctformaPackageImpl#getRecordValue()
+	 * @generated
+	 */
+	int RECORD_VALUE = 26;
+
+	/**
+	 * The feature id for the '<em><b>Recordvalues</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECORD_VALUE__RECORDVALUES = CONTENT_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Record Value</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECORD_VALUE_FEATURE_COUNT = CONTENT_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Record Value</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECORD_VALUE_OPERATION_COUNT = CONTENT_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link upctforma.impl.ListValueImpl <em>List Value</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see upctforma.impl.ListValueImpl
+	 * @see upctforma.impl.UpctformaPackageImpl#getListValue()
+	 * @generated
+	 */
+	int LIST_VALUE = 27;
+
+	/**
+	 * The feature id for the '<em><b>Listvalues</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIST_VALUE__LISTVALUES = CONTENT_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>List Value</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIST_VALUE_FEATURE_COUNT = CONTENT_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>List Value</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIST_VALUE_OPERATION_COUNT = CONTENT_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link upctforma.impl.FieldValueImpl <em>Field Value</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see upctforma.impl.FieldValueImpl
+	 * @see upctforma.impl.UpctformaPackageImpl#getFieldValue()
+	 * @generated
+	 */
+	int FIELD_VALUE = 28;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIELD_VALUE__NAME = NAME_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Fieldvalue</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIELD_VALUE__FIELDVALUE = NAME_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Field Value</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIELD_VALUE_FEATURE_COUNT = NAME_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Field Value</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIELD_VALUE_OPERATION_COUNT = NAME_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * Returns the meta object for class '{@link upctforma.Column <em>Column</em>}'.
@@ -1486,15 +1399,15 @@ public interface UpctformaPackage extends EPackage {
 	EReference getWidget_Widgettype();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link upctforma.Widget#getWidgetarguments <em>Widgetarguments</em>}'.
+	 * Returns the meta object for the containment reference list '{@link upctforma.Widget#getWidgetelements <em>Widgetelements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Widgetarguments</em>'.
-	 * @see upctforma.Widget#getWidgetarguments()
+	 * @return the meta object for the containment reference list '<em>Widgetelements</em>'.
+	 * @see upctforma.Widget#getWidgetelements()
 	 * @see #getWidget()
 	 * @generated
 	 */
-	EReference getWidget_Widgetarguments();
+	EReference getWidget_Widgetelements();
 
 	/**
 	 * Returns the meta object for class '{@link upctforma.Text <em>Text</em>}'.
@@ -1538,15 +1451,15 @@ public interface UpctformaPackage extends EPackage {
 	EClass getVideo();
 
 	/**
-	 * Returns the meta object for the attribute '{@link upctforma.Video#getUrl <em>Url</em>}'.
+	 * Returns the meta object for the attribute '{@link upctforma.Video#getId <em>Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Url</em>'.
-	 * @see upctforma.Video#getUrl()
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see upctforma.Video#getId()
 	 * @see #getVideo()
 	 * @generated
 	 */
-	EAttribute getVideo_Url();
+	EAttribute getVideo_Id();
 
 	/**
 	 * Returns the meta object for class '{@link upctforma.ContentDefinition <em>Content Definition</em>}'.
@@ -1623,25 +1536,25 @@ public interface UpctformaPackage extends EPackage {
 	EClass getSimpleElement();
 
 	/**
-	 * Returns the meta object for class '{@link upctforma.Parameter <em>Parameter</em>}'.
+	 * Returns the meta object for class '{@link upctforma.PlaceHolder <em>Place Holder</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Parameter</em>'.
-	 * @see upctforma.Parameter
+	 * @return the meta object for class '<em>Place Holder</em>'.
+	 * @see upctforma.PlaceHolder
 	 * @generated
 	 */
-	EClass getParameter();
+	EClass getPlaceHolder();
 
 	/**
-	 * Returns the meta object for the reference '{@link upctforma.Parameter#getType <em>Type</em>}'.
+	 * Returns the meta object for the reference '{@link upctforma.PlaceHolder#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Type</em>'.
-	 * @see upctforma.Parameter#getType()
-	 * @see #getParameter()
+	 * @see upctforma.PlaceHolder#getType()
+	 * @see #getPlaceHolder()
 	 * @generated
 	 */
-	EReference getParameter_Type();
+	EReference getPlaceHolder_Type();
 
 	/**
 	 * Returns the meta object for class '{@link upctforma.Row <em>Row</em>}'.
@@ -1674,46 +1587,6 @@ public interface UpctformaPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getRow_Usetemplate();
-
-	/**
-	 * Returns the meta object for the '{@link upctforma.Row#getArgumentType(upctforma.SimpleElement) <em>Get Argument Type</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Argument Type</em>' operation.
-	 * @see upctforma.Row#getArgumentType(upctforma.SimpleElement)
-	 * @generated
-	 */
-	EOperation getRow__GetArgumentType__SimpleElement();
-
-	/**
-	 * Returns the meta object for the '{@link upctforma.Row#getArguments(upctforma.Row) <em>Get Arguments</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Arguments</em>' operation.
-	 * @see upctforma.Row#getArguments(upctforma.Row)
-	 * @generated
-	 */
-	EOperation getRow__GetArguments__Row();
-
-	/**
-	 * Returns the meta object for the '{@link upctforma.Row#getParameterType(upctforma.TypeSimpleElement) <em>Get Parameter Type</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Parameter Type</em>' operation.
-	 * @see upctforma.Row#getParameterType(upctforma.TypeSimpleElement)
-	 * @generated
-	 */
-	EOperation getRow__GetParameterType__TypeSimpleElement();
-
-	/**
-	 * Returns the meta object for the '{@link upctforma.Row#getParameters(upctforma.Row) <em>Get Parameters</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Parameters</em>' operation.
-	 * @see upctforma.Row#getParameters(upctforma.Row)
-	 * @generated
-	 */
-	EOperation getRow__GetParameters__Row();
 
 	/**
 	 * Returns the meta object for class '{@link upctforma.Unit <em>Unit</em>}'.
@@ -1833,68 +1706,6 @@ public interface UpctformaPackage extends EPackage {
 	EAttribute getParagraph_Text();
 
 	/**
-	 * Returns the meta object for class '{@link upctforma.Argument <em>Argument</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Argument</em>'.
-	 * @see upctforma.Argument
-	 * @generated
-	 */
-	EClass getArgument();
-
-	/**
-	 * Returns the meta object for class '{@link upctforma.Tab <em>Tab</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Tab</em>'.
-	 * @see upctforma.Tab
-	 * @generated
-	 */
-	EClass getTab();
-
-	/**
-	 * Returns the meta object for class '{@link upctforma.Animation <em>Animation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Animation</em>'.
-	 * @see upctforma.Animation
-	 * @generated
-	 */
-	EClass getAnimation();
-
-	/**
-	 * Returns the meta object for the attribute '{@link upctforma.Animation#getWidth <em>Width</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Width</em>'.
-	 * @see upctforma.Animation#getWidth()
-	 * @see #getAnimation()
-	 * @generated
-	 */
-	EAttribute getAnimation_Width();
-
-	/**
-	 * Returns the meta object for the attribute '{@link upctforma.Animation#getImage <em>Image</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Image</em>'.
-	 * @see upctforma.Animation#getImage()
-	 * @see #getAnimation()
-	 * @generated
-	 */
-	EAttribute getAnimation_Image();
-
-	/**
-	 * Returns the meta object for class '{@link upctforma.DragAndDrop <em>Drag And Drop</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Drag And Drop</em>'.
-	 * @see upctforma.DragAndDrop
-	 * @generated
-	 */
-	EClass getDragAndDrop();
-
-	/**
 	 * Returns the meta object for class '{@link upctforma.UseTemplate <em>Use Template</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1916,15 +1727,15 @@ public interface UpctformaPackage extends EPackage {
 	EReference getUseTemplate_Typetemplate();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link upctforma.UseTemplate#getArguments <em>Arguments</em>}'.
+	 * Returns the meta object for the containment reference list '{@link upctforma.UseTemplate#getTemplateelements <em>Templateelements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Arguments</em>'.
-	 * @see upctforma.UseTemplate#getArguments()
+	 * @return the meta object for the containment reference list '<em>Templateelements</em>'.
+	 * @see upctforma.UseTemplate#getTemplateelements()
 	 * @see #getUseTemplate()
 	 * @generated
 	 */
-	EReference getUseTemplate_Arguments();
+	EReference getUseTemplate_Templateelements();
 
 	/**
 	 * Returns the meta object for class '{@link upctforma.Type <em>Type</em>}'.
@@ -1947,77 +1758,25 @@ public interface UpctformaPackage extends EPackage {
 	EClass getSimpleType();
 
 	/**
-	 * Returns the meta object for the attribute '{@link upctforma.SimpleType#getType <em>Type</em>}'.
+	 * Returns the meta object for class '{@link upctforma.RecordType <em>Record Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see upctforma.SimpleType#getType()
-	 * @see #getSimpleType()
+	 * @return the meta object for class '<em>Record Type</em>'.
+	 * @see upctforma.RecordType
 	 * @generated
 	 */
-	EAttribute getSimpleType_Type();
+	EClass getRecordType();
 
 	/**
-	 * Returns the meta object for class '{@link upctforma.AggregatedType <em>Aggregated Type</em>}'.
+	 * Returns the meta object for the containment reference list '{@link upctforma.RecordType#getRecordtype <em>Recordtype</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Aggregated Type</em>'.
-	 * @see upctforma.AggregatedType
+	 * @return the meta object for the containment reference list '<em>Recordtype</em>'.
+	 * @see upctforma.RecordType#getRecordtype()
+	 * @see #getRecordType()
 	 * @generated
 	 */
-	EClass getAggregatedType();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link upctforma.AggregatedType#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Type</em>'.
-	 * @see upctforma.AggregatedType#getType()
-	 * @see #getAggregatedType()
-	 * @generated
-	 */
-	EReference getAggregatedType_Type();
-
-	/**
-	 * Returns the meta object for class '{@link upctforma.CompositeArgument <em>Composite Argument</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Composite Argument</em>'.
-	 * @see upctforma.CompositeArgument
-	 * @generated
-	 */
-	EClass getCompositeArgument();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link upctforma.CompositeArgument#getArguments <em>Arguments</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Arguments</em>'.
-	 * @see upctforma.CompositeArgument#getArguments()
-	 * @see #getCompositeArgument()
-	 * @generated
-	 */
-	EReference getCompositeArgument_Arguments();
-
-	/**
-	 * Returns the meta object for class '{@link upctforma.Fixed <em>Fixed</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Fixed</em>'.
-	 * @see upctforma.Fixed
-	 * @generated
-	 */
-	EClass getFixed();
-
-	/**
-	 * Returns the meta object for class '{@link upctforma.Variable <em>Variable</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Variable</em>'.
-	 * @see upctforma.Variable
-	 * @generated
-	 */
-	EClass getVariable();
+	EReference getRecordType_Recordtype();
 
 	/**
 	 * Returns the meta object for class '{@link upctforma.WidgetType <em>Widget Type</em>}'.
@@ -2030,15 +1789,15 @@ public interface UpctformaPackage extends EPackage {
 	EClass getWidgetType();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link upctforma.WidgetType#getParameters <em>Parameters</em>}'.
+	 * Returns the meta object for the reference list '{@link upctforma.WidgetType#getWidgettypeelements <em>Widgettypeelements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Parameters</em>'.
-	 * @see upctforma.WidgetType#getParameters()
+	 * @return the meta object for the reference list '<em>Widgettypeelements</em>'.
+	 * @see upctforma.WidgetType#getWidgettypeelements()
 	 * @see #getWidgetType()
 	 * @generated
 	 */
-	EReference getWidgetType_Parameters();
+	EReference getWidgetType_Widgettypeelements();
 
 	/**
 	 * Returns the meta object for class '{@link upctforma.ListType <em>List Type</em>}'.
@@ -2062,14 +1821,119 @@ public interface UpctformaPackage extends EPackage {
 	EReference getListType_Listtype();
 
 	/**
-	 * Returns the meta object for enum '{@link upctforma.TypeSimpleElement <em>Type Simple Element</em>}'.
+	 * Returns the meta object for class '{@link upctforma.Game <em>Game</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Type Simple Element</em>'.
-	 * @see upctforma.TypeSimpleElement
+	 * @return the meta object for class '<em>Game</em>'.
+	 * @see upctforma.Game
 	 * @generated
 	 */
-	EEnum getTypeSimpleElement();
+	EClass getGame();
+
+	/**
+	 * Returns the meta object for the attribute '{@link upctforma.Game#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see upctforma.Game#getId()
+	 * @see #getGame()
+	 * @generated
+	 */
+	EAttribute getGame_Id();
+
+	/**
+	 * Returns the meta object for class '{@link upctforma.CompositeType <em>Composite Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Composite Type</em>'.
+	 * @see upctforma.CompositeType
+	 * @generated
+	 */
+	EClass getCompositeType();
+
+	/**
+	 * Returns the meta object for class '{@link upctforma.Field <em>Field</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Field</em>'.
+	 * @see upctforma.Field
+	 * @generated
+	 */
+	EClass getField();
+
+	/**
+	 * Returns the meta object for the reference '{@link upctforma.Field#getFieldtype <em>Fieldtype</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Fieldtype</em>'.
+	 * @see upctforma.Field#getFieldtype()
+	 * @see #getField()
+	 * @generated
+	 */
+	EReference getField_Fieldtype();
+
+	/**
+	 * Returns the meta object for class '{@link upctforma.RecordValue <em>Record Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Record Value</em>'.
+	 * @see upctforma.RecordValue
+	 * @generated
+	 */
+	EClass getRecordValue();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link upctforma.RecordValue#getRecordvalues <em>Recordvalues</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Recordvalues</em>'.
+	 * @see upctforma.RecordValue#getRecordvalues()
+	 * @see #getRecordValue()
+	 * @generated
+	 */
+	EReference getRecordValue_Recordvalues();
+
+	/**
+	 * Returns the meta object for class '{@link upctforma.ListValue <em>List Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>List Value</em>'.
+	 * @see upctforma.ListValue
+	 * @generated
+	 */
+	EClass getListValue();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link upctforma.ListValue#getListvalues <em>Listvalues</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Listvalues</em>'.
+	 * @see upctforma.ListValue#getListvalues()
+	 * @see #getListValue()
+	 * @generated
+	 */
+	EReference getListValue_Listvalues();
+
+	/**
+	 * Returns the meta object for class '{@link upctforma.FieldValue <em>Field Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Field Value</em>'.
+	 * @see upctforma.FieldValue
+	 * @generated
+	 */
+	EClass getFieldValue();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link upctforma.FieldValue#getFieldvalue <em>Fieldvalue</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Fieldvalue</em>'.
+	 * @see upctforma.FieldValue#getFieldvalue()
+	 * @see #getFieldValue()
+	 * @generated
+	 */
+	EReference getFieldValue_Fieldvalue();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -2193,12 +2057,12 @@ public interface UpctformaPackage extends EPackage {
 		EReference WIDGET__WIDGETTYPE = eINSTANCE.getWidget_Widgettype();
 
 		/**
-		 * The meta object literal for the '<em><b>Widgetarguments</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Widgetelements</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference WIDGET__WIDGETARGUMENTS = eINSTANCE.getWidget_Widgetarguments();
+		EReference WIDGET__WIDGETELEMENTS = eINSTANCE.getWidget_Widgetelements();
 
 		/**
 		 * The meta object literal for the '{@link upctforma.impl.TextImpl <em>Text</em>}' class.
@@ -2239,12 +2103,12 @@ public interface UpctformaPackage extends EPackage {
 		EClass VIDEO = eINSTANCE.getVideo();
 
 		/**
-		 * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute VIDEO__URL = eINSTANCE.getVideo_Url();
+		EAttribute VIDEO__ID = eINSTANCE.getVideo_Id();
 
 		/**
 		 * The meta object literal for the '{@link upctforma.impl.ContentDefinitionImpl <em>Content Definition</em>}' class.
@@ -2309,14 +2173,14 @@ public interface UpctformaPackage extends EPackage {
 		EClass SIMPLE_ELEMENT = eINSTANCE.getSimpleElement();
 
 		/**
-		 * The meta object literal for the '{@link upctforma.impl.ParameterImpl <em>Parameter</em>}' class.
+		 * The meta object literal for the '{@link upctforma.impl.PlaceHolderImpl <em>Place Holder</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see upctforma.impl.ParameterImpl
-		 * @see upctforma.impl.UpctformaPackageImpl#getParameter()
+		 * @see upctforma.impl.PlaceHolderImpl
+		 * @see upctforma.impl.UpctformaPackageImpl#getPlaceHolder()
 		 * @generated
 		 */
-		EClass PARAMETER = eINSTANCE.getParameter();
+		EClass PLACE_HOLDER = eINSTANCE.getPlaceHolder();
 
 		/**
 		 * The meta object literal for the '<em><b>Type</b></em>' reference feature.
@@ -2324,7 +2188,7 @@ public interface UpctformaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PARAMETER__TYPE = eINSTANCE.getParameter_Type();
+		EReference PLACE_HOLDER__TYPE = eINSTANCE.getPlaceHolder_Type();
 
 		/**
 		 * The meta object literal for the '{@link upctforma.impl.RowImpl <em>Row</em>}' class.
@@ -2351,38 +2215,6 @@ public interface UpctformaPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ROW__USETEMPLATE = eINSTANCE.getRow_Usetemplate();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Argument Type</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ROW___GET_ARGUMENT_TYPE__SIMPLEELEMENT = eINSTANCE.getRow__GetArgumentType__SimpleElement();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Arguments</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ROW___GET_ARGUMENTS__ROW = eINSTANCE.getRow__GetArguments__Row();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Parameter Type</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ROW___GET_PARAMETER_TYPE__TYPESIMPLEELEMENT = eINSTANCE.getRow__GetParameterType__TypeSimpleElement();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Parameters</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ROW___GET_PARAMETERS__ROW = eINSTANCE.getRow__GetParameters__Row();
 
 		/**
 		 * The meta object literal for the '{@link upctforma.impl.UnitImpl <em>Unit</em>}' class.
@@ -2481,62 +2313,6 @@ public interface UpctformaPackage extends EPackage {
 		EAttribute PARAGRAPH__TEXT = eINSTANCE.getParagraph_Text();
 
 		/**
-		 * The meta object literal for the '{@link upctforma.impl.ArgumentImpl <em>Argument</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see upctforma.impl.ArgumentImpl
-		 * @see upctforma.impl.UpctformaPackageImpl#getArgument()
-		 * @generated
-		 */
-		EClass ARGUMENT = eINSTANCE.getArgument();
-
-		/**
-		 * The meta object literal for the '{@link upctforma.impl.TabImpl <em>Tab</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see upctforma.impl.TabImpl
-		 * @see upctforma.impl.UpctformaPackageImpl#getTab()
-		 * @generated
-		 */
-		EClass TAB = eINSTANCE.getTab();
-
-		/**
-		 * The meta object literal for the '{@link upctforma.impl.AnimationImpl <em>Animation</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see upctforma.impl.AnimationImpl
-		 * @see upctforma.impl.UpctformaPackageImpl#getAnimation()
-		 * @generated
-		 */
-		EClass ANIMATION = eINSTANCE.getAnimation();
-
-		/**
-		 * The meta object literal for the '<em><b>Width</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ANIMATION__WIDTH = eINSTANCE.getAnimation_Width();
-
-		/**
-		 * The meta object literal for the '<em><b>Image</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ANIMATION__IMAGE = eINSTANCE.getAnimation_Image();
-
-		/**
-		 * The meta object literal for the '{@link upctforma.impl.DragAndDropImpl <em>Drag And Drop</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see upctforma.impl.DragAndDropImpl
-		 * @see upctforma.impl.UpctformaPackageImpl#getDragAndDrop()
-		 * @generated
-		 */
-		EClass DRAG_AND_DROP = eINSTANCE.getDragAndDrop();
-
-		/**
 		 * The meta object literal for the '{@link upctforma.impl.UseTemplateImpl <em>Use Template</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2555,12 +2331,12 @@ public interface UpctformaPackage extends EPackage {
 		EReference USE_TEMPLATE__TYPETEMPLATE = eINSTANCE.getUseTemplate_Typetemplate();
 
 		/**
-		 * The meta object literal for the '<em><b>Arguments</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Templateelements</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference USE_TEMPLATE__ARGUMENTS = eINSTANCE.getUseTemplate_Arguments();
+		EReference USE_TEMPLATE__TEMPLATEELEMENTS = eINSTANCE.getUseTemplate_Templateelements();
 
 		/**
 		 * The meta object literal for the '{@link upctforma.impl.TypeImpl <em>Type</em>}' class.
@@ -2583,68 +2359,22 @@ public interface UpctformaPackage extends EPackage {
 		EClass SIMPLE_TYPE = eINSTANCE.getSimpleType();
 
 		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * The meta object literal for the '{@link upctforma.impl.RecordTypeImpl <em>Record Type</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see upctforma.impl.RecordTypeImpl
+		 * @see upctforma.impl.UpctformaPackageImpl#getRecordType()
 		 * @generated
 		 */
-		EAttribute SIMPLE_TYPE__TYPE = eINSTANCE.getSimpleType_Type();
+		EClass RECORD_TYPE = eINSTANCE.getRecordType();
 
 		/**
-		 * The meta object literal for the '{@link upctforma.impl.AggregatedTypeImpl <em>Aggregated Type</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see upctforma.impl.AggregatedTypeImpl
-		 * @see upctforma.impl.UpctformaPackageImpl#getAggregatedType()
-		 * @generated
-		 */
-		EClass AGGREGATED_TYPE = eINSTANCE.getAggregatedType();
-
-		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Recordtype</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference AGGREGATED_TYPE__TYPE = eINSTANCE.getAggregatedType_Type();
-
-		/**
-		 * The meta object literal for the '{@link upctforma.impl.CompositeArgumentImpl <em>Composite Argument</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see upctforma.impl.CompositeArgumentImpl
-		 * @see upctforma.impl.UpctformaPackageImpl#getCompositeArgument()
-		 * @generated
-		 */
-		EClass COMPOSITE_ARGUMENT = eINSTANCE.getCompositeArgument();
-
-		/**
-		 * The meta object literal for the '<em><b>Arguments</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference COMPOSITE_ARGUMENT__ARGUMENTS = eINSTANCE.getCompositeArgument_Arguments();
-
-		/**
-		 * The meta object literal for the '{@link upctforma.impl.FixedImpl <em>Fixed</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see upctforma.impl.FixedImpl
-		 * @see upctforma.impl.UpctformaPackageImpl#getFixed()
-		 * @generated
-		 */
-		EClass FIXED = eINSTANCE.getFixed();
-
-		/**
-		 * The meta object literal for the '{@link upctforma.impl.VariableImpl <em>Variable</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see upctforma.impl.VariableImpl
-		 * @see upctforma.impl.UpctformaPackageImpl#getVariable()
-		 * @generated
-		 */
-		EClass VARIABLE = eINSTANCE.getVariable();
+		EReference RECORD_TYPE__RECORDTYPE = eINSTANCE.getRecordType_Recordtype();
 
 		/**
 		 * The meta object literal for the '{@link upctforma.impl.WidgetTypeImpl <em>Widget Type</em>}' class.
@@ -2657,12 +2387,12 @@ public interface UpctformaPackage extends EPackage {
 		EClass WIDGET_TYPE = eINSTANCE.getWidgetType();
 
 		/**
-		 * The meta object literal for the '<em><b>Parameters</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Widgettypeelements</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference WIDGET_TYPE__PARAMETERS = eINSTANCE.getWidgetType_Parameters();
+		EReference WIDGET_TYPE__WIDGETTYPEELEMENTS = eINSTANCE.getWidgetType_Widgettypeelements();
 
 		/**
 		 * The meta object literal for the '{@link upctforma.impl.ListTypeImpl <em>List Type</em>}' class.
@@ -2683,14 +2413,104 @@ public interface UpctformaPackage extends EPackage {
 		EReference LIST_TYPE__LISTTYPE = eINSTANCE.getListType_Listtype();
 
 		/**
-		 * The meta object literal for the '{@link upctforma.TypeSimpleElement <em>Type Simple Element</em>}' enum.
+		 * The meta object literal for the '{@link upctforma.impl.GameImpl <em>Game</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see upctforma.TypeSimpleElement
-		 * @see upctforma.impl.UpctformaPackageImpl#getTypeSimpleElement()
+		 * @see upctforma.impl.GameImpl
+		 * @see upctforma.impl.UpctformaPackageImpl#getGame()
 		 * @generated
 		 */
-		EEnum TYPE_SIMPLE_ELEMENT = eINSTANCE.getTypeSimpleElement();
+		EClass GAME = eINSTANCE.getGame();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GAME__ID = eINSTANCE.getGame_Id();
+
+		/**
+		 * The meta object literal for the '{@link upctforma.impl.CompositeTypeImpl <em>Composite Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see upctforma.impl.CompositeTypeImpl
+		 * @see upctforma.impl.UpctformaPackageImpl#getCompositeType()
+		 * @generated
+		 */
+		EClass COMPOSITE_TYPE = eINSTANCE.getCompositeType();
+
+		/**
+		 * The meta object literal for the '{@link upctforma.impl.FieldImpl <em>Field</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see upctforma.impl.FieldImpl
+		 * @see upctforma.impl.UpctformaPackageImpl#getField()
+		 * @generated
+		 */
+		EClass FIELD = eINSTANCE.getField();
+
+		/**
+		 * The meta object literal for the '<em><b>Fieldtype</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FIELD__FIELDTYPE = eINSTANCE.getField_Fieldtype();
+
+		/**
+		 * The meta object literal for the '{@link upctforma.impl.RecordValueImpl <em>Record Value</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see upctforma.impl.RecordValueImpl
+		 * @see upctforma.impl.UpctformaPackageImpl#getRecordValue()
+		 * @generated
+		 */
+		EClass RECORD_VALUE = eINSTANCE.getRecordValue();
+
+		/**
+		 * The meta object literal for the '<em><b>Recordvalues</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RECORD_VALUE__RECORDVALUES = eINSTANCE.getRecordValue_Recordvalues();
+
+		/**
+		 * The meta object literal for the '{@link upctforma.impl.ListValueImpl <em>List Value</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see upctforma.impl.ListValueImpl
+		 * @see upctforma.impl.UpctformaPackageImpl#getListValue()
+		 * @generated
+		 */
+		EClass LIST_VALUE = eINSTANCE.getListValue();
+
+		/**
+		 * The meta object literal for the '<em><b>Listvalues</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LIST_VALUE__LISTVALUES = eINSTANCE.getListValue_Listvalues();
+
+		/**
+		 * The meta object literal for the '{@link upctforma.impl.FieldValueImpl <em>Field Value</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see upctforma.impl.FieldValueImpl
+		 * @see upctforma.impl.UpctformaPackageImpl#getFieldValue()
+		 * @generated
+		 */
+		EClass FIELD_VALUE = eINSTANCE.getFieldValue();
+
+		/**
+		 * The meta object literal for the '<em><b>Fieldvalue</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FIELD_VALUE__FIELDVALUE = eINSTANCE.getFieldValue_Fieldvalue();
 
 	}
 

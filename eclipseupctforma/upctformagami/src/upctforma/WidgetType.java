@@ -4,6 +4,7 @@ package upctforma;
 
 import org.eclipse.emf.common.util.EList;
 
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Widget Type</b></em>'.
@@ -13,7 +14,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link upctforma.WidgetType#getParameters <em>Parameters</em>}</li>
+ *   <li>{@link upctforma.WidgetType#getWidgettypeelements <em>Widgettypeelements</em>}</li>
  * </ul>
  *
  * @see upctforma.UpctformaPackage#getWidgetType()
@@ -22,19 +23,19 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface WidgetType extends Type {
 	/**
-	 * Returns the value of the '<em><b>Parameters</b></em>' containment reference list.
-	 * The list contents are of type {@link upctforma.Parameter}.
+	 * Returns the value of the '<em><b>Widgettypeelements</b></em>' reference list.
+	 * The list contents are of type {@link upctforma.Type}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Parameters</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Widgettypeelements</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Parameters</em>' containment reference list.
-	 * @see upctforma.UpctformaPackage#getWidgetType_Parameters()
-	 * @model containment="true"
+	 * @return the value of the '<em>Widgettypeelements</em>' reference list.
+	 * @see upctforma.UpctformaPackage#getWidgetType_Widgettypeelements()
+	 * @model required="true"
 	 * @generated
 	 */
-	EList<Parameter> getParameters();
+	EList<Type> getWidgettypeelements();
 
 } // WidgetType

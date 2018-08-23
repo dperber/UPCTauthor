@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link upctforma.UseTemplate#getTypetemplate <em>Typetemplate</em>}</li>
- *   <li>{@link upctforma.UseTemplate#getArguments <em>Arguments</em>}</li>
+ *   <li>{@link upctforma.UseTemplate#getTemplateelements <em>Templateelements</em>}</li>
  * </ul>
  *
  * @see upctforma.UpctformaPackage#getUseTemplate()
@@ -51,19 +51,19 @@ public interface UseTemplate extends EObject {
 	void setTypetemplate(TemplateDef value);
 
 	/**
-	 * Returns the value of the '<em><b>Arguments</b></em>' containment reference list.
-	 * The list contents are of type {@link upctforma.Argument}.
+	 * Returns the value of the '<em><b>Templateelements</b></em>' containment reference list.
+	 * The list contents are of type {@link upctforma.ContentElement}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Arguments</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Templateelements</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Arguments</em>' containment reference list.
-	 * @see upctforma.UpctformaPackage#getUseTemplate_Arguments()
+	 * @return the value of the '<em>Templateelements</em>' containment reference list.
+	 * @see upctforma.UpctformaPackage#getUseTemplate_Templateelements()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Argument> getArguments();
+	EList<ContentElement> getTemplateelements();
 
 } // UseTemplate

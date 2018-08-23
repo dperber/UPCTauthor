@@ -108,8 +108,8 @@ public class UpctformaValidator extends EObjectValidator {
 				return validateContentElement((ContentElement)value, diagnostics, context);
 			case UpctformaPackage.SIMPLE_ELEMENT:
 				return validateSimpleElement((SimpleElement)value, diagnostics, context);
-			case UpctformaPackage.PARAMETER:
-				return validateParameter((Parameter)value, diagnostics, context);
+			case UpctformaPackage.PLACE_HOLDER:
+				return validatePlaceHolder((PlaceHolder)value, diagnostics, context);
 			case UpctformaPackage.ROW:
 				return validateRow((Row)value, diagnostics, context);
 			case UpctformaPackage.UNIT:
@@ -120,34 +120,30 @@ public class UpctformaValidator extends EObjectValidator {
 				return validateImport((Import)value, diagnostics, context);
 			case UpctformaPackage.PARAGRAPH:
 				return validateParagraph((Paragraph)value, diagnostics, context);
-			case UpctformaPackage.ARGUMENT:
-				return validateArgument((Argument)value, diagnostics, context);
-			case UpctformaPackage.TAB:
-				return validateTab((Tab)value, diagnostics, context);
-			case UpctformaPackage.ANIMATION:
-				return validateAnimation((Animation)value, diagnostics, context);
-			case UpctformaPackage.DRAG_AND_DROP:
-				return validateDragAndDrop((DragAndDrop)value, diagnostics, context);
 			case UpctformaPackage.USE_TEMPLATE:
 				return validateUseTemplate((UseTemplate)value, diagnostics, context);
 			case UpctformaPackage.TYPE:
 				return validateType((Type)value, diagnostics, context);
 			case UpctformaPackage.SIMPLE_TYPE:
 				return validateSimpleType((SimpleType)value, diagnostics, context);
-			case UpctformaPackage.AGGREGATED_TYPE:
-				return validateAggregatedType((AggregatedType)value, diagnostics, context);
-			case UpctformaPackage.COMPOSITE_ARGUMENT:
-				return validateCompositeArgument((CompositeArgument)value, diagnostics, context);
-			case UpctformaPackage.FIXED:
-				return validateFixed((Fixed)value, diagnostics, context);
-			case UpctformaPackage.VARIABLE:
-				return validateVariable((Variable)value, diagnostics, context);
+			case UpctformaPackage.RECORD_TYPE:
+				return validateRecordType((RecordType)value, diagnostics, context);
 			case UpctformaPackage.WIDGET_TYPE:
 				return validateWidgetType((WidgetType)value, diagnostics, context);
 			case UpctformaPackage.LIST_TYPE:
 				return validateListType((ListType)value, diagnostics, context);
-			case UpctformaPackage.TYPE_SIMPLE_ELEMENT:
-				return validateTypeSimpleElement((TypeSimpleElement)value, diagnostics, context);
+			case UpctformaPackage.GAME:
+				return validateGame((Game)value, diagnostics, context);
+			case UpctformaPackage.COMPOSITE_TYPE:
+				return validateCompositeType((CompositeType)value, diagnostics, context);
+			case UpctformaPackage.FIELD:
+				return validateField((Field)value, diagnostics, context);
+			case UpctformaPackage.RECORD_VALUE:
+				return validateRecordValue((RecordValue)value, diagnostics, context);
+			case UpctformaPackage.LIST_VALUE:
+				return validateListValue((ListValue)value, diagnostics, context);
+			case UpctformaPackage.FIELD_VALUE:
+				return validateFieldValue((FieldValue)value, diagnostics, context);
 			default:
 				return true;
 		}
@@ -296,8 +292,8 @@ public class UpctformaValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateParameter(Parameter parameter, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(parameter, diagnostics, context);
+	public boolean validatePlaceHolder(PlaceHolder placeHolder, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(placeHolder, diagnostics, context);
 	}
 
 	/**
@@ -419,120 +415,6 @@ public class UpctformaValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateArgument(Argument argument, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(argument, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateTab(Tab tab, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(tab, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateAnimation(Animation animation, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(animation, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(animation, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(animation, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(animation, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(animation, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(animation, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(animation, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(animation, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(animation, diagnostics, context);
-		if (result || diagnostics != null) result &= validateAnimation_checkTypeImage(animation, diagnostics, context);
-		return result;
-	}
-
-	/**
-	 * The cached validation expression for the checkTypeImage constraint of '<em>Animation</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected static final String ANIMATION__CHECK_TYPE_IMAGE__EEXPRESSION = "self.arguments->forAll( e | e.oclIsKindOf(Image)=true)";
-
-	/**
-	 * Validates the checkTypeImage constraint of '<em>Animation</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateAnimation_checkTypeImage(Animation animation, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return
-			validate
-				(UpctformaPackage.Literals.ANIMATION,
-				 animation,
-				 diagnostics,
-				 context,
-				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
-				 "checkTypeImage",
-				 ANIMATION__CHECK_TYPE_IMAGE__EEXPRESSION,
-				 Diagnostic.ERROR,
-				 DIAGNOSTIC_SOURCE,
-				 0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateDragAndDrop(DragAndDrop dragAndDrop, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(dragAndDrop, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(dragAndDrop, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(dragAndDrop, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(dragAndDrop, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(dragAndDrop, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(dragAndDrop, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(dragAndDrop, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(dragAndDrop, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(dragAndDrop, diagnostics, context);
-		if (result || diagnostics != null) result &= validateDragAndDrop_checkTypeImage(dragAndDrop, diagnostics, context);
-		return result;
-	}
-
-	/**
-	 * The cached validation expression for the checkTypeImage constraint of '<em>Drag And Drop</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected static final String DRAG_AND_DROP__CHECK_TYPE_IMAGE__EEXPRESSION = "self.arguments->forAll( e | e.oclIsKindOf(Image)=true)";
-
-	/**
-	 * Validates the checkTypeImage constraint of '<em>Drag And Drop</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateDragAndDrop_checkTypeImage(DragAndDrop dragAndDrop, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return
-			validate
-				(UpctformaPackage.Literals.DRAG_AND_DROP,
-				 dragAndDrop,
-				 diagnostics,
-				 context,
-				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
-				 "checkTypeImage",
-				 DRAG_AND_DROP__CHECK_TYPE_IMAGE__EEXPRESSION,
-				 Diagnostic.ERROR,
-				 DIAGNOSTIC_SOURCE,
-				 0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public boolean validateUseTemplate(UseTemplate useTemplate, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(useTemplate, diagnostics, context);
 	}
@@ -560,35 +442,8 @@ public class UpctformaValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateAggregatedType(AggregatedType aggregatedType, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(aggregatedType, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateCompositeArgument(CompositeArgument compositeArgument, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(compositeArgument, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateFixed(Fixed fixed, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(fixed, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateVariable(Variable variable, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(variable, diagnostics, context);
+	public boolean validateRecordType(RecordType recordType, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(recordType, diagnostics, context);
 	}
 
 	/**
@@ -614,8 +469,53 @@ public class UpctformaValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateTypeSimpleElement(TypeSimpleElement typeSimpleElement, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return true;
+	public boolean validateGame(Game game, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(game, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateCompositeType(CompositeType compositeType, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(compositeType, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateField(Field field, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(field, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateRecordValue(RecordValue recordValue, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(recordValue, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateListValue(ListValue listValue, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(listValue, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateFieldValue(FieldValue fieldValue, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(fieldValue, diagnostics, context);
 	}
 
 	/**

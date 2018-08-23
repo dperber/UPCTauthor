@@ -3,18 +3,10 @@
 package upctforma.impl;
 
 import java.util.Collection;
-
-import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
-
-import upctforma.Parameter;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import upctforma.Type;
 import upctforma.UpctformaPackage;
 import upctforma.WidgetType;
 
@@ -26,22 +18,21 @@ import upctforma.WidgetType;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link upctforma.impl.WidgetTypeImpl#getParameters <em>Parameters</em>}</li>
+ *   <li>{@link upctforma.impl.WidgetTypeImpl#getWidgettypeelements <em>Widgettypeelements</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class WidgetTypeImpl extends TypeImpl implements WidgetType {
 	/**
-	 * The cached value of the '{@link #getParameters() <em>Parameters</em>}' containment reference list.
+	 * The cached value of the '{@link #getWidgettypeelements() <em>Widgettypeelements</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getParameters()
+	 * @see #getWidgettypeelements()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Parameter> parameters;
-
+	protected EList<Type> widgettypeelements;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -66,25 +57,11 @@ public class WidgetTypeImpl extends TypeImpl implements WidgetType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Parameter> getParameters() {
-		if (parameters == null) {
-			parameters = new EObjectContainmentEList<Parameter>(Parameter.class, this, UpctformaPackage.WIDGET_TYPE__PARAMETERS);
+	public EList<Type> getWidgettypeelements() {
+		if (widgettypeelements == null) {
+			widgettypeelements = new EObjectResolvingEList<Type>(Type.class, this, UpctformaPackage.WIDGET_TYPE__WIDGETTYPEELEMENTS);
 		}
-		return parameters;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case UpctformaPackage.WIDGET_TYPE__PARAMETERS:
-				return ((InternalEList<?>)getParameters()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+		return widgettypeelements;
 	}
 
 	/**
@@ -95,8 +72,8 @@ public class WidgetTypeImpl extends TypeImpl implements WidgetType {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case UpctformaPackage.WIDGET_TYPE__PARAMETERS:
-				return getParameters();
+			case UpctformaPackage.WIDGET_TYPE__WIDGETTYPEELEMENTS:
+				return getWidgettypeelements();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -110,9 +87,9 @@ public class WidgetTypeImpl extends TypeImpl implements WidgetType {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case UpctformaPackage.WIDGET_TYPE__PARAMETERS:
-				getParameters().clear();
-				getParameters().addAll((Collection<? extends Parameter>)newValue);
+			case UpctformaPackage.WIDGET_TYPE__WIDGETTYPEELEMENTS:
+				getWidgettypeelements().clear();
+				getWidgettypeelements().addAll((Collection<? extends Type>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -126,8 +103,8 @@ public class WidgetTypeImpl extends TypeImpl implements WidgetType {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case UpctformaPackage.WIDGET_TYPE__PARAMETERS:
-				getParameters().clear();
+			case UpctformaPackage.WIDGET_TYPE__WIDGETTYPEELEMENTS:
+				getWidgettypeelements().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -141,8 +118,8 @@ public class WidgetTypeImpl extends TypeImpl implements WidgetType {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case UpctformaPackage.WIDGET_TYPE__PARAMETERS:
-				return parameters != null && !parameters.isEmpty();
+			case UpctformaPackage.WIDGET_TYPE__WIDGETTYPEELEMENTS:
+				return widgettypeelements != null && !widgettypeelements.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
