@@ -84,8 +84,8 @@ public class InyectorGamificationXMI {
 	
 
 	public void exportXMI() {
-		String absoluteTargetFolderPath = "P:\\runtime-EclipseXtext\\upctforma";
-		String absoluteTargetFolderPath2 = "P:\\eclipseupctforma\\org.eclipse.acceleo.module.upctgami\\model";
+		String absoluteTargetFolderPath = "P:\\upctauthor2\\runtime-EclipseXtext\\upctforma";
+		String absoluteTargetFolderPath2 = "P:\\upctauthor2\\eclipseupctforma\\org.eclipse.acceleo.module.upctgami\\model";
 	    Injector injector = new UpctformagamiStandaloneSetupGenerated()
 	       .createInjectorAndDoEMFRegistration();
 		

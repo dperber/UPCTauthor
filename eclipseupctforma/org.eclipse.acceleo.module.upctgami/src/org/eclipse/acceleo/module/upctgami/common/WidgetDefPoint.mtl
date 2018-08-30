@@ -2,7 +2,7 @@
 [module WidgetDefPoint('http://cpcd.upct.es/upctformagami')]
 
 
-[template public generateWidgetDefPoint(aWidgetDefPoint : WidgetDefPoint)]
+[template public generateWidgetDefPoint(aWidgetGamify : WidgetGamify)]
 [file('index.php', true, 'UTF-8')]
 
 

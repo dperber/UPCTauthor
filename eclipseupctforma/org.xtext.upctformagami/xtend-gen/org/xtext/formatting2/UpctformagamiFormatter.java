@@ -12,9 +12,12 @@ import org.eclipse.xtext.formatting2.IFormattableDocument;
 import org.eclipse.xtext.resource.XtextResource;
 import org.eclipse.xtext.xbase.lib.Extension;
 import org.xtext.services.UpctformagamiGrammarAccess;
+import upctformagami.Badge;
 import upctformagami.Gamification;
-import upctformagami.Point;
-import upctformagami.WidgetDefPoint;
+import upctformagami.Import;
+import upctformagami.PointAchievement;
+import upctformagami.UnitGamify;
+import upctformagami.WidgetGamify;
 
 @SuppressWarnings("all")
 public class UpctformagamiFormatter extends AbstractFormatter2 {
@@ -23,17 +26,28 @@ public class UpctformagamiFormatter extends AbstractFormatter2 {
   private UpctformagamiGrammarAccess _upctformagamiGrammarAccess;
   
   protected void _format(final Gamification gamification, @Extension final IFormattableDocument document) {
-    throw new Error("Unresolved compilation problems:"
-      + "\nType mismatch: cannot convert from element type WidgetGamify to WidgetDefPoint"
-      + "\nType mismatch: cannot convert from element type UnitGamify to UnitPoint"
-      + "\nType mismatch: cannot convert from EList<WidgetGamify> to Iterable<? extends WidgetDefPoint> | WidgetDefPoint[]"
-      + "\nType mismatch: cannot convert from EList<UnitGamify> to Iterable<? extends UnitPoint> | UnitPoint[]");
+    EList<Import> _imports = gamification.getImports();
+    for (final Import _import : _imports) {
+      document.<Import>format(_import);
+    }
+    EList<Badge> _badges = gamification.getBadges();
+    for (final Badge badge : _badges) {
+      document.<Badge>format(badge);
+    }
+    EList<WidgetGamify> _widgets = gamification.getWidgets();
+    for (final WidgetGamify widgetGamify : _widgets) {
+      document.<WidgetGamify>format(widgetGamify);
+    }
+    EList<UnitGamify> _units = gamification.getUnits();
+    for (final UnitGamify unitGamify : _units) {
+      document.<UnitGamify>format(unitGamify);
+    }
   }
   
-  protected void _format(final WidgetDefPoint widgetDefPoint, @Extension final IFormattableDocument document) {
-    EList<Point> _pointswidgetdef = widgetDefPoint.getPointswidgetdef();
-    for (final Point point : _pointswidgetdef) {
-      document.<Point>format(point);
+  protected void _format(final WidgetGamify widgetGamify, @Extension final IFormattableDocument document) {
+    EList<PointAchievement> _pointswidgetdef = widgetGamify.getPointswidgetdef();
+    for (final PointAchievement pointAchievement : _pointswidgetdef) {
+      document.<PointAchievement>format(pointAchievement);
     }
   }
   
@@ -44,8 +58,8 @@ public class UpctformagamiFormatter extends AbstractFormatter2 {
     } else if (gamification instanceof Gamification) {
       _format((Gamification)gamification, document);
       return;
-    } else if (gamification instanceof WidgetDefPoint) {
-      _format((WidgetDefPoint)gamification, document);
+    } else if (gamification instanceof WidgetGamify) {
+      _format((WidgetGamify)gamification, document);
       return;
     } else if (gamification instanceof EObject) {
       _format((EObject)gamification, document);

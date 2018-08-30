@@ -1,0 +1,35 @@
+entro2
+		encuentro FinalUnit1
+				split
+				if (Score <= 65.0?) then (yes)
+						:Demo Unit 3;
+
+				
+				split again
+				if (Score <= 100.0?) then (yes)
+						:Demo Unit 4;
+
+				
+		end split
+
+
+entro2
+		encuentro FinalUnit1
+				split
+				if (Score <= 65.0?) then (yes)
+						:Demo Unit 3;
+
+				
+entro2
+
+				split again
+				if (Score <= 100.0?) then (yes)
+						:Demo Unit 4;
+
+				
+entro2
+
+		end split
+
+
+entro2

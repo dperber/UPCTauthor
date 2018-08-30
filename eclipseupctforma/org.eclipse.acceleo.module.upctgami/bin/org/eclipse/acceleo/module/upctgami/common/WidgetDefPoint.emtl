@@ -14,10 +14,8 @@
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </charset>
       </body>
-      <parameter name="aWidgetDefPoint">
-        <eAnnotations source="MTL">
-          <details key="type" value="WidgetDefPoint"/>
-        </eAnnotations>
+      <parameter name="aWidgetGamify">
+        <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//WidgetGamify"/>
       </parameter>
     </ownedModuleElement>
   </mtl:Module>
@@ -47,8 +45,8 @@
         </eAnnotations>
         <eAnnotations source="MTL" references="/0/generateWidgetDefPoint"/>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <eParameters name="aWidgetDefPoint">
-          <eType xsi:type="ocl.ecore:VoidType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclVoid"/>
+        <eParameters name="aWidgetGamify">
+          <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//WidgetGamify"/>
         </eParameters>
       </eOperations>
     </eClassifiers>
@@ -72,18 +70,29 @@
         <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)"/>
       </eAnnotations>
     </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="upctformagami_WidgetGamify_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://cpcd.upct.es/upctformagami#//WidgetGamify"/>
+      </eAnnotations>
+    </eClassifiers>
   </ecore:EPackage>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//WidgetGamify"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
     <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//WidgetGamify"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//WidgetGamify"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://cpcd.upct.es/upctformagami#//WidgetGamify"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
@@ -91,32 +100,32 @@
   <ecore:EAnnotation source="positions">
     <eAnnotations source="positions.0" references="/0/generateWidgetDefPoint">
       <details key="start" value="92"/>
-      <details key="end" value="223"/>
+      <details key="end" value="219"/>
       <details key="line" value="5"/>
     </eAnnotations>
     <eAnnotations source="positions.1" references="/0/generateWidgetDefPoint/%">
-      <details key="start" value="167"/>
-      <details key="end" value="211"/>
+      <details key="start" value="163"/>
+      <details key="end" value="207"/>
       <details key="line" value="6"/>
     </eAnnotations>
     <eAnnotations source="positions.2" references="/0/generateWidgetDefPoint/%/%">
-      <details key="start" value="202"/>
-      <details key="end" value="204"/>
+      <details key="start" value="198"/>
+      <details key="end" value="200"/>
       <details key="line" value="7"/>
     </eAnnotations>
     <eAnnotations source="positions.3" references="/0/generateWidgetDefPoint/%/%.1">
-      <details key="start" value="173"/>
-      <details key="end" value="184"/>
+      <details key="start" value="169"/>
+      <details key="end" value="180"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.4" references="/0/generateWidgetDefPoint/%/%.2">
-      <details key="start" value="192"/>
-      <details key="end" value="199"/>
+      <details key="start" value="188"/>
+      <details key="end" value="195"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.5" references="/0/generateWidgetDefPoint/aWidgetDefPoint">
+    <eAnnotations source="positions.5" references="/0/generateWidgetDefPoint/aWidgetGamify">
       <details key="start" value="132"/>
-      <details key="end" value="164"/>
+      <details key="end" value="160"/>
       <details key="line" value="5"/>
     </eAnnotations>
   </ecore:EAnnotation>

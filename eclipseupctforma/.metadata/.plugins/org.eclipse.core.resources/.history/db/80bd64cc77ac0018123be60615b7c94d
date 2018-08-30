@@ -1,0 +1,284 @@
+[comment encoding = UTF-8 /]
+[module main('http://cpcd.upct.es/upctformagami')/]
+
+[import org::eclipse::acceleo::module::upctgami::common::WidgetDefPoint/]
+
+[template public main(aGamification : Gamification)]
+[comment @main/]
+
+[file('index.php', false, 'UTF-8')]
+<!DOCTYPE html>
+<?php
+
+$numero = count($_GET);
+$tags = array_keys($_GET);// obtiene los nombres de las varibles
+$valores = array_values($_GET);// obtiene los valores de las varibles
+
+require_once "../config.php";
+require_once "php/funciones.php";
+use \Tsugi\Grades\GradeUtil;
+
+use \Tsugi\Core\LTIX;
+use \Tsugi\Util\LTI;
+use \Tsugi\Util\Caliper;
+
+$LTI = LTIX::requireData();
+$p = $CFG->dbprefix;
+?>
+<html>
+  <head>
+   <meta charset="utf-8">
+	<title>Gamification</title>
+	<link rel="stylesheet" type="text/css" href="css/icomoon.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+	 <link rel="stylesheet" type="text/css" href="css/base.css">
+ <link rel="stylesheet" type="text/css" href="css/social.css">
+    <!-- Bootstrap 3.3.5 -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css" media="screen" charset="utf-8">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" media="screen" charset="utf-8">
+    <script type="text/javascript" src="jquery/jquery-1.11.3.min.js"></script>
+   <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
+   <script src="jquery-ui-touch-punch-master/jquery.ui.touch-punch.min.js"></script>
+  </head>
+  <body id="body">
+	<section id="apdo1" class="section-divider textdividersub divider1" style="background:url('./images/cabecerat2.jpg');">
+      <div class="container">
+        <h1><?php echo $CONTEXT->title; ?></h1>
+        <hr>
+        <p></p>
+      </div>
+    </section>
+	<section style="margin-top: 70px;margin-bottom: 70px;">
+	<div class="container">
+	<div class="row">
+
+	[for (aUnitGamify : UnitGamify | aGamification.units)]
+		<div class="col-md-3 center-block" style="margin-bottom: 25px;">	
+			[if aUnitGamify.state.toString() = 'open' ]
+				<?php
+					if (isCompleteUnitSQL("[aUnitGamify.URL /]",$USER->id,$LINK->id)>0){
+						echo '<input type="image" src="'.convertComplete("[aUnitGamify.image /]").'" width="250" alt="[if aUnitGamify.unitref.name.oclIsUndefined() ][aUnitGamify.evalref.name /][else][aUnitGamify.unitref.name /][/if]" onclick="entrarMision('.'\'[aUnitGamify.URL /]\''.','.'\'[if aUnitGamify.unitref.name.oclIsUndefined() ][aUnitGamify.evalref.name /][else][aUnitGamify.unitref.name /][/if]\''.')">';
+					}else{ 
+						echo '<input type="image" src="[aUnitGamify.image /]" width="250" alt="[if aUnitGamify.unitref.name.oclIsUndefined() ][aUnitGamify.evalref.name /][else][aUnitGamify.unitref.name /][/if]" onclick="entrarMision('.'\'[aUnitGamify.URL /]\''.','.'\'[if aUnitGamify.unitref.name.oclIsUndefined() ][aUnitGamify.evalref.name /][else][aUnitGamify.unitref.name /][/if]\''.')">';
+					}
+				?>
+			[else]
+				<?php
+					if (isCompleteUnitSQL("[aUnitGamify.URL /]",$USER->id,$LINK->id)>0){
+						echo '<input type="image" src="'.convertComplete("[aUnitGamify.image /]").'" width="250" alt="[if aUnitGamify.unitref.name.oclIsUndefined() ][aUnitGamify.evalref.name /][else][aUnitGamify.unitref.name /][/if]" onclick="entrarMision('.'\'[aUnitGamify.URL /]\''.','.'\'[if aUnitGamify.unitref.name.oclIsUndefined() ][aUnitGamify.evalref.name /][else][aUnitGamify.unitref.name /][/if]\''.')">';
+					}else{ 
+						if (isOpenUnitSQL("[if aUnitGamify.unitref.name.oclIsUndefined() ][aUnitGamify.evalref.name /][else][aUnitGamify.unitref.name /][/if]",$USER->id,$LINK->id)==1){
+							echo '<input type="image" src="[aUnitGamify.image /]" width="250" alt="[if aUnitGamify.unitref.name.oclIsUndefined() ][aUnitGamify.evalref.name /][else][aUnitGamify.unitref.name /][/if]" onclick="entrarMision('.'\'[aUnitGamify.URL /]\''.','.'\'[if aUnitGamify.unitref.name.oclIsUndefined() ][aUnitGamify.evalref.name /][else][aUnitGamify.unitref.name /][/if]\''.')">';
+						}
+						/*else{
+							echo '<input type="image" style="opacity:0.5" src="[aUnitGamify.image /]" [if aUnitGamify.state.toString() = 'close' ]disabled[/if] width="250" alt="[if aUnitGamify.unitref.name.oclIsUndefined() ][aUnitGamify.evalref.name /][else][aUnitGamify.unitref.name /][/if]" onclick="entrarMision('.'\'[aUnitGamify.URL /]\''.','.'\'[if aUnitGamify.unitref.name.oclIsUndefined() ][aUnitGamify.evalref.name /][else][aUnitGamify.unitref.name /][/if]\''.')">';
+						}*/
+					}
+				?>
+			[/if]
+		</div>
+	[/for]
+	</div>	
+	</div>
+	</section>
+
+	<p id="demo"></p>
+
+	<script>
+	var points,pointspre, pointsunit = "";
+	[for (aWidgetGamify : WidgetGamify | aGamification.widgets)]
+		var a = {
+		[for (aPointAchievement : PointAchievement | aWidgetGamify.pointswidgetdef)]
+			[if aPointAchievement.type.toString() = 'completed']
+				[if (aPointAchievement.attempt <> 0)]
+					"[aPointAchievement.attempt /]" : [aPointAchievement.points/],
+				[else]
+					"default" : [aPointAchievement.points/],
+				[/if]
+			[/if]
+		[/for]
+		};
+		var b = {
+		[for (aWidgetDef : upctforma::WidgetType | aWidgetGamify.widgetref)]
+			"[aWidgetDef.name /]" : a,
+		[/for]
+		};
+		[if aWidgetGamify.unitref->size() > 0]
+			[for (aUnit : upctforma::Unit | aWidgetGamify.unitref)]
+				pointsunit = Object.assign({}, pointsunit, {"[aUnit.name /]" : b});
+			[/for]
+
+		[else]
+			pointspre = Object.assign({}, pointspre, b);
+		[/if]
+	[/for]
+
+	var numerounidades = 1;
+	var unit = "";
+	[for (aUnitGamify : UnitGamify | aGamification.units)]
+		var c = ['['/]
+		[for (aPointAchievement : PointAchievement | aUnitGamify.pointsunit)]
+			[if aPointAchievement.type.toString() = 'completed']
+				[if (aPointAchievement.attempt <> 0)]
+					{"[aPointAchievement.attempt /]" : [aPointAchievement.points/]},
+				[else]
+					{"default" : [aPointAchievement.points/]},
+				[/if]
+			[else]
+				[if aPointAchievement.type.toString() = 'scores']
+					{"InitialScore" : [aPointAchievement.pointrange.InitialScore/], "FinalScore" : [aPointAchievement.pointrange.FinalScore/], "Points" : [aPointAchievement.points/]},
+				[/if]
+			[/if]
+		[/for]
+		[']'/];
+		
+		var numuni = 0;
+		[if aUnitGamify.unitref->size() > 0]
+			[for (aMission : Mission | aUnitGamify.missions)]
+				numuni = numuni + 1;
+			[/for]
+		[else]
+			numuni = 1;
+		[/if]
+		numerounidades = numerounidades + numuni;
+
+		var f = ['['/]
+		[for (aMission : Mission | aUnitGamify.missions)]
+			[if aMission.nextunit->size() > 0]
+				{"InitialScore" : [aMission.missionrange.InitialScore/], "FinalScore" : [aMission.missionrange.FinalScore/], "Points" : '[aMission.type/]', "Next" : '[aMission.nextunit.name /]'},
+			[else]
+				{"InitialScore" : [aMission.missionrange.InitialScore/], "FinalScore" : [aMission.missionrange.FinalScore/], "Points" : '[aMission.type/]', "Next" : '[aMission.nexteval.name /]'},
+			[/if]
+		[/for]
+		[']'/];
+
+		var e = "";
+		[if aUnitGamify.unitref->size() > 0]
+			e  = {"tipo" : "unit","badget": "[aUnitGamify.defbadges.badge.url /]","points" : c,"missions" : f};
+			unit = Object.assign({}, unit, {"[aUnitGamify.unitref.name /]" : e});
+		[else]
+			e  = {"tipo" : "evaluation","badget": "[aUnitGamify.defbadges.badge.url /]","points" : c,"missions" : f};
+			unit = Object.assign({}, unit, {"[aUnitGamify.evalref.name /]" : e});
+		[/if]
+	[/for]
+
+		function entrarMision(url,unidad) {
+			points = pointspre;
+			if (pointsunit.hasOwnProperty(unidad)) {
+				for (var clave in pointsunit['['/]unidad[']'/]) {
+					points['['/]clave[']'/] = pointsunit['['/]unidad[']'/]['['/]clave[']'/];
+				}
+			}
+			if (unit.hasOwnProperty(unidad)) {
+				for (var clave in unit['['/]unidad[']'/]) {
+					points['['/]clave[']'/] = unit['['/]unidad[']'/]['['/]clave[']'/];
+				}
+			}
+
+			var url2 = url + "?PHPSESSID=" + '<?php echo session_id(); ?>';			
+			var form = '';
+            form += "<input type='hidden' name='unidades' value='"+ numerounidades +"'>";
+            form += "<input type='hidden' name='identificador' value='"+ url +"'>";
+            form += "<input type='hidden' name='points' value='"+ JSON.stringify(points) +"'>";
+			$('<form action="'+url2+'" method="POST">'+form+'</form>').appendTo('body').submit();
+		}
+		function entrarRanking(link) {
+			url = "ranking.php";
+			var url2 = url + "?PHPSESSID=" + '<?php echo session_id(); ?>';			
+			var form = '';
+            form += "<input type='hidden' name='unidades' value='"+ numerounidades +"'>";
+            form += "<input type='hidden' name='link' value='"+ link +"'>";
+       		$('<form action="'+url2+'" method="POST">'+form+'</form>').appendTo('body').submit();
+			
+		}
+	</script>
+	<div class="social">
+		<ul>
+			<li><a onclick="entrarRanking(<?php echo $LINK->id; ?>)" target="_blank" ><i class="fa fa-trophy" style="font-size:48px;" aria-hidden="true"></i></a></li>
+		</ul>
+	</div>
+
+	<footer id="footerwrap">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12">
+					<h6 style="color: #fff;">&copy; Polytechnic University of Cartagena - Pza. del Cronista Isidoro Valverde, Edif. La Milagrosa, C.P. 30202 Cartagena. Tlf: 868 07 11 98.</h6>
+                    <h6 style="color: #fff;">&copy; Designed and Developed by <a href="http://cpcd.upct.es/" target="_blank">Center of Production of Digital Contents</a> of the Polytechnic University of Cartagena</h6>
+						
+					</div>
+				</div>	
+			</div>
+	</footer>
+	</body>
+</html>
+
+[/file]
+
+[file('diagramaactividad.plantuml', false, 'UTF-8')]
+@startuml
+start
+repeat
+[for (aUnitGamify : UnitGamify | aGamification.units)]
+	[if aUnitGamify.state.toString() = 'open' ]
+		[if i <> 1]
+			split again
+		[else]
+			split
+		[/if]
+		:[if aUnitGamify.unitref.name.oclIsUndefined() ][aUnitGamify.evalref.name /][else][aUnitGamify.unitref.name /][/if];
+		[for (aMission : Mission | aUnitGamify.missions)]
+			[if i <> 1]
+				split again
+			[else]
+				split
+			[/if]
+			[if aMission.missionrange.InitialScore <> aMission.missionrange.FinalScore]
+				if (Score <= [aMission.missionrange.FinalScore/]?) then (yes)
+					[if aMission.nextunit->size() > 0]
+						:[aMission.nextunit.name /];
+					[else]
+						:[aMission.nexteval.name /];
+					[/if]
+			[else]
+				[if aMission.nextunit->size() > 0]
+					:[aMission.nextunit.name /];
+				[else]
+					:[aMission.nexteval.name /];
+				[/if]
+			[/if]
+
+			[if aMission.nextunit->size() > 0]
+				[generatePlantUMLUnit(aGamification,aMission.nextunit.name)/]
+			[else]
+				[generatePlantUMLEval(aGamification,aMission.nextunit.name)/]
+			[/if]
+		[/for]
+		end split
+	[/if]
+[/for]
+end split
+
+repeat while (not all units completed?)
+stop
+@enduml
+
+[/file]
+
+[/template]
+
+[template public generatePlantUMLUnit(aGamification : Gamification, name: String)]
+[file('diagramaactividad.plantuml', false, 'UTF-8')]
+
+[/file]
+[/template]
+
+[template public generatePlantUMLEval(aGamification : Gamification, name: String)]
+[file('diagramaactividad.plantuml', false, 'UTF-8')]
+[for (aUnitGamify : UnitGamify | aGamification.units)]
+	[if aUnitGamify.evaluationunit.toString() = 'open' ]
+
+	[/if]
+[/for]
+[/file]
+[/template]

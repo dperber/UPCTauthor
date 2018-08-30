@@ -15,30 +15,30 @@ import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
 import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 import org.xtext.services.UpctformagamiGrammarAccess;
-import upctforma.AggregatedType;
-import upctforma.Animation;
-import upctforma.Argument;
 import upctforma.Column;
 import upctforma.Composite;
-import upctforma.CompositeArgument;
+import upctforma.CompositeType;
 import upctforma.ContentElement;
-import upctforma.DragAndDrop;
-import upctforma.Fixed;
+import upctforma.Field;
+import upctforma.FieldValue;
+import upctforma.Game;
 import upctforma.Image;
 import upctforma.ListType;
+import upctforma.ListValue;
 import upctforma.Paragraph;
+import upctforma.PlaceHolder;
+import upctforma.RecordType;
+import upctforma.RecordValue;
 import upctforma.Row;
 import upctforma.Section;
 import upctforma.SimpleElement;
 import upctforma.SimpleType;
-import upctforma.Tab;
 import upctforma.TemplateDef;
 import upctforma.Text;
 import upctforma.Type;
 import upctforma.Unit;
 import upctforma.UpctformaPackage;
 import upctforma.UseTemplate;
-import upctforma.Variable;
 import upctforma.Video;
 import upctforma.Widget;
 import upctforma.WidgetType;
@@ -56,14 +56,15 @@ import upctformaevalua.Unique;
 import upctformaevalua.UniqueAnswer;
 import upctformaevalua.UpctformaevaluaPackage;
 import upctformagami.Badge;
-import upctformagami.BadgeUnit;
 import upctformagami.Gamification;
 import upctformagami.Import;
 import upctformagami.Mission;
-import upctformagami.Point;
-import upctformagami.UnitPoint;
+import upctformagami.PointAchievement;
+import upctformagami.ScoreRange;
+import upctformagami.UnitBadge;
+import upctformagami.UnitGamify;
 import upctformagami.UpctformagamiPackage;
-import upctformagami.WidgetDefPoint;
+import upctformagami.WidgetGamify;
 
 @SuppressWarnings("all")
 public class UpctformagamiSemanticSequencer extends AbstractDelegatingSemanticSequencer {
@@ -79,32 +80,26 @@ public class UpctformagamiSemanticSequencer extends AbstractDelegatingSemanticSe
 		Set<Parameter> parameters = context.getEnabledBooleanParameters();
 		if (epackage == UpctformaPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
-			case UpctformaPackage.AGGREGATED_TYPE:
-				sequence_AggregatedType(context, (AggregatedType) semanticObject); 
-				return; 
-			case UpctformaPackage.ANIMATION:
-				sequence_Animation(context, (Animation) semanticObject); 
-				return; 
-			case UpctformaPackage.ARGUMENT:
-				sequence_Argument_Impl(context, (Argument) semanticObject); 
-				return; 
 			case UpctformaPackage.COLUMN:
 				sequence_Column(context, (Column) semanticObject); 
 				return; 
 			case UpctformaPackage.COMPOSITE:
 				sequence_Composite_Impl(context, (Composite) semanticObject); 
 				return; 
-			case UpctformaPackage.COMPOSITE_ARGUMENT:
-				sequence_CompositeArgument_Impl(context, (CompositeArgument) semanticObject); 
+			case UpctformaPackage.COMPOSITE_TYPE:
+				sequence_CompositeType_Impl(context, (CompositeType) semanticObject); 
 				return; 
 			case UpctformaPackage.CONTENT_ELEMENT:
 				sequence_ContentElement_Impl(context, (ContentElement) semanticObject); 
 				return; 
-			case UpctformaPackage.DRAG_AND_DROP:
-				sequence_DragAndDrop(context, (DragAndDrop) semanticObject); 
+			case UpctformaPackage.FIELD:
+				sequence_Field(context, (Field) semanticObject); 
 				return; 
-			case UpctformaPackage.FIXED:
-				sequence_Fixed(context, (Fixed) semanticObject); 
+			case UpctformaPackage.FIELD_VALUE:
+				sequence_FieldValue(context, (FieldValue) semanticObject); 
+				return; 
+			case UpctformaPackage.GAME:
+				sequence_Game(context, (Game) semanticObject); 
 				return; 
 			case UpctformaPackage.IMAGE:
 				sequence_Image(context, (Image) semanticObject); 
@@ -112,11 +107,20 @@ public class UpctformagamiSemanticSequencer extends AbstractDelegatingSemanticSe
 			case UpctformaPackage.LIST_TYPE:
 				sequence_ListType(context, (ListType) semanticObject); 
 				return; 
+			case UpctformaPackage.LIST_VALUE:
+				sequence_ListValue(context, (ListValue) semanticObject); 
+				return; 
 			case UpctformaPackage.PARAGRAPH:
 				sequence_Paragraph(context, (Paragraph) semanticObject); 
 				return; 
-			case UpctformaPackage.PARAMETER:
-				sequence_Parameter_Impl(context, (upctforma.Parameter) semanticObject); 
+			case UpctformaPackage.PLACE_HOLDER:
+				sequence_PlaceHolder(context, (PlaceHolder) semanticObject); 
+				return; 
+			case UpctformaPackage.RECORD_TYPE:
+				sequence_RecordType(context, (RecordType) semanticObject); 
+				return; 
+			case UpctformaPackage.RECORD_VALUE:
+				sequence_RecordValue(context, (RecordValue) semanticObject); 
 				return; 
 			case UpctformaPackage.ROW:
 				sequence_Row(context, (Row) semanticObject); 
@@ -129,9 +133,6 @@ public class UpctformagamiSemanticSequencer extends AbstractDelegatingSemanticSe
 				return; 
 			case UpctformaPackage.SIMPLE_TYPE:
 				sequence_SimpleType(context, (SimpleType) semanticObject); 
-				return; 
-			case UpctformaPackage.TAB:
-				sequence_Tab(context, (Tab) semanticObject); 
 				return; 
 			case UpctformaPackage.TEMPLATE_DEF:
 				sequence_TemplateDef(context, (TemplateDef) semanticObject); 
@@ -147,9 +148,6 @@ public class UpctformagamiSemanticSequencer extends AbstractDelegatingSemanticSe
 				return; 
 			case UpctformaPackage.USE_TEMPLATE:
 				sequence_UseTemplate(context, (UseTemplate) semanticObject); 
-				return; 
-			case UpctformaPackage.VARIABLE:
-				sequence_Variable(context, (Variable) semanticObject); 
 				return; 
 			case UpctformaPackage.VIDEO:
 				sequence_Video(context, (Video) semanticObject); 
@@ -208,9 +206,6 @@ public class UpctformagamiSemanticSequencer extends AbstractDelegatingSemanticSe
 			case UpctformagamiPackage.BADGE:
 				sequence_Badge(context, (Badge) semanticObject); 
 				return; 
-			case UpctformagamiPackage.BADGE_UNIT:
-				sequence_BadgeUnit(context, (BadgeUnit) semanticObject); 
-				return; 
 			case UpctformagamiPackage.GAMIFICATION:
 				sequence_Gamification(context, (Gamification) semanticObject); 
 				return; 
@@ -220,58 +215,25 @@ public class UpctformagamiSemanticSequencer extends AbstractDelegatingSemanticSe
 			case UpctformagamiPackage.MISSION:
 				sequence_Mission(context, (Mission) semanticObject); 
 				return; 
-			case UpctformagamiPackage.POINT:
-				sequence_Point(context, (Point) semanticObject); 
+			case UpctformagamiPackage.POINT_ACHIEVEMENT:
+				sequence_PointAchievement(context, (PointAchievement) semanticObject); 
 				return; 
-			case UpctformagamiPackage.UNIT_POINT:
-				sequence_UnitPoint(context, (UnitPoint) semanticObject); 
+			case UpctformagamiPackage.SCORE_RANGE:
+				sequence_ScoreRange(context, (ScoreRange) semanticObject); 
 				return; 
-			case UpctformagamiPackage.WIDGET_DEF_POINT:
-				sequence_WidgetDefPoint(context, (WidgetDefPoint) semanticObject); 
+			case UpctformagamiPackage.UNIT_BADGE:
+				sequence_UnitBadge(context, (UnitBadge) semanticObject); 
+				return; 
+			case UpctformagamiPackage.UNIT_GAMIFY:
+				sequence_UnitGamify(context, (UnitGamify) semanticObject); 
+				return; 
+			case UpctformagamiPackage.WIDGET_GAMIFY:
+				sequence_WidgetGamify(context, (WidgetGamify) semanticObject); 
 				return; 
 			}
 		if (errorAcceptor != null)
 			errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
 	}
-	
-	/**
-	 * Contexts:
-	 *     Type returns AggregatedType
-	 *     AggregatedType returns AggregatedType
-	 *
-	 * Constraint:
-	 *     (name=EString (type+=SimpleType type+=SimpleType*)?)
-	 */
-	protected void sequence_AggregatedType(ISerializationContext context, AggregatedType semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     Argument returns Animation
-	 *     Animation returns Animation
-	 *
-	 * Constraint:
-	 *     (width=EString? image=EString? (arguments+=SimpleElement arguments+=SimpleElement*)?)
-	 */
-	protected void sequence_Animation(ISerializationContext context, Animation semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     Argument returns Argument
-	 *     Argument_Impl returns Argument
-	 *
-	 * Constraint:
-	 *     {Argument}
-	 */
-	protected void sequence_Argument_Impl(ISerializationContext context, Argument semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
 	
 	/**
 	 * Contexts:
@@ -281,18 +243,6 @@ public class UpctformagamiSemanticSequencer extends AbstractDelegatingSemanticSe
 	 *     (value?='value'? text=EString?)
 	 */
 	protected void sequence_Assertion(ISerializationContext context, Assertion semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     BadgeUnit returns BadgeUnit
-	 *
-	 * Constraint:
-	 *     (type=TypeRule? badge=[Badge|EString]?)
-	 */
-	protected void sequence_BadgeUnit(ISerializationContext context, BadgeUnit semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -324,14 +274,20 @@ public class UpctformagamiSemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Contexts:
-	 *     Argument returns CompositeArgument
-	 *     CompositeArgument_Impl returns CompositeArgument
+	 *     Type returns CompositeType
+	 *     CompositeType_Impl returns CompositeType
 	 *
 	 * Constraint:
-	 *     (arguments+=SimpleElement arguments+=SimpleElement*)?
+	 *     name=EString
 	 */
-	protected void sequence_CompositeArgument_Impl(ISerializationContext context, CompositeArgument semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+	protected void sequence_CompositeType_Impl(ISerializationContext context, CompositeType semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, UpctformaPackage.Literals.NAME_ELEMENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, UpctformaPackage.Literals.NAME_ELEMENT__NAME));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getCompositeType_ImplAccess().getNameEStringParserRuleCall_2_0(), semanticObject.getName());
+		feeder.finish();
 	}
 	
 	
@@ -363,19 +319,6 @@ public class UpctformagamiSemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Contexts:
-	 *     Argument returns DragAndDrop
-	 *     DragAndDrop returns DragAndDrop
-	 *
-	 * Constraint:
-	 *     (arguments+=SimpleElement arguments+=SimpleElement*)?
-	 */
-	protected void sequence_DragAndDrop(ISerializationContext context, DragAndDrop semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
 	 *     EvaluationUnit returns EvaluationUnit
 	 *     EvaluationUnit_Impl returns EvaluationUnit
 	 *
@@ -384,6 +327,48 @@ public class UpctformagamiSemanticSequencer extends AbstractDelegatingSemanticSe
 	 */
 	protected void sequence_EvaluationUnit_Impl(ISerializationContext context, EvaluationUnit semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     FieldValue returns FieldValue
+	 *
+	 * Constraint:
+	 *     (name=EString fieldvalue=ContentElement)
+	 */
+	protected void sequence_FieldValue(ISerializationContext context, FieldValue semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, UpctformaPackage.Literals.NAME_ELEMENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, UpctformaPackage.Literals.NAME_ELEMENT__NAME));
+			if (transientValues.isValueTransient(semanticObject, UpctformaPackage.Literals.FIELD_VALUE__FIELDVALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, UpctformaPackage.Literals.FIELD_VALUE__FIELDVALUE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getFieldValueAccess().getNameEStringParserRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getFieldValueAccess().getFieldvalueContentElementParserRuleCall_4_0(), semanticObject.getFieldvalue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Field returns Field
+	 *
+	 * Constraint:
+	 *     (name=EString fieldtype=[Type|EString])
+	 */
+	protected void sequence_Field(ISerializationContext context, Field semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, UpctformaPackage.Literals.NAME_ELEMENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, UpctformaPackage.Literals.NAME_ELEMENT__NAME));
+			if (transientValues.isValueTransient(semanticObject, UpctformaPackage.Literals.FIELD__FIELDTYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, UpctformaPackage.Literals.FIELD__FIELDTYPE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getFieldAccess().getNameEStringParserRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getFieldAccess().getFieldtypeTypeEStringParserRuleCall_4_0_1(), semanticObject.eGet(UpctformaPackage.Literals.FIELD__FIELDTYPE, false));
+		feeder.finish();
 	}
 	
 	
@@ -415,21 +400,14 @@ public class UpctformagamiSemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Contexts:
-	 *     Parameter returns Fixed
-	 *     ContentElement returns Fixed
-	 *     Fixed returns Fixed
+	 *     ContentElement returns Game
+	 *     Game returns Game
 	 *
 	 * Constraint:
-	 *     type=[Type|EString]
+	 *     id=EString?
 	 */
-	protected void sequence_Fixed(ISerializationContext context, Fixed semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, UpctformaPackage.Literals.PARAMETER__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, UpctformaPackage.Literals.PARAMETER__TYPE));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getFixedAccess().getTypeTypeEStringParserRuleCall_3_0_1(), semanticObject.eGet(UpctformaPackage.Literals.PARAMETER__TYPE, false));
-		feeder.finish();
+	protected void sequence_Game(ISerializationContext context, Game semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -441,8 +419,8 @@ public class UpctformagamiSemanticSequencer extends AbstractDelegatingSemanticSe
 	 *     (
 	 *         (imports+=Import imports+=Import*)? 
 	 *         (badges+=Badge badges+=Badge*)? 
-	 *         (widgets+=WidgetDefPoint widgets+=WidgetDefPoint*)? 
-	 *         (units+=UnitPoint units+=UnitPoint*)?
+	 *         (widgets+=WidgetGamify widgets+=WidgetGamify*)? 
+	 *         (units+=UnitGamify units+=UnitGamify*)?
 	 *     )
 	 */
 	protected void sequence_Gamification(ISerializationContext context, Gamification semanticObject) {
@@ -465,8 +443,6 @@ public class UpctformagamiSemanticSequencer extends AbstractDelegatingSemanticSe
 	/**
 	 * Contexts:
 	 *     ContentElement returns Image
-	 *     Argument returns Image
-	 *     SimpleElement returns Image
 	 *     Image returns Image
 	 *
 	 * Constraint:
@@ -501,9 +477,31 @@ public class UpctformagamiSemanticSequencer extends AbstractDelegatingSemanticSe
 	 *     ListType returns ListType
 	 *
 	 * Constraint:
-	 *     (name=EString listtype=[SimpleType|EString]?)
+	 *     (name=EString listtype=[Type|EString])
 	 */
 	protected void sequence_ListType(ISerializationContext context, ListType semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, UpctformaPackage.Literals.NAME_ELEMENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, UpctformaPackage.Literals.NAME_ELEMENT__NAME));
+			if (transientValues.isValueTransient(semanticObject, UpctformaPackage.Literals.LIST_TYPE__LISTTYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, UpctformaPackage.Literals.LIST_TYPE__LISTTYPE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getListTypeAccess().getNameEStringParserRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getListTypeAccess().getListtypeTypeEStringParserRuleCall_4_0_1(), semanticObject.eGet(UpctformaPackage.Literals.LIST_TYPE__LISTTYPE, false));
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     ContentElement returns ListValue
+	 *     ListValue returns ListValue
+	 *
+	 * Constraint:
+	 *     (listvalues+=ContentElement listvalues+=ContentElement*)
+	 */
+	protected void sequence_ListValue(ISerializationContext context, ListValue semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -513,7 +511,7 @@ public class UpctformagamiSemanticSequencer extends AbstractDelegatingSemanticSe
 	 *     Mission returns Mission
 	 *
 	 * Constraint:
-	 *     (type=TypeMissions? InitialScore=EDouble? FinalScore=EDouble? nextunit=[Unit|EString]? nexteval=[EvaluationUnit|EString]?)
+	 *     (type=TypeMissions? (missionrange+=ScoreRange missionrange+=ScoreRange*)? nextunit=[Unit|EString]? nexteval=[EvaluationUnit|EString]?)
 	 */
 	protected void sequence_Mission(ISerializationContext context, Mission semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -571,32 +569,31 @@ public class UpctformagamiSemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Contexts:
-	 *     Parameter returns Parameter
-	 *     ContentElement returns Parameter
-	 *     Parameter_Impl returns Parameter
+	 *     ContentElement returns PlaceHolder
+	 *     PlaceHolder returns PlaceHolder
 	 *
 	 * Constraint:
 	 *     type=[Type|EString]
 	 */
-	protected void sequence_Parameter_Impl(ISerializationContext context, upctforma.Parameter semanticObject) {
+	protected void sequence_PlaceHolder(ISerializationContext context, PlaceHolder semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, UpctformaPackage.Literals.PARAMETER__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, UpctformaPackage.Literals.PARAMETER__TYPE));
+			if (transientValues.isValueTransient(semanticObject, UpctformaPackage.Literals.PLACE_HOLDER__TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, UpctformaPackage.Literals.PLACE_HOLDER__TYPE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getParameter_ImplAccess().getTypeTypeEStringParserRuleCall_3_0_1(), semanticObject.eGet(UpctformaPackage.Literals.PARAMETER__TYPE, false));
+		feeder.accept(grammarAccess.getPlaceHolderAccess().getTypeTypeEStringParserRuleCall_3_0_1(), semanticObject.eGet(UpctformaPackage.Literals.PLACE_HOLDER__TYPE, false));
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     Point returns Point
+	 *     PointAchievement returns PointAchievement
 	 *
 	 * Constraint:
-	 *     (type=TypeRule? points=EInt? attempt=EInt? InitialScore=EDouble? FinalScore=EDouble?)
+	 *     (type=TypeRule? points=EInt? attempt=EInt? (pointrange+=ScoreRange pointrange+=ScoreRange*)?)
 	 */
-	protected void sequence_Point(ISerializationContext context, Point semanticObject) {
+	protected void sequence_PointAchievement(ISerializationContext context, PointAchievement semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -616,6 +613,32 @@ public class UpctformagamiSemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Contexts:
+	 *     Type returns RecordType
+	 *     RecordType returns RecordType
+	 *
+	 * Constraint:
+	 *     (name=EString recordtype+=Field recordtype+=Field*)
+	 */
+	protected void sequence_RecordType(ISerializationContext context, RecordType semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     ContentElement returns RecordValue
+	 *     RecordValue returns RecordValue
+	 *
+	 * Constraint:
+	 *     (recordvalues+=FieldValue recordvalues+=FieldValue*)
+	 */
+	protected void sequence_RecordValue(ISerializationContext context, RecordValue semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     ContentElement returns Row
 	 *     Row returns Row
 	 *
@@ -623,6 +646,18 @@ public class UpctformagamiSemanticSequencer extends AbstractDelegatingSemanticSe
 	 *     ((columns+=Column columns+=Column*)? usetemplate=UseTemplate?)
 	 */
 	protected void sequence_Row(ISerializationContext context, Row semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     ScoreRange returns ScoreRange
+	 *
+	 * Constraint:
+	 *     (InitialScore=EDouble? FinalScore=EDouble?)
+	 */
+	protected void sequence_ScoreRange(ISerializationContext context, ScoreRange semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -642,8 +677,6 @@ public class UpctformagamiSemanticSequencer extends AbstractDelegatingSemanticSe
 	/**
 	 * Contexts:
 	 *     ContentElement returns SimpleElement
-	 *     Argument returns SimpleElement
-	 *     SimpleElement returns SimpleElement
 	 *     SimpleElement_Impl returns SimpleElement
 	 *
 	 * Constraint:
@@ -660,23 +693,16 @@ public class UpctformagamiSemanticSequencer extends AbstractDelegatingSemanticSe
 	 *     SimpleType returns SimpleType
 	 *
 	 * Constraint:
-	 *     (name=EString type=TypeSimpleElement?)
+	 *     name=EString
 	 */
 	protected void sequence_SimpleType(ISerializationContext context, SimpleType semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     Argument returns Tab
-	 *     Tab returns Tab
-	 *
-	 * Constraint:
-	 *     (arguments+=SimpleElement arguments+=SimpleElement*)?
-	 */
-	protected void sequence_Tab(ISerializationContext context, Tab semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, UpctformaPackage.Literals.NAME_ELEMENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, UpctformaPackage.Literals.NAME_ELEMENT__NAME));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getSimpleTypeAccess().getNameEStringParserRuleCall_2_0(), semanticObject.getName());
+		feeder.finish();
 	}
 	
 	
@@ -695,8 +721,6 @@ public class UpctformagamiSemanticSequencer extends AbstractDelegatingSemanticSe
 	/**
 	 * Contexts:
 	 *     ContentElement returns Text
-	 *     Argument returns Text
-	 *     SimpleElement returns Text
 	 *     Text returns Text
 	 *
 	 * Constraint:
@@ -779,7 +803,19 @@ public class UpctformagamiSemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Contexts:
-	 *     UnitPoint returns UnitPoint
+	 *     UnitBadge returns UnitBadge
+	 *
+	 * Constraint:
+	 *     (type=TypeRule? badge=[Badge|EString]?)
+	 */
+	protected void sequence_UnitBadge(ISerializationContext context, UnitBadge semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     UnitGamify returns UnitGamify
 	 *
 	 * Constraint:
 	 *     (
@@ -788,12 +824,12 @@ public class UpctformagamiSemanticSequencer extends AbstractDelegatingSemanticSe
 	 *         evalref=[EvaluationUnit|EString]? 
 	 *         URL=EString? 
 	 *         image=EString? 
-	 *         (defbadges+=BadgeUnit defbadges+=BadgeUnit*)? 
-	 *         (pointsunit+=Point pointsunit+=Point*)? 
+	 *         (defbadges+=UnitBadge defbadges+=UnitBadge*)? 
+	 *         (pointsunit+=PointAchievement pointsunit+=PointAchievement*)? 
 	 *         (missions+=Mission missions+=Mission*)?
 	 *     )
 	 */
-	protected void sequence_UnitPoint(ISerializationContext context, UnitPoint semanticObject) {
+	protected void sequence_UnitGamify(ISerializationContext context, UnitGamify semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -815,7 +851,7 @@ public class UpctformagamiSemanticSequencer extends AbstractDelegatingSemanticSe
 	 *     UseTemplate returns UseTemplate
 	 *
 	 * Constraint:
-	 *     (typetemplate=[TemplateDef|EString]? (arguments+=Argument arguments+=Argument*)?)
+	 *     (typetemplate=[TemplateDef|EString]? (templateelements+=ContentElement templateelements+=ContentElement*)?)
 	 */
 	protected void sequence_UseTemplate(ISerializationContext context, UseTemplate semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -824,33 +860,11 @@ public class UpctformagamiSemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Contexts:
-	 *     Parameter returns Variable
-	 *     ContentElement returns Variable
-	 *     Variable returns Variable
-	 *
-	 * Constraint:
-	 *     type=[Type|EString]
-	 */
-	protected void sequence_Variable(ISerializationContext context, Variable semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, UpctformaPackage.Literals.PARAMETER__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, UpctformaPackage.Literals.PARAMETER__TYPE));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getVariableAccess().getTypeTypeEStringParserRuleCall_3_0_1(), semanticObject.eGet(UpctformaPackage.Literals.PARAMETER__TYPE, false));
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
 	 *     ContentElement returns Video
-	 *     Argument returns Video
-	 *     SimpleElement returns Video
 	 *     Video returns Video
 	 *
 	 * Constraint:
-	 *     url=EString?
+	 *     id=EString?
 	 */
 	protected void sequence_Video(ISerializationContext context, Video semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -859,16 +873,16 @@ public class UpctformagamiSemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Contexts:
-	 *     WidgetDefPoint returns WidgetDefPoint
+	 *     WidgetGamify returns WidgetGamify
 	 *
 	 * Constraint:
 	 *     (
 	 *         (widgetref+=[WidgetType|EString] widgetref+=[WidgetType|EString]*)? 
 	 *         (unitref+=[Unit|EString] unitref+=[Unit|EString]*)? 
-	 *         (pointswidgetdef+=Point pointswidgetdef+=Point*)?
+	 *         (pointswidgetdef+=PointAchievement pointswidgetdef+=PointAchievement*)?
 	 *     )
 	 */
-	protected void sequence_WidgetDefPoint(ISerializationContext context, WidgetDefPoint semanticObject) {
+	protected void sequence_WidgetGamify(ISerializationContext context, WidgetGamify semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -879,7 +893,7 @@ public class UpctformagamiSemanticSequencer extends AbstractDelegatingSemanticSe
 	 *     WidgetType returns WidgetType
 	 *
 	 * Constraint:
-	 *     (name=EString (parameters+=Parameter parameters+=Parameter*)?)
+	 *     (name=EString widgettypeelements+=[Type|EString] widgettypeelements+=[Type|EString]*)
 	 */
 	protected void sequence_WidgetType(ISerializationContext context, WidgetType semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -889,11 +903,10 @@ public class UpctformagamiSemanticSequencer extends AbstractDelegatingSemanticSe
 	/**
 	 * Contexts:
 	 *     ContentElement returns Widget
-	 *     Argument returns Widget
 	 *     Widget returns Widget
 	 *
 	 * Constraint:
-	 *     (name=EString widgettype=[WidgetType|EString] (widgetarguments+=Argument widgetarguments+=Argument*)?)
+	 *     (name=EString widgettype=[WidgetType|EString] (widgetelements+=ContentElement widgetelements+=ContentElement*)?)
 	 */
 	protected void sequence_Widget(ISerializationContext context, Widget semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

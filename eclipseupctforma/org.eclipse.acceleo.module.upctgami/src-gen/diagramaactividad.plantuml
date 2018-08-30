@@ -1,0 +1,30 @@
+@startuml
+start
+repeat
+			split
+		:Demo Unit 1;
+				split
+					:FinalUnit1;
+
+									if (Score <= 65.0?) then (yes)
+									:Demo Unit 3;
+									
+									elseif (Score <= 100.0?) then (yes)
+									:Demo Unit 4;
+									
+									endif
+				
+							
+							
+				
+				split again
+					:Demo Unit 2;
+
+				
+		end split
+end split
+
+repeat while (not all units completed?)
+stop
+@enduml
+

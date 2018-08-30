@@ -10,9 +10,9 @@ import org.xtext.services.UpctformagamiGrammarAccess
 import upctformagami.Badge
 import upctformagami.Gamification
 import upctformagami.Import
-import upctformagami.Point
-import upctformagami.UnitPoint
-import upctformagami.WidgetDefPoint
+import upctformagami.PointAchievement
+import upctformagami.UnitGamify
+import upctformagami.WidgetGamify
 
 class UpctformagamiFormatter extends AbstractFormatter2 {
 	
@@ -26,20 +26,20 @@ class UpctformagamiFormatter extends AbstractFormatter2 {
 		for (Badge badge : gamification.getBadges()) {
 			badge.format;
 		}
-		for (WidgetDefPoint widgetDefPoint : gamification.getWidgets()) {
-			widgetDefPoint.format;
+		for (WidgetGamify widgetGamify : gamification.getWidgets()) {
+			widgetGamify.format;
 		}
-		for (UnitPoint unitPoint : gamification.getUnits()) {
-			unitPoint.format;
+		for (UnitGamify unitGamify : gamification.getUnits()) {
+			unitGamify.format;
 		}
 	}
 
-	def dispatch void format(WidgetDefPoint widgetDefPoint, extension IFormattableDocument document) {
+	def dispatch void format(WidgetGamify widgetGamify, extension IFormattableDocument document) {
 		// TODO: format HiddenRegions around keywords, attributes, cross references, etc. 
-		for (Point point : widgetDefPoint.getPointswidgetdef()) {
-			point.format;
+		for (PointAchievement pointAchievement : widgetGamify.getPointswidgetdef()) {
+			pointAchievement.format;
 		}
 	}
 	
-	// TODO: implement for UnitPoint, Unit, WidgetType, Section, Row, Column, UseTemplate, Widget, Text, Tab, Animation, DragAndDrop, CompositeArgument, AggregatedType, TemplateDef, EvaluationUnit, Training, Final, UniqueAnswer, MultipleAnswer, FillingAnswer, TrueOrFalse
+	// TODO: implement for UnitGamify, PointAchievement, Mission, Unit, Section, Row, Column, UseTemplate, Widget, Text, RecordValue, ListValue, RecordType, FieldValue, TemplateDef, EvaluationUnit, Training, Final, UniqueAnswer, MultipleAnswer, FillingAnswer, TrueOrFalse
 }
