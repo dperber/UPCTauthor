@@ -2,7 +2,7 @@
 
 UPCTauthor is a authoring tool to create contents and evaluation units and for its gamification. An example of content created with UPCTauthor can be found in the URL http://cpcd.upct.es/autor/. A user manual is available at URL http://cpcd.upct.es/upctforma/. GitHub content:
 
-- UPCTauthor framework (upctauthorframework)
+- UPCTauthor framework (upctauthorframework )
 - Eclipse project (eclipseupctforma)
 
 ## UPCTauthor framework
